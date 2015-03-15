@@ -70,15 +70,28 @@ public:
 		if (!weapon->isOneHandMeleeWeapon()) {
 			return INVALIDWEAPON;
 		}
-		
-		float mods[3] = {0.f, 0.f, 0.f};
-		
-		for (int i = 0; i < 3; i++)
-			mods[System::random(2)] += 0.34f;
-			
-		UnicodeString args = "healthDamageMultiplier=" + String::valueOf(mods[0]) + ";actionDamageMultiplier=" + String::valueOf(mods[1]) + ";mindDamageMultiplier=" + String::valueOf(mods[2]) + ";";
 
-		return doCombatAction(creature, target, args);
+		int duration = 20;
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
+
+		if (creature->isInCombat()) {
+			if (creature->hasBuff(buffcrc)) {
+				creature->sendSystemMessage("You are still recovering from your frenzy!");
+			}
+			else if (!creature->hasBuff(buffcrc)) {
+				int roll = (System::random(100));
+				if (roll > 90) {
+					creature->sendSystemMessage("You enter into a FRENZY!");
+					creature->addBuff(buff);
+				}else {
+					creature->sendSystemMessage("you failed the roll");
+				}
+			}
+		}
+		//int actionCost = creature->inflictDamage(creature, CreatureAttribute::ACTION, 50, true);
+
+		return doCombatAction(creature, target);
 	}
 
 };
