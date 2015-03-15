@@ -32,7 +32,7 @@
 --GNU LGPL for Engine3 and the licenses of the other code concerned, 
 --provided that you include the source code of that other code when 
 --and as the GNU LGPL requires distribution of source code.
- 
+-- 
 --Note that people who make modified versions of Engine3 are not obligated 
 --to grant this special exception for their modified versions; 
 --it is their choice whether to do so. The GNU Lesser General Public License 
