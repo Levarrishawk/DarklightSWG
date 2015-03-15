@@ -1582,7 +1582,7 @@ void CreatureObjectImplementation::setAccelerationMultiplierBase(
 }
 
 void CreatureObjectImplementation::setAccelerationMultiplierMod(float newMultiplierMod, bool notifyClient) {
-	float buffMod = getSkillMod("private_acceleration_multiplier") > 0 ? (float)getSkillMod("private_acceleration_multiplier") / 100.f : 1.f;
+	float buffMod = getSkillMod("private_acceleration_multiplier") > 0 ? (float)getSkillMod("private_acceleration_multiplier") / 100.f : 1.3f;
 
 	if (accelerationMultiplierMod == newMultiplierMod * buffMod)
 		return;

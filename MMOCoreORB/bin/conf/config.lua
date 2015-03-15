@@ -54,8 +54,8 @@ DBHost = "127.0.0.1"
 DBPort = 3306
 DBName = "swgemu"
 DBUser = "swgemu"
-DBPass = "123456"
-DBSecret = "swgemus3cr37!" -- Change this! This value should be unique and of reasonable length.
+DBPass = "Pr0meth!u5"
+DBSecret = "$yngeLike$men" -- Change this! This value should be unique and of reasonable length.
 
 LoginPort = 44453
 LoginProcessingThreads = 1
@@ -90,20 +90,20 @@ ZonesEnabled = {
 	--"11",
 	--"character_farm",
 	--"cinco_city_test_m5",
-	--"corellia",
+	"corellia",
 	--"creature_test",
-	--"dantooine",
-	--"dathomir",
+	"dantooine",
+	"dathomir",
 	--"dungeon1",
-	--"endor",
+	"endor",
 	--"endor_asommers",
 	--"floratest",
 	--"godclient_test",
-	--"lok",
-	--"naboo",
+	"lok",
+	"naboo",
 	--"otoh_gunga",
 	--"rivertest",
-	--"rori",
+	"rori",
 	--"runtimerules",
 	--"simple",
 	--"space_09",
@@ -123,23 +123,29 @@ ZonesEnabled = {
 	--"space_tatooine_2",
 	--"space_yavin4",
 	--"taanab",
-	--"talus",
+	"talus",
 	"tatooine",
 	--"test_wearables",
 	"tutorial",
 	--"umbra",
 	--"watertabletest",
-	--"yavin4"
+	"yavin4",
+	"kaas",
+	"dungeon2"
 }
 
 
 -- directory of tres with live.cfg
-TrePath = "/home/swgemu/Desktop/SWGEmu"
+TrePath = "/home/swgemu/workspace/tre"
 
 TreFiles = {
 	"default_patch.tre",
+	"darklight_01s.tre",
+	"darklight_01.tre",
 	"patch_sku1_14_00.tre",
+	"darklight_post14.tre",
 	"patch_14_00.tre",
+	"darklight_pre14.tre",
 	"patch_sku1_13_00.tre",
 	"patch_13_00.tre",
 	"patch_sku1_12_00.tre",
