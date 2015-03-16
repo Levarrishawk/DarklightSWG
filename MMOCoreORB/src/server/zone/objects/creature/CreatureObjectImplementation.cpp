@@ -183,8 +183,8 @@ void CreatureObjectImplementation::initializeMembers() {
 
 	shockWounds = 0;
 
-	accelerationMultiplierBase = 1.f;
-	accelerationMultiplierMod = 1.f;
+	accelerationMultiplierBase = 1.3f;
+	accelerationMultiplierMod = 1.3f;
 	speedMultiplierBase = 1.f;
 	speedMultiplierMod = 1.f;
 	currentSpeed = 0.f;
