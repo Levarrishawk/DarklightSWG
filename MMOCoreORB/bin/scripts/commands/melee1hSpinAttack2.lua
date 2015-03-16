@@ -57,7 +57,7 @@ Melee1hSpinAttack2Command = {
 
 	areaAction = true,
 	areaRange = 7,
-
+	poolsToDamage = HEALTH,
 	stateEffects = {
 	  StateEffect( 
 		BLIND_EFFECT, 
