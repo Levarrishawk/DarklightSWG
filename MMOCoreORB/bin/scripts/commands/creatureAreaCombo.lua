@@ -46,7 +46,7 @@ CreatureAreaComboCommand = {
 	damageMultiplier = 1,
 	speedMultiplier = 1,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "attack",
 	animationCRC = 0,
