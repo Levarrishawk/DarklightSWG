@@ -51,7 +51,7 @@ Melee1hHit3Command = {
 	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
-	poolsToDamage = HEALTH_ATTRIBUTE,
+	poolsToDamage = HEALTH,
 	
 	animationCRC = hashCode("combo_5a_light"),
 
