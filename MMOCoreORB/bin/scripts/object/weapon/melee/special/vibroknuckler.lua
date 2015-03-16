@@ -100,9 +100,9 @@ object_weapon_melee_special_vibroknuckler = object_weapon_melee_special_shared_v
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 15,
-	actionAttackCost = 25,
-	mindAttackCost = 15,
+	healthAttackCost = 0,
+	actionAttackCost = 65,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
@@ -114,10 +114,10 @@ object_weapon_melee_special_vibroknuckler = object_weapon_melee_special_shared_v
 	maxRange = 3,
 	maxRangeAccuracy = 10,
 
-	minDamage = 20,
-	maxDamage = 120,
+	minDamage = 85,
+	maxDamage = 240,
 
-	attackSpeed = 2.6,
+	attackSpeed = 1.5,
 
 	woundsRatio = 8,
 

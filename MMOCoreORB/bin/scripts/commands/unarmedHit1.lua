@@ -48,9 +48,11 @@ UnarmedHit1Command = {
 	speedMultiplier = 1.5,
 	accuracyBonus = 15,
 	
-	healthCostMultiplier = 1.0,
-	actionCostMultiplier = 1.0,
-	mindCostMultiplier = 1.0,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.0,
+	mindCostMultiplier = 0,
+
+	poolsToDamage = HEALTH,
 
 	animationCRC = hashCode("combo_2d_light"),
 

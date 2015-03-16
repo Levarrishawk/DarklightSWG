@@ -48,13 +48,15 @@ UnarmedBlind1Command = {
 	speedMultiplier = 2.0,
 	accuracyBonus = 15,
 	
-	healthCostMultiplier = 1.5,
-	actionCostMultiplier = 1.5,
-	mindCostMultiplier = 1.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 4.5,
+	mindCostMultiplier = 0,
 
 	animationCRC = hashCode("attack_high_center_light_1"),
 
 	combatSpam = "aryxslash",
+
+	poolsToDamage = HEALTH,
 
 	stateEffects = {
 	  StateEffect( 
