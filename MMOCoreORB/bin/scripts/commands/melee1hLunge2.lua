@@ -53,7 +53,7 @@ Melee1hLunge2Command = {
 
 	animationCRC = hashCode("melee1hlunge2"),
 	
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 	combatSpam = "lungestab",
 
 	range = 20,
