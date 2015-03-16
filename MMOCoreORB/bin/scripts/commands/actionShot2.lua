@@ -44,16 +44,16 @@
 ActionShot2Command = {
         name = "actionshot2",
 
-	damageMultiplier = 2.0,
+	damageMultiplier = 8.0,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 2.0,
-	actionCostMultiplier = 1.25,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 13.25,
+	mindCostMultiplier = 0,
 
 	coneAngle = 30,
 	coneAction = true,
 
-	poolsToDamage = ACTION_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("fire_area_medium"),
 
