@@ -1716,7 +1716,7 @@ int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
 
 		if (rand <= 100) {
 			poolsToDamage = HEALTH;
-		} /*else if (rand < 99) {   // Test removal of all non-health damage. 3/16/15 Levarris
+		} /*else if (rand < 99) {   // Removes AI ability to hit anything other than Health. - Levarris 3/16
 			poolsToDamage = ACTION;
 		} else {
 			poolsToDamage = MIND;
