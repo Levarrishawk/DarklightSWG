@@ -51,7 +51,7 @@ CripplingShotCommand = {
 	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("fire_5_single_light_face"),
 

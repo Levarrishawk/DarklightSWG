@@ -70,7 +70,7 @@ WildShot2Command = {
 	  )
 	},
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }

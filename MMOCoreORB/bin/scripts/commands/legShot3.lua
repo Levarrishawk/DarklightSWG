@@ -63,7 +63,7 @@ LegShot3Command = {
 	  )
 	},
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("test_homing"),
 

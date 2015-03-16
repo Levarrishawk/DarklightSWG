@@ -55,7 +55,7 @@ ScatterShot2Command = {
 
 	combatSpam = "scatterblast",
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
