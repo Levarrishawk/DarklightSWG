@@ -106,12 +106,15 @@ public:
 			
 		uint32 healthBuffCRC = BuffCRC::MEDICAL_ENHANCE_HEALTH;
 		ManagedReference<Buff*> buff = new Buff(creature, healthBuffCRC, 30, BuffType::MEDICAL);
+		ManagedReference<Buff*> buffOther = new Buff(creatureTarget, healthBuffCRC, 30, BuffType::MEDICAL);
+
 		if (!creature->hasBuff(healthBuffCRC)) {
 			creature->sendSystemMessage("You have used the enhance ability.");
 			creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
-			int health = creature->getBaseHAM(CreatureAttribute::HEALTH);
+			//int health = creature->getBaseHAM(CreatureAttribute::HEALTH);
 			buff->setAttributeModifier(CreatureAttribute::HEALTH, 500);
 			creature->addBuff(buff);
+			creatureTarget->addBuff(buffOther);
 			doAnimations(creature, creatureTarget);
 		}else {
 			creature->sendSystemMessage("The buff has already been applied.");
