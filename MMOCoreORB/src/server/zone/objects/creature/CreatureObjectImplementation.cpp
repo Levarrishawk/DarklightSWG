@@ -2391,7 +2391,7 @@ void CreatureObjectImplementation::activateHAMRegeneration() {
 	uint32 healthTick = (uint32) ceil((float) MAX(0, getHAM(
 			CreatureAttribute::CONSTITUTION)) * 13.0f / 1200.0f * 3.0f
 			* modifier);
-	uint32 actionTick = 100;
+	uint32 actionTick = 400;
 
 	/* Commented original
 	uint32 actionTick = (uint32) ceil((float) MAX(0, getHAM(
