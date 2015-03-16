@@ -1714,13 +1714,13 @@ int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
 	if (poolsToDamage & RANDOM) {
 		int rand = System::random(100);
 
-		if (rand < 50) {
+		if (rand <= 100) {
 			poolsToDamage = HEALTH;
-		} else if (rand < 99) {
+		} /*else if (rand < 99) {   // Test removal of all non-health damage. 3/16/15 Levarris
 			poolsToDamage = ACTION;
 		} else {
 			poolsToDamage = MIND;
-		}
+		}*/
 	}
 
 	return poolsToDamage;
