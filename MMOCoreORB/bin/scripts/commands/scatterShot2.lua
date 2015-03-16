@@ -44,18 +44,18 @@
 ScatterShot2Command = {
         name = "scattershot2",
 
-	damageMultiplier = 5.0,
+	damageMultiplier = 15.0,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 2.0,
-	actionCostMultiplier = 1.25,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 14.25,
+	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
 	animationCRC = hashCode("fire_5_single_medium"),
 
 	combatSpam = "scatterblast",
 
-	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE + MIND_ATTRIBUTE,
+	poolsToDamage = HEALTH,
 
 	range = -1
 }
