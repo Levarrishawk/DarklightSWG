@@ -54,7 +54,7 @@ Melee1hDizzyHit2Command = {
 	areaRange = 7,
 	areaAction = true,
 	
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 	
 	animationCRC = hashCode("combo_4a_light"),
 
