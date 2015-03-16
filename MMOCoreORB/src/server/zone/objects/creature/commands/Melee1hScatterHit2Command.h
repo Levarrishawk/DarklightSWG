@@ -81,7 +81,7 @@ public:
 			}
 			else if (!creature->hasBuff(buffcrc)) {
 				int roll = (System::random(100));
-				if (roll > 90) {
+				if (roll > 50) {
 					creature->sendSystemMessage("You enter into a FRENZY!");
 					creature->addBuff(buff);
 				}else {
