@@ -66,7 +66,7 @@ Melee1hBlindHit2Command = {
 	  )
 	},
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("combo_2b_medium"),
 
