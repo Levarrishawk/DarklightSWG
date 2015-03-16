@@ -44,6 +44,7 @@
 CreatureAreaBleedingCommand = {
         name = "creatureareableeding",
         combatSpam = "attack",
+        poolsToDamage = HEALTH_ATTRIBUTE,
 	dotEffects = {
 	  DotEffect( 
 		BLEEDING, 
