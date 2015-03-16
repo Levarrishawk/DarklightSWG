@@ -66,7 +66,7 @@ CreatureAreaKnockdownCommand = {
 	},
 
 	areaRange = 25,
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 	areaAction = true
 }
 
