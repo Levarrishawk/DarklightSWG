@@ -44,11 +44,11 @@
 LegShot3Command = {
         name = "legshot3",
 
-	damageMultiplier = 2.0,
+	damageMultiplier = 10.0,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 2.0,
-	mindCostMultiplier = 2.0,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 9.0,
+	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
 	stateEffects = {
@@ -63,7 +63,7 @@ LegShot3Command = {
 	  )
 	},
 
-	poolsToDamage = ACTION_ATTRIBUTE,
+	poolsToDamage = HEALTH,
 
 	animationCRC = hashCode("test_homing"),
 
