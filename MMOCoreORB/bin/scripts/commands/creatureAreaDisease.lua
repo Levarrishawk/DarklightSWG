@@ -44,6 +44,7 @@
 CreatureAreaDiseaseCommand = {
         name = "creatureareadisease",
         combatSpam = "attack",
+       	poolsToDamage = HEALTH_ATTRIBUTE,
 	dotEffects = {
 	  DotEffect( 
 		DISEASED, 
