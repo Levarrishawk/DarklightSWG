@@ -100,7 +100,10 @@ public:
 			object = creature;
 
 		CreatureObject* creatureTarget = cast<CreatureObject*>( object.get());
-
+		Locker clocker(creatureTarget, creature);
+		if (creatureTarget->isAiAgent() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
+			creatureTarget = creature;
+			
 		uint32 healthBuffCRC = BuffCRC::MEDICAL_ENHANCE_HEALTH;
 		ManagedReference<Buff*> buff = new Buff(creature, healthBuffCRC, 30, BuffType::MEDICAL);
 		if (!creature->hasBuff(healthBuffCRC)) {
