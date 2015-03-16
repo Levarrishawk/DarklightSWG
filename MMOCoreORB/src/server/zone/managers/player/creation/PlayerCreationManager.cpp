@@ -425,8 +425,8 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 	String profession, customization, hairTemplate, hairCustomization;
 	callback->getSkill(profession);
 
-	if (profession.contains("jedi"))
-		profession = "crafting_artisan";
+	//if (profession.contains("jedi"))
+	//	profession = "crafting_artisan";
 
 	callback->getCustomizationString(customization);
 	callback->getHairObject(hairTemplate);
@@ -553,7 +553,7 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 
 							Time timeVal(sec);
 
-							if (timeVal.miliDifference() < 86400000) {
+							if (timeVal.miliDifference() < 1) {
 								ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are only permitted to create one character every 24 hours. Repeat attempts prior to 24 hours elapsing will reset the timer.", 0x0);
 								client->sendMessage(errMsg);
 
