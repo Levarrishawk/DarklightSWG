@@ -52,7 +52,8 @@ Melee1hLunge2Command = {
         accuracyBonus = 25,
 
 	animationCRC = hashCode("melee1hlunge2"),
-
+	
+	poolsToDamage = HEALTH,
 	combatSpam = "lungestab",
 
 	range = 20,
@@ -63,8 +64,8 @@ Melee1hLunge2Command = {
 		{ "knockdownRecovery", "lastKnockdown" }, 
 		{ "knockdown_defense" }, 
 		{}, 
-		100, 
-		100, 
+		70, 
+		70, 
 		10 
 	  )
 	}

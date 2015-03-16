@@ -44,14 +44,14 @@
 Melee1hHealthHit2Command = {
         name = "melee1hhealthhit2",
 
-	damageMultiplier = 3.0,
-	speedMultiplier = 2.0,
-	healthCostMultiplier = 0.75,
-	actionCostMultiplier = 0.75,
-	mindCostMultiplier = 1.25,
+	damageMultiplier = 2.0,
+	speedMultiplier = 5.0,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 5,
+	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
-	poolsToDamage = HEALTH_ATTRIBUTE,
+	poolsToDamage = HEALTH,
 
 	animationCRC = hashCode("combo_3c_light"),
 
@@ -63,10 +63,10 @@ Melee1hHealthHit2Command = {
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
 		HEALTH,
 		true,
-		125,
-		100,
-		60, 
-		60
+		65,
+		50,
+		30, 
+		30
 	  )
 	},
 

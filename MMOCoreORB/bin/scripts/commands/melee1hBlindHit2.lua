@@ -46,9 +46,9 @@ Melee1hBlindHit2Command = {
 
 	damageMultiplier = 2.5,
 	speedMultiplier = 2.25,
-	healthCostMultiplier = 0.75,
-	actionCostMultiplier = 0.75,
-	mindCostMultiplier = 1.25,
+	healthCostMultiplier = ,
+	actionCostMultiplier = 5,
+	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
 	areaRange = 7,
@@ -60,13 +60,13 @@ Melee1hBlindHit2Command = {
 		{}, 
 		{ "blind_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		100, 
-		100, 
-		50 
+		50, 
+		50, 
+		20 
 	  )
 	},
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH,
 
 	animationCRC = hashCode("combo_2b_medium"),
 

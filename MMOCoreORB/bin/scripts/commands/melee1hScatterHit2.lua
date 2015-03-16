@@ -53,7 +53,7 @@ Melee1hScatterHit2Command = {
 
 	animationCRC = hashCode("combo_5b_light"),
 
-	poolsToDamage = HEALTH_ATTRIBUTE,
+	poolsToDamage = HEALTH,
 
 	combatSpam = "scattershiak",
 
