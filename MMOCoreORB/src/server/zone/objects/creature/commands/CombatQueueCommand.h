@@ -77,7 +77,7 @@ public:
 		forceCostMultiplier = 0;
 		forceCost = 0;
 
-		poolsToDamage = CombatManager::RANDOM;
+		poolsToDamage = CombatManager::HEALTH;  //changed from RANDOM
 
 		coneAngle = 30;
 
