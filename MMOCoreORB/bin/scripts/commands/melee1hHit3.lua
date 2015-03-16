@@ -46,24 +46,14 @@ Melee1hHit3Command = {
 
 	damageMultiplier = 5.0,
 	speedMultiplier = 2.25,
-	healthCostMultiplier = 1.0,
+	healthCostMultiplier = 0,
 	actionCostMultiplier = 1.0,
-	mindCostMultiplier = 2.0,
+	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
+	poolsToDamage = HEALTH_ATTRIBUTE,
+	
 	animationCRC = hashCode("combo_5a_light"),
-
-	stateEffects = {
-	  StateEffect( 
-		BLIND_EFFECT, 
-		{}, 
-		{ "blind_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		40, 
-		100, 
-		30 
-	  )
-	},
 
 	combatSpam = "chomok",
 
