@@ -51,7 +51,7 @@ UnarmedLegHit1Command = {
 	mindCostMultiplier = 0,
         accuracyBonus = 15,
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("attack_special_foot_stomp_medium"),
 

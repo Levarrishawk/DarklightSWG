@@ -52,7 +52,7 @@ UnarmedLunge2Command = {
 	actionCostMultiplier = 4.5,
 	mindCostMultiplier = 0,
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("counter_mid_center_light"),
 

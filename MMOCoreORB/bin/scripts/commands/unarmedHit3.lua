@@ -53,7 +53,7 @@ UnarmedHit3Command = {
 
 	animationCRC = hashCode("combo_5a_medium"),
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	stateEffects = {
 	  StateEffect( 

@@ -53,7 +53,7 @@ UnarmedSpinAttack2Command = {
 	mindCostMultiplier = 0,
         accuracyBonus = 15,
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("combo_3d_medium"),
 

@@ -54,7 +54,7 @@ UnarmedStun1Command = {
 
 	animationCRC = hashCode("combo_4c_light"),
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "screamingsquill",
 

@@ -56,7 +56,7 @@ UnarmedBlind1Command = {
 
 	combatSpam = "aryxslash",
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	stateEffects = {
 	  StateEffect( 

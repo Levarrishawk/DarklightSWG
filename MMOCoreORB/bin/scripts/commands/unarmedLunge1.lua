@@ -54,7 +54,7 @@ UnarmedLunge1Command = {
 
 	animationCRC = hashCode("lower_posture_unarmed_1"),
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "ridingbantha",
 

@@ -53,7 +53,7 @@ UnarmedHit2Command = {
 
 	animationCRC = hashCode("combo_3a_light"),
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "goraxsmash",
 

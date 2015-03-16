@@ -52,7 +52,7 @@ UnarmedHit1Command = {
 	actionCostMultiplier = 3.0,
 	mindCostMultiplier = 0,
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("combo_2d_light"),
 

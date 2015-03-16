@@ -50,7 +50,7 @@ UnarmedSpinAttack1Command = {
 	areaRange = -1,
 	accuracyBonus = 15,
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 	
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4.5,

@@ -51,7 +51,7 @@ UnarmedCombo2Command = {
 	mindCostMultiplier = 0,
         accuracyBonus = 15,
 
-	poolsToDamage = HEALTH,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("combo_4a_light"),
 
