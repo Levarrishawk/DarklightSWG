@@ -146,7 +146,6 @@ naboo = {
 
 	planetTravelPoints = {
 		{name = "Keren Starport", x = 1371.5938, z = 13, y = 2747.9043, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
-		{name = "Iconic Encounter", x = -6475.0, z = 17.2, y = -3642.4, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Keren Shuttleport South", x = 1567.5193, z = 25, y = 2837.8777, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
 		{name = "Keren Shuttleport", x = 2021.0026, z = 19, y = 2525.679, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
 		{name = "Theed Shuttle A", x = -5856.1055, z = 6, y = 4172.1606, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
@@ -174,7 +173,7 @@ rori = {
 	weatherEnabled = 1,
 
 	planetTravelPoints = {
---		{name = "Restuss Starport", x = 5340, z = 80, y = 5734, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
+		{name = "Restuss Starport", x = 5319, z = 78.6, y = 6111, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 --		{name = "Restuss Shuttleport", x = 5211, z = 80, y = 5791, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
 		{name = "Narmle Starport", x = -5374.0718, z = 80, y = -2188.6143, interplanetaryTravelAllowed = 1, incomingTravelAllowed = 1},
 		{name = "Narmle Shuttleport", x = -5255.4116, z = 80.664185, y = -2161.6274, interplanetaryTravelAllowed = 0, incomingTravelAllowed = 1},
