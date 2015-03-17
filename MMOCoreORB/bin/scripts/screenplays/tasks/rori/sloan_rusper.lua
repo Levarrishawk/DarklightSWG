@@ -46,7 +46,7 @@ sloan_rusper_missions =
 npcMapSloanRusper = 
 { 
 	{ 
-		spawnData = { planetName = "rori", npcTemplate = "lord_sloan_rusper", x = 5065, z = 80, y = 5715, direction = 0, cellID = 0, position = STAND },
+		spawnData = { planetName = "rori", npcTemplate = "lord_sloan_rusper", x = 5276, z = 79.7, y = 6116, direction = 0, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_restuss_sloan_rusper",
 		missions = sloan_rusper_missions

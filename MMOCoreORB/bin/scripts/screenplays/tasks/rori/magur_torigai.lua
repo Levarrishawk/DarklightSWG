@@ -43,7 +43,7 @@ magur_torigai_missions =
 npcMapMagurTorigai = 
 { 
 	{ 
-		spawnData = { planetName = "rori", npcTemplate = "magur_torigai", x = 5132, z = 80, y = 5729, direction = 0, cellID = 0, position = STAND },
+		spawnData = { planetName = "rori", npcTemplate = "magur_torigai", x = 5295, z = 80.1, y = 6124, direction = 180, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_restuss_magur_torigai",
 		missions = magur_torigai_missions

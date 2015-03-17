@@ -45,7 +45,7 @@ ajuva_vanasterin_missions =
 npcMapAjuvaVanasterin = 
 { 
 	{ 
-		spawnData = { planetName = "rori", npcTemplate = "ajuva_vanasterin", x = 5203, z = 80, y = 5700, direction = 180, cellID = 0, position = STAND },
+		spawnData = { planetName = "rori", npcTemplate = "ajuva_vanasterin", x = 5280, z = 79.4, y = 6107, direction = 0, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_restuss_ajuva_vanasterin",
 		missions = ajuva_vanasterin_missions
