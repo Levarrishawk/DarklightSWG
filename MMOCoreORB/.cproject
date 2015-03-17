@@ -18,16 +18,15 @@
 			<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 				<buildTargets>
 					<target name="all" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
-						<buildCommand>build</buildCommand>
+						<buildCommand>make</buildCommand>
 						<buildArguments/>
-						<buildTarget>all</buildTarget>
-						<stopOnError>false</stopOnError>
-						<useDefaultCommand>false</useDefaultCommand>
-						<runAllBuilders>true</runAllBuilders>
+						<buildTarget>build</buildTarget>
+						<stopOnError>true</stopOnError>
+						<useDefaultCommand>true</useDefaultCommand>
+						<runAllBuilders>false</runAllBuilders>
 					</target>
 					<target name="config" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
 						<buildCommand>make</buildCommand>
-						<buildArguments/>
 						<buildTarget>config</buildTarget>
 						<stopOnError>false</stopOnError>
 						<useDefaultCommand>true</useDefaultCommand>
