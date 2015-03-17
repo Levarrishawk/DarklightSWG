@@ -37,7 +37,7 @@ heraldScreenPlay = ScreenPlay:new {
 		{ planet = "naboo", template = "herald_rsf_security_guard", x = -5032.08, z = 6, y = 4091.71, angle = 115, cell = 0, destX = -264, destY = 2823,  stringFile = "herald_naboo_gungan_warrior_stronghold" },
 		{ planet = "naboo", template = "herald_patron", x = -5538, z = 6, y = 4365.1, angle = 103, cell = 0, destX = 2915, destY = 1151,  stringFile = "herald_naboo_mauler_encampment" },
 
-		{ planet = "rori", template = "herald_commoner", x = 5352, z = 80, y = 5663, angle = 90, cell = 0, destX = 7353, destY = 110,  stringFile = "herald_rori_kobola_spice_mine" },
+		{ planet = "rori", template = "herald_commoner", x = 5291, z = 78.9, y = 6103, angle = 90, cell = 0, destX = 7353, destY = 110,  stringFile = "herald_rori_kobola_spice_mine" },
 		{ planet = "rori", template = "herald_commoner", x = 5129.3, z = 80, y = 5556, angle = 55, cell = 0, destX = 878, destY = -4917,  stringFile = "herald_rori_borgle_bat_cave" },
 		{ planet = "rori", template = "herald_imperial_major", x = -5273.4, z = 80.1, y = -2234, angle = -90, cell = 0, destX = -5652, destY = -5659,  stringFile = "herald_rori_imperial_military_base" },
 		{ planet = "rori", template = "herald_commoner", x = -5210.7, z = 80, y = -2269.6, angle = -90, cell = 0, destX = 5463, destY = 5044,  stringFile = "herald_rori_cobral_hideout" },
