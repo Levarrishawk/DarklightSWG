@@ -71,26 +71,27 @@ public:
 			return INVALIDWEAPON;
 		}
 
-		int duration = 20;
+		int duration = 5;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
 
 		if (creature->isInCombat()) {
 			if (creature->hasBuff(buffcrc)) {
-				creature->sendSystemMessage("You are still recovering from your frenzy!");
+				creature->sendSystemMessage("You are already in a frenzy!");
 			}
 			else if (!creature->hasBuff(buffcrc)) {
 				int roll = (System::random(100));
-				if (roll > 50) {
-					creature->sendSystemMessage("You enter into a FRENZY!");
+				if (roll > 75) {
+					creature->sendSystemMessage("You enter into a frenzy!");
+					buff->setSkillModifier("frenzy", 20);
+					buff->setSpeedMultiplierMod(0.5f);
 					creature->addBuff(buff);
 				}else {
-					creature->sendSystemMessage("you failed the roll");
+					creature->sendSystemMessage("you failed to enter a frenzy.");
 				}
 			}
 		}
-		//int actionCost = creature->inflictDamage(creature, CreatureAttribute::ACTION, 50, true);
-
+		
 		return doCombatAction(creature, target);
 	}
 
