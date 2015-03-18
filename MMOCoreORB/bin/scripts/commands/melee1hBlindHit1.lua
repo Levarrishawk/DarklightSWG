@@ -44,11 +44,11 @@
 Melee1hBlindHit1Command = {
         name = "melee1hblindhit1",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 0.5,
-	mindCostMultiplier = 0.625,
+	damageMultiplier = 1.5,
+	speedMultiplier = 3,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
 	stateEffects = {
@@ -57,13 +57,13 @@ Melee1hBlindHit1Command = {
 		{}, 
 		{ "blind_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		100, 
-		100, 
-		30 
+		50, 
+		50, 
+		5 
 	  )
 	},
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("combo_4b_medium"),
 
