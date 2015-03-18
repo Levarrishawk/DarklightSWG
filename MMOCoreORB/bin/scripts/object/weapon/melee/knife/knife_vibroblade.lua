@@ -96,13 +96,13 @@ object_weapon_melee_knife_knife_vibroblade = object_weapon_melee_knife_shared_kn
 	speedModifiers = { "onehandmelee_speed" },
 
 	-- Leave blank for now
-	damageModifiers = { },
+	damageModifiers = { "frenzy" },
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 10,
+	healthAttackCost = 0,
 	actionAttackCost = 36,
-	mindAttackCost = 10,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
