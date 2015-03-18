@@ -44,16 +44,16 @@
 Melee1hScatterHit1Command = {
         name = "melee1hscatterhit1",
 
-	damageMultiplier = 3.0,
-	speedMultiplier = 1.5,
-	healthCostMultiplier = 1.0,
-	actionCostMultiplier = 1.0,
-	mindCostMultiplier = 1.5,
+	damageMultiplier = 0.9,
+	speedMultiplier = 3,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 2.25,
+	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
 	animationCRC = hashCode("combo_3b_light"),
 
-	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE + MIND_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "scatterstab",
 
