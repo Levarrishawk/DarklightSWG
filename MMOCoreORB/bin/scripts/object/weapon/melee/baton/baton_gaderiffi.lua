@@ -98,13 +98,13 @@ object_weapon_melee_baton_baton_gaderiffi = object_weapon_melee_baton_shared_bat
 	speedModifiers = { "onehandmelee_speed" },
 
 	-- Leave blank for now
-	damageModifiers = { },
+	damageModifiers = { "frenzy" },
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 47,
+	healthAttackCost = 0,
 	actionAttackCost = 26,
-	mindAttackCost = 10,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
