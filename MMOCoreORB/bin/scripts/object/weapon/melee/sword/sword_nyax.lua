@@ -96,13 +96,13 @@ object_weapon_melee_sword_sword_nyax = object_weapon_melee_sword_shared_sword_ny
 	speedModifiers = { "onehandmelee_speed" },
 
 	-- Leave blank for now
-	damageModifiers = { },
+	damageModifiers = { "frenzy" },
 	
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 28,
-	actionAttackCost = 28,
-	mindAttackCost = 28,
+	healthAttackCost = 0,
+	actionAttackCost = 150,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankAccuracy = 0,
