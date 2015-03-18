@@ -44,10 +44,10 @@
 Melee1hBlindHit2Command = {
         name = "melee1hblindhit2",
 
-	damageMultiplier = 2.5,
-	speedMultiplier = 2.25,
-	healthCostMultiplier = ,
-	actionCostMultiplier = 5,
+	damageMultiplier = 1.75,
+	speedMultiplier = 3,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
@@ -60,9 +60,9 @@ Melee1hBlindHit2Command = {
 		{}, 
 		{ "blind_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		50, 
-		50, 
-		20 
+		70, 
+		70, 
+		10 
 	  )
 	},
 
