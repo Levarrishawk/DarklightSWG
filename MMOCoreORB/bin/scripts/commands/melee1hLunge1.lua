@@ -45,17 +45,17 @@ Melee1hLunge1Command = {
 	name = "melee1hlunge1",
 
 	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 0.5,
-	mindCostMultiplier = 1.0,
+	speedMultiplier = 3,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
 	animationCRC = hashCode("lower_posture_1hmelee_1"),
 
 	combatSpam = "lungestab",
 
-	range = 15,
+	range = 8,
 
 	stateEffects = {
 	  StateEffect( 
@@ -63,8 +63,8 @@ Melee1hLunge1Command = {
 		{ "postureDownRecovery" }, 
 		{ "posture_change_down_defense" }, 
 		{}, 
-		100, 
-		100, 
+		70, 
+		70, 
 		0 
 	  )
 	}
