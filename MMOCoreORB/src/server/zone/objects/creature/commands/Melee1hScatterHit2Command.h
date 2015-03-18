@@ -71,7 +71,7 @@ public:
 			return INVALIDWEAPON;
 		}
 
-		int duration = 5;
+		int duration = 10;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
 
@@ -83,7 +83,7 @@ public:
 				int roll = (System::random(100));
 				if (roll > 75) {
 					creature->sendSystemMessage("You enter into a frenzy!");
-					buff->setSkillModifier("frenzy", 20);
+					buff->setSkillModifier("frenzy", 40);
 					buff->setSpeedMultiplierMod(0.5f);
 					creature->addBuff(buff);
 				}else {
