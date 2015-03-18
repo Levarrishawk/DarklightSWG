@@ -96,13 +96,13 @@ object_weapon_melee_knife_knife_donkuwah = object_weapon_melee_knife_shared_knif
 	speedModifiers = { "onehandmelee_speed" },
 	
 	-- Leave blank for now
-	damageModifiers = { },
+	damageModifiers = { "frenzy" },
 	       
 	
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 6,
+	healthAttackCost = 0,
 	actionAttackCost = 6,
-	mindAttackCost = 2,
+	mindAttackCost = 0,
 	forceCost = 0,
 	
 	pointBlankAccuracy = 0,
