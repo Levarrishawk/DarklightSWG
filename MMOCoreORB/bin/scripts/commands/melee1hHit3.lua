@@ -44,13 +44,13 @@
 Melee1hHit3Command = {
         name = "melee1hhit3",
 
-	damageMultiplier = 5.0,
-	speedMultiplier = 2.25,
+	damageMultiplier = 4,
+	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.0,
+	actionCostMultiplier = 2.0,
 	mindCostMultiplier = 0,
         accuracyBonus = 25,
-
+        
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	
 	animationCRC = hashCode("combo_5a_light"),
