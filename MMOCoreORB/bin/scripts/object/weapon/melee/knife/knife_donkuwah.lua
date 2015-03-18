@@ -101,7 +101,7 @@ object_weapon_melee_knife_knife_donkuwah = object_weapon_melee_knife_shared_knif
 	
 	-- The values below are the default values.  To be used for blue frog objects primarily
 	healthAttackCost = 0,
-	actionAttackCost = 6,
+	actionAttackCost = 150,
 	mindAttackCost = 0,
 	forceCost = 0,
 	
