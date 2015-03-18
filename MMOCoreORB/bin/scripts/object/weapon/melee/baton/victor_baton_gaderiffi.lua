@@ -98,13 +98,13 @@ object_weapon_melee_baton_victor_baton_gaderiffi = object_weapon_melee_baton_sha
 	speedModifiers = { "onehandmelee_speed" },
 	
 	-- Leave blank for now
-	damageModifiers = { },
+	damageModifiers = { "frenzy" },
 	       
 	
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 40,
-	actionAttackCost = 33,
-	mindAttackCost = 13,
+	healthAttackCost = 0,
+	actionAttackCost = 150,
+	mindAttackCost = ,
 	forceCost = 0,
 	
 	pointBlankAccuracy = 0,
@@ -116,10 +116,10 @@ object_weapon_melee_baton_victor_baton_gaderiffi = object_weapon_melee_baton_sha
 	maxRange = -13,
 	maxRangeAccuracy = 5,
 
-	minDamage = 48,
+	minDamage = 128,
 	maxDamage = 148,
 	
-	attackSpeed = 3.8,
+	attackSpeed = 3,
 
 	woundsRatio = 16,
 }
