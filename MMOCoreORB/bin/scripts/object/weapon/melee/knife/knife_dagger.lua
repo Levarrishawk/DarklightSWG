@@ -96,13 +96,13 @@ object_weapon_melee_knife_knife_dagger = object_weapon_melee_knife_shared_knife_
 	speedModifiers = { "onehandmelee_speed" },
 
 	-- Leave blank for now
-	damageModifiers = { },
+	damageModifiers = { "frenzy" },
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 6,
-	actionAttackCost = 29,
-	mindAttackCost = 6,
+	healthAttackCost = 0,
+	actionAttackCost = 150,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
@@ -114,8 +114,8 @@ object_weapon_melee_knife_knife_dagger = object_weapon_melee_knife_shared_knife_
 	maxRange = 4,
 	maxRangeAccuracy = 25,
 
-	minDamage = 20,
-	maxDamage = 45,
+	minDamage = 120,
+	maxDamage = 145,
 
 	attackSpeed = 3,
 
