@@ -44,10 +44,10 @@
 Melee1hHealthHit2Command = {
         name = "melee1hhealthhit2",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 5.0,
+	damageMultiplier = 2,
+	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 5,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
@@ -63,9 +63,9 @@ Melee1hHealthHit2Command = {
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
 		HEALTH,
 		true,
-		65,
-		50,
-		30, 
+		70,
+		70,
+		40, 
 		30
 	  )
 	},
