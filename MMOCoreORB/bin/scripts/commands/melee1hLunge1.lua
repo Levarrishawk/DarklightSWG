@@ -50,7 +50,7 @@ Melee1hLunge1Command = {
 	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
         accuracyBonus = 25,
-
+	poolsToDamage = HEALTH_ATTRIBUTE,
 	animationCRC = hashCode("lower_posture_1hmelee_1"),
 
 	combatSpam = "lungestab",
@@ -63,8 +63,8 @@ Melee1hLunge1Command = {
 		{ "postureDownRecovery" }, 
 		{ "posture_change_down_defense" }, 
 		{}, 
-		70, 
-		70, 
+		60, 
+		60, 
 		0 
 	  )
 	}
