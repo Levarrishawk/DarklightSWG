@@ -44,11 +44,11 @@
 Melee1hHealthHit1Command = {
         name = "melee1hhealthhit1",
 
-	damageMultiplier = 1.5,
-	speedMultiplier = 1.5,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 0.5,
-	mindCostMultiplier = 0.625,
+	damageMultiplier = 1.25,
+	speedMultiplier = 3,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
@@ -63,10 +63,10 @@ Melee1hHealthHit1Command = {
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
 		HEALTH,
 		true,
-		125,
-		100,
-		30, 
-		30
+		60,
+		60,
+		15, 
+		15
 	  )
 	},
 
