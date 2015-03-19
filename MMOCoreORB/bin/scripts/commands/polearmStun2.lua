@@ -44,7 +44,7 @@
 PolearmStun2Command = {
         name = "polearmstun2",
 
-	damageMultiplier = 5,
+	damageMultiplier = 4,
 	speedMultiplier = 4,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3,
@@ -62,7 +62,7 @@ PolearmStun2Command = {
 		{ "jedi_state_defense" }, 
 		40, 
 		50, 
-		15 
+		10
 	  )
 	},
 
