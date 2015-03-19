@@ -49,7 +49,7 @@ PolearmArea2Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
-	accuracyBonus = 10,
+	accuracyBonus = 30,
 
 	areaRange = 7,
 	areaAction = true,
