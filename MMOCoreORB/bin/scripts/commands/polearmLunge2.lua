@@ -47,7 +47,7 @@ PolearmLunge2Command = {
 	damageMultiplier = 2.0,
 	speedMultiplier = 5,
 	accuracyBonus = 10,
-	
+	poolsToDamage = HEALTH_ATTRIBUTE,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 0,
