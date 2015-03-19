@@ -44,7 +44,7 @@
 PolearmArea2Command = {
         name = "polearmarea2",
 
-	damageMultiplier = 5,
+	damageMultiplier = 6,
 	speedMultiplier = 4,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.5,
@@ -62,7 +62,7 @@ PolearmArea2Command = {
 		{ "jedi_state_defense" }, 
 		75, 
 		100, 
-		30 
+		4 
 	  ),
 	  StateEffect( 
 		STUN_EFFECT, 
@@ -71,7 +71,7 @@ PolearmArea2Command = {
 		{ "jedi_state_defense" }, 
 		55, 
 		50, 
-		15
+		10
 	  )
 	},
 
