@@ -47,7 +47,7 @@ Melee1hHealthHit2Command = {
 	damageMultiplier = 2,
 	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4,
+	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
