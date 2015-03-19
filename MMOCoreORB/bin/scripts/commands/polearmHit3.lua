@@ -50,18 +50,18 @@ PolearmHit3Command = {
 	mindCostMultiplier = 0,
 	accuracyBonus = 10,
 	poolsToDamage = HEALTH_ATTRIBUTE,
+	
 	stateEffects = {
 	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
-		{ "knockdownRecovery", "lastKnockdown" }, 
-		{ "knockdown_defense" }, 
+		STUN_EFFECT, 
 		{}, 
-		60, 
-		0, 
-		0 
+		{ "stun_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		55, 
+		50, 
+		15 
 	  )
-	}
-
+	},
 
 	animationCRC = hashCode("combo_5a_medium"),
 
