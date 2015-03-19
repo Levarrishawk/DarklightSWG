@@ -1,6 +1,5 @@
 emperors_hand = Creature:new {
 	objectName = "@mob/creature_names:emperors_hand",
-	customName = "Aralina Silk (Emperor's Hand)",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 252,
