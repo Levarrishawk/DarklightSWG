@@ -44,8 +44,8 @@
 PolearmLunge2Command = {
 	name = "polearmlunge2",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 5,
+	damageMultiplier = 3,
+	speedMultiplier = 4,
 	accuracyBonus = 10,
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	healthCostMultiplier = 0,
