@@ -66,9 +66,9 @@ Melee1hDizzyHit2Command = {
 		{}, 
 		{ "dizzy_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		70, 
-		70, 
-		6 
+		60, 
+		60, 
+		4
 	  )
 	},
 
