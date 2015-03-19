@@ -44,10 +44,10 @@
 PolearmActionHit2Command = {
         name = "polearmactionhit2",
 
-	damageMultiplier = 1,
-	speedMultiplier = 4,
+	damageMultiplier = 5,
+	speedMultiplier = 6,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 5,
+	actionCostMultiplier = 7,
 	mindCostMultiplier = 0,
 	accuracyBonus = 10,
 
@@ -64,7 +64,7 @@ PolearmActionHit2Command = {
 		75,
 		60,
 		40, 
-		15
+		10
 	  )
 	},
 
