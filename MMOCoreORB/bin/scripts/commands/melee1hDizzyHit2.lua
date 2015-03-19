@@ -47,7 +47,7 @@ Melee1hDizzyHit2Command = {
 	damageMultiplier = 1.5,
 	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3,
+	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
