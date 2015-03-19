@@ -50,7 +50,7 @@ PolearmSpinAttack2Command = {
 	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
 	accuracyBonus = 10,
-
+	poolsToDamage = HEALTH_ATTRIBUTE,
 	areaAction = true,
 	areaRange = 7,
 
