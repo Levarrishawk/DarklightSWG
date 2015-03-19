@@ -44,11 +44,11 @@
 PolearmActionHit2Command = {
         name = "polearmactionhit2",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 2.0,
-	healthCostMultiplier = 1.5,
-	actionCostMultiplier = 1.0,
-	mindCostMultiplier = 1.0,
+	damageMultiplier = 1,
+	speedMultiplier = 8,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 5,
+	mindCostMultiplier = 0,
 	accuracyBonus = 10,
 
 	animationCRC = hashCode("lower_posture_2hmelee_2"),
@@ -61,10 +61,10 @@ PolearmActionHit2Command = {
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
 		ACTION,
 		true,
-		125,
-		100,
-		60, 
-		60
+		75,
+		60,
+		40, 
+		15
 	  )
 	},
 
