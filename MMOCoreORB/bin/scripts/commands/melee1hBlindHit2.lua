@@ -47,7 +47,7 @@ Melee1hBlindHit2Command = {
 	damageMultiplier = 1.75,
 	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3,
+	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 0,
         accuracyBonus = 25,
 
