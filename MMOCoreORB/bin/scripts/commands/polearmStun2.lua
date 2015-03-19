@@ -50,7 +50,7 @@ PolearmStun2Command = {
 	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
 	accuracyBonus = 10,
-
+	poolsToDamage = HEALTH_ATTRIBUTE,
 	areaRange = 7,
 	areaAction = true,
 
