@@ -43,10 +43,10 @@
 
 PolearmHit3Command = {
         name = "polearmhit3",
-	damageMultiplier = 3.5,
-	speedMultiplier = 3.5,
+	damageMultiplier = 4,
+	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.4,
+	actionCostMultiplier = 2,
 	mindCostMultiplier = 0,
 	accuracyBonus = 10,
 	poolsToDamage = HEALTH_ATTRIBUTE,
@@ -59,7 +59,7 @@ PolearmHit3Command = {
 		{ "jedi_state_defense" }, 
 		55, 
 		50, 
-		15 
+		10 
 	  )
 	},
 
