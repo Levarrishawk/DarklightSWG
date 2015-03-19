@@ -100,9 +100,9 @@ object_weapon_melee_polearm_polearm_vibro_axe = object_weapon_melee_polearm_shar
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 70,
-	actionAttackCost = 55,
-	mindAttackCost = 22,
+	healthAttackCost = 0,
+	actionAttackCost = 150,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
@@ -114,10 +114,10 @@ object_weapon_melee_polearm_polearm_vibro_axe = object_weapon_melee_polearm_shar
 	maxRange = 7,
 	maxRangeAccuracy = -45,
 
-	minDamage = 100,
-	maxDamage = 375,
+	minDamage = 200,
+	maxDamage = 300,
 
-	attackSpeed = 5,
+	attackSpeed = 8,
 
 	woundsRatio = 33,
 
@@ -126,8 +126,8 @@ object_weapon_melee_polearm_polearm_vibro_axe = object_weapon_melee_polearm_shar
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 49, 196, 6.5, 23, 750, -45, -40, 3, -45, 7, 78, 65, 29},
-	experimentalMax = {0, 0, 91, 364, 4.5, 43, 1500, -20, -20, 3, -20, 7, 45, 35, 15},
+	experimentalMin = {0, 0, 49, 196, 6.5, 23, 750, -45, -40, 3, -45, 7, 0, 150, 0},
+	experimentalMax = {0, 0, 91, 364, 4.5, 43, 1500, -20, -20, 3, -20, 7, 0, 150, 0},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
