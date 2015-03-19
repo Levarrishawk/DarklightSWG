@@ -45,7 +45,7 @@ PolearmLegHit3Command = {
         name = "polearmleghit3",
 
 	damageMultiplier = 2.5,
-	speedMultiplier = 8,
+	speedMultiplier = 4,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
