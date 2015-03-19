@@ -48,7 +48,7 @@ PolearmHit3Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2,
 	mindCostMultiplier = 0,
-	accuracyBonus = 10,
+	accuracyBonus = 30,
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	
 	stateEffects = {
