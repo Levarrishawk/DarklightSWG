@@ -256,3 +256,4 @@ function kaas_imperial_garison:spawnMobiles()
 	spawnMobile("kaas", "imperial_inquisitor", 200, 65.1, -12.0, 58.1, 168, 35791469)
 	spawnMobile("kaas", "imperial_inquisitor", 200, 55.6, -12.0, 59.3, 21, 35791469)
 	spawnMobile("kaas", "imperial_inquisitor", 200, 50.1, -12.0, 58.0, 179, 35791469)
+end
