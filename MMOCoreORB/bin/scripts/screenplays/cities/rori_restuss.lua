@@ -200,8 +200,8 @@ function RoriRestussScreenPlay:spawnMobiles()
 	spawnMobile("rori", "rebel_commando", 300, 5161.5, 80.2, 5609.3, -90, 0)
 	spawnMobile("rori", "rebel_commando", 300, 5128.7, 80.0, 5535.5, -75, 0)
 	spawnMobile("rori", "rebel_commando", 300, 5125.1, 80.2, 5542.4, 145, 0)
---Emperor's hand
-	spawnMobile("rori", "emperors_hand", 8000, 5284.9, 80.1, 5747.0, 90, 0)
+--Emperor's hand  (Possibly causing segfault?)
+--	spawnMobile("rori", "emperors_hand", 8000, 5284.9, 80.1, 5747.0, 90, 0)
 
 
 end
