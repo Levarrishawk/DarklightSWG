@@ -124,9 +124,10 @@
 #include "server/zone/objects/tangible/components/droid/DroidPlaybackModuleDataComponent.h"
 
 //  GOTO line 688 for next portion:  NGE Player BH system
+/*
 #include "server/zone/managers/visibility/VisibilityManager.h"
 #include "server/zone/objects/player/sui/callbacks/BountyHuntSuiCallback.h"
-#include "server/zone/objects/player/sui/inputbox/SuiInputBox.h"
+#include "server/zone/objects/player/sui/inputbox/SuiInputBox.h" */
 
 
 #include <iostream>
@@ -692,6 +693,7 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 	player->updateTimeOfDeath();
 	player->clearBuffs(true);
 	//  NGE BH SYSTEM, COMMENTED OUT UNTIL READY
+	/*
 	if(attacker->isPlayerCreature())
 	{
 		ManagedReference<SuiInputBox*> input = new SuiInputBox(player, SuiWindowType::STRUCTURE_VENDOR_WITHDRAW);
@@ -702,7 +704,7 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 
 		player->getPlayerObject()->addSuiBox(input);
 		player->sendMessage(input->generateMessage());
-	} 
+	}  */
 
 	if (attacker->getFaction() != 0) {
 		if (attacker->isPlayerCreature() || attacker->isPet()) {
