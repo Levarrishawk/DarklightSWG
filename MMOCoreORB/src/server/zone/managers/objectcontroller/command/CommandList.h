@@ -60,7 +60,7 @@ class CommandList : public Logger, public Object {
 	HashTable<uint32, Reference<QueueCommand*> > commands;
 
 public:
-	CommandList() : commands(700) {
+	CommandList() : commands(701) {
 		setLoggingName("CommandList");
 
 		setGlobalLogging(true);
