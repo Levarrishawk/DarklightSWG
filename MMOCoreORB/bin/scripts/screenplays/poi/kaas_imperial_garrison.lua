@@ -49,11 +49,11 @@ function kaas_imperial_garison:spawnMobiles()
 	
 	spawnMobile("kaas", "stormtrooper", 300, 2.7, 7.0, -0.4, -1, 35791436)
 	spawnMobile("kaas", "stormtrooper", 300, 9.9, 7.0, -4.4, 0, 35791436)
-	spawnMobile("kaas", stormtrooper", 300, 7.8, 7.0, -15.2, 0, 35791436)
-	spawnMobile("kaas", stormtrooper", 300, -9.8, 7.0, -13.1, -121, 35791436)
-	spawnMobile("kaas", stormtrooper", 300, -4.8, 7.0, -4.7, -131, 35791436)
-	spawnMobile("kaas", stormtrooper", 300, 3.1, 7.0, -11.3, 121, 35791436)
-	spawnMobile("kaas", stormtrooper", 300, -0.3, 7.0, -10.20, 123, 35791436)
+	spawnMobile("kaas", "stormtrooper", 300, 7.8, 7.0, -15.2, 0, 35791436)
+	spawnMobile("kaas", "stormtrooper", 300, -9.8, 7.0, -13.1, -121, 35791436)
+	spawnMobile("kaas", "stormtrooper", 300, -4.8, 7.0, -4.7, -131, 35791436)
+	spawnMobile("kaas", "stormtrooper", 300, 3.1, 7.0, -11.3, 121, 35791436)
+	spawnMobile("kaas", "stormtrooper", 300, -0.3, 7.0, -10.20, 123, 35791436)
 	
 	-- Temple Entrance Guards
 
