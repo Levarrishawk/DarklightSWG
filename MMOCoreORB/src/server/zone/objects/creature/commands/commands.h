@@ -416,6 +416,7 @@
 #include "Melee1hHit3Command.h"
 #include "Melee1hLunge1Command.h"
 #include "Melee1hLunge2Command.h"
+#include "Melee1hLunge3Command.h"
 #include "Melee1hScatterHit1Command.h"
 #include "Melee1hScatterHit2Command.h"
 #include "Melee1hSpinAttack1Command.h"
