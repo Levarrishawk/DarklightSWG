@@ -1114,6 +1114,7 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<Melee1hHit3Command>(String("melee1hHit3").toLowerCase());
 	commandFactory.registerCommand<Melee1hLunge1Command>(String("melee1hLunge1").toLowerCase());
 	commandFactory.registerCommand<Melee1hLunge2Command>(String("melee1hLunge2").toLowerCase());
+	commandFactory.registerCommand<Melee1hLunge3Command>(String("melee1hLunge3").toLowerCase());
 	commandFactory.registerCommand<Melee1hScatterHit1Command>(String("melee1hScatterHit1").toLowerCase());
 	commandFactory.registerCommand<Melee1hScatterHit2Command>(String("melee1hScatterHit2").toLowerCase());
 	commandFactory.registerCommand<Melee1hSpinAttack1Command>(String("melee1hSpinAttack1").toLowerCase());
