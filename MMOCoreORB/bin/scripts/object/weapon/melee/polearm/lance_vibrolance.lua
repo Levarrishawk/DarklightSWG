@@ -41,7 +41,7 @@
 --this exception also makes it possible to release a modified version 
 
 
-object_weapon_melee_polearm_polearm_vibro_axe = object_weapon_melee_polearm_shared_polearm_vibro_axe:new {
+object_weapon_melee_polearm_lance_vibrolance = object_weapon_melee_polearm_shared_lance_vibrolance:new {
 
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
@@ -132,4 +132,4 @@ object_weapon_melee_polearm_polearm_vibro_axe = object_weapon_melee_polearm_shar
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
 
-ObjectTemplates:addTemplate(object_weapon_melee_polearm_polearm_vibro_axe, "object/weapon/melee/polearm/polearm_vibro_axe.iff")
+ObjectTemplates:addTemplate(object_weapon_melee_polearm_lance_vibrolance, "object/weapon/melee/polearm/lance_vibrolance.iff")
