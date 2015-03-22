@@ -43,20 +43,20 @@
 
 Melee2hMindHit2Command = {
         name = "melee2hmindhit2",
-	damageMultiplier = 2.0,
-	speedMultiplier = 2.0,
-	healthCostMultiplier = 1.0,
-	actionCostMultiplier = 1.5,
-	mindCostMultiplier = 1.0,
-        accuracyBonus = 10,
+	damageMultiplier = 4,
+	speedMultiplier = 5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 5,
+	mindCostMultiplier = 0,
+        accuracyBonus = 40,
 
-	poolsToDamage = MIND_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	dotEffects = {
 	  DotEffect( 
 		BLEEDING, 
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
-		MIND,
+		HEALTH,
 		true,
 		125,
 		100,
