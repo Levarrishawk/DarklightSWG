@@ -43,13 +43,14 @@
 
 Melee2hSpinAttack2Command = {
         name = "melee2hspinattack2",
-	damageMultiplier = 3.0,
-	speedMultiplier = 2.5,
-	healthCostMultiplier = 1.5,
-	actionCostMultiplier = 2.0,
-	mindCostMultiplier = 1.5,
-        accuracyBonus = 10,
-
+	damageMultiplier = 4.5,
+	speedMultiplier = 5.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 6,
+	mindCostMultiplier = 0,
+        accuracyBonus = 40,
+	poolsToDamage = HEALTH_ATTRIBUTE,
+	
 	areaAction = true,
 	areaRange = 7,
 
