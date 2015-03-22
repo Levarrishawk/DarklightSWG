@@ -50,6 +50,8 @@ Melee2hHit3Command = {
 	mindCostMultiplier = 0,
         accuracyBonus = 40,
 
+	poolsToDamage = HEALTH_ATTRIBUTE,
+
 	stateEffects = {
 	  StateEffect( 
 		DIZZY_EFFECT, 
