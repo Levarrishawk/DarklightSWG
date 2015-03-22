@@ -26,7 +26,7 @@ mayor_start = Creature:new {
 	optionsBitmask = 264,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/shared_dressed_mayor.iff"},
+	templates = {"object/mobile/dressed_mayor.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",

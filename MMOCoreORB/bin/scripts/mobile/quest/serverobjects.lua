@@ -6,6 +6,11 @@ includeFile("quest/chadra_fan_thief.lua")
 includeFile("quest/gadget_specialist.lua")
 includeFile("quest/theater_manager.lua")
 
+--Legacy
+includeFile("quest/legacy/mayor_start.lua")
+
+
+
 --Hero of Tatooine
 includeFile("quest/tatooine/hero_of_tat/hero_of_tat_bh.lua")
 includeFile("quest/tatooine/hero_of_tat/hero_of_tat_farmer.lua")
