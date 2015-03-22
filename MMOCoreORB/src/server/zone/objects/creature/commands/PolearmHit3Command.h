@@ -70,40 +70,7 @@ public:
 		if (!weapon->isPolearmWeaponObject()) {
 			return INVALIDWEAPON;
 		}
-		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
-		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
-		if (creatureTarget == NULL)
-			return GENERALERROR;
 
-		if (creature->getDistanceTo(object) > 5.f){
-			creature->sendSystemMessage("You are out of range.");
-			return GENERALERROR;
-		}
-		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
-		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SUFFERING;
-
-		if(creatureTarget->hasBuff(buffcrc)) {
-			creature->sendSystemMessage("@jedi_spam:force_buff_present");
-			return GENERALERROR;
-		}
-
-		if(creature->hasBuff(buffcrc2)) {
-			creature->sendSystemMessage("You cannot snare at this time.");
-			return GENERALERROR;
-		}
-
-		int duration = 5;
-		int duration2 = 15;
-
-		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, duration2, BuffType::JEDI);
-		ManagedReference<Buff*> buff = new Buff(creatureTarget, buffcrc, duration, BuffType::JEDI);
-
-		if (object->isCreatureObject() && creatureTarget->isAttackableBy(creature) && !creatureTarget->hasBuff(buffcrc)) {
-			buff->setSpeedMultiplierMod(0.5);
-			creatureTarget->addBuff(buff);
-			creature->addBuff(buff2);
-
-		}
 		return doCombatAction(creature, target);
 	}
 
