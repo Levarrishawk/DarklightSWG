@@ -312,6 +312,9 @@ includeFile("poi/yavin4_blueleaf_temple.lua")
 includeFile("poi/yavin4_imperial_base.lua")
 includeFile("poi/yavin4_woolamander_temple.lua")
 includeFile("poi/kaas_imperial_garrison.lua")
+includeFile("poi/kaas_abandon_separ_facility.lua")
+includeFile("poi/kaas_sith_facility.lua")
+includeFile("poi/kaas_vitiate_tomb.lua")
 
 --Static Spawns
 includeFile("static_spawns/corellia_static_spawns.lua")
