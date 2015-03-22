@@ -1,6 +1,6 @@
 mayor_start = Creature:new {
 	objectName = "",
-	customName = "Mayor Mikdanyell Guh'rantt"
+	customName = "Mayor Mikdanyell Guh'rantt",
 	socialGroup = "",
 	faction = "",
 	level = 100,
