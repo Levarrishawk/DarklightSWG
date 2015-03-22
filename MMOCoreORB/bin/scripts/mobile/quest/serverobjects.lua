@@ -672,3 +672,6 @@ includeFile("quest/yavin4/ruwan_warrant_officer.lua")
 includeFile("quest/yavin4/theme_park_rebel_big_creature.lua")
 includeFile("quest/yavin4/theme_park_rebel_big_creature_cage.lua")
 includeFile("quest/yavin4/theme_park_rebel_supervisor.lua")
+
+-- Legacy
+includeFile("quest/legacy/serverobjects.lua")
