@@ -43,13 +43,15 @@
 
 Melee2hSweep2Command = {
         name = "melee2hsweep2",
-	damageMultiplier = 2.0,
-	speedMultiplier = 2.5,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 2.25,
-	mindCostMultiplier = 1.0,
-        accuracyBonus = 10,
-
+	damageMultiplier = 4.0,
+	speedMultiplier = 5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 5,
+	mindCostMultiplier = 0,
+        accuracyBonus = 40,
+    
+	poolsToDamage = HEALTH_ATTRIBUTE,
+	
 	areaRange = 7,
 	areaAction = true,
 
