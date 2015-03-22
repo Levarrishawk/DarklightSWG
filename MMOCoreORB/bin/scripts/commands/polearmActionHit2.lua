@@ -64,7 +64,7 @@ PolearmActionHit2Command = {
 		100,
 		80,
 		60, 
-		40
+		30
 	  )
 	},
 
