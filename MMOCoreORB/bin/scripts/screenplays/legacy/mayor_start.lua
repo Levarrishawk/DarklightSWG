@@ -1,4 +1,4 @@
-DantooineMiningOutpostScreenPlay = ScreenPlay:new {
+mayor_start = ScreenPlay:new {
   numberOfActs = 1,
   
   screenplayName = "mayor_start"
