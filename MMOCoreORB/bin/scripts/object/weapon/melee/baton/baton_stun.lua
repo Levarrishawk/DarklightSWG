@@ -116,8 +116,8 @@ object_weapon_melee_baton_baton_stun = object_weapon_melee_baton_shared_baton_st
 	maxRange = 4,
 	maxRangeAccuracy = 0,
 
-	minDamage = 325,
-	maxDamage = 475,
+	minDamage = 300,
+	maxDamage = 400,
 
 	attackSpeed = 5,
 
