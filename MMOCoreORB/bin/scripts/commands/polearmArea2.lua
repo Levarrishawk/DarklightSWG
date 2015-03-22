@@ -45,9 +45,9 @@ PolearmArea2Command = {
         name = "polearmarea2",
 
 	damageMultiplier = 6,
-	speedMultiplier = 4,
+	speedMultiplier = 3.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.5,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
 	accuracyBonus = 30,
 
@@ -61,7 +61,7 @@ PolearmArea2Command = {
 		{ "dizzy_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
 		75, 
-		100, 
+		75, 
 		4 
 	  ),
 	  StateEffect( 
