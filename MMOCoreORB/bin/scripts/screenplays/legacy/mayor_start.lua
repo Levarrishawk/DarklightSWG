@@ -14,5 +14,5 @@ end
 
 function mayor_start:spawnMobiles()
 
-  --In The Cantina
+  --In The Guild Hall
   spawnMobile("tatooine", "mayor_start", 1, -0.1, 2.5, 7.5, 179, 1279960)
