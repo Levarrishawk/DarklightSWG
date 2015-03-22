@@ -43,12 +43,12 @@
 
 Melee2hHit3Command = {
         name = "melee2hhit3",
-	damageMultiplier = 4.0,
-	speedMultiplier = 2.5,
-	healthCostMultiplier = 1.25,
-	actionCostMultiplier = 2.0,
-	mindCostMultiplier = 1.25,
-        accuracyBonus = 10,
+	damageMultiplier = 3.5,
+	speedMultiplier = 4,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 4,
+	mindCostMultiplier = 0,
+        accuracyBonus = 40,
 
 	stateEffects = {
 	  StateEffect( 
@@ -58,7 +58,7 @@ Melee2hHit3Command = {
 		{ "jedi_state_defense" }, 
 		30, 
 		100, 
-		30 
+		4
 	  )
 	},
 
