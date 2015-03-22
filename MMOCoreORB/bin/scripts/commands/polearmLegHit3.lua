@@ -47,7 +47,7 @@ PolearmLegHit3Command = {
 	damageMultiplier = 3.5,
 	speedMultiplier = 4,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.5,
+	actionCostMultiplier = 5.25,
 	mindCostMultiplier = 0,
 	accuracyBonus = 30,
 
