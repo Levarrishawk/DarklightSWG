@@ -45,11 +45,11 @@ object_tangible_component_weapon_scope_weapon = object_tangible_component_weapon
 
 
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	experimentalProperties = {"XX", "XX", "OQ", "OQ", "XX", "XX", "OQ", "OQ", "OQ", "OQ"},
+	experimentalProperties = {"XX", "XX", "OQ", "OQ", "XX", "XX", "OQ", "XX", "XX", "XX"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	experimentalGroupTitles = {"null", "null", "expDamage", "exp_durability", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
+	experimentalGroupTitles = {"null", "null", "expDamage", "exp_durability", "null", "null", "expRange", "null", "null", "null"},
 	experimentalSubGroupTitles = {"null", "null", "woundchance", "hitpoints", "zerorangemod", "minrangemod", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 0, 10, 0, 0, 5, 15, 15, 15},
+	experimentalMin = {0, 0, 0, 10, 0, 0, 5, 0, 0, 0},
 	experimentalMax = {0, 0, 10, 100, 0, 0, 25, 0, 0, 0},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
