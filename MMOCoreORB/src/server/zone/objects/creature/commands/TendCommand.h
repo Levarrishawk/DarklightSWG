@@ -207,7 +207,7 @@ public:
 			return GENERALERROR;
 		}
 
-		if (creature->getHAM(CreatureAttribute::MIND) < mindCost) {
+		if (creature->getHAM(CreatureAttribute::ACTION) < mindCost) {
 			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
 			return GENERALERROR;
 		}
@@ -230,8 +230,8 @@ public:
 				return GENERALERROR;
 			}
 
-			int healPower = round(((float)creature->getSkillMod("healing_injury_treatment") / 3.f + 20.f) * bfScale);
-
+			//int healPower = round(((float)creature->getSkillMod("healing_injury_treatment") / 3.f + 20.f) * bfScale);
+			int healPower = 300;
 			int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healPower);
 			int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healPower, true, false);
 
@@ -268,10 +268,10 @@ public:
 			playerManager->sendBattleFatigueMessage(creature, creatureTarget);
 		}
 
-		creature->inflictDamage(creature, CreatureAttribute::MIND, mindCost, false);
-		creature->addWounds(CreatureAttribute::FOCUS, mindWoundCost);
-		creature->addWounds(CreatureAttribute::WILLPOWER, mindWoundCost);
-		creature->addShockWounds(2);
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
+		//creature->addWounds(CreatureAttribute::FOCUS, mindWoundCost);
+		//creature->addWounds(CreatureAttribute::WILLPOWER, mindWoundCost);
+		//creature->addShockWounds(2);
 
 		doAnimations(creature, creatureTarget);
 
