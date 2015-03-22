@@ -8,9 +8,7 @@ bone_armor_boots = {
 		{"energyeffectiveness",10,35,10},
 		{"armor_effectiveness",4,19,10},
 		{"armor_integrity",7500, 12500,0},
-		{"armor_health_encumbrance",6,4,0},
-		{"armor_action_encumbrance",16,8,0},
-		{"armor_mind_encumbrance",4,2,0},
+
 	},
 	skillMods = {
 
