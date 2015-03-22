@@ -45,9 +45,9 @@ PolearmSweep2Command = {
         name = "polearmsweep2",
 
 	damageMultiplier = 4,
-	speedMultiplier = 4,
+	speedMultiplier = 3.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.5,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
 	accuracyBonus = 30,
 
@@ -57,9 +57,9 @@ PolearmSweep2Command = {
 		{ "knockdownRecovery", "lastKnockdown" }, 
 		{ "knockdown_defense" }, 
 		{}, 
-		15, 
-		50, 
-		3 
+		40, 
+		100, 
+		0 
 	  )
 	},
 	areaRange = 7,
