@@ -10,9 +10,6 @@ bh_armor_leggings = {
 		{"armor_special_type",0,0,0},
 		{"armor_effectiveness",10,50,10},
 		{"armor_integrity",20000,70000,0},
-		{"armor_health_encumbrance",75,45,0},
-		{"armor_action_encumbrance",175,105,0},
-		{"armor_mind_encumbrance",25,15,0},
 	},
 	customizationStringNames = {"/private/index_color_1", "/private/index_color_2"},
 	customizationValues = {
