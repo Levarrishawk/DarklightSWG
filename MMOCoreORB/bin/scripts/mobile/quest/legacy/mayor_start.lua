@@ -1,4 +1,4 @@
-c_3po = Creature:new {
+mayor_start = Creature:new {
 	objectName = "",
 	customName = "Mayor Mikdanyell Guh'rantt"
 	socialGroup = "",
