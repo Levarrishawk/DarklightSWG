@@ -44,10 +44,10 @@
 PolearmActionHit2Command = {
         name = "polearmactionhit2",
 
-	damageMultiplier = 5,
+	damageMultiplier = 5.5,
 	speedMultiplier = 5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 7,
+	actionCostMultiplier = 6,
 	mindCostMultiplier = 0,
 	accuracyBonus = 30,
 
@@ -61,10 +61,10 @@ PolearmActionHit2Command = {
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
 		ACTION,
 		true,
-		75,
-		60,
-		40, 
-		20
+		100,
+		80,
+		60, 
+		40
 	  )
 	},
 
