@@ -52,19 +52,6 @@ Melee2hMindHit2Command = {
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
-	dotEffects = {
-	  DotEffect( 
-		BLEEDING, 
-		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
-		HEALTH,
-		true,
-		125,
-		100,
-		60, 
-		60
-	  )
-	},
-
 	animationCRC = hashCode("combo_3c_light"),
 
 	combatSpam = "mindslam",
