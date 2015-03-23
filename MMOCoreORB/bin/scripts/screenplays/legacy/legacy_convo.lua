@@ -8,7 +8,7 @@ legacy_convo = ConvoTemplate:new {
 
 --Intro First
 first_legacy_quest = ConvoScreen:new {
-  id = "mayor_start_chat",
+  id = "first_legacy_quest",
   leftDialog = "",
   customDialogText = "Welcome to Mos Eisley! I'm Mayor Guh'rantt. Do you know the history of Mos Eisley? It's a beautiful city, full of life and character and one of the best cantinas in the known galaxy.",
   stopConversation = "false",
@@ -18,7 +18,7 @@ first_legacy_quest = ConvoScreen:new {
   
   }
 }
-first_legacy_quest:addScreen(mayor_start_chat);
+first_legacy_quest:addScreen(first_legacy_quest);
 
 --deny
 deny = ConvoScreen:new {
@@ -31,7 +31,7 @@ deny = ConvoScreen:new {
 }
 first_legacy_quest:addScreen(deny);
 
-first_legacy_quest:addScreen(mayor_start_chat);
+
 
 
 mayor2 = ConvoScreen:new {
@@ -40,7 +40,7 @@ mayor2 = ConvoScreen:new {
   customDialogText = "Yes. My...debt. My next payment, a speeder deed, was stolen from me. I can't divert...er...raise the money with all the problems in the city. If you do some things for me, it might...free up some funds I need.",
   stopConversation = "false",
   options = {
-     {"I see. What would I have to do?","mayor3"}
+     {"I see. What would I have to do?","mayor3"},
   }
 }
 first_legacy_quest:addScreen(mayor2);
@@ -51,7 +51,7 @@ mayor3 = ConvoScreen:new {
   customDialogText = "Mos Eisley suffers from Tusken Raiders, wild vermin, and menacing hooligans. I don't have the staff to handle these problems. I need you to go out there. You want to help the city, don't you?",
   stopConversation = "false",
   options = {
-     {"Tell me about the wild vermin.","mayor4"}
+     {"Tell me about the wild vermin.","mayor4"},
   }
 }
 first_legacy_quest:addScreen(mayor4);
@@ -62,7 +62,7 @@ mayor4 = ConvoScreen:new {
   customDialogText = "Mos Eisley suffers from Tusken Raiders, wild vermin, and menacing hooligans. I don't have the staff to handle these problems. I need you to go out there. You want to help the city, don't you?",
   stopConversation = "false",
   options = {
-     {"I'll help her.","mayorvermin"}
+     {"I'll help her.","mayorvermin"},
      {"I can't help right now.","deny"}
   }
 }
@@ -79,3 +79,4 @@ mayorvermin = ConvoScreen:new {
   }
 }
 first_legacy_quest:addScreen(mayorvermin);
+addConversationTemplate("first_legacy_quest", first_legacy_quest);
