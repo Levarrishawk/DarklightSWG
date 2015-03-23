@@ -1,6 +1,6 @@
 mayor_start = ScreenPlay:new {
   numberOfActs = 1,
-  
+  questString = "LegacyQuest",
   screenplayName = "mayor_start"
 }
 
@@ -16,8 +16,13 @@ function mayor_start:spawnMobiles()
 
   --In The Guild Hall
   spawnMobile("tatooine", "mayor_start", 1, -0.1, 2.5, 7.5, 179, 1279960)
-  end
+end
 
+--This Creates the handler.
+legacy_quest_convo_handler = Object:new {
+	
+ }
+--function nameOfHandlerInsideOfConversationLuaFile:getNext....
 function legacy_quest_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
 	local creature = LuaCreatureObject(conversingPlayer)
 	local convosession = creature:getConversationSession()
