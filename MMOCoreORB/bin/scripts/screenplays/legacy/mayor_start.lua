@@ -18,7 +18,7 @@ function mayor_start:spawnMobiles()
   spawnMobile("tatooine", "mayor_start", 1, -0.1, 2.5, 7.5, 179, 1279960)
   end
 
-function legacy_convo:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
+function legacy_quest_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
 	local creature = LuaCreatureObject(conversingPlayer)
 	local convosession = creature:getConversationSession()
 	lastConversation = nil
@@ -38,7 +38,7 @@ function legacy_convo:getNextConversationScreen(conversationTemplate, conversing
 			--print("Last conversation is null.  let's try to get the first screen")
 			
 			local creature = LuaCreatureObject(conversingPlayer)
-			local hasAccepted = creature:hasScreenPlayState(force_sensitive.states.quest.intro, force_sensitive.questString)
+		--	local hasAccepted = creature:hasScreenPlayState(force_sensitive.states.quest.intro, force_sensitive.questString)
 			--print("hasAccepted() is " .. hasAccepted)   
 			
 			if ( hasAccepted == 0 ) then
