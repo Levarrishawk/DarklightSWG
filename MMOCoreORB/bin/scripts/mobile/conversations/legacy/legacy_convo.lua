@@ -18,7 +18,7 @@ first_conv = ConvoScreen:new {
   
   }
 }
-first_legacy_quest:addScreen(first_conv);
+legacy_convo:addScreen(first_conv);
 
 --deny
 deny = ConvoScreen:new {
@@ -29,7 +29,7 @@ deny = ConvoScreen:new {
   options = {
   }
 }
-first_legacy_quest:addScreen(deny);
+legacy_convo:addScreen(deny);
 
 
 
@@ -43,7 +43,7 @@ mayor2 = ConvoScreen:new {
      {"I see. What would I have to do?","mayor3"},
   }
 }
-first_legacy_quest:addScreen(mayor2);
+legacy_convo:addScreen(mayor2);
 
 mayor3 = ConvoScreen:new {
   id = "mayor3",
@@ -54,7 +54,7 @@ mayor3 = ConvoScreen:new {
      {"Tell me about the wild vermin.","mayor4"},
   }
 }
-first_legacy_quest:addScreen(mayor4);
+legacy_convo:addScreen(mayor4);
 
 mayor4 = ConvoScreen:new {
   id = "mayor4",
@@ -67,7 +67,7 @@ mayor4 = ConvoScreen:new {
   }
 }
 
-first_legacy_quest:addScreen(mayor4);
+legacy_convo:addScreen(mayor4);
 
 mayorvermin = ConvoScreen:new {
   id = "mayorvermin",
@@ -78,6 +78,6 @@ mayorvermin = ConvoScreen:new {
     
   }
 }
-first_legacy_quest:addScreen(mayorvermin);
+legacy_convo:addScreen(mayorvermin);
 
-addConversationTemplate("first_legacy_quest", first_legacy_quest);
+addConversationTemplate("legacy_convo", legacy_convo);
