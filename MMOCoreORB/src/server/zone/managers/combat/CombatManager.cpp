@@ -1031,7 +1031,13 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 
 	if(weapon == NULL)
 		return 0;
-
+		
+	int swordArmor = defender->getSkillMod("sword_armor");
+	if (swordArmor > 0) {
+		float dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
+		defender->notifyObservers(ObserverEventType::DAMAGERECEIVED, attacker, dmgAbsorbed);
+		sendMitigationCombatSpam(defender, NULL, (int)dmgAbsorbed, FORCEARMOR);
+	}
 	// the easy calculation
 	if (defender->isAiAgent()) {
 		float armorReduction = getArmorNpcReduction(cast<AiAgent*>(defender), weapon);
@@ -1110,16 +1116,10 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 		float rawDamage = damage;
 
 		int forceArmor = defender->getSkillMod("force_armor");
-		int swordArmor = defender->getSkillMod("sword_armor");
-		
+	
 		if (forceArmor > 0) {
 			float dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
 			defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, dmgAbsorbed);
-			sendMitigationCombatSpam(defender, NULL, (int)dmgAbsorbed, FORCEARMOR);
-		}
-		if (swordArmor > 0) {
-			float dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
-			defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, dmgAbsorbed); //DAMAGERECEIVED
 			sendMitigationCombatSpam(defender, NULL, (int)dmgAbsorbed, FORCEARMOR);
 		}
 	}
