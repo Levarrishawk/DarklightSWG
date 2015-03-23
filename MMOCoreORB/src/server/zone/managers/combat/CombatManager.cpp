@@ -1110,22 +1110,40 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 		float rawDamage = damage;
 
 		int forceArmor = defender->getSkillMod("force_armor");
+		int swordArmor = defender->getSkillMod("sword_armor");
+		
 		if (forceArmor > 0) {
 			float dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
 			defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, dmgAbsorbed);
+			sendMitigationCombatSpam(defender, NULL, (int)dmgAbsorbed, FORCEARMOR);
+		}
+		if (swordArmor > 0) {
+			float dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
+			defender->notifyObservers(ObserverEventType::FORCEBUFFHIT, attacker, dmgAbsorbed); //DAMAGERECEIVED
 			sendMitigationCombatSpam(defender, NULL, (int)dmgAbsorbed, FORCEARMOR);
 		}
 	}
 
 	// now apply the rest of the damage to the regular armor
 	ManagedReference<ArmorObject*> armor = NULL;
-
+/*
+old methed.
 	if (poolToDamage & CombatManager::HEALTH)
 		armor = getHealthArmor(defender);
 	else if (poolToDamage & CombatManager::ACTION)
 		armor = getActionArmor(defender);
 	else if (poolToDamage & CombatManager::MIND)
+		armor = getMindArmor(defender);*/
+		
+	//This should make all parts of armor useful. as it will randomly hit any armor.
+	int roll = System::random(3);
+	if (roll == 0 || roll == 1) {
+		armor = getHealthArmor(defender);
+	}else if (roll == 2 ){
+		armor = getActionArmor(defender);
+	}else{
 		armor = getMindArmor(defender);
+	}
 
 	if (armor != NULL && !armor->isVulnerable(weapon->getDamageType())) {
 		// use only the damage applied to the armor for piercing (after the PSG takes some off)
