@@ -79,4 +79,5 @@ mayorvermin = ConvoScreen:new {
   }
 }
 first_legacy_quest:addScreen(mayorvermin);
+
 addConversationTemplate("first_legacy_quest", first_legacy_quest);
