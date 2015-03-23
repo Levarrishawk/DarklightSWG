@@ -68,7 +68,7 @@ PolearmActionHit2Command = {
 	  )
 	},
 
-	poolsToDamage = ACTION_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
