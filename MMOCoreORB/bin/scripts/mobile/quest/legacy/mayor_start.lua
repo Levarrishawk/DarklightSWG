@@ -29,7 +29,7 @@ mayor_start = Creature:new {
 	templates = {"object/mobile/dressed_mayor.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "legacy_convo",
+	conversationTemplate = "legacy_quest_convo_handler",
 	attacks = {
 	}
 }
