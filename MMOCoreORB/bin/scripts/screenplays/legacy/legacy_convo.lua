@@ -1,5 +1,5 @@
 legacy_convo = ConvoTemplate:new {
-  initialScreen = "first_legacy_quest",
+  initialScreen = "first_conv",
   templateType = "Lua",
   luaClassHandler = "legacy_quest_convo_handler",
   screens = {}
@@ -7,7 +7,7 @@ legacy_convo = ConvoTemplate:new {
 
 
 --Intro First
-first_legacy_quest = ConvoScreen:new {
+first_conv = ConvoScreen:new {
   id = "first_legacy_quest",
   leftDialog = "",
   customDialogText = "Welcome to Mos Eisley! I'm Mayor Guh'rantt. Do you know the history of Mos Eisley? It's a beautiful city, full of life and character and one of the best cantinas in the known galaxy.",
@@ -18,7 +18,7 @@ first_legacy_quest = ConvoScreen:new {
   
   }
 }
-first_legacy_quest:addScreen(first_legacy_quest);
+first_legacy_quest:addScreen(first_conv);
 
 --deny
 deny = ConvoScreen:new {
