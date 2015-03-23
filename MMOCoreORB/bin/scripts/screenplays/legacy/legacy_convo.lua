@@ -8,7 +8,7 @@ legacy_convo = ConvoTemplate:new {
 
 --Intro First
 first_conv = ConvoScreen:new {
-  id = "first_legacy_quest",
+  id = "first_conv",
   leftDialog = "",
   customDialogText = "Welcome to Mos Eisley! I'm Mayor Guh'rantt. Do you know the history of Mos Eisley? It's a beautiful city, full of life and character and one of the best cantinas in the known galaxy.",
   stopConversation = "false",
