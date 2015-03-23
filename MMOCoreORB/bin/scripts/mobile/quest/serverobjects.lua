@@ -8,6 +8,7 @@ includeFile("quest/theater_manager.lua")
 
 --Legacy
 includeFile("quest/legacy/mayor_start.lua")
+includeFile("quest/legacy/thiel.lua")
 
 
 
