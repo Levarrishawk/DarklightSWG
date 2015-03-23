@@ -18,7 +18,7 @@ function mayor_start:spawnMobiles()
   spawnMobile("tatooine", "mayor_start", 1, -0.1, 2.5, 7.5, 179, 1279960)
   end
 
-function force_sensitive_convo_handler:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
+function legacy_convo:getNextConversationScreen(conversationTemplate, conversingPlayer, selectedOption)
 	local creature = LuaCreatureObject(conversingPlayer)
 	local convosession = creature:getConversationSession()
 	lastConversation = nil
