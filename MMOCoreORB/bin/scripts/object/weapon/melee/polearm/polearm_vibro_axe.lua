@@ -111,7 +111,7 @@ object_weapon_melee_polearm_polearm_vibro_axe = object_weapon_melee_polearm_shar
 	idealRange = 5,
 	idealAccuracy = -45,
 
-	maxRange = 7,
+	maxRange = 6,
 	maxRangeAccuracy = -45,
 
 	minDamage = 500,
