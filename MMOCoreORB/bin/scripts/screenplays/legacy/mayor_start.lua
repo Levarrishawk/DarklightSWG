@@ -47,7 +47,7 @@ function legacy_quest_convo_handler:getNextConversationScreen(conversationTempla
 			--print("hasAccepted() is " .. hasAccepted)   
 			
 			if ( hasAccepted == 0 ) then
-				nextConversationScreen = conversation:getScreen("intro_first_screen")--First convo screen to pull.
+				nextConversationScreen = conversation:getScreen("first_conv")--First convo screen to pull.
 
 			else
 				nextConversationScreen = conversation:getScreen("complete")--End of the road.
