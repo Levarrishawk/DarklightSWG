@@ -14,6 +14,10 @@ includeFile("conversations/themepark/tutorial/stormtrooper_filler_conv.lua")
 includeFile("conversations/themepark/tutorial/panic_npc_1_conv.lua")
 includeFile("conversations/themepark/tutorial/protocol_droid_3po_silver_conv.lua")
 
+-- Legacy
+includeFile("conversations/legacy/legacy_convo.lua")
+
+
 -- Nym Themepark
 includeFile("conversations/themepark/nym/berema_conv.lua")
 includeFile("conversations/themepark/nym/choster_conv.lua")
