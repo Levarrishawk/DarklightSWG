@@ -64,3 +64,23 @@ function legacy_quest_convo_handler:getNextConversationScreen(conversationTempla
 	--print("returning screen")		
 	return nextConversationScreen	
 end
+
+function legacy_quest_convo_handler:runScreenHandlers(conversationTemplate, conversingPlayer, conversingNPC, selectedOption, conversationScreen)	
+	--print("\ntest_convo_handler:runScreenHandlers() called\n")
+	local screen = LuaConversationScreen(conversationScreen)	
+	local screenID = screen:getScreenID()	
+	--print("screenID is " .. screenID	)
+	local player = LuaCreatureObject(conversingPlayer)
+	--[[local completed = player:getScreenPlayState(force_sensitive.states.quest.intro, force_sensitive.questString)	
+	local pInventory = player:getSlottedObject("inventory")
+	if ( screenID == "thielFinal" ) then
+		player:setScreenPlayState(force_sensitive.states.quest.intro, force_sensitive.questString)
+		giveItem(pInventory, "object/tangible/loot/quest/force_sensitive/force_crystal.iff", -1)
+		giveItem(pInventory, "object/tangible/crafting/station/generic_tool.iff", -1)
+		giveItem(pInventory, "object/tangible/survey_tool/survey_tool_mineral.iff", -1)
+		giveItem(pInventory, "object/tangible/survey_tool/survey_tool_liquid.iff", -1)
+	end
+	]]
+	--print("returning convosvreen")
+	return conversationScreen
+end
