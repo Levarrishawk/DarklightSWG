@@ -22,7 +22,7 @@ includeFile("themepark/tutorial.lua")
 
 -- Legacy
 includeFile("legacy/mayor_start.lua")
-includeFile("legacy/force_sesntive.lua")
+includeFile("legacy/force_sensitive.lua")
 
 
 
