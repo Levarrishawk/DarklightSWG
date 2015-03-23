@@ -77,14 +77,10 @@ public:
 			return GENERALERROR;
 		}
 		int divider = creature->getSkillMod("private_damage_divider");
-		if (divider == 0) divider = 3;
-
 		divider /= 3;
-
 		int duration = 15;
-
 		ManagedReference<Buff*> buff = new Buff(creature, forceRun2CRC, duration, BuffType::JEDI);
-		buff->setSkillModifier("sword_armor", 30);
+		buff->setSkillModifier("sword_armor", 40);
 		buff->setSkillModifier("private_damage_divisor", divider);
 		creature->addBuff(buff);
 
