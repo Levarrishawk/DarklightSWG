@@ -96,7 +96,7 @@ object_weapon_melee_2h_sword_2h_sword_maul = object_weapon_melee_2h_sword_shared
 	speedModifiers = { "twohandmelee_speed" },
 
 	-- Leave blank for now
-	damageModifiers = { },
+	damageModifiers = { "swordsman" },
 
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
