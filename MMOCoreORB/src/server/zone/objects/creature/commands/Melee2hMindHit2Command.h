@@ -76,12 +76,11 @@ public:
 			creature->sendSystemMessage("@jedi_spam:force_buff_present"); //"You already have a similar Force enhancement active."
 			return GENERALERROR;
 		}
-		int divider = creature->getSkillMod("private_damage_divider");
-		divider /= 3;
+		
 		int duration = 15;
 		ManagedReference<Buff*> buff = new Buff(creature, forceRun2CRC, duration, BuffType::JEDI);
 		buff->setSkillModifier("sword_armor", 40);
-		buff->setSkillModifier("private_damage_divisor", divider);
+		buff->setSkillModifier("swordsman", 0.6);
 		creature->addBuff(buff);
 
 		return doCombatAction(creature, target);
