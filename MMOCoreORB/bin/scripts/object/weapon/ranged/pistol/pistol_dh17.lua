@@ -122,12 +122,12 @@ object_weapon_ranged_pistol_pistol_dh17 = object_weapon_ranged_pistol_shared_pis
 	woundsRatio = 10,
 
 	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 1, 2, 2, 2, 2},
-	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ"},
+	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "CD", "OQ", "XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "XX", "XX", "XX"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "expRange", "null", "null", "expRange", "expEffeciency", "expEffeciency", "expEffeciency"},
+	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "exp_durability", "expRange", "null", "null", "expRange", "null", "null", "null"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "roundsused", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 35, 53, 4.2, 7, 10, 750, -5, -60, 15, 7, 23, 44, 13},
-	experimentalMax = {0, 0, 65, 98, 2.9, 13, 40, 1500, 5, -60, 15, 13, 13, 22, 7},
+	experimentalMin = {0, 0, 35, 53, 4.2, 7, 10, 750, -5, -60, 15, 7, 0, 150, 0},
+	experimentalMax = {0, 0, 65, 98, 2.9, 13, 40, 1500, 5, -60, 15, 13, 0, 150, 0},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
