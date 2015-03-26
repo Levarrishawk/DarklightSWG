@@ -122,12 +122,12 @@ object_weapon_melee_2h_sword_2h_sword_katana = object_weapon_melee_2h_sword_shar
 	woundsRatio = 21,
 
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	experimentalProperties = {"XX", "XX", "SR", "SR", "SR", "SR", "SR", "SR", "SR", "XX", "SR", "XX", "SR", "SR", "SR"},
+	experimentalProperties = {"XX", "XX", "SR", "SR", "SR", "SR", "SR", "SR", "SR", "XX", "SR", "XX", "XX", "XX", "XX"},
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "expEffeciency", "expEffeciency", "expEffeciency"},
+	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "exp_durability", "expRange", "expRange", "null", "expRange", "null", "null", "null", "null"},
 	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "hitpoints", "zerorangemod", "maxrangemod", "midrange", "midrangemod", "maxrange", "attackhealthcost", "attackactioncost", "attackmindcost"},
-	experimentalMin = {0, 0, 11, 112, 4.6, 15, 750, -4, -4, 3, -4, 4, 27, 65, 33},
-	experimentalMax = {0, 0, 20, 208, 3.1, 27, 1500, 6, 6, 3, 6, 4, 15, 35, 18},
+	experimentalMin = {0, 0, 11, 112, 4.6, 15, 750, -4, -4, 3, -4, 4, 0, 150, 0},
+	experimentalMax = {0, 0, 20, 208, 3.1, 27, 1500, 6, 6, 3, 6, 4, 0, 150, 0},
 	experimentalPrecision = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 }
