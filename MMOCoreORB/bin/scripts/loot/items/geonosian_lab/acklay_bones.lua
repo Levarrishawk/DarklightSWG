@@ -15,9 +15,6 @@ acklay_bones = {
 		{"zerorangemod",0,0,0,0},
 		{"maxrangemod",0,0,0,0},
 		{"midrangemod",0,0,0,0},
-		{"attackhealthcost",0,0,0,0},
-		{"attackactioncost",0,0,0,0},
-		{"attackmindcost",0,0,0,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}
