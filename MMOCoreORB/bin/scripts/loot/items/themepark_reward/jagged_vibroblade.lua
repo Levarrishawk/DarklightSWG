@@ -15,9 +15,6 @@ jagged_vibroblade = {
 		{"maxrangemod",5,5,0},
 		{"midrange",3,3,0},
 		{"maxrange",5,5,0},
-		{"attackhealthcost",5,5,0},
-		{"attackactioncost",15,15,0},
-		{"attackmindcost",5,5,0},
 	},
 	skillMods = {
 		{ "berserk", 5 }
