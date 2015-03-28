@@ -9,9 +9,6 @@ tie_helmet = {
 	         {"armor_rating",0,0,0,0},
 	         {"armor_effectiveness",0,0,0,0},
 	         {"armor_integrity",20000,70000,0},
-	         {"armor_health_encumbrance",0,0,0,0},
-	         {"armor_action_encumbrance",0,0,0,0},
-	         {"armor_mind_encumbrance",0,0,0,0},
 	},
 	customizationStringNames = {},
 	customizationValues = {}
