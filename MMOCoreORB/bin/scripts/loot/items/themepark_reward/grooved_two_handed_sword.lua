@@ -15,9 +15,6 @@ grooved_two_handed_sword = {
 		{"maxrangemod",3,3,0},
 		{"midrange",3,3,0},
 		{"maxrange",7,7,0},
-		{"attackhealthcost",18,18,0},
-		{"attackactioncost",43,43,0},
-		{"attackmindcost",22,22,0},
 	},
 	skillMods = {
 		{ "intimidate", 5 }
