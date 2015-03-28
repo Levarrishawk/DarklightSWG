@@ -8,9 +8,6 @@ tuned_weapon_scope_quest = {
 	craftingValues = {
 		{"woundchance",20,20,0},
 		{"midrangemod",25,25,0},
-		{"attackhealthcost",25,25,0},
-		{"attackactioncost",25,25,0},
-		{"attackmindcost",20,20,0},
 		{"useCount",2,10,0},
 		{"hitpoints",0,0,0},
 	},
