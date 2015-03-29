@@ -24,9 +24,8 @@ prophet_of_the_dark_side = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	diet = HERBIVORE,
 
-	templates = {
-		"object/mobile/dressed_dark_jedi_human_male_01.iff",
-		"object/mobile/dressed_dark_jedi_human_female_01.iff"},
+	templates = {"object/mobile/tatooine_npc/hedon_istee.iff"},
+	outfit = "prophet_outfit",
 	lootGroups = {
 	    {
 			groups = {
@@ -43,8 +42,10 @@ prophet_of_the_dark_side = Creature:new {
 			lootChance = 6000000
 		}
 	},
-	weapons = {"dark_jedi_weapons_gen2"},
-	attacks = merge(lightsabermaster,forcewielder)
+	weapons = {"dark_jedi_weapons_gen4"},
+	attacks = merge(lightsabermaster,forcepowermaster)
+	
 }
+
 
 CreatureTemplates:addCreatureTemplate(prophet_of_the_dark_side, "prophet_of_the_dark_side")
