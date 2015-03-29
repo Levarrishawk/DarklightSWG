@@ -1,14 +1,15 @@
 prophet_of_the_dark_side = Creature:new {
 	objectName = "@mob/creature_names:prophet_of_the_dark_side",
 	socialGroup = "imperial",
+	pvpFaction = "imperial",
 	faction = "imperial",
 	level = 126,
-	chanceHit = 4,
-	damageMin = 745,
-	damageMax = 1200,
+	chanceHit = 4.000000,
+	damageMin = 1045,
+	damageMax = 1500,
 	baseXp = 11953,
-	baseHAM = 44000,
-	baseHAMmax = 54000,
+	baseHAM = 144000,
+	baseHAMmax = 154000,
 	armor = 0,
 	resists = {80,80,80,80,80,80,80,80,-1},
 	meatType = "",
@@ -18,7 +19,7 @@ prophet_of_the_dark_side = Creature:new {
 	boneType = "",
 	boneAmount = 0,
 	milk = 0,
-	tamingChance = 0,
+	tamingChance = 0.000000,
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + KILLER,
@@ -46,6 +47,5 @@ prophet_of_the_dark_side = Creature:new {
 	attacks = merge(lightsabermaster,forcepowermaster)
 	
 }
-
 
 CreatureTemplates:addCreatureTemplate(prophet_of_the_dark_side, "prophet_of_the_dark_side")
