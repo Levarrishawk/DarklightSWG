@@ -88,7 +88,7 @@ ZonesEnabled = {
 	--"09",
 	--"10",
 	--"11",
-	"character_farm",
+--	"character_farm",
 	--"cinco_city_test_m5",
 	"corellia",
 	--"creature_test",
