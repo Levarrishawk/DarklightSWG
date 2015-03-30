@@ -4,12 +4,12 @@ prophet_of_the_dark_side = Creature:new {
 	pvpFaction = "imperial",
 	faction = "imperial",
 	level = 126,
-	chanceHit = 4.000000,
-	damageMin = 1045,
-	damageMax = 1500,
+	chanceHit = 4,
+	damageMin = 745,
+	damageMax = 1200,
 	baseXp = 11953,
-	baseHAM = 144000,
-	baseHAMmax = 154000,
+	baseHAM = 44000,
+	baseHAMmax = 54000,
 	armor = 0,
 	resists = {80,80,80,80,80,80,80,80,-1},
 	meatType = "",
@@ -19,14 +19,15 @@ prophet_of_the_dark_side = Creature:new {
 	boneType = "",
 	boneAmount = 0,
 	milk = 0,
-	tamingChance = 0.000000,
+	tamingChance = 0,
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + KILLER,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/tatooine_npc/hedon_istee.iff"},
---	outfit = "prophet_outfit",
+	templates = {
+		"object/mobile/dressed_dark_jedi_human_male_01.iff",
+		"object/mobile/dressed_dark_jedi_human_female_01.iff"},
 	lootGroups = {
 	    {
 			groups = {
@@ -43,9 +44,8 @@ prophet_of_the_dark_side = Creature:new {
 			lootChance = 6000000
 		}
 	},
-	weapons = {"dark_jedi_weapons_gen4"},
-	attacks = merge(lightsabermaster,forcepowermaster)
-	
+	weapons = {"dark_jedi_weapons_gen2"},
+	attacks = merge(lightsabermaster,forcewielder)
 }
 
 CreatureTemplates:addCreatureTemplate(prophet_of_the_dark_side, "prophet_of_the_dark_side")
