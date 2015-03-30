@@ -26,7 +26,7 @@ prophet_of_the_dark_side = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/tatooine_npc/hedon_istee.iff"},
-	outfit = "prophet_outfit",
+--	outfit = "prophet_outfit",
 	lootGroups = {
 	    {
 			groups = {
