@@ -44,9 +44,12 @@
 Saber2hBodyHit3Command = {
         name = "saber2hbodyhit3",
         
-    damageMultiplier = 2.25,
-	speedMultiplier = 2.5,
-	forceCostMultiplier = 2.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 
 	animationCRC = hashCode("showoff_3_light"),
 
