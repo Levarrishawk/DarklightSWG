@@ -44,17 +44,20 @@
 SaberThrow1Command = {
         name = "saberthrow1",                
         
-	damageMultiplier = 1.5,
-	speedMultiplier = 1.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 	coneAngle = 60,
 	coneAction = true,
-	forceCostMultiplier = 1.5,
 
 	animationCRC = hashCode("saberthrow_light"),
 
 	combatSpam = "saberthrow1",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = 32
 }
