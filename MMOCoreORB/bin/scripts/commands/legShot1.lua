@@ -46,12 +46,12 @@ LegShot1Command = {
 
 	damageMultiplier = 1,
 	speedMultiplier = 2,
-	healthCostMultiplier = 2.25,
-	actionCostMultiplier = 1.25,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 4.0,
+	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
-	poolsToDamage = ACTION_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("test_homing"),
 
