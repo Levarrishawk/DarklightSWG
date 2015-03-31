@@ -44,9 +44,12 @@
 SaberPolearmSpinAttack1Command = {
         name = "saberpolearmspinattack1",
        
-    damageMultiplier = 1.5,
-	speedMultiplier = 1.5,
-	forceCostMultiplier = 1.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 	areaAction = true,
 	areaRange = 7,
 
@@ -54,7 +57,7 @@ SaberPolearmSpinAttack1Command = {
 
 	combatSpam = "saberpolearmspinattack1",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
