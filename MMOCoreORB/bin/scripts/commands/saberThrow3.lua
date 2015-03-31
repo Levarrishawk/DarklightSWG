@@ -46,11 +46,14 @@ SaberThrow3Command = {
         
                 
         
-	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 	coneAngle = 60,
 	coneAction = true,
-	forceCostMultiplier = 3.0,
 
 	stateEffects = {
 	   StateEffect( 
@@ -68,7 +71,7 @@ SaberThrow3Command = {
 
 	combatSpam = "saberthrow3",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = 32
 }
