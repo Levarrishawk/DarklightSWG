@@ -46,9 +46,9 @@ SuppressionFire1Command = {
 
 	damageMultiplier = 1.5,
 	speedMultiplier = 1.5,
-	healthCostMultiplier = 1.75,
-	actionCostMultiplier = 1.25,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.5,
+	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
 	stateEffects = {
@@ -64,6 +64,8 @@ SuppressionFire1Command = {
 	},
 
 	animationCRC = hashCode("fire_area_light"),
+	
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "suppressionfire",
 
