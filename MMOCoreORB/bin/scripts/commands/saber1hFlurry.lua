@@ -46,11 +46,14 @@ Saber1hFlurryCommand = {
         
                 
         
-    damageMultiplier = 3.0,
-	speedMultiplier = 1.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 	areaRange = 7,
 	areaAction = true,
-	forceCostMultiplier = 3.0,
 
 	stateEffects = {
 	   StateEffect( 
@@ -86,7 +89,7 @@ Saber1hFlurryCommand = {
 
 	combatSpam = "saber1hflurry",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
