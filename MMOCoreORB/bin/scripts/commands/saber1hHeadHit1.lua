@@ -44,15 +44,18 @@
 Saber1hHeadHit1Command = {
         name = "saber1hheadhit1",
         
-    damageMultiplier = 1.3,
-	speedMultiplier = 1.5,
-	forceCostMultiplier = 1.5,
+      	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 
 	animationCRC = hashCode("combo_2a_light"),
 
 	combatSpam = "saber1hheadhit1",
 	
-	poolsToDamage = MIND_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
