@@ -2,6 +2,51 @@ kaas_world = {
 
 	lairSpawns = {
 		{
+			lairTemplateName = "kaas_ysalamiri_pack",
+			spawnLimit = -1,
+			minDifficulty = 100,
+			maxDifficulty = 110,
+			numberToSpawn = 0,
+			weighting = 15,
+			size = 40
+		},
+		{
+			lairTemplateName = "kaas_vine_cat_lair",
+			spawnLimit = -1,
+			minDifficulty = 100,
+			maxDifficulty = 110,
+			numberToSpawn = 0,
+			weighting = 15,
+			size = 40
+		},
+		{
+			lairTemplateName = "kaas_sleen_lair",
+			spawnLimit = -1,
+			minDifficulty = 100,
+			maxDifficulty = 110,
+			numberToSpawn = 0,
+			weighting = 15,
+			size = 40
+		},
+		{
+			lairTemplateName = "kaas_mailoc_swarm",
+			spawnLimit = -1,
+			minDifficulty = 100,
+			maxDifficulty = 110,
+			numberToSpawn = 0,
+			weighting = 15,
+			size = 40
+		},
+		{
+			lairTemplateName = "kaas_gundark_pack",
+			spawnLimit = -1,
+			minDifficulty = 100,
+			maxDifficulty = 130,
+			numberToSpawn = 0,
+			weighting = 15,
+			size = 40
+		},
+		{
 			lairTemplateName = "dathomir_reptilian_flyer_flock_neutral_none",
 			spawnLimit = -1,
 			minDifficulty = 10,
