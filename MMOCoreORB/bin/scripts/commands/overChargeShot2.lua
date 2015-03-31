@@ -46,12 +46,14 @@ OverChargeShot2Command = {
 
 	damageMultiplier = 3.75,
 	speedMultiplier = 2,
-	healthCostMultiplier = 1,
-	actionCostMultiplier = 1,
-	mindCostMultiplier = 1,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
 	accuracyBonus = 15,
 
 	animationCRC = hashCode("fire_1_special_single_medium"),
+	
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "overchargeshot",
 
