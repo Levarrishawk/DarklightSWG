@@ -44,15 +44,18 @@
 Saber2hHit2Command = {
         name = "saber2hhit2",
         
-    damageMultiplier = 2.0,
-	speedMultiplier = 2.0,
-	forceCostMultiplier = 2.0,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 
 	animationCRC = hashCode("combo_2b_light"),
 
 	combatSpam = "saber2hhit2",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
