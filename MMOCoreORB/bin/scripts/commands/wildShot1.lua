@@ -46,9 +46,9 @@ WildShot1Command = {
 
 	damageMultiplier = 2.25,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 1.75,
-	actionCostMultiplier = 1.25,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.5,
+	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
 	animationCRC = hashCode("fire_7_single_medium"),
@@ -67,7 +67,7 @@ WildShot1Command = {
 	  )
 	},
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
