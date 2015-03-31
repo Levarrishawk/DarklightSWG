@@ -44,9 +44,12 @@
 Saber2hSweep3Command = {
         name = "saber2hsweep3",
         
-    damageMultiplier = 3.0,
-	speedMultiplier = 3.5,
-	forceCostMultiplier = 2.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 
 	stateEffects = {
 	  StateEffect( 
@@ -64,7 +67,7 @@ Saber2hSweep3Command = {
 
 	combatSpam = "saber2hsweep3",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
