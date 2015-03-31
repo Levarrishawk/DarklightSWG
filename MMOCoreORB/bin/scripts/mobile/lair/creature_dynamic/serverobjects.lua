@@ -188,6 +188,12 @@ includeFile("lair/creature_dynamic/endor_swirl_prong_erratic_neutral_none.lua")
 includeFile("lair/creature_dynamic/endor_swirl_prong_impaler_neutral_none.lua")
 includeFile("lair/creature_dynamic/endor_swirl_prong_neutral_none.lua")
 
+includeFile("lair/creature_dynamic/kaas_gundark_pack.lua")
+includeFile("lair/creature_dynamic/kaas_mailoc_swarm.lua")
+includeFile("lair/creature_dynamic/kaas_sleen_lair.lua")
+includeFile("lair/creature_dynamic/kaas_vine_cat_lair.lua")
+includeFile("lair/creature_dynamic/kaas_ysalamiri_pack.lua")
+
 includeFile("lair/creature_dynamic/lok_flit_pack2_neutral_none.lua")
 includeFile("lair/creature_dynamic/lok_flit_pack_neutral_none.lua")
 includeFile("lair/creature_dynamic/lok_gurk_herd_neutral_none.lua")
