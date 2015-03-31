@@ -46,9 +46,9 @@ FullAutoArea2Command = {
 
 	damageMultiplier = 2.0,
 	speedMultiplier = 1.5,
-	healthCostMultiplier = 2.5,
-	actionCostMultiplier = 2.5,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 5.5,
+	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
 	animationCRC = hashCode("fire_defender_posture_change_down"),
@@ -88,7 +88,7 @@ FullAutoArea2Command = {
 	  )
 	},
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
