@@ -44,9 +44,12 @@
 SaberSlash2Command = {
         name = "saberslash2",	
         
-    damageMultiplier = 2.5,
-	speedMultiplier = 1.5,
-	forceCostMultiplier = 2.0,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 	
 	dotEffects = {
 	  DotEffect( 
@@ -77,7 +80,7 @@ SaberSlash2Command = {
 
 	combatSpam = "saberslash2",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
