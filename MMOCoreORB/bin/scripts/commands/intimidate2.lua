@@ -45,7 +45,7 @@ Intimidate2Command = {
 	name = "intimidate2",
 
 	damageMultiplier = 0,
-	speedMultiplier = 1,
+	speedMultiplier = 2,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
@@ -58,16 +58,16 @@ Intimidate2Command = {
 		{}, 
 		{ "intimidate_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		100, 
+		80, 
 		0, 
-		120 
+		15 
 	  )
 	},
 
 	combatSpam = "intim",
 	animationCRC = hashCode("intimidate"),
 	effectString = "clienteffect/combat_special_attacker_intimidate.cef",
-	range = 15,
+	range = 11,
 
 	poolsToDamage = 0
 }
