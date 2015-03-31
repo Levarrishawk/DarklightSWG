@@ -100,6 +100,21 @@ object_tangible_wearables_robe_shared_aakuan_robe = SharedTangibleObjectTemplate
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_robe_shared_aakuan_robe, "object/tangible/wearables/robe/shared_aakuan_robe.iff")
 
+object_tangible_wearables_robe_shared_exar_cultist_hood_down = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/robe/shared_exar_cultist_hood_down.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_robe_shared_exar_cultist_hood_down, "object/tangible/wearables/robe/shared_exar_cultist_hood_down.iff")
+
+object_tangible_wearables_robe_shared_exar_cultist_hood_down_f = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/robe/shared_exar_cultist_hood_down_f.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_robe_shared_exar_cultist_hood_down_f, "object/tangible/wearables/robe/shared_exar_cultist_hood_down_f.iff")
+
+
 object_tangible_wearables_robe_shared_robe_inquisitor = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/wearables/robe/shared_robe_inquisitor.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
