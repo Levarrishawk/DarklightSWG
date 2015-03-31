@@ -44,10 +44,10 @@
 WildShot2Command = {
         name = "wildshot2",
 
-	damageMultiplier = 8.0,
+	damageMultiplier = 3.0,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 13.25,
+	actionCostMultiplier = 3.75,
 	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
@@ -76,4 +76,3 @@ WildShot2Command = {
 }
 
 AddCommand(WildShot2Command)
-
