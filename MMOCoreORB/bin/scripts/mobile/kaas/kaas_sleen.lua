@@ -1,6 +1,6 @@
 sleen = Creature:new {
 	objectName = "",
-	customName = "a Sleen"
+	customName = "a Sleen",
 	socialGroup = "voritor",
 	faction = "",
 	level = 53,
