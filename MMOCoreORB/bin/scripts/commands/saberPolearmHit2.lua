@@ -45,9 +45,12 @@ SaberPolearmHit2Command = {
         name = "saberpolearmhit2",
         
                               
-    damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
-	forceCostMultiplier = 2.0,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 	
 	stateEffects = {
 	  StateEffect( 
@@ -65,7 +68,7 @@ SaberPolearmHit2Command = {
 
 	combatSpam = "saberpolearmhit2",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
