@@ -44,10 +44,10 @@
 ScatterShot2Command = {
         name = "scattershot2",
 
-	damageMultiplier = 15.0,
+	damageMultiplier = 5.0,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 14.25,
+	actionCostMultiplier = 3.75,
 	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
@@ -61,4 +61,3 @@ ScatterShot2Command = {
 }
 
 AddCommand(ScatterShot2Command)
-
