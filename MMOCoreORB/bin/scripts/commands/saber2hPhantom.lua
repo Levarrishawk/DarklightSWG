@@ -44,11 +44,14 @@
 Saber2hPhantomCommand = {
         name = "saber2hphantom",
         
-    damageMultiplier = 4.5,
-	speedMultiplier = 1.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 	coneAngle = 60,
 	coneAction = true,
-	forceCostMultiplier = 3.0,
 
 		stateEffects = {
 	   StateEffect( 
@@ -84,7 +87,7 @@ Saber2hPhantomCommand = {
 
 	combatSpam = "saber2hphantom",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
