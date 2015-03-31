@@ -8,7 +8,7 @@ kaas_world = {
 			maxDifficulty = 19,
 			numberToSpawn = 0,
 			weighting = 15,
-			size = 30
+			size = 40
 		},
 		{
 			lairTemplateName = "dathomir_reptilian_ancient_flyer_flock_neutral_none",
@@ -17,7 +17,7 @@ kaas_world = {
 			maxDifficulty = 25,
 			numberToSpawn = 0,
 			weighting = 15,
-			size = 30
+			size = 40
 		},
 		{
 			lairTemplateName = "dathomir_reptilian_mature_flyer_lair_neutral_large",
@@ -26,7 +26,7 @@ kaas_world = {
 			maxDifficulty = 24,
 			numberToSpawn = 0,
 			weighting = 15,
-			size = 30
+			size = 40
 		},
 		{
 			lairTemplateName = "dantooine_dark_side_savage_neutral_none",
@@ -34,8 +34,8 @@ kaas_world = {
 			minDifficulty = 75,
 			maxDifficulty = 79,
 			numberToSpawn = 0,
-			weighting = 3,
-			size = 25
+			weighting = 15,
+			size = 40
 		},
 		{
 			lairTemplateName = "dantooine_force_renegade_neutral_none",
@@ -43,8 +43,8 @@ kaas_world = {
 			minDifficulty = 80,
 			maxDifficulty = 84,
 			numberToSpawn = 0,
-			weighting = 6,
-			size = 25
+			weighting = 15,
+			size = 40
 		},
 		{
 			lairTemplateName = "dantooine_force_archaist_neutral_none",
@@ -52,8 +52,8 @@ kaas_world = {
 			minDifficulty = 90,
 			maxDifficulty = 94,
 			numberToSpawn = 0,
-			weighting = 3,
-			size = 25
+			weighting = 15,
+			size = 40
 		},
 		{
 			lairTemplateName = "dantooine_force_crypt_crawler_neutral_none",
@@ -61,8 +61,8 @@ kaas_world = {
 			minDifficulty = 95,
 			maxDifficulty = 99,
 			numberToSpawn = 0,
-			weighting = 3,
-			size = 25
+			weighting = 15,
+			size = 40
 		},
 		{
 			lairTemplateName = "dantooine_force_wilder_neutral_none",
@@ -70,8 +70,8 @@ kaas_world = {
 			minDifficulty = 115,
 			maxDifficulty = 119,
 			numberToSpawn = 0,
-			weighting = 3,
-			size = 25
+			weighting = 15,
+			size = 40
 		},
 		{
 			lairTemplateName = "dantooine_force_crystal_hunter_neutral_none",
@@ -79,8 +79,8 @@ kaas_world = {
 			minDifficulty = 115,
 			maxDifficulty = 119,
 			numberToSpawn = 0,
-			weighting = 3,
-			size = 25
+			weighting = 15,
+			size = 40
 		},
 	}
 }
