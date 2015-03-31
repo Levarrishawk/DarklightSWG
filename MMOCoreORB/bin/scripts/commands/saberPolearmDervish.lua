@@ -45,11 +45,14 @@ SaberPolearmDervishCommand = {
         name = "saberpolearmdervish",
         
                 
-	damageMultiplier = 3.5,
-	speedMultiplier = 1.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 	areaAction = true,
 	areaRange = 7,
-	forceCostMultiplier = 2.5,
 
 		stateEffects = {
 	   StateEffect( 
@@ -85,7 +88,7 @@ SaberPolearmDervishCommand = {
 
 	combatSpam = "saberpolearmdervish",
 	
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
