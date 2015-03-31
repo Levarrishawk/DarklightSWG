@@ -39,8 +39,8 @@ sleen = Creature:new {
 	weapons = {},
 	conversationTemplate = "",
 	attacks = {
-		{"strongpoison",""}
-		{"creatureareapoison",""},
+		{"strongpoison",""},
+		{"creatureareapoison",""}
 	}
 }
 
