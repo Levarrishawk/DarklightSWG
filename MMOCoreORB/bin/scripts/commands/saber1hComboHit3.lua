@@ -44,9 +44,12 @@
 Saber1hComboHit3Command = {
         name = "saber1hcombohit3",
         
-    damageMultiplier = 3.0,
-	speedMultiplier = 1.5,
-	forceCostMultiplier = 3.5,
+    	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1,
+	mindCostMultiplier = 0,
+	accuracyBonus = 10,
 
 	animationCRC = hashCode("combo_5b_light"),
 	
@@ -64,7 +67,7 @@ Saber1hComboHit3Command = {
 
 	combatSpam = "saber1hcombohit3",
 	
-	poolsToDamage = HEALTH_ATTRIBUTE + ACTION_ATTRIBUTE + MIND_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	range = -1
 }
