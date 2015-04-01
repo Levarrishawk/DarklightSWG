@@ -44,12 +44,12 @@
 UnarmedHit3Command = {
         name = "unarmedhit3",
 
-	damageMultiplier = 4.0,
-	speedMultiplier = 3.0,
+	damageMultiplier = 3,
+	speedMultiplier = 4,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 6,
+	actionCostMultiplier = 5,
 	mindCostMultiplier = 0,
-        accuracyBonus = 15,
+        --accuracyBonus = 15,
 
 	animationCRC = hashCode("combo_5a_medium"),
 
@@ -61,9 +61,9 @@ UnarmedHit3Command = {
 		{}, 
 		{ "blind_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		40, 
+		50, 
 		100, 
-		30
+		15
 	  )
 	},
 	
