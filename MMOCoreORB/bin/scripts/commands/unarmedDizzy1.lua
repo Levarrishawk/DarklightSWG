@@ -49,7 +49,7 @@ UnarmedDizzy1Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4.5,
 	mindCostMultiplier = 0,
-        accuracyBonus = 15,
+        --accuracyBonus = 15,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
@@ -59,9 +59,9 @@ UnarmedDizzy1Command = {
 		{}, 
 		{ "dizzy_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		30, 
+		40, 
 		100, 
-		20 
+		10 
 	  )
 	},
 
