@@ -43,26 +43,16 @@
 
 Melee2hHit3Command = {
         name = "melee2hhit3",
-	damageMultiplier = 3.5,
-	speedMultiplier = 4,
+	damageMultiplier = 4.5,
+	speedMultiplier = 3.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
-        accuracyBonus = 40,
+        accuracyBonus = 10,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
-	stateEffects = {
-	  StateEffect( 
-		DIZZY_EFFECT, 
-		{}, 
-		{ "dizzy_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		30, 
-		100, 
-		4
-	  )
-	},
+	stateEffects = {},
 
 	animationCRC = hashCode("combo_4a_medium"),
 
