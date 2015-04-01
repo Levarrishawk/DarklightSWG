@@ -32,7 +32,7 @@ thiel = Creature:new {
 				"object/mobile/dressed_commoner_artisan_sullustan_male_01.iff"},
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "intro_conv",
+	conversationTemplate = "force_sensitive_intro_conv",
 	attacks = {
 	}
 }
