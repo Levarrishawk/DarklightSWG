@@ -46,16 +46,16 @@ MultiTargetPistolShotCommand = {
 
 	damageMultiplier = 4.0,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 1.25,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 2.25,
+	mindCostMultiplier = 0,
 	accuracyBonus = 50,
 
         --no documentation on specific coneAngle, leaving it alone
-	coneAngle = 30,
+	coneAngle = 60,
 	coneAction = true,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("fire_5_special_single_light"),
 
