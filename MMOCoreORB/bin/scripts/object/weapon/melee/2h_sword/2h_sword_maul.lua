@@ -117,7 +117,7 @@ object_weapon_melee_2h_sword_2h_sword_maul = object_weapon_melee_2h_sword_shared
 	minDamage = 550,
 	maxDamage = 650,
 
-	attackSpeed = 5,
+	attackSpeed = 4,
 
 	woundsRatio = 15,
 
