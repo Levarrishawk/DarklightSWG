@@ -46,12 +46,12 @@ DoubleTapCommand = {
 
 	damageMultiplier = 3.0,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 0.75,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 1.75,
+	mindCostMultiplier = 0,
         accuracyBonus = 50,
 
-	poolsToDamage = ACTION_ATTRIBUTE + HEALTH_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("fire_7_single_light_face"),
 
