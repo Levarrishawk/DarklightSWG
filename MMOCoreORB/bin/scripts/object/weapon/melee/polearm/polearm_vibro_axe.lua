@@ -106,16 +106,16 @@ object_weapon_melee_polearm_polearm_vibro_axe = object_weapon_melee_polearm_shar
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = -45,
+	pointBlankAccuracy = 0,
 
 	idealRange = 5,
-	idealAccuracy = -45,
+	idealAccuracy = 0,
 
 	maxRange = 6,
-	maxRangeAccuracy = -45,
+	maxRangeAccuracy = 0,
 
-	minDamage = 500,
-	maxDamage = 550,
+	minDamage = 350,
+	maxDamage = 450,
 
 	attackSpeed = 3.5,
 
