@@ -48,7 +48,7 @@ Melee2hHit3Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
-        accuracyBonus = 10,
+       -- accuracyBonus = 10,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
