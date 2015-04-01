@@ -46,15 +46,17 @@ DisarmingShot2Command = {
 
 	damageMultiplier = 2.75,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 1.0,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 2.0,
+	mindCostMultiplier = 0,
         accuracyBonus = 50,
 
 	coneAngle = 15,
 	coneAction = true,
 
 	animationCRC = hashCode("fire_3_single_light_face"),
+	
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "disarmblast",
 
