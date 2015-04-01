@@ -49,20 +49,11 @@ UnarmedKnockdown2Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4.5,
 	mindCostMultiplier = 0,
-        accuracyBonus = 15,
+        --accuracyBonus = 15,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	stateEffects = {
-	  StateEffect( 
-		DIZZY_EFFECT, 
-		{}, 
-		{ "dizzy_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		75, 
-		100, 
-		40 
-	  ),
 	  StateEffect( 
 		KNOCKDOWN_EFFECT, 
 		{ "knockdownRecovery", "lastKnockdown" }, 
