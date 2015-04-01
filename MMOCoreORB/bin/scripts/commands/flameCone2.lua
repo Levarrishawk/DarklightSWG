@@ -45,15 +45,15 @@ FlameCone2Command = {
         name = "flamecone2",
 	damageMultiplier = 6,
 	speedMultiplier = 4,
-	healthCostMultiplier = 2.0,
-	actionCostMultiplier = 0.5,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.0,
+	mindCostMultiplier = 0,
 	accuracyBonus = 0,
 	
 	coneAngle = 45,
 	coneAction = true,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("fire_flame_thrower_cone_2_light"),
 	combatSpam = "flamecone2",
