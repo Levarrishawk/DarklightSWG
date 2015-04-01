@@ -44,12 +44,12 @@
 UnarmedLegHit1Command = {
         name = "unarmedleghit1",
 
-	damageMultiplier = 2.5,
-	speedMultiplier = 2.0,
+	damageMultiplier = 1.5,
+	speedMultiplier = 2.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 5.75,
+	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
-        accuracyBonus = 15,
+        --accuracyBonus = 15,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
