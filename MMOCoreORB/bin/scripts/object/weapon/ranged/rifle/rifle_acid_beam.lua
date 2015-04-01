@@ -112,8 +112,8 @@ object_weapon_ranged_rifle_rifle_acid_beam = object_weapon_ranged_rifle_shared_r
 	maxRange = 48,
 	maxRangeAccuracy = -120,
 
-	minDamage = 60,
-	maxDamage = 160,
+	minDamage = 430,
+	maxDamage = 830,
 
 	attackSpeed = 5.2,
 
