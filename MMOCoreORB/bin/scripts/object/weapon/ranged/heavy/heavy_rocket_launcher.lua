@@ -102,9 +102,9 @@ object_weapon_ranged_heavy_heavy_rocket_launcher = object_weapon_ranged_heavy_sh
 	combatSpam = "rocket_launcher",
 	animationType = "rocket_launcher",
 
-	healthAttackCost = 95,
-	actionAttackCost = 42,
-	mindAttackCost = 23,
+	healthAttackCost = 0,
+	actionAttackCost = 160,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
