@@ -46,10 +46,10 @@ UnarmedBlind1Command = {
 
 	damageMultiplier = 1.5,
 	speedMultiplier = 2.0,
-	accuracyBonus = 15,
+	--accuracyBonus = 15,
 	
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.5,
+	actionCostMultiplier = 5,
 	mindCostMultiplier = 0,
 
 	animationCRC = hashCode("attack_high_center_light_1"),
@@ -66,7 +66,7 @@ UnarmedBlind1Command = {
 		{ "jedi_state_defense" }, 
 		100, 
 		100, 
-		50 
+		15 
 	  )
 	},
 
