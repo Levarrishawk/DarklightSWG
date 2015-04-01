@@ -46,12 +46,12 @@ SniperShotCommand = {
 
     	damage = 200,
 	speed = 1.0,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 0.5,
-	mindCostMultiplier = 2.0,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.0,
+	mindCostMultiplier = 0,
 	accuracyBonus = 5,
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("fire_1_special_single_medium_face"),
 
