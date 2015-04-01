@@ -104,9 +104,9 @@ object_weapon_ranged_heavy_heavy_acid_beam = object_weapon_ranged_heavy_shared_h
 
 	-- Leave blank for now
 	damageModifiers = { },
-	healthAttackCost = 60,
-	actionAttackCost = 60,
-	mindAttackCost = 15,
+	healthAttackCost = 0,
+	actionAttackCost = 150,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
