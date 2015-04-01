@@ -55,17 +55,7 @@ UnarmedHit3Command = {
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
-	stateEffects = {
-	  StateEffect( 
-		BLIND_EFFECT, 
-		{}, 
-		{ "blind_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		50, 
-		100, 
-		15
-	  )
-	},
+	stateEffects = {},
 	
 	combatSpam = "spittingrawl",	
 
