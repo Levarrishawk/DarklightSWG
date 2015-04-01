@@ -72,7 +72,7 @@ object_weapon_melee_special_vibroknuckler = object_weapon_melee_special_shared_v
 	damageType = KINETIC,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = LIGHT,
+	armorPiercing = NONE,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -101,23 +101,23 @@ object_weapon_melee_special_vibroknuckler = object_weapon_melee_special_shared_v
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
 	healthAttackCost = 0,
-	actionAttackCost = 65,
+	actionAttackCost = 150,
 	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = 10,
+	pointBlankAccuracy = 0,
 
 	idealRange = 1,
-	idealAccuracy = 10,
+	idealAccuracy = 0,
 
 	maxRange = 3,
-	maxRangeAccuracy = 10,
+	maxRangeAccuracy = 0,
 
-	minDamage = 85,
-	maxDamage = 240,
+	minDamage = 100,
+	maxDamage = 250,
 
-	attackSpeed = 1.5,
+	attackSpeed = 3,
 
 	woundsRatio = 8,
 
