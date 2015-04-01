@@ -48,7 +48,7 @@ Melee2hMindHit2Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 5,
 	mindCostMultiplier = 0,
-        accuracyBonus = 40,
+        accuracyBonus = 10,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
