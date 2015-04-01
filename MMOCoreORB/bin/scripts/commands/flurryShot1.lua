@@ -46,9 +46,9 @@ FlurryShot1Command = {
 
 	damageMultiplier = 2.0,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 0.5,
-	mindCostMultiplier = 1.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 2.5,
+	mindCostMultiplier = 0,
 	accuracyBonus = 5,
 
 	stateEffects = {
@@ -63,7 +63,7 @@ FlurryShot1Command = {
 	  )
 	},
 
-	poolsToDamage = RANDOM_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("fire_5_special_single_medium_face"),
 
