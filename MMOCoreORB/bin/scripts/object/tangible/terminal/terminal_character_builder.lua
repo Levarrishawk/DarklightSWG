@@ -2744,14 +2744,14 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				},
 				"Heavy",
 				{
-			--		"Acid Stream Launcher", "object/weapon/ranged/heavy/heavy_acid_beam.iff",
-			--		"Beam Rifle", "object/weapon/ranged/rifle/rifle_beam.iff",
+					"Acid Stream Launcher", "object/weapon/ranged/heavy/heavy_acid_beam.iff",
+					"Beam Rifle", "object/weapon/ranged/rifle/rifle_beam.iff",
 					"Flame Thrower", "object/weapon/ranged/rifle/rifle_flame_thrower.iff",
-			--		"Heavy Acid Rifle", "object/weapon/ranged/rifle/rifle_acid_beam.iff",
-			--		"Heavy Particle Beam Cannon", "object/weapon/ranged/heavy/heavy_particle_beam.iff",
-			--		"Lightning Beam Cannon", "object/weapon/ranged/heavy/heavy_lightning_beam.iff",
+					"Heavy Acid Rifle", "object/weapon/ranged/rifle/rifle_acid_beam.iff",
+					"Heavy Particle Beam Cannon", "object/weapon/ranged/heavy/heavy_particle_beam.iff",
+					"Lightning Beam Cannon", "object/weapon/ranged/heavy/heavy_lightning_beam.iff",
 					"Light Lightning Cannon", "object/weapon/ranged/rifle/rifle_lightning.iff",
-			--		"Rocket Launcher", "object/weapon/ranged/heavy/heavy_rocket_launcher.iff"
+					"Rocket Launcher", "object/weapon/ranged/heavy/heavy_rocket_launcher.iff"
 				},
 				"One-handed",
 				{
