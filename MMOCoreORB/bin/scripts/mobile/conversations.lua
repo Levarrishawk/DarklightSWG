@@ -16,6 +16,7 @@ includeFile("conversations/themepark/tutorial/protocol_droid_3po_silver_conv.lua
 
 -- Legacy
 includeFile("conversations/legacy/legacy_convo.lua")
+includeFile("conversations/legacy/force_sensitive_intro_conv.lua")
 
 
 -- Nym Themepark
