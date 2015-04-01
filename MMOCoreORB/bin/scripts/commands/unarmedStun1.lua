@@ -44,12 +44,12 @@
 UnarmedStun1Command = {
 	name = "unarmedstun1",
 
-	damageMultiplier = 1.25,
+	damageMultiplier = 1.5,
 	speedMultiplier = 2.0,
-	accuracyBonus = 15,
+	--accuracyBonus = 15,
 	
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.5,
+	actionCostMultiplier = 5,
 	mindCostMultiplier = 0,
 
 	animationCRC = hashCode("combo_4c_light"),
@@ -66,7 +66,7 @@ UnarmedStun1Command = {
 		{ "jedi_state_defense" }, 
 		100, 
 		100, 
-		60 
+		15 
 	  )
 	},
 
