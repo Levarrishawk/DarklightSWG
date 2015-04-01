@@ -43,10 +43,10 @@
 
 Melee2hHeadHit3Command = {
         name = "melee2hheadhit3",
-	damageMultiplier = 4.5,
+	damageMultiplier = 4,
 	speedMultiplier = 4,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4,
+	actionCostMultiplier = 4.5,
 	mindCostMultiplier = 0,
         --accuracyBonus = 10,
 
