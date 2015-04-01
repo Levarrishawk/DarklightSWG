@@ -48,7 +48,8 @@ Melee2hArea3Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
-        accuracyBonus = 40,
+        accuracyBonus = 10,
+        
         poolsToDamage = HEALTH_ATTRIBUTE,
 
 	stateEffects = {
