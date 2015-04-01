@@ -102,9 +102,9 @@ object_weapon_ranged_heavy_heavy_particle_beam = object_weapon_ranged_heavy_shar
 	combatSpam = "particle_beam",
 	animationType = "particle_beam",
 
-	healthAttackCost = 25,
-	actionAttackCost = 85,
-	mindAttackCost = 25,
+	healthAttackCost = 0,
+	actionAttackCost = 130,
+	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
