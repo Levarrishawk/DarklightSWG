@@ -44,12 +44,12 @@
 FlurryShot2Command = {
         name = "flurryshot2",
 
-	damageMultiplier = 2.5,
-	speedMultiplier = 2.0,
+	damageMultiplier = 3.5,
+	speedMultiplier = 3.2,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.0,
+	actionCostMultiplier = 4.6,
 	mindCostMultiplier = 0,
-	accuracyBonus = 5,
+	--accuracyBonus = 5,
 
 	coneAngle = 15,
 	coneAction = true,
@@ -60,9 +60,9 @@ FlurryShot2Command = {
 		{}, 
 		{ "dizzy_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
+		50, 
 		100, 
-		100, 
-		30 
+		4
 	  )
 	},
 
