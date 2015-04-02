@@ -44,12 +44,12 @@
 UnarmedBlind1Command = {
 	name = "unarmedblind1",
 
-	damageMultiplier = 1.5,
+	damageMultiplier = 2,
 	speedMultiplier = 2.0,
 	--accuracyBonus = 15,
 	
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 5,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
 
 	animationCRC = hashCode("attack_high_center_light_1"),
