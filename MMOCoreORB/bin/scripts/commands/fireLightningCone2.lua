@@ -59,7 +59,7 @@ FireLightningCone2Command = {
 	coneAngle = 60,
 	coneAction = true,
 
-	range = 16
+	range = 65
 }
 
 AddCommand(FireLightningCone2Command)

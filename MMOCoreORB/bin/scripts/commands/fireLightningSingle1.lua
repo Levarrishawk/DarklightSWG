@@ -56,7 +56,7 @@ FireLightningSingle1Command = {
 
 	combatSpam = "firelightningsingle1",
 
-	range = 16
+	range = 65
 }
 
 AddCommand(FireLightningSingle1Command)
