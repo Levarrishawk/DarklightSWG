@@ -46,9 +46,9 @@ ConfusionShotCommand = {
 
 	damageMultiplier = 3.0,
 	speedMultiplier = 2.3,
-	healthCostMultiplier = 1,
-	actionCostMultiplier = 1,
-	mindCostMultiplier = 1,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
 
 	stateEffects = {
 	  StateEffect( 
@@ -72,6 +72,8 @@ ConfusionShotCommand = {
 	},
 
 	animationCRC = hashCode("fire_5_special_single_medium_face"),
+	
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "confusionshot",
 
