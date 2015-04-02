@@ -44,10 +44,10 @@
 SniperShotCommand = {
         name = "snipershot",
 
-	damageMultiplier = 5,
+	damageMultiplier = 3,
 	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3,
+	actionCostMultiplier = 5,
 	mindCostMultiplier = 0,
 	--accuracyBonus = 5,
 
@@ -57,7 +57,7 @@ SniperShotCommand = {
 
 	combatSpam = "snipershot",
 
-	range = 60
+	range = -1
 }
 
 AddCommand(SniperShotCommand)
