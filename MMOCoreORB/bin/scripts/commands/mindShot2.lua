@@ -45,11 +45,11 @@ MindShot2Command = {
         name = "mindshot2",
 
 	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
+	speedMultiplier = 4.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.5,
+	actionCostMultiplier = 3.15,
 	mindCostMultiplier = 0,
-	accuracyBonus = 5,
+	--accuracyBonus = 5,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
@@ -61,12 +61,12 @@ MindShot2Command = {
 	  DotEffect( 
 		BLEEDING, 
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
-		ACTION,
+		HEALTH,
 		true,
-		125,
-		100,
-		60, 
-		60
+		95,
+		75,
+		50, 
+		10
 	  )
 	},
 
