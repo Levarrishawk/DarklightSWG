@@ -44,12 +44,12 @@
 UnarmedSpinAttack2Command = {
         name = "unarmedspinattack2",
 
-	damageMultiplier = 2.3,
+	damageMultiplier = 2.75,
 	speedMultiplier = 3.25,
 	areaAction = true,
 	areaRange = 7,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 6,
+	actionCostMultiplier = 4.75,
 	mindCostMultiplier = 0,
         --accuracyBonus = 15,
 
