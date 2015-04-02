@@ -44,12 +44,12 @@
 FullAutoArea2Command = {
         name = "fullautoarea2",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
+	damageMultiplier = 2.5,
+	speedMultiplier = 2.35,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 5.5,
+	actionCostMultiplier = 5,
 	mindCostMultiplier = 0,
-	accuracyBonus = 25,
+	--accuracyBonus = 25,
 
 	animationCRC = hashCode("fire_defender_posture_change_down"),
 
@@ -66,7 +66,7 @@ FullAutoArea2Command = {
 		{ "jedi_state_defense" }, 
 		30, 
 		100, 
-		30 
+		10 
 	  ),
 	  StateEffect( 
 		BLIND_EFFECT, 
@@ -75,7 +75,7 @@ FullAutoArea2Command = {
 		{ "jedi_state_defense" }, 
 		30, 
 		100, 
-		40 
+		10 
 	  ),
 	  StateEffect( 
 		STUN_EFFECT, 
@@ -84,7 +84,7 @@ FullAutoArea2Command = {
 		{ "jedi_state_defense" }, 
 		30, 
 		100, 
-		30 
+		10 
 	  )
 	},
 
