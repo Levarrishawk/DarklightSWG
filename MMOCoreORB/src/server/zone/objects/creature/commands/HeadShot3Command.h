@@ -87,9 +87,7 @@ public:
 			}else {
 				creature->sendSystemMessage("You cannot relocate at this time.");
 			}
-		}
-	
-
+			
 		return SUCCESS;
 	}
 
