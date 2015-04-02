@@ -44,10 +44,10 @@
 FullAutoSingle2Command = {
         name = "fullautosingle2",
 
-	damageMultiplier = 3.5,
-	speedMultiplier = 1.5,
+	damageMultiplier = 3.35,
+	speedMultiplier = 2.15,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 5.0,
+	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
 	accuracyBonus = 25,
 
@@ -55,35 +55,7 @@ FullAutoSingle2Command = {
 
 	combatSpam = "s_auto",
 
-	stateEffects = {
-	  StateEffect( 
-		DIZZY_EFFECT, 
-		{}, 
-		{ "dizzy_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		30, 
-		100, 
-		30 
-	  ),
-	  StateEffect( 
-		BLIND_EFFECT, 
-		{}, 
-		{ "blind_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		30, 
-		100, 
-		40 
-	  ),
-	  StateEffect( 
-		STUN_EFFECT, 
-		{}, 
-		{ "stun_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		30, 
-		100, 
-		30 
-	  )
-	},
+	stateEffects = {},
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
