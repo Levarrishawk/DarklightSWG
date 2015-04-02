@@ -140,7 +140,6 @@ TrePath = "/home/swgemu/workspace/tre"
 
 TreFiles = {
 	"default_patch.tre",
-	"sky.tre",
 	"darklight_02s.tre",
 	"darklight_02.tre",
 	"darklight_01s.tre",
