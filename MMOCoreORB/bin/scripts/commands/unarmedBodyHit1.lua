@@ -44,10 +44,10 @@
 UnarmedBodyHit1Command = {
         name = "unarmedbodyhit1",
 
-	damageMultiplier = 3,
-	speedMultiplier = 2.0,
+	damageMultiplier = 5,
+	speedMultiplier = 3.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4,
+	actionCostMultiplier = 4.5,
 	mindCostMultiplier = 0,
         --accuracyBonus = 15,
 
