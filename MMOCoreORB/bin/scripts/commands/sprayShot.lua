@@ -46,9 +46,9 @@ SprayShotCommand = {
 
 	damageMultiplier = 4.0,
 	speedMultiplier = 3.5,
-	healthCostMultiplier = 1,
-	actionCostMultiplier = 1,
-	mindCostMultiplier = 1,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
 
 	stateEffects = {
 	  StateEffect( 
@@ -82,6 +82,8 @@ SprayShotCommand = {
 
 	animationCRC = hashCode("fire_7_single_medium"),
 
+	poolsToDamage = HEALTH_ATTRIBUTE,
+	
 	combatSpam = "sprayshot",
 
 	range = -1
