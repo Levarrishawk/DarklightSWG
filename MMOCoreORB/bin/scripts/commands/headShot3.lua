@@ -44,8 +44,8 @@
 HeadShot3Command = {
         name = "headshot3",
 
-	damageMultiplier = 3.5,
-	speedMultiplier = 3,
+	damageMultiplier = 3.25,
+	speedMultiplier = 3.35,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4.25,
 	mindCostMultiplier = 0,
