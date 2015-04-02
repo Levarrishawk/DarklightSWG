@@ -46,9 +46,9 @@ LowBlowCommand = {
 
 	damageMultiplier = 2.0,
 	speedMultiplier = 2.5,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 1.0,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 2.0,
+	mindCostMultiplier = 0,
 	accuracyBonus = 50,
 
 	stateEffects = {
@@ -64,6 +64,8 @@ LowBlowCommand = {
 	},
 
 	animationCRC = hashCode("fire_5_single_light"),
+
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "lowblow",
 

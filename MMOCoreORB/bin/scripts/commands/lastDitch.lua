@@ -46,9 +46,9 @@ LastDitchCommand = {
 
 	damageMultiplier = 6.0,
 	speedMultiplier = 4.0,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 1.25,
-	mindCostMultiplier = 0.5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 2.25,
+	mindCostMultiplier = 0,
 	accuracyBonus = 50,
 
 	stateEffects = {
@@ -68,6 +68,8 @@ LastDitchCommand = {
 	},
 
 	animationCRC = hashCode("fire_1_special_single_light"),
+
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "lastditch",
 
