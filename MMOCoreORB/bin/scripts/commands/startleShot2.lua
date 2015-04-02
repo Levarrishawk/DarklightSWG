@@ -44,12 +44,12 @@
 StartleShot2Command = {
         name = "startleshot2",
 
-	damageMultiplier = 4.0,
-	speedMultiplier = 2.0,
+	damageMultiplier = 4.75,
+	speedMultiplier = 3.4,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.5,
+	actionCostMultiplier = 4.35,
 	mindCostMultiplier = 0,
-	accuracyBonus = 5,
+	--accuracyBonus = 5,
 	
 	coneAngle = 60,
 	coneAction = true,	
@@ -60,7 +60,7 @@ StartleShot2Command = {
 		{ "postureUpRecovery" }, 
 		{ "posture_change_up_defense" }, 
 		{}, 
-		60, 
+		40, 
 		100, 
 		0 
 	  )
