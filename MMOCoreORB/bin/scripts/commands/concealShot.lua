@@ -44,12 +44,12 @@
 ConcealShotCommand = {
         name = "concealshot",
 
-	damageMultiplier = 2.5,
+	damageMultiplier = 3.5,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.5,
+	actionCostMultiplier = 2.25,
 	mindCostMultiplier = 0,
-	accuracyBonus = 5,
+	--accuracyBonus = 5,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
