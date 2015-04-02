@@ -68,8 +68,29 @@ public:
 		if (!weapon->isRifleWeapon()) {
 			return INVALIDWEAPON;
 		}
+		int duration = 10;
+		int cooldown = 60;
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
+		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
+		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, cooldown, BuffType::JEDI);
 
-		return doCombatAction(creature, target);
+		if (creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You are to tired to relocate!");
+		}
+		else if (!creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You attempt to relocate!");
+			buff->setSkillModifier("block", 200);
+			buff->setSpeedMultiplierMod(1.5f);
+			creature->addBuff(buff);
+			creature->addBuff(buff2);
+			}else {
+				creature->sendSystemMessage("You cannot relocate at this time.");
+			}
+		}
+	
+
+		return SUCCESS;
 	}
 
 };
