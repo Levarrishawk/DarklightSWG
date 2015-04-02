@@ -46,11 +46,13 @@ FireLightningCone1Command = {
 
 	damageMultiplier = 3.0,
 	speedMultiplier = 2.0,
-	healthCostMultiplier = 1,
-	actionCostMultiplier = 1,
-	mindCostMultiplier = 1,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
 
 	animationCRC = hashCode("fire_area_medium"),
+	
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	combatSpam = "firelightningcone1",
 
