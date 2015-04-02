@@ -44,10 +44,10 @@
 UnarmedDizzy1Command = {
         name = "unarmeddizzy1",
 
-	damageMultiplier = 1.5,
+	damageMultiplier = 2,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.5,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
         --accuracyBonus = 15,
 
