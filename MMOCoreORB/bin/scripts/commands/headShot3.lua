@@ -44,12 +44,12 @@
 HeadShot3Command = {
         name = "headshot3",
 
-	damageMultiplier = 3.0,
-	speedMultiplier = 2.0,
+	damageMultiplier = 3.5,
+	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.5,
+	actionCostMultiplier = 4.25,
 	mindCostMultiplier = 0,
-	accuracyBonus = 5,
+	--accuracyBonus = 5,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
