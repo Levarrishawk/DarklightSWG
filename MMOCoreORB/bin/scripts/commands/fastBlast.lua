@@ -46,9 +46,9 @@ FastBlastCommand = {
 
 	damageMultiplier = 4.15,
 	speedMultiplier = 3.05,
-	healthCostMultiplier = 1,
-	actionCostMultiplier = 1,
-	mindCostMultiplier = 1,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
