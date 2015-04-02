@@ -72,7 +72,7 @@ object_weapon_ranged_pistol_pistol_fwg5 = object_weapon_ranged_pistol_shared_pis
 	damageType = HEAT,
 
 	-- NONE, LIGHT, MEDIUM, HEAVY
-	armorPiercing = NONE,
+	armorPiercing = LIGHT,
 
 	-- combat_rangedspecialize_bactarifle, combat_rangedspecialize_rifle, combat_rangedspecialize_pistol, combat_rangedspecialize_heavy, combat_rangedspecialize_carbine
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
@@ -101,7 +101,7 @@ object_weapon_ranged_pistol_pistol_fwg5 = object_weapon_ranged_pistol_shared_pis
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
 	healthAttackCost = 0,
-	actionAttackCost = 100,
+	actionAttackCost = 150,
 	mindAttackCost = 0,
 	forceCost = 0,
 
@@ -111,13 +111,13 @@ object_weapon_ranged_pistol_pistol_fwg5 = object_weapon_ranged_pistol_shared_pis
 	idealRange = 20,
 	idealAccuracy = 20,
 
-	maxRange = 64,
-	maxRangeAccuracy = -70,
+	maxRange = 30,
+	maxRangeAccuracy = 70,
 
-	minDamage = 45,
-	maxDamage = 190,
+	minDamage = 250,
+	maxDamage = 350,
 
-	attackSpeed = 3.4,
+	attackSpeed = 2.5,
 
 	woundsRatio = 9,
 
