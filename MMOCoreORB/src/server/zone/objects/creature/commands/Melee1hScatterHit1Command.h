@@ -42,18 +42,18 @@ this exception also makes it possible to release a modified version
 which carries forward this exception.
 */
 
-#ifndef MELEE1HSCATTERHIT1COMMAND_H_
-#define MELEE1HSCATTERHIT1COMMAND_H_
+#ifndef MELEE1HFRENZY1COMMAND_H_
+#define MELEE1HFRENZY1COMMAND_H_
 
 #include "server/zone/objects/scene/SceneObject.h"
 #include "server/zone/managers/combat/CombatManager.h"
 #include "CombatQueueCommand.h"
 
 
-class Melee1hScatterHit1Command : public CombatQueueCommand {
+class Melee1hFrenzy1Command : public CombatQueueCommand {
 public:
 
-	Melee1hScatterHit1Command(const String& name, ZoneProcessServer* server)
+	Melee1hFrenzy1Command(const String& name, ZoneProcessServer* server)
 		: CombatQueueCommand(name, server) {
 	}
 
@@ -70,17 +70,31 @@ public:
 		if (!weapon->isOneHandMeleeWeapon()) {
 			return INVALIDWEAPON;
 		}
-		
-		float mods[3] = {0.f, 0.f, 0.f};
-		
-		for (int i = 0; i < 2; i++)
-			mods[System::random(2)] += 0.5f;
-			
-		UnicodeString args = "healthDamageMultiplier=" + String::valueOf(mods[0]) + ";actionDamageMultiplier=" + String::valueOf(mods[1]) + ";mindDamageMultiplier=" + String::valueOf(mods[2]) + ";";
 
-		return doCombatAction(creature, target, args);
+		int duration = 10;
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
+
+		if (creature->isInCombat()) {
+			if (creature->hasBuff(buffcrc)) {
+				creature->sendSystemMessage("You are already in a frenzy!");
+			}
+			else if (!creature->hasBuff(buffcrc)) {
+				int roll = (System::random(100));
+				if (roll > 75) {
+					creature->sendSystemMessage("You enter into a frenzy!");
+					buff->setSkillModifier("frenzy", 40);
+					buff->setSpeedMultiplierMod(0.5f);
+					creature->addBuff(buff);
+				}else {
+					creature->sendSystemMessage("you failed to enter a frenzy.");
+				}
+			}
+		}
+		
+		return doCombatAction(creature, target);
 	}
 
 };
 
-#endif //MELEE1HSCATTERHIT1COMMAND_H_
+#endif //MELEE1HFRENZY1COMMAND_H_
