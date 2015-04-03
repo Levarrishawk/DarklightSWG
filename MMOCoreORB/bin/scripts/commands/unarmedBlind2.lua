@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 UnarmedBlind2Command = {
-	name = "unarmedBlind2",
+	name = "unarmedblind2",
 
 	damageMultiplier = 4,
 	speedMultiplier = 2.0,
