@@ -61,7 +61,7 @@ MindShot1Command = {
 	  DotEffect( 
 		BLEEDING, 
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
-		ACTION,
+		HEALTH,
 		true,
 		125,
 		100,
