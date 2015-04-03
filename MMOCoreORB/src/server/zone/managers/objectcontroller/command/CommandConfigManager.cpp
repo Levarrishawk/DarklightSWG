@@ -1115,8 +1115,8 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<Melee1hLunge1Command>(String("melee1hLunge1").toLowerCase());
 	commandFactory.registerCommand<Melee1hLunge2Command>(String("melee1hLunge2").toLowerCase());
 	commandFactory.registerCommand<Melee1hLunge3Command>(String("melee1hLunge3").toLowerCase());
-	commandFactory.registerCommand<Melee1hScatterHit1Command>(String("melee1hScatterHit1").toLowerCase());
-	commandFactory.registerCommand<Melee1hScatterHit2Command>(String("melee1hScatterHit2").toLowerCase());
+	commandFactory.registerCommand<Melee1hFrenzy1Command>(String("melee1hFrenzy1").toLowerCase());
+	commandFactory.registerCommand<Melee1hFrenzy2Command>(String("melee1hFrenzy2").toLowerCase());
 	commandFactory.registerCommand<Melee1hSpinAttack1Command>(String("melee1hSpinAttack1").toLowerCase());
 	commandFactory.registerCommand<Melee1hSpinAttack2Command>(String("melee1hSpinAttack2").toLowerCase());
 	commandFactory.registerCommand<Melee2hArea1Command>(String("melee2hArea1").toLowerCase());
@@ -1130,8 +1130,8 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<Melee2hHit3Command>(String("melee2hHit3").toLowerCase());
 	commandFactory.registerCommand<Melee2hLunge1Command>(String("melee2hLunge1").toLowerCase());
 	commandFactory.registerCommand<Melee2hLunge2Command>(String("melee2hLunge2").toLowerCase());
-	commandFactory.registerCommand<Melee2hMindHit1Command>(String("melee2hMindHit1").toLowerCase());
-	commandFactory.registerCommand<Melee2hMindHit2Command>(String("melee2hMindHit2").toLowerCase());
+	commandFactory.registerCommand<Melee2hFocus1Command>(String("melee2hFocus1").toLowerCase());
+	commandFactory.registerCommand<Melee2hFocus2Command>(String("melee2hFocus2").toLowerCase());
 	commandFactory.registerCommand<Melee2hSpinAttack1Command>(String("melee2hSpinAttack1").toLowerCase());
 	commandFactory.registerCommand<Melee2hSpinAttack2Command>(String("melee2hSpinAttack2").toLowerCase());
 	commandFactory.registerCommand<Melee2hSweep1Command>(String("melee2hSweep1").toLowerCase());
