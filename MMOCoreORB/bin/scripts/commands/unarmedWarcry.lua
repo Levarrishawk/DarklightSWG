@@ -41,8 +41,8 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
-unarmedWarcryCommand = {
-	name = "unarmedwarcry",
+UnarmedWarcryCommand = {
+	name = "unarmedWarcry",
 
 	damageMultiplier = 0,
 	speedMultiplier = 1,
@@ -75,5 +75,5 @@ unarmedWarcryCommand = {
 	poolsToDamage = 0
 }
 
-AddCommand(Warcry2Command)
+AddCommand(UnarmedWarcry2Command)
 
