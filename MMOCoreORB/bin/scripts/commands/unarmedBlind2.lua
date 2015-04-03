@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 UnarmedBlind2Command = {
-	name = "unarmedblind2",
+	name = "unarmedBlind2",
 
 	damageMultiplier = 4,
 	speedMultiplier = 2.0,
@@ -73,5 +73,5 @@ UnarmedBlind2Command = {
 	range = -1
 }
 
-AddCommand(UnarmedBlind1Command)
+AddCommand(UnarmedBlind2Command)
 
