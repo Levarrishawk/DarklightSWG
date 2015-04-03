@@ -66,7 +66,7 @@ UnarmedBlind2Command = {
 		{ "jedi_state_defense" }, 
 		100, 
 		100, 
-		30 
+		20 
 	  )
 	},
 
