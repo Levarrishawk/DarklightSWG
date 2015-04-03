@@ -42,18 +42,18 @@ this exception also makes it possible to release a modified version
 which carries forward this exception.
 */
 
-#ifndef MELEE1HSCATTERHIT2COMMAND_H_
-#define MELEE1HSCATTERHIT2COMMAND_H_
+#ifndef MELEE1HFRENZY2COMMAND_H_
+#define MELEE1HFRENZY2COMMAND_H_
 
 #include "server/zone/objects/scene/SceneObject.h"
 #include "server/zone/managers/combat/CombatManager.h"
 #include "CombatQueueCommand.h"
 
 
-class Melee1hScatterHit2Command : public CombatQueueCommand {
+class Melee1hFrenzy2Command : public CombatQueueCommand {
 public:
 
-	Melee1hScatterHit2Command(const String& name, ZoneProcessServer* server)
+	Melee1hFrenzy2Command(const String& name, ZoneProcessServer* server)
 		: CombatQueueCommand(name, server) {
 	}
 
@@ -97,4 +97,4 @@ public:
 
 };
 
-#endif //MELEE1HSCATTERHIT2COMMAND_H_
+#endif //MELEE1HFRENZY2COMMAND_H_
