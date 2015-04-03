@@ -725,9 +725,9 @@ float CombatManager::getDefenderToughnessModifier(CreatureObject* defender, int 
 		}
 	}
 
-	int jediToughness = defender->getSkillMod("unarmed_toughness");
+	int jediToughness = defender->getSkillMod("jedi_toughness");
 	if (damType != WeaponObject::LIGHTSABER && jediToughness > 0)
-		damage *= 1.f - (jediToughness / 80.f);
+		damage *= 1.f - (jediToughness / 100.f);
 
 	float foodMitigatedDamage = damage;
 	int foodBonus = defender->getSkillMod("mitigate_damage");
