@@ -66,7 +66,7 @@ UnarmedBlind1Command = {
 		{ "jedi_state_defense" }, 
 		100, 
 		100, 
-		15 
+		10 
 	  )
 	},
 
