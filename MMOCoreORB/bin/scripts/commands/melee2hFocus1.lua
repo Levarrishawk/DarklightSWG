@@ -41,36 +41,23 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
-Melee2hMindHit1Command = {
-        name = "melee2hmindhit1",
-	damageMultiplier = 1.0,
-	speedMultiplier = 1.25,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 1.0,
-	mindCostMultiplier = 0.5,
-        accuracyBonus = 10,
+Melee2hFocus1Command = {
+        name = "melee2hfocus1",
+	damageMultiplier = 4.5,
+	speedMultiplier = 5,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 5.5,
+	mindCostMultiplier = 0,
+       -- accuracyBonus = 10,
 
-	poolsToDamage = MIND_ATTRIBUTE,
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
-	dotEffects = {
-	  DotEffect( 
-		BLEEDING, 
-		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
-		MIND,
-		true,
-		125,
-		100,
-		30, 
-		30
-	  )
-	},
+	animationCRC = hashCode("combo_3c_light"),
 
-	animationCRC = hashCode("combo_2b_medium"),
-
-	combatSpam = "mindstrike",
+	combatSpam = "mindslam",
 
 	range = -1
 }
 
-AddCommand(Melee2hMindHit1Command)
+AddCommand(Melee2hFocus1Command)
 
