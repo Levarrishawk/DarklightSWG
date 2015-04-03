@@ -75,5 +75,5 @@ UnarmedWarcryCommand = {
 	poolsToDamage = 0
 }
 
-AddCommand(UnarmedWarcry2Command)
+AddCommand(UnarmedWarcryCommand)
 
