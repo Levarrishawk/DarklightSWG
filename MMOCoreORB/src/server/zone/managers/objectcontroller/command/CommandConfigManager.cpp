@@ -1437,10 +1437,12 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<TurretFireCommand>(String("turretFire").toLowerCase());
 	commandFactory.registerCommand<TurretFireManualCommand>(String("turretFireManual").toLowerCase());
 	commandFactory.registerCommand<UnarmedBlind1Command>(String("unarmedBlind1").toLowerCase());
+	commandFactory.registerCommand<UnarmedBlind2Command>(String("unarmedBlind2").toLowerCase());
 	commandFactory.registerCommand<UnarmedBodyHit1Command>(String("unarmedBodyHit1").toLowerCase());
 	commandFactory.registerCommand<UnarmedCombo1Command>(String("unarmedCombo1").toLowerCase());
 	commandFactory.registerCommand<UnarmedCombo2Command>(String("unarmedCombo2").toLowerCase());
 	commandFactory.registerCommand<UnarmedDizzy1Command>(String("unarmedDizzy1").toLowerCase());
+	commandFactory.registerCommand<UnarmedDizzy2Command>(String("unarmedDizzy2").toLowerCase());
 	commandFactory.registerCommand<UnarmedHeadHit1Command>(String("unarmedHeadHit1").toLowerCase());
 	commandFactory.registerCommand<UnarmedHit1Command>(String("unarmedHit1").toLowerCase());
 	commandFactory.registerCommand<UnarmedHit2Command>(String("unarmedHit2").toLowerCase());
@@ -1453,6 +1455,9 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<UnarmedSpinAttack1Command>(String("unarmedSpinAttack1").toLowerCase());
 	commandFactory.registerCommand<UnarmedSpinAttack2Command>(String("unarmedSpinAttack2").toLowerCase());
 	commandFactory.registerCommand<UnarmedStun1Command>(String("unarmedStun1").toLowerCase());
+	commandFactory.registerCommand<UnarmedStun1Command>(String("unarmedStun1").toLowerCase());
+	commandFactory.registerCommand<UnarmedIntimidateCommand>(String("unarmedIntimidate").toLowerCase());
+	commandFactory.registerCommand<UnarmedWarcryCommand>(String("unarmedWarcry").toLowerCase());
 	commandFactory.registerCommand<UnassociateDroidControlDeviceWithShipCommand>(String("unassociateDroidControlDeviceWithShip").toLowerCase());
 	commandFactory.registerCommand<UnCityBanCommand>(String("unCityBan").toLowerCase());
 	commandFactory.registerCommand<UnconsentCommand>(String("unconsent").toLowerCase());
