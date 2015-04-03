@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 UnarmedStun2Command = {
-	name = "unarmedstun2",
+	name = "unarmedStun2",
 
 	damageMultiplier = 4,
 	speedMultiplier = 2.0,
