@@ -41,8 +41,8 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
-Melee2hMindHit2Command = {
-        name = "melee2hmindhit2",
+Melee2hFocus2Command = {
+        name = "melee2hfocus2",
 	damageMultiplier = 4.5,
 	speedMultiplier = 5,
 	healthCostMultiplier = 0,
@@ -59,5 +59,5 @@ Melee2hMindHit2Command = {
 	range = -1
 }
 
-AddCommand(Melee2hMindHit2Command)
+AddCommand(Melee2hFocus2Command)
 
