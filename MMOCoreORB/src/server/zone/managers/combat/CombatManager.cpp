@@ -1034,7 +1034,7 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 		
 	int swordArmor = defender->getSkillMod("sword_armor");
 	if (swordArmor > 0) {
-		float dmgAbsorbed = rawDamage - (damage *= 1.f - (forceArmor / 100.f));
+		float dmgAbsorbed = rawDamage - (damage *= 1.f - (swordArmor / 100.f));
 		defender->notifyObservers(ObserverEventType::DAMAGERECEIVED, attacker, dmgAbsorbed);
 		sendMitigationCombatSpam(defender, NULL, (int)dmgAbsorbed, FORCEARMOR);
 	}
