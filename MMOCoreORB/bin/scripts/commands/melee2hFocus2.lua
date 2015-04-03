@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 Melee2hFocus2Command = {
-        name = "melee2hfocus2",
+        name = "melee2hFocus2",
 	damageMultiplier = 4.5,
 	speedMultiplier = 5,
 	healthCostMultiplier = 0,
