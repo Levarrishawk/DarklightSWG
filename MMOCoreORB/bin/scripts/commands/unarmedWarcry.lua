@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 UnarmedWarcryCommand = {
-	name = "unarmedWarcry",
+	name = "unarmedwarcry",
 
 	damageMultiplier = 0,
 	speedMultiplier = 1,
