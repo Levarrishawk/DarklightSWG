@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 Melee1hFrenzy1Command = {
-	name = "melee1hfrenzy1",
+	name = "melee1hFrenzy1",
 
 	damageMultiplier = 0.9,
 	speedMultiplier = 3,
