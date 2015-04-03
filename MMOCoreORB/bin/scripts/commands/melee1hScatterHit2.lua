@@ -41,8 +41,8 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
-Melee1hScatterHit2Command = {
-        name = "melee1hscatterhit2",
+Melee1hFrenzy2Command = {
+        name = "melee1hfrenzy2",
 
 	damageMultiplier = 2.0,
 	speedMultiplier = 3,
@@ -60,5 +60,5 @@ Melee1hScatterHit2Command = {
 	range = -1
 }
 
-AddCommand(Melee1hScatterHit2Command)
+AddCommand(Melee1hFrenzy2Command)
 
