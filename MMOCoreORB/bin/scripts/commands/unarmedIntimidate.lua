@@ -42,7 +42,7 @@
 --true = 1, false = 0
 
 UnarmedIntimidateCommand = {
-	name = "intimidate",
+	name = "unarmedintimidate",
 
 	damageMultiplier = 0,
 	speedMultiplier = 2,
