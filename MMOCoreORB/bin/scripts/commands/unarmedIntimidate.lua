@@ -41,8 +41,8 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
-unarmedIntimidateCommand = {
-	name = "unarmedintimidate",
+UnarmedIntimidateCommand = {
+	name = "unarmedIntimidate",
 
 	damageMultiplier = 0,
 	speedMultiplier = 2,
@@ -72,5 +72,5 @@ unarmedIntimidateCommand = {
 	poolsToDamage = 0
 }
 
-AddCommand(unarmedIntimidateCommand)
+AddCommand(UnarmedIntimidateCommand)
 
