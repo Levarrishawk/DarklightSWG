@@ -1455,7 +1455,7 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<UnarmedSpinAttack1Command>(String("unarmedSpinAttack1").toLowerCase());
 	commandFactory.registerCommand<UnarmedSpinAttack2Command>(String("unarmedSpinAttack2").toLowerCase());
 	commandFactory.registerCommand<UnarmedStun1Command>(String("unarmedStun1").toLowerCase());
-	commandFactory.registerCommand<UnarmedStun1Command>(String("unarmedStun1").toLowerCase());
+	commandFactory.registerCommand<UnarmedStun2Command>(String("unarmedStun2").toLowerCase());
 	commandFactory.registerCommand<UnarmedIntimidateCommand>(String("unarmedIntimidate").toLowerCase());
 	commandFactory.registerCommand<UnarmedWarcryCommand>(String("unarmedWarcry").toLowerCase());
 	commandFactory.registerCommand<UnassociateDroidControlDeviceWithShipCommand>(String("unassociateDroidControlDeviceWithShip").toLowerCase());
