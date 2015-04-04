@@ -14,7 +14,7 @@ function pvp:start()
 end
   
 function pvp:spawnActiveAreas()
-	local pSpawnArea = spawnSceneObject("character_farm", "object/active_area.iff", 5318, 80, 5680, 0, 0, 0, 0, 0)
+	local pSpawnArea = spawnSceneObject("rori", "object/active_area.iff", 5318, 80, 5680, 0, 0, 0, 0, 0)
     
 	if (pSpawnArea ~= nil) then
 		local activeArea = LuaActiveArea(pSpawnArea)
