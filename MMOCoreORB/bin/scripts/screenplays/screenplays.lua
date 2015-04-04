@@ -30,6 +30,7 @@ includeFile("legacy/force_sensitive.lua")--test
 includeFile("gcw/newsnet.lua")
 includeFile("gcw/recruiters/recruiterConvoHandler.lua")
 includeFile("gcw/recruiters/recruiterScreenplay.lua")
+includeFile("gcw/restusspvp.lua")
 
 -- Dungeons
 includeFile("dungeon/death_watch_bunker/deathWatchBunker.lua")
