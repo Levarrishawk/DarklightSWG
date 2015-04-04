@@ -30,6 +30,6 @@ restusspvp = ScreenPlay:new {
     
     if (movingObject:isCreatureObject()) then
       player:sendSystemMessage("You have entered the Restuss PvP zone!")
-      playerObject:setFactionStatus(2)
+      player:setFactionStatus(2)
     end
   end
