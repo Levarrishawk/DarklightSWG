@@ -7,6 +7,7 @@
 
 #include "LuaCreatureObject.h"
 #include "server/zone/objects/creature/CreatureObject.h"
+#include "server/zone/objects/creature/DroidObject.h"
 #include "server/zone/objects/cell/CellObject.h"
 #include "server/zone/objects/player/sessions/ConversationSession.h"
 #include "server/zone/ZoneServer.h"
@@ -14,12 +15,13 @@
 #include "server/zone/packets/chat/ChatSystemMessage.h"
 #include "server/zone/objects/player/sessions/EntertainingSession.h"
 #include "server/zone/objects/player/PlayerObject.h"
+#include "server/zone/managers/player/PlayerManager.h"
 
 const char LuaCreatureObject::className[] = "LuaCreatureObject";
 
 Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "_setObject", &LuaCreatureObject::_setObject },
-		{ "_getObject", &LuaCreatureObject::_getObject },
+		{ "_getObject", &LuaSceneObject::_getObject },
 		{ "getBankCredits", &LuaCreatureObject::getBankCredits },
 		{ "setBankCredits", &LuaCreatureObject::setBankCredits },
 		{ "sendSystemMessage", &LuaCreatureObject::sendSystemMessage },
@@ -37,6 +39,8 @@ Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "sendOpenHolocronToPageMessage", &LuaCreatureObject::sendOpenHolocronToPageMessage },
 		{ "inflictDamage", &LuaCreatureObject::inflictDamage },
 		{ "setHAM", &LuaCreatureObject::setHAM },
+		{ "setBaseHAM", &LuaCreatureObject::setBaseHAM },
+		{ "setMaxHAM", &LuaCreatureObject::setMaxHAM },
 		{ "getHAM", &LuaCreatureObject::getHAM },
 		{ "getMaxHAM", &LuaCreatureObject::getMaxHAM },
 		{ "getTargetID", &LuaCreatureObject::getTargetID },
@@ -47,6 +51,7 @@ Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "getPositionX", &LuaSceneObject::getPositionX },
 		{ "getPositionY", &LuaSceneObject::getPositionY },
 		{ "getPositionZ", &LuaSceneObject::getPositionZ },
+		{ "getDirectionAngle", &LuaSceneObject::getDirectionAngle },
 		{ "getWorldPositionX", &LuaSceneObject::getWorldPositionX },
 		{ "getWorldPositionY", &LuaSceneObject::getWorldPositionY },
 		{ "getWorldPositionZ", &LuaSceneObject::getWorldPositionZ },
@@ -58,6 +63,7 @@ Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "setLootRights", &LuaCreatureObject::setLootRights},
 		{ "getPosture", &LuaCreatureObject::getPosture},
 		{ "setPosture", &LuaCreatureObject::setPosture},
+		{ "setMoodString", &LuaCreatureObject::setMoodString},
 		{ "hasSkill", &LuaCreatureObject::hasSkill},
 		{ "removeSkill", &LuaCreatureObject::removeSkill},
 		{ "getConversationSession", &LuaCreatureObject::getConversationSession},
@@ -98,18 +104,36 @@ Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "getPerformanceName", &LuaCreatureObject::getPerformanceName},
 		{ "getWalkSpeed", &LuaCreatureObject::getWalkSpeed },
 		{ "isAttackableBy", &LuaCreatureObject::isAttackableBy },
+		{ "getSpecies", &LuaCreatureObject::getSpecies },
+		{ "isDroidPet", &LuaCreatureObject::isDroidPet },
+		{ "isCombatDroidPet", &LuaCreatureObject::isCombatDroidPet },
+		{ "awardExperience", &LuaCreatureObject::awardExperience },
 		{ 0, 0 }
 };
 
 LuaCreatureObject::LuaCreatureObject(lua_State *L) : LuaSceneObject(L) {
+#ifdef DYNAMIC_CAST_LUAOBJECTS
+	realObject = dynamic_cast<CreatureObject*>(_getRealSceneObject());
+
+	assert(!_getRealSceneObject() || realObject != NULL);
+#else
 	realObject = static_cast<CreatureObject*>(lua_touserdata(L, 1));
+#endif
 }
 
 LuaCreatureObject::~LuaCreatureObject(){
 }
 
 int LuaCreatureObject::_setObject(lua_State* L) {
+	LuaSceneObject::_setObject(L);
+
+#ifdef DYNAMIC_CAST_LUAOBJECTS
+	realObject = dynamic_cast<CreatureObject*>(_getRealSceneObject());
+
+	assert(!_getRealSceneObject() || realObject != NULL);
+#else
 	realObject = static_cast<CreatureObject*>(lua_touserdata(L, -1));
+#endif
 
 	return 0;
 }
@@ -117,12 +141,6 @@ int LuaCreatureObject::_setObject(lua_State* L) {
 int LuaCreatureObject::getFirstName(lua_State* L) {
 	String text = realObject->getFirstName();
 	lua_pushstring(L, text.toCharArray());
-	return 1;
-}
-
-int LuaCreatureObject::_getObject(lua_State* L) {
-	lua_pushlightuserdata(L, realObject.get());
-
 	return 1;
 }
 
@@ -135,8 +153,11 @@ int LuaCreatureObject::addDotState(lua_State* L) {
 	byte type = lua_tointeger(L, -5);
 	uint32 strength = lua_tointeger(L, -6);
 	uint64 dotType = lua_tointeger(L, -7);
+	CreatureObject* attacker = (CreatureObject*)lua_touserdata(L, -8);
 
-	//realObject->addDotState(dotType, objectID, strength, type, duration, potency, defense);
+	Locker locker(realObject);
+
+	realObject->addDotState(attacker, dotType, objectID, strength, type, duration, potency, defense);
 
 	return 0;
 }
@@ -163,6 +184,14 @@ int LuaCreatureObject::setPosture(lua_State* L) {
 	return 0;
 }
 
+int LuaCreatureObject::setMoodString(lua_State* L) {
+	String value = lua_tostring(L, -1);
+
+	realObject->setMoodString(value);
+
+	return 0;
+}
+
 int LuaCreatureObject::setPvpStatusBitmask(lua_State* L) {
 	int bitmask = lua_tonumber(L, -1);
 	realObject->setPvpStatusBitmask(bitmask, true);
@@ -177,9 +206,13 @@ int LuaCreatureObject::sendOpenHolocronToPageMessage(lua_State* L) {
 }
 
 int LuaCreatureObject::sendSystemMessage(lua_State* L) {
-	String value = lua_tostring(L, -1);
-	realObject->sendSystemMessage(value);
-
+	if (lua_islightuserdata(L, -1)) {
+		StringIdChatParameter* message = (StringIdChatParameter*)lua_touserdata(L, -1);
+		realObject->sendSystemMessage(*message);
+	} else {
+		String value = lua_tostring(L, -1);
+		realObject->sendSystemMessage(value);
+	}
 	return 0;
 }
 
@@ -229,6 +262,24 @@ int LuaCreatureObject::setHAM(lua_State* L) {
 	uint32 value = (uint32) lua_tonumber(L, -1);
 
 	realObject->setHAM(type, value);
+
+	return 0;
+}
+
+int LuaCreatureObject::setBaseHAM(lua_State* L) {
+	uint32 type = (uint32) lua_tonumber(L, -2);
+	uint32 value = (uint32) lua_tonumber(L, -1);
+
+	realObject->setBaseHAM(type, value);
+
+	return 0;
+}
+
+int LuaCreatureObject::setMaxHAM(lua_State* L) {
+	uint32 type = (uint32) lua_tonumber(L, -2);
+	uint32 value = (uint32) lua_tonumber(L, -1);
+
+	realObject->setMaxHAM(type, value);
 
 	return 0;
 }
@@ -348,6 +399,8 @@ int LuaCreatureObject::getTargetID(lua_State* L) {
 
 int LuaCreatureObject::clearCombatState(lua_State* L) {
 	bool clearDef = lua_tonumber(L, -1);
+
+	Locker locker(realObject);
 
 	realObject->clearCombatState(clearDef);
 
@@ -561,15 +614,18 @@ int LuaCreatureObject::setLootRights(lua_State* L) {
 }
 
 int LuaCreatureObject::getGroupSize(lua_State* L) {
+	Locker locker(realObject);
+
 	GroupObject* group = realObject->getGroup();
+
+	if (group == NULL) {
+		lua_pushnumber(L, 0);
+		return 1;
+	}
 
 	Locker lock(group, realObject);
 
-	if (group != NULL) {
-		lua_pushnumber(L, group->getGroupSize());
-	} else {
-		lua_pushnumber(L, 0);
-	}
+	lua_pushnumber(L, group->getGroupSize());
 
 	return 1;
 }
@@ -587,6 +643,8 @@ int LuaCreatureObject::getGroupMember(lua_State* L) {
 
 	if (i < 0)
 		i = 0;
+
+	Locker locker(realObject);
 
 	GroupObject* group = realObject->getGroup();
 
@@ -714,3 +772,35 @@ int LuaCreatureObject::isAttackableBy(lua_State* L) {
 	return 1;
 }
 
+int LuaCreatureObject::getSpecies(lua_State* L) {
+	lua_pushinteger(L, realObject->getSpecies());
+
+	return 1;
+}
+
+int LuaCreatureObject::isDroidPet(lua_State* L) {
+	bool retVal = realObject->isDroidObject() && realObject->isPet();
+	lua_pushboolean(L, retVal);
+
+	return 1;
+}
+
+int LuaCreatureObject::isCombatDroidPet(lua_State* L) {
+	bool retVal = realObject->isDroidObject() && realObject->isPet();
+	if (retVal) {
+		DroidObject* d = cast<DroidObject*>(realObject);
+		retVal = d->isCombatDroid();
+	}
+	lua_pushboolean(L, retVal);
+	return 1;
+}
+
+int LuaCreatureObject::awardExperience(lua_State* L) {
+	String experienceType = lua_tostring(L, -2);
+	int experienceAmount = lua_tointeger(L, -1);
+
+	PlayerManager* playerManager = realObject->getZoneServer()->getPlayerManager();
+	playerManager->awardExperience(realObject, experienceType, experienceAmount, false);
+
+	return 0;
+}
