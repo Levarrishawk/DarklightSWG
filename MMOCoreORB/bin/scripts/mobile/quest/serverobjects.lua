@@ -7,7 +7,7 @@ includeFile("quest/gadget_specialist.lua")
 includeFile("quest/theater_manager.lua")
 
 --Legacy
-
+includeFile("quest/legacy/mayor_start.lua")
 includeFile("quest/legacy/thiel.lua")
 
 
