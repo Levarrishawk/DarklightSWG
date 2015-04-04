@@ -75,4 +75,3 @@ private:
 
 
 
-#endif /* LUAPLAYEROBJECT_H_ */
