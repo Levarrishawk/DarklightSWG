@@ -73,3 +73,4 @@ int ScreenPlayObserverImplementation::notifyObserverEvent(uint32 eventType, Obse
 	//1 remove observer, 0 keep observer
 
 	return ret;
+}
