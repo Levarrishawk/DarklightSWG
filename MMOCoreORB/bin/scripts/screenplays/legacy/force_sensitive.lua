@@ -45,7 +45,7 @@ registerScreenPlay("force_sensitive", true)
 
 function force_sensitive:start() 
 	--spawnMobile("planet", "npc_name", re-spawn timer, x, z, y, direction of face, cell)
-	local pThiel = spawnMobile("dathomir","thiel", 1, 5296.4, 78.5, -4173.7, -10, 0)
+	spawnMobile("tatooine", "mayor_start", 1, -0.1, 2.5, 7.5, 179, 1279960)
 	if ( pThiel ~= nil ) then
 	end
 end
@@ -91,7 +91,7 @@ function force_sensitive_convo_handler:getNextConversationScreen(conversationTem
 			--print("hasAccepted() is " .. hasAccepted)   
 			
 			if ( hasAccepted == 0 ) then
-				nextConversationScreen = conversation:getScreen("intro_first_screen")--First convo screen to pull.
+				nextConversationScreen = conversation:getScreen("first_conv")--First convo screen to pull.
 
 			else
 				nextConversationScreen = conversation:getScreen("complete")--End of the road.
