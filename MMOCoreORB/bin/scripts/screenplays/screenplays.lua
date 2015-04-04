@@ -21,7 +21,7 @@ includeFile("themepark/marauder/themeParkMarauder.lua")
 includeFile("themepark/tutorial.lua")
 
 -- Legacy
---includeFile("legacy/mayor_start.lua")
+includeFile("legacy/mayor_start.lua")
 includeFile("legacy/force_sensitive.lua")--test
 
 
