@@ -32,6 +32,6 @@ restusspvp = ScreenPlay:new {
       player:sendSystemMessage("You have entered the Restuss PvP zone!")
       ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
       deleteData(player:getObjectID() .. ":changingFactionStatus")
-      player:setFactionStatus(2)
+      playerObject:setFactionStatus(2)
     end
   end
