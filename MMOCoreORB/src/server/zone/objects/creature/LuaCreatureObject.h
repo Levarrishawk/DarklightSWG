@@ -29,12 +29,11 @@ namespace creature {
 		~LuaCreatureObject();
 
 		int _setObject(lua_State* L);
+		int _getObject(lua_State* L);
 		// Methods we will need to use
 		int getBankCredits(lua_State *L);
 		int setBankCredits(lua_State* L);
 		int setHAM(lua_State* L);
-		int setBaseHAM(lua_State* L);
-		int setMaxHAM(lua_State* L);
 		int sendSystemMessage(lua_State* L);
 		int sendSystemMessageWithDI(lua_State* L);
 		int sendSystemMessageWithTO(lua_State* L);
@@ -55,7 +54,6 @@ namespace creature {
 		int playEffect(lua_State* L);
 		int setState(lua_State* L);
 		int setPosture(lua_State* L);
-		int setMoodString(lua_State* L);
 		int getPosture(lua_State* L);
 		int hasSkill(lua_State* L);
 		int removeSkill(lua_State* L);
@@ -95,13 +93,10 @@ namespace creature {
 		int getPerformanceName(lua_State* L);
 		int getWalkSpeed(lua_State* L);
 		int isAttackableBy(lua_State* L);
-		int getSpecies(lua_State* L);
-		int isDroidPet(lua_State* L);
-		int isCombatDroidPet(lua_State* L);
-		int awardExperience(lua_State* L);
+
 	private:
 		// The pointer to the 'real object' defined in object.cc
-		CreatureObject* realObject;
+		Reference<CreatureObject*> realObject;
 	};
 
 }
