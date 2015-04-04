@@ -34,7 +34,7 @@ restusspvp = ScreenPlay:new {
     end
 end
 
-function recruiterScreenplay:handleGoOvert(pPlayer)
+function restusspvp:handleGoOvert(pPlayer)
   ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
   deleteData(player:getObjectID() .. ":changingFactionStatus")
   playerObject:setFactionStatus(2)
