@@ -28,7 +28,7 @@ public:
 
 private:
 	// The pointer to the 'real object' defined in object.cc
-	IntangibleObject* realObject;
+	Reference<IntangibleObject*> realObject;
 };
 
 
