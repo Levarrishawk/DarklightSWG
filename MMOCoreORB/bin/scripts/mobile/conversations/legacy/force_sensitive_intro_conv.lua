@@ -49,11 +49,11 @@ force_sensitive_intro_conv = ConvoTemplate:new {
 intro_first_screen = ConvoScreen:new {
 	id = "intro_first_screen",
 	leftDialog = "",
-	customDialogText = "Hello there! I see you're our newest arrival. Allow me to be the first to introduce myself and welcome you to our village on Dathomir. I am Jedi Master Thiel... Are you ready to get started?",
+	customDialogText = "Welcome to Mos Eisley! I'm Mayor Guh'rantt. Do you know the history of Mos Eisley? It's a beautiful city, full of life and character and one of the best cantinas in the known galaxy.",
 	stopConversation = "false",
 	options = {
-		{"Yes, I have been waiting for this moment for a long time now.", "thiel2"},
-		{"I'd prefer to take my time, I'll come back when I am ready.","deny"}
+		{"I hear you need some help with a debt owed to Jabba.", "thiel2"},
+		{"I'm very busy.  I'll come back later.","deny"}
 	
 	}
 }

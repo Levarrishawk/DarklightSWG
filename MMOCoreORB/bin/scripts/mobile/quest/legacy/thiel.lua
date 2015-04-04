@@ -1,6 +1,6 @@
 thiel = Creature:new {
 	objectName = "",
-	customName = "Thiel",
+	customName = "Mayor Mikdanyell Guh'rantt",
 	socialGroup = "townsperson",
 	faction = "townsperson",
 	level = 15,
@@ -27,9 +27,7 @@ thiel = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_commoner_artisan_trandoshan_male_01.iff",
-				"object/mobile/dressed_commoner_artisan_bith_male_01.iff",
-				"object/mobile/dressed_commoner_artisan_sullustan_male_01.iff"},
+		"object/mobile/dressed_mayor.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "force_sensitive_intro_conv",
