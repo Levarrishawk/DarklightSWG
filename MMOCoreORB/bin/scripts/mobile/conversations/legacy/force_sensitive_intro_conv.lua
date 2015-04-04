@@ -76,11 +76,11 @@ force_sensitive_intro_conv:addScreen(deny);
 thiel2 = ConvoScreen:new {
 	id = "thiel2",
 	leftDialog = "",
-	customDialogText = "Great! There is going to be a lot of information given to you during your time with the mentors. We are here to give you all the insight you need to become a sucessful Jedi, becoming a Jedi is not easy and it's not an easy life when you become one either. Are you sure you wish to continue this path?",
+	customDialogText = "Yes. My...debt. My next payment, a speeder deed, was stolen from me. I can't divert...er...raise the money with all the problems in the city. If you do some things for me, it might...free up some funds I need.",
 	stopConversation = "false",
 	options = {
-		{"Yes I am ready and willing to do this.","thiel3"},
-		{"You're right, I am not ready for this.","deny"}
+		{"I see. What would I have to do?","thiel3"},
+		
 	}
 }
 
@@ -90,10 +90,10 @@ force_sensitive_intro_conv:addScreen(thiel2);
 thiel3 = ConvoScreen:new {
 	id = "thiel3",
 	leftDialog = "",
-	customDialogText = "Now that you understand what your journey is about to be, I am going to explain what you will be doing here at our village. We have gathered some of our best from the Jedi Order to come here and teach all of our new Force sensitives, when you go up to each mentor they will specificly bring up their area of expertise.",
+	customDialogText = "Mos Eisley suffers from Tusken Raiders, wild vermin, and menacing hooligans. I don't have the staff to handle these problems. I need you to go out there. You want to help the city, don't you?",
 	stopConversation = "false",
 	options = {
-		{"I understand completely, please continue.","thiel4"},
+		{"Tell me about the wild vermin.","thiel4"},
 	}
 }
 
@@ -103,10 +103,11 @@ force_sensitive_intro_conv:addScreen(thiel3);
 thiel4 = ConvoScreen:new {
 	id = "thiel4",
 	leftDialog = "",
-	customDialogText = "When you are here you will learn how to survive on your own, we will not baby you and you will be at your own risk if you leave the village... we will not stop you.",
+	customDialogText = "Entha Kandela has been clamoring that she needs some help controlling the population of various vermin on the outskirts of Mos Eisley. Give her the assistance she requires.",
 	stopConversation = "false",
 	options = {
-		{"Is there anything else I need to know?","thiel5"},
+		{"I'll help her","thiel5"},
+		{"I can't help right now.","deny"}
 	}
 }
 
@@ -116,10 +117,10 @@ force_sensitive_intro_conv:addScreen(thiel4);
 thiel5 = ConvoScreen:new {
 	id = "thiel5",
 	leftDialog = "",
-	customDialogText = "I will provide you with the basic tools for your success here, and a 'Mentor's Crystal' it will give you guidence if you feel lost, and it will be needed to complete your training. ",
-	stopConversation = "false",
+	customDialogText = "Good.",
+	stopConversation = "true",
 	options = {
-		{"Alright so I use the crystal after completing my training from each mentor, or if I feel lost.","thiel6"},
+		{}
 	}
 }
 
