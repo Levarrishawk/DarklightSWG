@@ -31,12 +31,12 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 	local playerObject = LuaPlayerObject(pMovingObject)
     
 	if (movingObject:isCreatureObject()) then
-		player:sendSystemMessage("You have entered the Restuss PvP zone!")
-		--pvp:handleGoOvert(pMovingObject)
 		if (playerObjectPointer ~= nil and player:isImperial() or player:isRebel()) then
 			local playerObject = LuaPlayerObject(playerObjectPointer)
 			playerObject:setFactionStatus(2)
+			player:sendSystemMessage("You have entered the Restuss PvP zone!")
 		else
+			player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
 			player:teleport(5298, 78, 6115, 0)
 		end
 	end
