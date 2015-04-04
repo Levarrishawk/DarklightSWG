@@ -519,4 +519,3 @@ int LuaPlayerObject::closeSuiWindowType(lua_State* L) {
 	realObject->closeSuiWindowType( suiType );
 
 	return 0;
-}
