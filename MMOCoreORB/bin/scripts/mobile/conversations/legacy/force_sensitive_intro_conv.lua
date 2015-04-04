@@ -120,7 +120,7 @@ thiel5 = ConvoScreen:new {
 	customDialogText = "Good.",
 	stopConversation = "true",
 	options = {
-		{}
+		
 	}
 }
 
