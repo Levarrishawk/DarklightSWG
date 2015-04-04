@@ -30,8 +30,13 @@ restusspvp = ScreenPlay:new {
     
     if (movingObject:isCreatureObject()) then
       player:sendSystemMessage("You have entered the Restuss PvP zone!")
-      ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
-      deleteData(player:getObjectID() .. ":changingFactionStatus")
-      playerObject:setFactionStatus(2)
+      restusspvp:handleGoOvert(pMovingObject)
     end
-  end
+end
+
+function recruiterScreenplay:handleGoOvert(pPlayer)
+  ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
+  deleteData(player:getObjectID() .. ":changingFactionStatus")
+  playerObject:setFactionStatus(2)
+  end)
+end
