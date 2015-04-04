@@ -21,7 +21,7 @@ includeFile("themepark/marauder/themeParkMarauder.lua")
 includeFile("themepark/tutorial.lua")
 
 -- Legacy
-includeFile("legacy/mayor_start.lua")
+--includeFile("legacy/mayor_start.lua")
 includeFile("legacy/force_sensitive.lua")--test
 
 
@@ -30,7 +30,7 @@ includeFile("legacy/force_sensitive.lua")--test
 includeFile("gcw/newsnet.lua")
 includeFile("gcw/recruiters/recruiterConvoHandler.lua")
 includeFile("gcw/recruiters/recruiterScreenplay.lua")
---includeFile("gcw/restusspvp.lua")
+includeFile("gcw/pvp.lua")
 
 -- Dungeons
 includeFile("dungeon/death_watch_bunker/deathWatchBunker.lua")
