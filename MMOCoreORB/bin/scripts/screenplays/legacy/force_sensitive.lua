@@ -45,7 +45,7 @@ registerScreenPlay("force_sensitive", true)
 
 function force_sensitive:start() 
 	--spawnMobile("planet", "npc_name", re-spawn timer, x, z, y, direction of face, cell)
-	spawnMobile("tatooine", "mayor_start", 1, -0.1, 2.5, 7.5, 179, 1279960)
+	spawnMobile("tatooine", "thiel", 1, -0.1, 2.5, 7.5, 179, 1279960)
 	if ( pThiel ~= nil ) then
 	end
 end
