@@ -43,20 +43,7 @@
 
 Melee2hFocus2Command = {
         name = "melee2hfocus2",
-	damageMultiplier = 4.5,
-	speedMultiplier = 5,
-	healthCostMultiplier = 0,
-	actionCostMultiplier = 5.5,
-	mindCostMultiplier = 0,
-       -- accuracyBonus = 10,
 
-	poolsToDamage = HEALTH_ATTRIBUTE,
-
-	animationCRC = hashCode("combo_3c_light"),
-
-	combatSpam = "mindslam",
-
-	range = -1
 }
 
 AddCommand(Melee2hFocus2Command)
