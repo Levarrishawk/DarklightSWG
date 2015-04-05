@@ -86,6 +86,7 @@ public:
 					buff->setSkillModifier("frenzy", 40);
 					buff->setSpeedMultiplierMod(0.5f);
 					creature->addBuff(buff);
+					creature->playEffect("clienteffect/pl_force_run_self.cef", "");
 				}else {
 					creature->sendSystemMessage("you failed to enter a frenzy.");
 				}
