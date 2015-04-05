@@ -69,7 +69,7 @@ public:
 			return INVALIDWEAPON;
 		}
 		int duration = 10;
-		int cooldown = 60;
+		int cooldown = 45;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
 		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
@@ -80,8 +80,7 @@ public:
 		}
 		else if (!creature->hasBuff(buffcrc2)) {
 			creature->sendSystemMessage("You attempt to relocate!");
-			buff->setSkillModifier("block", 200);
-			buff->setSpeedMultiplierMod(1.5f);
+			buff->setSpeedMultiplierMod(1.8f);
 			creature->addBuff(buff);
 			creature->addBuff(buff2);
 			}else {
