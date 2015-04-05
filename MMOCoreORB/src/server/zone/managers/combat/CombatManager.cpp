@@ -1032,7 +1032,7 @@ int CombatManager::getArmorReduction(TangibleObject* attacker, WeaponObject* wea
 	if(weapon == NULL)
 		return 0;
 	float rawDamage = damage;
-	int swordArmor = defender->getSkillMod("sword_armor");
+	int swordArmor = defender->getSkillMod("ability_armor");
 	if (swordArmor > 0) {
 		float dmgAbsorbed = rawDamage - (damage *= 1.f - (swordArmor / 100.f));
 		defender->notifyObservers(ObserverEventType::DAMAGERECEIVED, attacker, dmgAbsorbed);
