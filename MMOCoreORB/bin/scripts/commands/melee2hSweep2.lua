@@ -43,7 +43,7 @@
 
 Melee2hSweep2Command = {
         name = "melee2hsweep2",
-	damageMultiplier = 2.5,
+	damageMultiplier = 3,
 	speedMultiplier = 3,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4.5,
