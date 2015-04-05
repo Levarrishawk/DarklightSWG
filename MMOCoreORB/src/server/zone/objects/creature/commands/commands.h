@@ -304,7 +304,7 @@
 #include "HaveconsentCommand.h"
 #include "HeadShot1Command.h"
 #include "HeadShot2Command.h"
-#include "HeadShot3Command.h"
+#include "RelocateCommand.h"
 #include "HealActionSelf1Command.h"
 #include "HealActionSelf2Command.h"
 #include "HealActionWoundOther1Command.h"
