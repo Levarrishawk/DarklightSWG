@@ -27,11 +27,12 @@ function pvp:spawnActiveAreas()
 end
   
 function pvp:notifySpawnArea(pActiveArea, pMovingObject)
-	return ObjectManager.withCreatureObject(pPlayer, function(player)
+	return ObjectManager.withCreatureObject(pMovingObject, function(player)
 		if (player:isAiAgent()) then
 			return 0
 		end
-	--	createEvent(100, "pvp", "handlePvpZone", pMovingObject)print("event started")
+
+		return 0
 	end)
 end
 --[[
