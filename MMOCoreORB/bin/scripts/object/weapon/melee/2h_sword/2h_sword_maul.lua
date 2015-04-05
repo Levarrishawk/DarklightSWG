@@ -114,8 +114,8 @@ object_weapon_melee_2h_sword_2h_sword_maul = object_weapon_melee_2h_sword_shared
 	maxRange = 5,
 	maxRangeAccuracy = 0,
 
-	minDamage = 550,
-	maxDamage = 650,
+	minDamage = 300,
+	maxDamage = 450,
 
 	attackSpeed = 4,
 
