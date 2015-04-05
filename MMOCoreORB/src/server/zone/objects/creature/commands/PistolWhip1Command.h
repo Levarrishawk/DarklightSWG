@@ -103,7 +103,7 @@ public:
 			buff->setSpeedMultiplierMod(0.01);
 			creatureTarget->addBuff(buff);
 			creature->addBuff(buff2);
-
+			creatureTarget->playEffect("clienteffect/pistol_root.cef", "");
 		}	
 		return doCombatAction(creature, target);
 	}
