@@ -46,7 +46,7 @@ Melee2hSpinAttack2Command = {
 	damageMultiplier = 3.5,
 	speedMultiplier = 4,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.3,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
         --accuracyBonus = 10,
         
