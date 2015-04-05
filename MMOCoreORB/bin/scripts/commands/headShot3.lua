@@ -44,20 +44,6 @@
 HeadShot3Command = {
         name = "headshot3",
 
-	damageMultiplier = 3.25,
-	speedMultiplier = 3.35,
-	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.25,
-	mindCostMultiplier = 0,
-	--accuracyBonus = 5,
-
-	poolsToDamage = HEALTH_ATTRIBUTE,
-
-	animationCRC = hashCode("fire_1_special_single_medium_face"),
-
-	combatSpam = "masterheadshot",
-
-	range = -1
 }
 
 AddCommand(HeadShot3Command)
