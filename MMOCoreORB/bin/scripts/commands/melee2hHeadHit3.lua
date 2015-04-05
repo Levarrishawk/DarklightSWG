@@ -51,8 +51,9 @@ Melee2hHeadHit3Command = {
         accuracyBonus = 10,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
-	stateEffects = {
-	  StateEffect( 
+	
+		stateEffects = {
+	StateEffect( 
 		DIZZY_EFFECT, 
 		{}, 
 		{ "dizzy_defense", "resistance_states" }, 
@@ -60,7 +61,16 @@ Melee2hHeadHit3Command = {
 		80, 
 		60, 
 		4
-	  )
+  		),
+  	StateEffect(
+  		KNOCKDOWN_EFFECT, 
+		{ "knockdownRecovery", "lastKnockdown" }, 
+		{ "knockdown_defense" }, 
+		{}, 
+		40, 
+		100, 
+		10
+		)
 	},
 
 	animationCRC = hashCode("combo_2d_medium"),
