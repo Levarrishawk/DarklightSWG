@@ -68,15 +68,9 @@ public:
 		if (!weapon->isPistolWeapon()) {
 			return INVALIDWEAPON;
 		}
-		Reference<TangibleObject*> targetObject = server->getZoneServer()->getObject(target).castTo<TangibleObject*>();
-
-		if (targetObject == NULL || !targetObject->isCreatureObject())
-			return INVALIDTARGET;
-			
+	
 		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
 		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
-	/*
-		Shouldn't need these.
 		
 		if (creatureTarget == NULL)
 			return GENERALERROR;
@@ -85,7 +79,7 @@ public:
 			creature->sendSystemMessage("You are out of range.");
 			return GENERALERROR;
 		}
-	*/
+	
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SUFFERING;
 
