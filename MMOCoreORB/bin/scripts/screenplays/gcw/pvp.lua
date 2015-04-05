@@ -63,7 +63,7 @@ function recruiterScreenplay:handleGoCovert(pPlayer)
 		playerObject:setFactionStatus(1)
 	end)
 end
-]]--
+
 		if (playerObjectPointer ~= nil and player:isImperial() or player:isRebel()) then
 			local playerObject = LuaPlayerObject(playerObjectPointer)
 			playerObject:setFactionStatus(2)
@@ -75,7 +75,7 @@ end
 
 
 
---[[
+
 	local movingObject = LuaSceneObject(pMovingObject)
 	local player = LuaCreatureObject(pMovingObject)
 	local playerObjectPointer = player:getPlayerObject()
