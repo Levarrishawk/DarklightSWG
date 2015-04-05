@@ -52,7 +52,17 @@ Melee2hArea3Command = {
         
         poolsToDamage = HEALTH_ATTRIBUTE,
 
-	stateEffects = {},
+	stateEffects = {
+	  StateEffect( 
+		STUN_EFFECT, 
+		{}, 
+		{ "stun_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		60, 
+		60, 
+		10
+	  )
+	},
 
 	areaRange = 7,
 	areaAction = true,
