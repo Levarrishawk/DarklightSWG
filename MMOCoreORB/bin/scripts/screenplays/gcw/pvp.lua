@@ -32,7 +32,7 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 			return 0
 		end
 		
-		if (player:isImperial or player:isRebel) then
+		if (player:isImperial() or player:isRebel()) then
 			createEvent(1, "pvp", "handlePvpZone", pMovingObject)
 		else
 			player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
