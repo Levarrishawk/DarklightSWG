@@ -31,17 +31,18 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		if (player:isAiAgent()) then
 			return 0
 		end
-		createEvent(100, "pvp", "handlePvpZone", pMovingObject)print("event started")
+	--	createEvent(100, "pvp", "handlePvpZone", pMovingObject)print("event started")
 		return 0
 	end)
 end
-
+--[[
 function pvp:handlePvpZone(pPlayer)
 	ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
 		deleteData(player:getObjectID() .. ":changingFactionStatus")
 		playerObject:setFactionStatus(2)
 	end)
 end
+]]--
 --[[
 ##REF
 function recruiterScreenplay:handleGoCovert(pPlayer)
