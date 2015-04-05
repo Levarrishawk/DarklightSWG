@@ -31,8 +31,8 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		if (player:isAiAgent()) then
 			return 0
 		end
-		if (playerObjectPointer ~= nil and player:isImperial() or player:isRebel()) then
-			local playerObject = LuaPlayerObject(playerObjectPointer)
+		if ( player:isImperial() or player:isRebel()) then
+			local playerObject = LuaPlayerObject(pMovingObject)
 			playerObject:setFactionStatus(2)
 			player:sendSystemMessage("You have entered the Restuss PvP zone!")
 		else
