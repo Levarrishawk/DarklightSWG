@@ -42,7 +42,7 @@ this exception also makes it possible to release a modified version
 which carries forward this exception.
 */
 
-#ifndef HEADSHOT3COMMAND_H_
+#ifndef RELOCATECOMMAND_H_
 #define RELOCATECOMMAND_H_
 
 #include "server/zone/objects/scene/SceneObject.h"
