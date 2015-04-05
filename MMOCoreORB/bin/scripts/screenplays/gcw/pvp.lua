@@ -43,11 +43,11 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 end
 
 function pvp:handlePvpZone(pPlayer)
---[[	ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
+	ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
 		deleteData(player:getObjectID() .. ":changingFactionStatus")
 		playerObject:setFactionStatus(2)
 	end)
-	]]--
+
 end
 
 --[[
