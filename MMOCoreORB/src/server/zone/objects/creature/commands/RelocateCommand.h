@@ -43,15 +43,15 @@ which carries forward this exception.
 */
 
 #ifndef HEADSHOT3COMMAND_H_
-#define HEADSHOT3COMMAND_H_
+#define RELOCATECOMMAND_H_
 
 #include "server/zone/objects/scene/SceneObject.h"
 #include "CombatQueueCommand.h"
 
-class HeadShot3Command : public CombatQueueCommand {
+class RelocateCommand : public CombatQueueCommand {
 public:
 
-	HeadShot3Command(const String& name, ZoneProcessServer* server)
+	RelocateCommand(const String& name, ZoneProcessServer* server)
 		: CombatQueueCommand(name, server) {
 	}
 
@@ -68,6 +68,21 @@ public:
 		if (!weapon->isRifleWeapon()) {
 			return INVALIDWEAPON;
 		}
+		
+		// Action cost of skill.
+		int actionCost = 400;
+
+		//Check for and deduct Force cost.
+
+		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
+		
+		if (creature->getHAM(CreatureAttribute::ACTION) < actionCost) {
+			creature->sendSystemMessage("You don't have enough action to preform this ability");
+			return false;
+		}
+		
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
+		
 		int duration = 10;
 		int cooldown = 45;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
