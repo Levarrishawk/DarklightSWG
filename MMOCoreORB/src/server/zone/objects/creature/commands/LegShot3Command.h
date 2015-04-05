@@ -68,6 +68,31 @@ public:
 		if (!weapon->isCarbineWeapon()) {
 			return INVALIDWEAPON;
 		}
+				uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SUFFERING;
+
+		if(creatureTarget->hasBuff(buffcrc)) {
+			creature->sendSystemMessage("@jedi_spam:force_buff_present");
+			return GENERALERROR;
+		}
+
+		if(creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You cannot snare at this time.");
+			return GENERALERROR;
+		}
+
+		int duration = 5;
+		int duration2 = 15;
+
+		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, duration2, BuffType::JEDI);
+		ManagedReference<Buff*> buff = new Buff(creatureTarget, buffcrc, duration, BuffType::JEDI);
+
+		if (object->isCreatureObject() && creatureTarget->isAttackableBy(creature) && !creatureTarget->hasBuff(buffcrc)) {
+			buff->setSpeedMultiplierMod(0.5);
+			creatureTarget->addBuff(buff);
+			creature->addBuff(buff2);
+			creatureTarget->playEffect("clienteffect/carbine_snare.cef", "");
+		}
 
 		return doCombatAction(creature, target);
 	}
