@@ -35,34 +35,43 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		if (player:isAiAgent() and not AiAgent(pMovingObject):isPet()) then
 			return 0
 		end
-		ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
-		deleteData(player:getObjectID() .. ":changingFactionStatus")
-			if (playerObjectPointer ~= nil and player:isImperial() or player:isRebel()) then
-				local playerObject = LuaPlayerObject(playerObjectPointer)
-				playerObject:setFactionStatus(2)
-				player:sendSystemMessage("You have entered the Restuss PvP zone!")
-			else
-				player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
-				player:teleport(5298, 78, 6115, 0)
-			end
-		end)
-
-		return 0
+		
+	createEvent(1, "pvp", "handleZone", pMovingObject)
+	
 	end)
 end
 
 
+function pvp:handleZone(pPlayer)
+		ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
+		deleteData(player:getObjectID() .. ":changingFactionStatus")
+		if (player:isImperial() or player:isRebel()) then
+			playerObject:setFactionStatus(2)
+			player:sendSystemMessage("You have entered the Restuss PvP zone!")
+		else
+			player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
+			player:teleport(5298, 78, 6115, 0)
+		end
+	end)
+end
 
 --[[
 ##REF
-
-		ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
+function recruiterScreenplay:handleGoCovert(pPlayer)
+	ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
 		deleteData(player:getObjectID() .. ":changingFactionStatus")
 		playerObject:setFactionStatus(1)
 	end)
-
+end
 ]]--
-
+		if (playerObjectPointer ~= nil and player:isImperial() or player:isRebel()) then
+			local playerObject = LuaPlayerObject(playerObjectPointer)
+			playerObject:setFactionStatus(2)
+			player:sendSystemMessage("You have entered the Restuss PvP zone!")
+		else
+			player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
+			player:teleport(5298, 78, 6115, 0)
+		end
 
 
 
