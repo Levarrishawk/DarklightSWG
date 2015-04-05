@@ -70,8 +70,28 @@ public:
 		if (!weapon->isTwoHandMeleeWeapon()) {
 			return INVALIDWEAPON;
 		}
+		
+		int duration = 10;
+		int cooldown = 45;
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
+		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
+		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, cooldown, BuffType::JEDI);
 
-		return doCombatAction(creature, target);
+		if (creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You are to tired to maintain focus!");
+		}
+		else if (!creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You focus your will power to kept yourself alive!");
+			buff->setSkillMod("private_max_damage_divisor", 4);
+			buff->setSkillMod("ability_armor", 20);
+			creature->addBuff(buff);
+			creature->addBuff(buff2);
+			}else {
+				creature->sendSystemMessage("You cannot focus at this time.");
+			}
+			
+		return SUCCESS;
 	}
 
 };
