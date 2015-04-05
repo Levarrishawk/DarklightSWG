@@ -3,7 +3,7 @@ local ObjectManager = require("managers.object.object_manager")
 pvp = ScreenPlay:new {
 	numberOfActs = 1,
   	questString = "pvp",
-  	states = {},
+  	states = {onleave = 1, overt = 2},
   	questdata = Object:new {
     	activePlayerName = "initial",
     	}
@@ -31,21 +31,17 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		if (player:isAiAgent()) then
 			return 0
 		end
-		if ( player:isImperial() or player:isRebel()) then
-			local playerObject = LuaPlayerObject(pMovingObject)
-			playerObject:setFactionStatus(2)
-			player:sendSystemMessage("You have entered the Restuss PvP zone!")
-		else
-			player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
-			player:teleport(5298, 78, 6115, 0)
-		end
-		
-
+		createEvent(100, "pvp", "handlePvpZone", pMovingObject)print("event started")
 		return 0
 	end)
 end
 
-
+function pvp:handlePvpZone(pPlayer)
+	ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
+		deleteData(player:getObjectID() .. ":changingFactionStatus")
+		playerObject:setFactionStatus(2)
+	end)
+end
 --[[
 ##REF
 function recruiterScreenplay:handleGoCovert(pPlayer)
