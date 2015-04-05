@@ -1168,8 +1168,8 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<PaymaintenanceCommand>(String("paymaintenance").toLowerCase());
 	commandFactory.registerCommand<PeaceCommand>(String("peace").toLowerCase());
 	commandFactory.registerCommand<PermissionListModifyCommand>(String("permissionListModify").toLowerCase());
-	commandFactory.registerCommand<PistolMeleeDefense1Command>(String("pistolMeleeDefense1").toLowerCase());
-	commandFactory.registerCommand<PistolMeleeDefense2Command>(String("pistolMeleeDefense2").toLowerCase());
+	commandFactory.registerCommand<PistolWhip1Command>(String("pistolWhip1").toLowerCase());
+	commandFactory.registerCommand<PistolWhip2Command>(String("pistolWhip2").toLowerCase());
 	commandFactory.registerCommand<PlaceBattlefieldStructureCommand>(String("placeBattlefieldStructure").toLowerCase());
 	commandFactory.registerCommand<PlaceStructureCommand>(String("placeStructure").toLowerCase());
 	commandFactory.registerCommand<PlaceStructureModeCommand>(String("placeStructureMode").toLowerCase());
