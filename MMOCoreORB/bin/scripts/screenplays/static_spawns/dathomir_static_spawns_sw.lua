@@ -44,6 +44,7 @@ function DathomirStaticSpawnsSwScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "specforce_marine", 300, -6455.5, 555.1, -6743.6, -33, 0)
 	spawnMobile("dathomir", "specforce_marine", 300, -6471.7, 553.5, -6741.9, 0, 0)
 	spawnMobile("dathomir", "specforce_marine", 300, -6476.2, 546.3, -6733.3, 33, 0)
+	spawnMobile("dungeon2", "specforce_marine", 300, -4.9, 173.8, 44.0, 33, 34673093)
 
 	--lookout station (-4573,-6556)
 	spawnMobile("dathomir", "singing_mountain_clan_sentry", 360, -4573.5, 34.7, -6556.4, 138, 0)
