@@ -46,7 +46,7 @@ Melee2hArea3Command = {
 	damageMultiplier = 3.5,
 	speedMultiplier = 4,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 6,
+	actionCostMultiplier = 4.25,
 	mindCostMultiplier = 0,
         --accuracyBonus = 10,
         
