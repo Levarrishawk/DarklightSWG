@@ -35,17 +35,15 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		if (player:isAiAgent() and not AiAgent(pMovingObject):isPet()) then
 			return 0
 		end
-		return 	ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
-			deleteData(player:getObjectID() .. ":changingFactionStatus")
-			if (player:isImperial() or player:isRebel()) then
-				local playerObject = LuaPlayerObject(playerObjectPointer)
-				playerObject:setFactionStatus(2)
-				player:sendSystemMessage("You have entered the Restuss PvP zone!")
-			else
-				player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
-				player:teleport(5298, 78, 6115, 0)
-			end
-		end)
+		local creature = PlayerObject(pMovingObject)
+		if (player:isImperial() or player:isRebel()) then
+			local playerObject = LuaPlayerObject(playerObjectPointer)
+			creature:setFactionStatus(2)
+			player:sendSystemMessage("You have entered the Restuss PvP zone!")
+		else
+			player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
+			player:teleport(5298, 78, 6115, 0)
+		end
 	end)
 end
 
