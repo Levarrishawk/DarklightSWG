@@ -32,7 +32,6 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 			return 0
 		end
 	--	createEvent(100, "pvp", "handlePvpZone", pMovingObject)print("event started")
-		return 0
 	end)
 end
 --[[
