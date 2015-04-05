@@ -60,7 +60,7 @@ UnarmedWarcryCommand = {
 		{}, 
 		100, 
 		0, 
-		20 
+		15 
 	  )
 	},
 
