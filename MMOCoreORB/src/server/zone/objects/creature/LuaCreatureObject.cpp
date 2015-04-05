@@ -73,6 +73,7 @@ Luna<LuaCreatureObject>::RegType LuaCreatureObject::Register[] = {
 		{ "setCustomObjectName", &LuaSceneObject::setCustomObjectName},
 		{ "getFaction", &LuaCreatureObject::getFaction},
 		{ "setFaction", &LuaCreatureObject::setFaction},
+		{ "setFactionStatus", &LuaCreatureObject::setFactionStatus },
 		{ "isRebel", &LuaCreatureObject::isRebel},
 		{ "isImperial", &LuaCreatureObject::isImperial},
 		{ "isNeutral", &LuaCreatureObject::isNeutral},
@@ -506,6 +507,14 @@ int LuaCreatureObject::getFaction(lua_State* L) {
 	lua_pushinteger(L, faction);
 
 	return 1;
+}
+
+int LuaCreatureObject::setFactionStatus(lua_State* L) {
+	int status = lua_tointeger(L, -1);
+
+	realObject->setFactionStatus(status);
+
+	return 0;
 }
 
 int LuaCreatureObject::isRebel(lua_State* L) {
