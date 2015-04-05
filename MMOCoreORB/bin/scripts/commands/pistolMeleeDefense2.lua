@@ -41,27 +41,17 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
-PistolMeleeDefense2Command = {
-        name = "pistolmeleedefense2",
+PistolWhip2Command = {
+        name = "pistolwhip2",
 
-	damageMultiplier = 4.0,
+	damageMultiplier = 2.0,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.0,
+	actionCostMultiplier = 5,
 	mindCostMultiplier = 0,
-        accuracyBonus = 50,
+        --accuracyBonus = 50,
 
-	stateEffects = {
-	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
-		{ "knockdownRecovery", "lastKnockdown" }, 
-		{ "knockdown_defense" }, 
-		{}, 
-		30, 
-		100, 
-		0 
-	  )
-	},
+	stateEffects = { }, --this will be handled in the src
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
@@ -72,5 +62,5 @@ PistolMeleeDefense2Command = {
 	range = 5
 }
 
-AddCommand(PistolMeleeDefense2Command)
+AddCommand(PistolWhip2Command)
 
