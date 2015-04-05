@@ -31,11 +31,11 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		return 0
 	end
 
-	return ObjectManager.withCreatureObject(pMovingObject, function(player)
+	return ObjectManager.withCreatureObjectAndPlayerObject(pMovingObject, function(player)
 		if (player:isAiAgent() and not AiAgent(pMovingObject):isPet()) then
 			return 0
 		end
-		ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
+
 		if (playerObjectPointer ~= nil and player:isImperial() or player:isRebel()) then
 			local playerObject = LuaPlayerObject(playerObjectPointer)
 			playerObject:setFactionStatus(2)
@@ -51,7 +51,15 @@ end
 
 
 
+--[[
+##REF
 
+		ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
+		deleteData(player:getObjectID() .. ":changingFactionStatus")
+		playerObject:setFactionStatus(1)
+	end)
+
+]]--
 
 
 
