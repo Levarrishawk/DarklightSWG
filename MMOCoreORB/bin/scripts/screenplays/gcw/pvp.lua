@@ -27,7 +27,7 @@ function pvp:spawnActiveAreas()
 end
   
 function pvp:notifySpawnArea(pActiveArea, pMovingObject)
-	return ObjectManager.withCreatureObjectAndPlayerObject(pPlayer, function(player)
+	return ObjectManager.withCreatureObject(pPlayer, function(player)
 		if (player:isAiAgent()) then
 			return 0
 		end
