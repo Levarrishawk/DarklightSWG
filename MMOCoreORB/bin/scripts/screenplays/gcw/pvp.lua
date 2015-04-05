@@ -31,7 +31,8 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		if (player:isAiAgent()) then
 			return 0
 		end
-
+		
+		createEvent(1, "pvp", "handlePvpZone", pMovingObject)
 		return 0
 	end)
 end
