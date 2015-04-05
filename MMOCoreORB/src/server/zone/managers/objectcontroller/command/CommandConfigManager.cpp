@@ -999,7 +999,7 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<HaveconsentCommand>(String("haveconsent").toLowerCase());
 	commandFactory.registerCommand<HeadShot1Command>(String("headShot1").toLowerCase());
 	commandFactory.registerCommand<HeadShot2Command>(String("headShot2").toLowerCase());
-	commandFactory.registerCommand<HeadShot3Command>(String("headShot3").toLowerCase());
+	commandFactory.registerCommand<RelocateCommand>(String("relocate").toLowerCase());
 	commandFactory.registerCommand<HealActionSelf1Command>(String("healActionSelf1").toLowerCase());
 	commandFactory.registerCommand<HealActionSelf2Command>(String("healActionSelf2").toLowerCase());
 	commandFactory.registerCommand<HealActionWoundOther1Command>(String("healActionWoundOther1").toLowerCase());
