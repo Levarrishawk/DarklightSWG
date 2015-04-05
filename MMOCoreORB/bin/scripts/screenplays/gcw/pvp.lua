@@ -35,7 +35,7 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		if (player:isAiAgent() and not AiAgent(pMovingObject):isPet()) then
 			return 0
 		end
-		local creature = PlayerObject(pMovingObject)
+		local creature = LuaPlayerObject(pMovingObject)
 		if (player:isImperial() or player:isRebel()) then
 			local playerObject = LuaPlayerObject(playerObjectPointer)
 			creature:setFactionStatus(2)
