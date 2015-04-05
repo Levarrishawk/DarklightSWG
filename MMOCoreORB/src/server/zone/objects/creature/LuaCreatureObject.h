@@ -65,7 +65,6 @@ namespace creature {
 		int getPlayerObject(lua_State* L);
 		int getFaction(lua_State* L);
 		int setFaction(lua_State* L);
-		int setFactionStatus(lua_State* L);
 		int isImperial(lua_State* L);
 		int isRebel(lua_State* L);
 		int isNeutral(lua_State* L);
