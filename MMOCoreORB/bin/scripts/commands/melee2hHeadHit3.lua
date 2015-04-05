@@ -44,13 +44,24 @@
 Melee2hHeadHit3Command = {
         name = "melee2hheadhit3",
 	damageMultiplier = 5.5,
-	speedMultiplier = 5,
+	speedMultiplier = 5.25,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4.75,
 	mindCostMultiplier = 0,
-        --accuracyBonus = 10,
+        accuracyBonus = 10,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
+	stateEffects = {
+	  StateEffect( 
+		DIZZY_EFFECT, 
+		{}, 
+		{ "dizzy_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		80, 
+		60, 
+		4
+	  )
+	},
 
 	animationCRC = hashCode("combo_2d_medium"),
 
