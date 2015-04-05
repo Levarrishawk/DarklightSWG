@@ -98,6 +98,7 @@ public:
 			buff->setSpeedMultiplierMod(1.8f);
 			creature->addBuff(buff);
 			creature->addBuff(buff2);
+			creature->playEffect("clienteffect/frs_light_wisdom.cef", "");
 			}else {
 				creature->sendSystemMessage("You cannot relocate at this time.");
 			}
