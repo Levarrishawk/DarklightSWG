@@ -42,16 +42,16 @@ this exception also makes it possible to release a modified version
 which carries forward this exception.
 */
 
-#ifndef PISTOLMELEEDEFENSE1COMMAND_H_
-#define PISTOLMELEEDEFENSE1COMMAND_H_
+#ifndef PISTOLWHIP1COMMAND_H_
+#define PISTOLWHIP1COMMAND_H_
 
 #include "server/zone/objects/scene/SceneObject.h"
 #include "CombatQueueCommand.h"
 
-class PistolMeleeDefense1Command : public CombatQueueCommand {
+class PistolWhip1Command : public CombatQueueCommand {
 public:
 
-	PistolMeleeDefense1Command(const String& name, ZoneProcessServer* server)
+	PistolWhip1Command(const String& name, ZoneProcessServer* server)
 		: CombatQueueCommand(name, server) {
 	}
 
@@ -68,10 +68,52 @@ public:
 		if (!weapon->isPistolWeapon()) {
 			return INVALIDWEAPON;
 		}
+		Reference<TangibleObject*> targetObject = server->getZoneServer()->getObject(target).castTo<TangibleObject*>();
 
+		if (targetObject == NULL || !targetObject->isCreatureObject())
+			return INVALIDTARGET;
+			
+		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
+		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
+	/*
+		Shouldn't need these.
+		
+		if (creatureTarget == NULL)
+			return GENERALERROR;
+
+		if (creature->getDistanceTo(object) > 5.f){
+			creature->sendSystemMessage("You are out of range.");
+			return GENERALERROR;
+		}
+	*/
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SUFFERING;
+
+		if(creatureTarget->hasBuff(buffcrc)) {
+			creature->sendSystemMessage("@jedi_spam:force_buff_present");
+			return GENERALERROR;
+		}
+
+		if(creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You cannot snare at this time.");
+			return GENERALERROR;
+		}
+
+		int duration = 2;
+		int duration2 = 65;
+
+		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, duration2, BuffType::JEDI);
+		ManagedReference<Buff*> buff = new Buff(creatureTarget, buffcrc, duration, BuffType::JEDI);
+
+		if (object->isCreatureObject() && creatureTarget->isAttackableBy(creature) && !creatureTarget->hasBuff(buffcrc)) {
+			buff->setSpeedMultiplierMod(0.01);
+			creatureTarget->addBuff(buff);
+			creature->addBuff(buff2);
+
+		}	
 		return doCombatAction(creature, target);
 	}
 
 };
 
-#endif //PISTOLMELEEDEFENSE1COMMAND_H_
+#endif //PISTOLWHIP1COMMAND_H_
