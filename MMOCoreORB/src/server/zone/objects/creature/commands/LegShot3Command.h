@@ -68,7 +68,19 @@ public:
 		if (!weapon->isCarbineWeapon()) {
 			return INVALIDWEAPON;
 		}
-				uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+
+		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
+		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
+	
+		if (creatureTarget == NULL)
+			return GENERALERROR;
+
+		if (creature->getDistanceTo(object) > 45.f){
+			creature->sendSystemMessage("You are out of range.");
+			return GENERALERROR;
+		}
+	
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SUFFERING;
 
 		if(creatureTarget->hasBuff(buffcrc)) {
@@ -91,7 +103,7 @@ public:
 			buff->setSpeedMultiplierMod(0.5);
 			creatureTarget->addBuff(buff);
 			creature->addBuff(buff2);
-			creatureTarget->playEffect("clienteffect/carbine_snare.cef", "");
+			creatureTarget->playEffect("clienteffect/pikeman_snare.cef", "");
 		}
 
 		return doCombatAction(creature, target);
