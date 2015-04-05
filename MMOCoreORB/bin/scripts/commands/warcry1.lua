@@ -60,14 +60,14 @@ Warcry1Command = {
 		{}, 
 		100, 
 		0, 
-		10 
+		3 
 	  )
 	},
 
 	combatSpam = "warcry",
 	animationCRC = hashCode("warcry"),
 	effectString = "clienteffect/combat_special_attacker_warcry.cef",
-	range = 15,
+	range = 10,
 
 	poolsToDamage = 0
 }
