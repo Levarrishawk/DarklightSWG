@@ -34,6 +34,7 @@ function pvp:notifySpawnArea(pActiveArea, pMovingObject)
 		
 		if (player:isImperial() or player:isRebel()) then
 			createEvent(1, "pvp", "handlePvpZone", pMovingObject)
+			player:sendSystemMessage("You have entered the Restuss PvP zone!")
 		else
 			player:sendSystemMessage("You must be Rebel or Imperial to enter the PvP zone!")
 			player:teleport(5298, 78, 6115, 0)
