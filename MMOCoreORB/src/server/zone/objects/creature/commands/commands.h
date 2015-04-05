@@ -417,6 +417,7 @@
 #include "Melee1hLunge1Command.h"
 #include "Melee1hLunge2Command.h"
 #include "Melee1hLunge3Command.h"
+#include "Melee1hLunge3Command.h"
 #include "Melee1hFrenzy1Command.h"
 #include "Melee1hFrenzy2Command.h"
 #include "Melee1hSpinAttack1Command.h"
