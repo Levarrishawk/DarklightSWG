@@ -46,7 +46,7 @@ end
 function pvp:handlePvpZone(pPlayer)
 	ObjectManager.withCreatureAndPlayerObject(pPlayer, function(player, playerObject)
 		deleteData(player:getObjectID() .. ":changingFactionStatus")
-		if (playerObject:isCovert() or playerObject:isOnleave()) then
+		if (playerObject:isCovert() or playerObject:isOnLeave()) then
 			playerObject:setFactionStatus(2)
 		end
 	end)
