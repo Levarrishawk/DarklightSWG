@@ -97,7 +97,7 @@ public:
 		}
 		else if (!creature->hasBuff(buffcrc2)) {
 			creature->sendSystemMessage("You focus your will power to kept yourself alive!");
-			buff->setSkillModifier("private_max_damage_divisor", 4);
+			buff->setSkillModifier("private_max_damage_divisor", 80);
 			buff->setSkillModifier("ability_armor", 40);
 			creature->addBuff(buff);
 			creature->addBuff(buff2);
