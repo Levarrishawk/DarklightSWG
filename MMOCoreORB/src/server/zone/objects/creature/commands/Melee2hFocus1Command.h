@@ -87,6 +87,7 @@ public:
 			buff->setSkillModifier("ability_armor", 20);
 			creature->addBuff(buff);
 			creature->addBuff(buff2);
+			creature->playEffect("clienteffect/pl_force_run_self.cef", "");
 			}else {
 				creature->sendSystemMessage("You cannot focus at this time.");
 			}
