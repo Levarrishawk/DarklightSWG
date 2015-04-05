@@ -41,10 +41,10 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
-HeadShot3Command = {
-        name = "headshot3",
+RelocateCommand = {
+        name = "relocate",
 
 }
 
-AddCommand(HeadShot3Command)
+AddCommand(RelocateCommand)
 
