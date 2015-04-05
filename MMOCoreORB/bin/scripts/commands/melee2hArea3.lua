@@ -43,26 +43,16 @@
 
 Melee2hArea3Command = {
         name = "melee2harea3",
-	damageMultiplier = 3.5,
-	speedMultiplier = 4,
+	damageMultiplier = 3.25,
+	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.25,
+	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
         --accuracyBonus = 10,
         
         poolsToDamage = HEALTH_ATTRIBUTE,
 
-	stateEffects = {
-	  StateEffect( 
-		POSTUREDOWN_EFFECT, 
-		{ "postureDownRecovery" }, 
-		{ "posture_change_down_defense" }, 
-		{}, 
-		15, 
-		100, 
-		0 
-	  )
-	},
+	stateEffects = {},
 
 	areaRange = 7,
 	areaAction = true,
