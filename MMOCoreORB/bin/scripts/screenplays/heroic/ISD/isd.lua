@@ -7,7 +7,7 @@ ISDScreenPlay = ScreenPlay:new
 
 registerScreenPlay("ISDScreenPlay", true)
 
-function CorelliaStaticSpawnsScreenPlay:start()
+function ISDScreenPlay:start()
   if (isZoneEnabled("dungeon2")) then
     self:spawnMobiles()
   end
