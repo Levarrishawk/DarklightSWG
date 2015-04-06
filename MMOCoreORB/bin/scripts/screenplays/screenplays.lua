@@ -25,7 +25,7 @@ includeFile("themepark/tutorial.lua")
 includeFile("legacy/force_sensitive.lua")--test
 
 --ISD
-includeFile("heroic/ISD/isd.lua")
+includeFile("isd/isd.lua")
 
 -- GCW
 includeFile("gcw/newsnet.lua")

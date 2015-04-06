@@ -4,7 +4,7 @@ includeFile("conversations.lua")
 
 
 -- Creatures
-includeFile("heroic/ISD/serverobjects.lua")
+includeFile("isd/serverobjects.lua")
 includeFile("corellia/serverobjects.lua")
 includeFile("dantooine/serverobjects.lua")
 includeFile("dathomir/serverobjects.lua")
