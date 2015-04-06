@@ -9,10 +9,10 @@ marksmannovice = { {"overchargeshot1",""},{"pointblanksingle1",""},{"pointblanka
 
 --creature level 11 to 15
 brawlermid = { {"intimidate1",""},{"melee1hlunge1",""},{"melee1hhit1",""},{"melee1hbodyhit1",""},{"melee2hlunge1",""},{"melee2hhit1",""},{"melee2hheadhit1",""},{"polearmlunge1",""},{"polearmhit1",""},{"polearmleghit1",""},{"unarmedlunge1",""},{"unarmedhit1",""},{"unarmedstun1",""} }
-marksmanmid = { {"overchargeshot1",""},{"pointblanksingle1",""},{"pointblankarea1",""},{"headshot1",""},{"bodyshot1",""},{"legshot1",""},{"fullautosingle1",""},{"diveshot",""},{"kipupshot",""},{"rollshot",""} }
+marksmanmid = { {"overchargeshot1",""},{"pointblanksingle1",""},{"pointblankarea1",""},{"bodyshot1",""},{"legshot1",""},{"fullautosingle1",""},{"diveshot",""},{"kipupshot",""},{"rollshot",""} }
 
 --creature level 16 to 20
-marksmanmaster = { {"overchargeshot2",""},{"pointblanksingle1",""},{"pointblankarea1",""},{"diveshot",""},{"kipupshot",""},{"rollshot",""},{"bodyshot2",""},{"healthshot1",""},{"legshot2",""},{"fullautosingle1",""},{"actionshot1",""},{"headshot2",""},{"mindshot1",""},{"warningshot",""},{"suppressionfire1",""} }
+marksmanmaster = { {"overchargeshot2",""},{"pointblanksingle1",""},{"pointblankarea1",""}, }
 brawlermaster = { {"intimidate2",""},{"unarmedlunge2",""},{"unarmedhit1",""},{"unarmedstun1",""},{"unarmedblind1",""},{"unarmedspinattack1",""},{"melee1hspinattack1",""},{"melee1hlunge2",""},{"melee1hdizzyhit1",""},{"melee1hhit1",""},{"melee1hbodyhit1",""},{"melee2hhit1",""},{"melee2hlunge2",""},{"melee2hheadhit1",""},{"melee2hsweep1",""},{"melee2hspinattack1",""},{"polearmlunge2",""},{"polearmhit1",""},{"polearmleghit1",""},{"polearmstun1",""},{"polearmspinattack1",""} }
 
 --creature level 21 to 25 use base profession master with these depending on weapons in thier weapons groups
