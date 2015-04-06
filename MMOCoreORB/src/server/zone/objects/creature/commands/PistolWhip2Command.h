@@ -80,13 +80,8 @@ public:
 			return GENERALERROR;
 		}
 	
-		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SERENITY;
 		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SUFFERING;
-
-		if(creatureTarget->hasBuff(buffcrc)) {
-			creature->sendSystemMessage("@jedi_spam:force_buff_present");
-			return GENERALERROR;
-		}
 
 		if(creature->hasBuff(buffcrc2)) {
 			creature->sendSystemMessage("You cannot snare at this time.");
@@ -94,7 +89,7 @@ public:
 		}
 
 		int duration = 5;
-		int duration2 = 65;
+		int duration2 = 35;
 
 		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, duration2, BuffType::JEDI);
 		ManagedReference<Buff*> buff = new Buff(creatureTarget, buffcrc, duration, BuffType::JEDI);
