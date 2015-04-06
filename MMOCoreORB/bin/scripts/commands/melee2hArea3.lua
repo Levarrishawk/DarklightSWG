@@ -58,8 +58,8 @@ Melee2hArea3Command = {
 		{}, 
 		{ "stun_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		60, 
-		60, 
+		70, 
+		70, 
 		10
 	  )
 	},
