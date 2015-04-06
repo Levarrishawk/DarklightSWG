@@ -63,7 +63,7 @@ end
 
 --Simply sends a system message
 function pvp:notifySpawnAreaLeave(pActiveArea, pMovingObject)
-		
+	
 	if (not SceneObject(pMovingObject):isCreatureObject()) then
 		return 0
 	end
@@ -72,9 +72,10 @@ function pvp:notifySpawnAreaLeave(pActiveArea, pMovingObject)
 		if (player:isAiAgent()) then
 			return 0
 		end
-		player:sendSendSystemMessage("You have left the PvP Zone.")
-	
-	return 0
-	
+		
+		if (player:isImperial() or player:isRebel()) then
+			player:sendSystemMessage("You have left the Restuss PvP zone!")
+		end
+		return 0
 	end)
 end
