@@ -77,7 +77,7 @@ public:
 		if (creatureTarget == NULL)
 			return GENERALERROR;
 
-		if (creature->getDistanceTo(object) > 5.f){
+		if (creature->getDistanceTo(object) > 8.f){
 			creature->sendSystemMessage("You are out of range.");
 			return GENERALERROR;
 		}
