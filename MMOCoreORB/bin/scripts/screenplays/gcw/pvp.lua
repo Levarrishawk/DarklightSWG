@@ -72,7 +72,7 @@ function pvp:notifySpawnAreaLeave(pActiveArea, pMovingObject)
 		if (player:isAiAgent()) then
 			return 0
 		end
-	player:sendSendSystemMessage("You have left the PvP Zone.")
+		player:sendSendSystemMessage("You have left the PvP Zone.")
 	
 	return 0
 	
