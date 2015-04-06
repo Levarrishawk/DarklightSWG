@@ -66,7 +66,7 @@ Melee2hSweep2Command = {
 		{ "posture_change_down_defense" }, 
 		{}, 
 		60, 
-		110, 
+		100, 
 		0 
 	  )
 	},
