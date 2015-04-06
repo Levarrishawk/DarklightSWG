@@ -97,7 +97,7 @@ public:
 		}
 		else if (!creature->hasBuff(buffcrc2)) {
 			creature->sendSystemMessage("You focus your will power to kept yourself alive!");
-			buff->setSkillModifier("ability_armor", 40);
+			buff->setSkillModifier("ability_armor", 20);
 			creature->addBuff(buff);
 			creature->addBuff(buff2);
 			creature->playEffect("clienteffect/swordsman_defense.cef", "");
