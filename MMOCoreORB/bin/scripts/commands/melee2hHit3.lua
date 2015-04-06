@@ -43,7 +43,7 @@
 
 Melee2hHit3Command = {
         name = "melee2hhit3",
-	damageMultiplier = 3.75,
+	damageMultiplier = 3.25,
 	speedMultiplier = 3,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.75,
@@ -58,9 +58,9 @@ Melee2hHit3Command = {
 		{}, 
 		{ "blind_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
+		50, 
 		70, 
-		70, 
-		10
+		7
 	  )
 	},
 
