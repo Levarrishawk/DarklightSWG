@@ -98,7 +98,7 @@ public:
 			buff->setSpeedMultiplierMod(0.5);
 			creatureTarget->addBuff(buff);
 			creature->addBuff(buff2);
-			creatureTarget->playEffect("clienteffect/pikeman_snare.cef", "");
+			creatureTarget->playEffect("clienteffect/carbine_snare.cef", "");
 		}
 
 		return doCombatAction(creature, target);
