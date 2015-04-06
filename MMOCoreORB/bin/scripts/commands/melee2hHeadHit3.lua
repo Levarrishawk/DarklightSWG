@@ -43,12 +43,12 @@
 
 Melee2hHeadHit3Command = {
         name = "melee2hheadhit3",
-	damageMultiplier = 5.5,
+	damageMultiplier = 5,
 	speedMultiplier = 3.25,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.75,
 	mindCostMultiplier = 0,
-        accuracyBonus = 10,
+        --accuracyBonus = 10,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	
@@ -58,7 +58,7 @@ Melee2hHeadHit3Command = {
 		{}, 
 		{ "dizzy_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		90, 
+		80, 
 		70, 
 		4
   		),
