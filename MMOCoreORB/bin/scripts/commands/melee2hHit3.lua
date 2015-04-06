@@ -62,7 +62,7 @@ Melee2hHit3Command = {
 		70, 
 		10
 	  )
-	}
+	},
 
 	animationCRC = hashCode("combo_4a_medium"),
 
