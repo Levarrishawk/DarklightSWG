@@ -46,7 +46,7 @@ krix_swift = Creature:new {
 	},
 	weapons = {"imperial_weapons_heavy"},
 	reactionStf = "@npc_reaction/military",
-	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
+	attacks = merge(brawlermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(krix_swift, "krix_swift")
