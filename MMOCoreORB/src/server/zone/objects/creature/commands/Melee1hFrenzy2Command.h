@@ -83,7 +83,7 @@ public:
 				int roll = (System::random(100));
 				if (roll > 75) {
 					creature->sendSystemMessage("You enter into a frenzy!");
-					buff->setSkillModifier("frenzy", 40);
+					buff->setSkillModifier("frenzy", 55);
 					buff->setSpeedMultiplierMod(0.5f);
 					creature->addBuff(buff);
 					creature->playEffect("clienteffect/fencer_frenzy.cef", "");
