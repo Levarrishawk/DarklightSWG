@@ -69,20 +69,6 @@ public:
 			return INVALIDWEAPON;
 		}
 		
-		// Action cost of skill.
-		int actionCost = 400;
-
-		//Check for and deduct Force cost.
-
-		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
-		
-		if (creature->getHAM(CreatureAttribute::ACTION) < actionCost) {
-			creature->sendSystemMessage("You don't have enough action to preform this ability");
-			return false;
-		}
-		
-		creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
-		
 		int duration = 10;
 		int cooldown = 45;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
@@ -94,6 +80,13 @@ public:
 			creature->sendSystemMessage("You are to tired to relocate!");
 		}
 		else if (!creature->hasBuff(buffcrc2)) {
+			int actionCost = 400;
+			ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
+			if (creature->getHAM(CreatureAttribute::ACTION) < actionCost) {
+				creature->sendSystemMessage("You don't have enough action to preform this ability");
+				return false;
+			}
+			creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
 			creature->sendSystemMessage("You attempt to relocate!");
 			buff->setSpeedMultiplierMod(1.5f);
 			creature->addBuff(buff);
