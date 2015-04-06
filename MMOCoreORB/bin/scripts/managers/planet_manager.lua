@@ -80,6 +80,9 @@ corellia = {
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.666281, oz = 0, ow = 0.745701, x = -136.437, z = 28, y = -4730.23, parentid = 0}
 	-- Distant Ship Controllers
 		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	-141.30, z = 28, y = -4722.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	-5039.30, z = 21, y = -2296.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	-3137.30, z = 31, y = 2806.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	3336.30, z = 308, y = 5524.0, parentid = 0}
 
 	}
 }
@@ -168,6 +171,13 @@ naboo = {
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.309582, oz = 0, ow = 0.950873, x = -4876.99, z = 6, y = 4142.12, parentid = 0},
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.0116238, oz = 0, ow = 0.999932, x = 5193.14, z = -192, y = 6680.25, parentid = 0},
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.0116238, oz = 0, ow = -0.686427, x = 1445.8, z = 13, y = 2771.98, parentid = 0}
+
+	-- Distant Ship Controllers
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	-4856.30, z = 6, y = 4166.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	1442.30, z = 13, y = 2772.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	5206.30, z = -192, y = 6677.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	4800.0, z = 4, y = -4698.0, parentid = 0}
+
 	}
 }
 
@@ -187,6 +197,10 @@ rori = {
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.100263, oz = 0, ow = 0.994961, x = -5307.37, z = 80.1274, y = -2216.91, parentid = 0},
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.69192, oz = 0, ow = 0.721974, x = 5370.22, z = 80, y = 5666.04, parentid = 0},
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.0274543, oz = 0, ow = 0.999623, x = 3672.91, z = 96, y = -6441.07, parentid = 0}
+
+	--Distant Ship Controllers
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	-5304.30, z = 80, y = -2228.0, parentid = 0}
+
 	}
 }
 
@@ -205,6 +219,10 @@ talus = {
 	planetObjects = {
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.996369, oz = 0, ow = -0.0851417, x = 4447.08, z = 2, y = 5286.96, parentid = 0},
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.692641, oz = 0, ow = 0.721282, x = 329.666, z = 6, y = -2924.69, parentid = 0}
+	-- Distand Ship Controllers
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	332.30, z = 6, y = -2930.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	4449.30, z = 2, y = 5281.0, parentid = 0}
+
 	}
 }
 
