@@ -1,6 +1,6 @@
 krix_swift = Creature:new {
 	objectName = "",
-	customName = "Krix SwiftShadow"
+	customName = "Krix SwiftShadow",
 	socialGroup = "death_watch",
 	faction = "",
 	level = 27,
