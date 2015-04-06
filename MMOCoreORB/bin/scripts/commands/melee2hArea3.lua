@@ -64,8 +64,8 @@ Melee2hArea3Command = {
 	  )
 	},
 
-	areaRange = 7,
-	areaAction = true,
+	coneAngle = 30,
+	coneAction = true,
 
 	animationCRC = hashCode("combo_3a_light"),
 
