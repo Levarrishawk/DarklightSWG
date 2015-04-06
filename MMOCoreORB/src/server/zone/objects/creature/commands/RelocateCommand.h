@@ -95,7 +95,7 @@ public:
 		}
 		else if (!creature->hasBuff(buffcrc2)) {
 			creature->sendSystemMessage("You attempt to relocate!");
-			buff->setSpeedMultiplierMod(1.8f);
+			buff->setSpeedMultiplierMod(1.5f);
 			creature->addBuff(buff);
 			creature->addBuff(buff2);
 			creature->playEffect("clienteffect/frs_light_wisdom.cef", "");
