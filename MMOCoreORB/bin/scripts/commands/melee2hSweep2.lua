@@ -46,7 +46,7 @@ Melee2hSweep2Command = {
 	damageMultiplier = 3.5,
 	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4,
+	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
         --accuracyBonus = 10,
     
@@ -66,7 +66,7 @@ Melee2hSweep2Command = {
 		{ "posture_change_down_defense" }, 
 		{}, 
 		60, 
-		100, 
+		110, 
 		0 
 	  )
 	},
