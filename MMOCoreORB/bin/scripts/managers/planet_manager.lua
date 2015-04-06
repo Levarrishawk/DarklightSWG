@@ -78,6 +78,9 @@ corellia = {
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.346712, oz = 0, ow = 0.937972, x = -5049.64, z = 21, y = -2304.52, parentid = 0},
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.290803, oz = 0, ow = 0.956783, x = 3330.38, z = 308, y = 5517.14, parentid = 0},
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.666281, oz = 0, ow = 0.745701, x = -136.437, z = 28, y = -4730.23, parentid = 0}
+	-- Distant Ship Controllers
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x =	-141.30, z = 28, y = -4722.0, parentid = 0}
+
 	}
 }
 
@@ -231,7 +234,10 @@ tatooine = {
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x = 1299.08, z = 7, y = 3145.21, parentid = 0}
 		-- Flying Ships over Static Cities
 		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x = 3542.30, z = 5, y = -4826.0, parentid = 0}
-		
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x = -1281.30, z = 12, y = -3589.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x = -2911.30, z = 5, y = 2129.0, parentid = 0}
+		{templateFile = "object/mobile/distant_ship_controller.iff", ox = 0, oy = 0.989124, oz = 0, ow = -0.147086, x = 1290.30, z = 5, y = 3138.0, parentid = 0}
+
 	}
 }
 
