@@ -46,7 +46,7 @@ Melee2hHeadHit3Command = {
 	damageMultiplier = 5.5,
 	speedMultiplier = 3.25,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.75,
+	actionCostMultiplier = 3.75,
 	mindCostMultiplier = 0,
         accuracyBonus = 10,
 
@@ -58,8 +58,8 @@ Melee2hHeadHit3Command = {
 		{}, 
 		{ "dizzy_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		80, 
-		60, 
+		90, 
+		70, 
 		4
   		),
   	StateEffect(
