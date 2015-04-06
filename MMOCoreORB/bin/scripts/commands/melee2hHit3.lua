@@ -52,7 +52,17 @@ Melee2hHit3Command = {
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
-	stateEffects = {},
+	stateEffects = {
+	  StateEffect( 
+		BLIND_EFFECT, 
+		{}, 
+		{ "blind_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		70, 
+		70, 
+		10
+	  )
+	}
 
 	animationCRC = hashCode("combo_4a_medium"),
 
