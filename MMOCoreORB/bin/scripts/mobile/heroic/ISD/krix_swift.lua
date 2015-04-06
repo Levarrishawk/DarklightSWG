@@ -1,4 +1,4 @@
-imperial_lieutenant_general = Creature:new {
+krix_swift = Creature:new {
 	objectName = "",
 	customName = "Krix SwiftShadow"
 	socialGroup = "death_watch",
@@ -45,10 +45,10 @@ imperial_lieutenant_general = Creature:new {
 		}
 	},
 	weapons = {"imperial_weapons_heavy"},
-	conversationTemplate = "imperialRecruiterConvoTemplate",
+	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",	
 	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
 }
 
-CreatureTemplates:addCreatureTemplate(imperial_lieutenant_general, "imperial_lieutenant_general")
+CreatureTemplates:addCreatureTemplate(krix_swift, "krix_swift")
