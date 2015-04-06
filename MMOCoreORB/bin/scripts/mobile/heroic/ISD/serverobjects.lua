@@ -1,1 +1,1 @@
-includeFile("heroic/ISD/krix_swift.lua")
+includeFile("ISD/krix_swift.lua")
