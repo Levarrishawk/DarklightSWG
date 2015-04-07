@@ -117,7 +117,7 @@ object_weapon_melee_polearm_lance_vibrolance = object_weapon_melee_polearm_share
 	minDamage = 400,
 	maxDamage = 500,
 
-	attackSpeed = 4,
+	attackSpeed = 3,
 
 	woundsRatio = 33,
 
