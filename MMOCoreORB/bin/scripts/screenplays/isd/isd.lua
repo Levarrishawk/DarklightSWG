@@ -168,7 +168,7 @@ function ISDScreenPlay:spawnMobiles()
 
   spawnMobile("dungeon2", "blackguard_stormtrooper", 300, -3.8, 453.6, 355.4, 179, 34673109)
   
-  spawnMobile("dungeon2", "imperial_lieutenant", 300, -21.5, 453.6, 357.5, -90, 34673109)
+  spawnMobile("dungeon2", "imperial_captain", 300, -21.5, 453.6, 357.5, -90, 34673109)
   spawnMobile("dungeon2", "imperial_noncom", 300, -11.5, 453.6, 360.4, 90, 34673109)
   spawnMobile("dungeon2", "imperial_noncom", 300, -11.8, 453.6, 354.9, 90, 34673109)
   spawnMobile("dungeon2", "imperial_major", 300, 9.3, 453.6, 355.8, 0, 34673110)
