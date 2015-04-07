@@ -58,9 +58,9 @@ Intimidate1Command = {
 		{}, 
 		{ "intimidate_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		60, 
+		80, 
 		0, 
-		10 
+		12 
 	  )
 	},
 
