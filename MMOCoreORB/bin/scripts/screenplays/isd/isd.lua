@@ -130,5 +130,60 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "black_sun_boarder", 300, -8.8, 152.3, 528.0, -90, 34673115)
   spawnMobile("dungeon2", "black_sun_boarder", 300, -8.4, 156.3, 548.6, -179, 34673115)
 
+-- Prat approach
+  spawnMobile("dungeon2", "watch_captain_prat", 300, -55.6, 172.1, 332.5, 0, 34673063)
+  spawnMobile("dungeon2", "blackguard_interrogator_droid", 300, -54.4, 172.1, 332.5, 0, 34673063)
+  spawnMobile("dungeon2", "blackguard_interrogator_droid", 300, -57.4, 172.1, 332.5, 0, 34673063)
+
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -55.7, 172.1, 349.8, 16, 34673063)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -53.0, 172.1, 349.3, 16, 34673063)
+
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -48.8, 171.6, 361.5, 44, 34673063)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -47.5, 171.6, 360.0, 44, 34673063)
+  
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -39.7, 171.1, 367.5, 59, 34673063)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -39.2, 171.1, 365.4, 68, 34673063)
+
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -20.6, 172.9, 370.2, 90, 34673063)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -20.6, 172.9, 367.8, 90, 34673063)
+  
+  -- Kenkirk Approach
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 17.9, 170.6, 391.7, 179, 34673062)
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 21.5, 170.6, 391.7, 179, 34673062)
+
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 18.6, 170.6, 407.3, 179, 34673062)
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 21.5, 170.6, 407.3, 179, 34673062)
+
+  spawnMobile("dungeon2", "commander_kenkirk", 300, 19.9, 170.6, 420.0, 179, 34673062)
+
+-- Command Deck
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 20.1, 453.6, 412.7, 0, 34673106)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 4.5, 453.6, 410.6, 90, 34673106)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 4.5, 453.6, 413.1, 90, 34673106)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 0.0, 453.6, 401.9, 0, 34673106)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 0.2, 453.6, 390.7, 0, 34673106)
+
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 5.9, 453.6, 368.4, -90, 34673108)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 1.6, 453.6, 363.9, 0, 34673108)
+
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, -3.8, 453.6, 355.4, 179, 34673109)
+  
+  spawnMobile("dungeon2", "imperial_lieutenant", 300, -21.5, 453.6, 357.5, -90, 34673109)
+  spawnMobile("dungeon2", "imperial_noncom", 300, -11.5, 453.6, 360.4, 90, 34673109)
+  spawnMobile("dungeon2", "imperial_noncom", 300, -11.8, 453.6, 354.9, 90, 34673109)
+  spawnMobile("dungeon2", "imperial_major", 300, 9.3, 453.6, 355.8, 0, 34673110)
+
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, -0.1, 453.6, 340.5, 0, 34673110)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 1.7, 453.6, 342.4, 0, 34673110)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, -2.4, 453.6, 342.5, 0, 34673110)
+
+  spawnMobile("dungeon2", "imperial_noncom", 300, -5.4, 451.4, 326.6, -148, 34673110)
+  spawnMobile("dungeon2", "imperial_noncom", 300, -3.5, 451.4, 329.5, 0, 34673110)
+
+  spawnMobile("dungeon2", "imperial_noncom", 300, 3.9, 451.4, 328.8, -169, 34673110)
+  spawnMobile("dungeon2", "imperial_noncom", 300, 5.8, 451.4, 326.3, 129, 34673110)
+
+  spawnMobile("dungeon2", "grand_admiral_sait", 300, -0.1, 453.6, 325.3, 179, 34673110)
+
 
   end
