@@ -33,6 +33,9 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 26.5, 90, 34673093)
   spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 35.6, 90, 34673093)
   spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 44.5, 90, 34673093)
+  
+  --Hallway 1
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 69.2, 173.8, 31.5, -90, 34673093)
 
 
   
