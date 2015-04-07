@@ -53,15 +53,6 @@ Melee2hHeadHit3Command = {
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	
 		stateEffects = {
-	StateEffect( 
-		DIZZY_EFFECT, 
-		{}, 
-		{ "dizzy_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		80, 
-		70, 
-		2
-  		),
   	StateEffect(
   		KNOCKDOWN_EFFECT, 
 		{ "knockdownRecovery", "lastKnockdown" }, 
