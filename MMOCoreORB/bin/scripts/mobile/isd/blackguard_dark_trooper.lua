@@ -25,6 +25,7 @@ blackguard_dark_trooper = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dark_trooper.iff"},
+	scale = 1.2,	
 	lootGroups = {
 		{
 			groups = {
