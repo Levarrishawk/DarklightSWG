@@ -60,7 +60,7 @@ Melee2hHeadHit3Command = {
 		{ "jedi_state_defense" }, 
 		80, 
 		70, 
-		4
+		2
   		),
   	StateEffect(
   		KNOCKDOWN_EFFECT, 
