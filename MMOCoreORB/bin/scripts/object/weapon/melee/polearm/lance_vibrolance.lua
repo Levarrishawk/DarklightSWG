@@ -90,7 +90,7 @@ object_weapon_melee_polearm_lance_vibrolance = object_weapon_melee_polearm_share
 	-- Leave as "dodge" for now, may have additions later
 	defenderSecondaryDefenseModifiers = { "block" },
 
-	defenderToughnessModifiers = { "polearm_toughness" },
+	defenderToughnessModifiers = { "polearm_speed" }, --was toughness
 
 	-- See http://www.ocdsoft.com/files/speed.xls
 	speedModifiers = { "polearm_speed" },
@@ -114,8 +114,8 @@ object_weapon_melee_polearm_lance_vibrolance = object_weapon_melee_polearm_share
 	maxRange = 7,
 	maxRangeAccuracy = -45,
 
-	minDamage = 350,
-	maxDamage = 450,
+	minDamage = 400,
+	maxDamage = 500,
 
 	attackSpeed = 4,
 
