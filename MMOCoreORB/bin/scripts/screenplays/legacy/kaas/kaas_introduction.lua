@@ -37,7 +37,7 @@ registerScreenPlay("force_sensitive", true)
 
 function kaas_introduction:start() 
 	--spawnMobile("planet", "npc_name", re-spawn timer, x, z, y, direction of face, cell)
-	spawnMobile("tatooine", "thiel", 1, -0.1, 2.5, 7.5, 179, 1279960)
+	spawnMobile("kaas", "thiel", 1, -5142, 80, -2248, -48, 0)
 	if ( pThiel ~= nil ) then
 	end
 end
