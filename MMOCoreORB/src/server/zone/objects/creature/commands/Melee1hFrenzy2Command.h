@@ -71,29 +71,36 @@ public:
 			return INVALIDWEAPON;
 		}
 
-		int duration = 10;
-		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
-		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
-
-		if (creature->isInCombat()) {
-			if (creature->hasBuff(buffcrc)) {
-				creature->sendSystemMessage("You are already in a frenzy!");
-			}
-			else if (!creature->hasBuff(buffcrc)) {
-				int roll = (System::random(100));
-				if (roll > 75) {
-					creature->sendSystemMessage("You enter into a frenzy!");
-					buff->setSkillModifier("frenzy", 55);
-					buff->setSpeedMultiplierMod(0.5f);
-					creature->addBuff(buff);
-					creature->playEffect("clienteffect/fencer_frenzy.cef", "");
-				}else {
-					creature->sendSystemMessage("you failed to enter a frenzy.");
-				}
-			}
-		}
 		
-		return doCombatAction(creature, target);
+		int duration = 10;
+		int cooldown = 45;
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
+		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
+		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, cooldown, BuffType::JEDI);
+
+		if (creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You are to tired to enter a frenzy!");
+		}
+		else if (!creature->hasBuff(buffcrc2)) {
+			int actionCost = 400;
+			ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
+			if (creature->getHAM(CreatureAttribute::ACTION) < actionCost) {
+				creature->sendSystemMessage("You don't have enough action to preform this ability");
+				return false;
+			}
+			creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
+			creature->sendSystemMessage("You attempt to relocate!");
+			buff->setSkillModifier("frenzy", 55);
+			buff->setSpeedMultiplierMod(0.5f);
+			creature->addBuff(buff);
+			creature->addBuff(buff2);
+			creature->playEffect("clienteffect/fencer_frenzy.cef", "");
+			}else {
+				creature->sendSystemMessage("You cannot enter a frenzy at this time.");
+			}
+			
+		return SUCCESS;
 	}
 
 };
