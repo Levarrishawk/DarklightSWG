@@ -117,7 +117,7 @@ object_weapon_melee_polearm_polearm_vibro_axe = object_weapon_melee_polearm_shar
 	minDamage = 400,
 	maxDamage = 500,
 
-	attackSpeed = 3.5,
+	attackSpeed = 3,
 
 	woundsRatio = 33,
 
