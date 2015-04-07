@@ -89,7 +89,7 @@ public:
 				return false;
 			}
 			creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
-			creature->sendSystemMessage("You attempt to relocate!");
+			creature->sendSystemMessage("You enter a frenzy!");
 			buff->setSkillModifier("frenzy", 25);
 			buff->setSpeedMultiplierMod(0.5f);
 			creature->addBuff(buff);
