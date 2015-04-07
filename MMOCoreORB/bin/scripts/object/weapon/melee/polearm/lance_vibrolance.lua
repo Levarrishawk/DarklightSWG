@@ -114,8 +114,8 @@ object_weapon_melee_polearm_lance_vibrolance = object_weapon_melee_polearm_share
 	maxRange = 7,
 	maxRangeAccuracy = -45,
 
-	minDamage = 400,
-	maxDamage = 500,
+	minDamage = 450,
+	maxDamage = 550,
 
 	attackSpeed = 3,
 
