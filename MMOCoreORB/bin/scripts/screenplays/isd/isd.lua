@@ -54,7 +54,28 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "blackguard_engineer", 300, 71.1, 173.8, 104.4, 30, 34673079)
   spawnMobile("dungeon2", "blackguard_engineer", 300, 52.0, 173.8, 138.3, -81, 34673077)
 
+-- Hallway 3
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 78.7, 173.8, 88.0, 179, 34673072)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_squad_leader", 300, 81.8, 173.8, 88.0, 179, 34673072)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 68.2, 173.8, 18.4, 179, 34673072)
 
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 89.4, 173.8, 94.5, -90, 34673075)
+
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 80.8, 173.8, 104.9, -179, 34673072)
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 78.7, 173.8, 104.9, -179, 34673072)
+  
+  spawnMobile("dungeon2", "blackguard_stormtrooper_squad_leader", 300, 79.8, 173.8, 114.6, 179, 34673072)
+
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 78.5, 173.8, 127.6, 179, 34673072)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 81.5, 173.8, 127.6, 179, 34673072)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 80.2, 173.8, 131.2, 179, 34673072)
+  
+-- Hallway 4
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 63.4, 173.8, 147.4, 179, 34673070)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 66.5, 173.8, 146.8, 179, 34673070)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 65.1, 173.8, 152.7, 179, 34673070)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 66.3, 173.8, 164.2, 179, 34673070)
+  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 63.2, 173.8, 164.2, 179, 34673070)
 
   
   end
