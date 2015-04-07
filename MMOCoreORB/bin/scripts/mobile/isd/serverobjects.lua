@@ -8,4 +8,4 @@ includeFile("isd/commander_kenkirk.lua")
 includeFile("isd/blackguard_interrogator_droid.lua")
 includeFile("isd/black_sun_boarder.lua")
 includeFile("isd/blackguard_stormtrooper.lua")
-includeFile("isd/blackguard_stormtrooper_squad_leader.lua")
+
