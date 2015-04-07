@@ -22,7 +22,7 @@ use sendTo:player
 
 kaas_introduction = ScreenPlay:new { 
 	numberOfActs = 1, 
-	questString = "ForceSensitive",
+	questString = "kaas_introduction",
 	states = {
 		quest = { intro = 2, defense = 4, craft = 8, forced = 16, force = 32, rohak = 64, mission = 128, missionComp = 256, jedi = 512 }
 	}, 
@@ -107,10 +107,10 @@ function kaas_introduction_convo_handler:runScreenHandlers(conversationTemplate,
 	local screenID = screen:getScreenID()	
 	--print("screenID is " .. screenID	)
 	local player = LuaCreatureObject(conversingPlayer)
-	local completed = player:getScreenPlayState(force_sensitive.states.quest.intro, force_sensitive.questString)	
+	local completed = player:getScreenPlayState(kaas_introduction.states.quest.intro, kaas_introduction.questString)	
 	local pInventory = player:getSlottedObject("inventory")
 	if ( screenID == "thielFinal" ) then
-		player:setScreenPlayState(force_sensitive.states.quest.intro, force_sensitive.questString)
+		player:setScreenPlayState(kaas_introduction.states.quest.intro, kaas_introduction.questString)
 		giveItem(pInventory, "object/tangible/loot/quest/force_sensitive/force_crystal.iff", -1)
 		giveItem(pInventory, "object/tangible/crafting/station/generic_tool.iff", -1)
 		giveItem(pInventory, "object/tangible/survey_tool/survey_tool_mineral.iff", -1)
