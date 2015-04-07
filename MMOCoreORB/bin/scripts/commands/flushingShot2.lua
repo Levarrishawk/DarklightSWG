@@ -62,7 +62,7 @@ FlushingShot2Command = {
 		{ "jedi_state_defense" }, 
 		50, 
 		100, 
-		15
+		7
 	  ),
 	  StateEffect( 
 		POSTUREDOWN_EFFECT, 
