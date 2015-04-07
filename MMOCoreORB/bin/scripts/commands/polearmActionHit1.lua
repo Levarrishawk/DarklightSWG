@@ -47,7 +47,7 @@ PolearmActionHit1Command = {
 	damageMultiplier = 2.25,
 	speedMultiplier = 4.25,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 5,
+	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
 	accuracyBonus = 10,
 
