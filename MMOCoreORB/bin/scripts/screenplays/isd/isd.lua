@@ -56,7 +56,7 @@ function ISDScreenPlay:spawnMobiles()
 
 -- Hallway 3
   spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 78.7, 173.8, 88.0, 179, 34673072)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_squad_leader", 300, 81.8, 173.8, 88.0, 179, 34673072)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 81.8, 173.8, 88.0, 179, 34673072)
   spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 68.2, 173.8, 18.4, 179, 34673072)
 
   spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 89.4, 173.8, 94.5, -90, 34673075)
@@ -64,7 +64,7 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 80.8, 173.8, 104.9, -179, 34673072)
   spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 78.7, 173.8, 104.9, -179, 34673072)
   
-  spawnMobile("dungeon2", "blackguard_stormtrooper_squad_leader", 300, 79.8, 173.8, 114.6, 179, 34673072)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 79.8, 173.8, 114.6, 179, 34673072)
 
   spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 78.5, 173.8, 127.6, 179, 34673072)
   spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 81.5, 173.8, 127.6, 179, 34673072)
@@ -87,7 +87,7 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 51.3, 173.8, 198.7, 90, 34673070)
   
 -- Launch Control  
-  spawnMobile("dungeon2", "blackguard_stormtrooper_squad_leader", 300, 29.4, 192.3, 205.3, 90, 34673071)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 29.4, 192.3, 205.3, 90, 34673071)
   spawnMobile("dungeon2", "imperial_pilot", 300, 6.4, 192.8, 197.2, 179, 34673071)
   spawnMobile("dungeon2", "black_sun_boarder", 300, -0.1, 192.8, 196.7, 179, 34673071)
   spawnMobile("dungeon2", "black_sun_boarder", 300, -9.9, 192.3, 204.2, -90, 34673071)
@@ -96,7 +96,7 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 84.1, 173.8, 217.6, 157, 34673069)
   
   -- Hangar level Security station
-  spawnMobile("dungeon2", "blackguard_stormtrooper_squad_leader", 300, 87.3, 172.5, 302.2, 0, 34673059)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 87.3, 172.5, 302.2, 0, 34673059)
   spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 83.1, 171.8, 357.8, 179, 34673060)
   spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 87.4, 171.8, 359.0, 179, 34673060)
   
