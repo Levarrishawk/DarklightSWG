@@ -77,5 +77,58 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 66.3, 173.8, 164.2, 179, 34673070)
   spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 63.2, 173.8, 164.2, 179, 34673070)
 
+-- Gunnery Control
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 71.5, 173.8, 174.9, -90, 34673070)
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 58.2, 173.8, 174.9, 90, 34673070)
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 64.8, 173.8, 180.6, -179, 34673070)
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 68.6, 173.8, 203.9, -90, 34673070)
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 61.3, 173.8, 203.9, 90, 34673070)
+
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 51.3, 173.8, 198.7, 90, 34673070)
   
+-- Launch Control  
+  spawnMobile("dungeon2", "blackguard_stormtrooper_squad_leader", 300, 29.4, 192.3, 205.3, 90, 34673071)
+  spawnMobile("dungeon2", "imperial_pilot", 300, 6.4, 192.8, 197.2, 179, 34673071)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -0.1, 192.8, 196.7, 179, 34673071)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -9.9, 192.3, 204.2, -90, 34673071)
+
+-- Hallway 5
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 84.1, 173.8, 217.6, 157, 34673069)
+  
+  -- Hangar level Security station
+  spawnMobile("dungeon2", "blackguard_stormtrooper_squad_leader", 300, 87.3, 172.5, 302.2, 0, 34673059)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 83.1, 171.8, 357.8, 179, 34673060)
+  spawnMobile("dungeon2", "blackguard_stormtrooper", 300, 87.4, 171.8, 359.0, 179, 34673060)
+  
+  -- Engineering Level
+  spawnMobile("dungeon2", "black_sun_boarder", 300, 17.1, 140.8, 364.8, 90, 34673098)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, 22.1, 140.8, 365.0, -90, 34673098)
+
+  spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 20.2, 140.6, 379.3, 179, 34673099)
+  
+  spawnMobile("dungeon2", "black_sun_boarder", 300, 42.3, 140.6, 409.1, 0, 34673101)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, 41.4, 140.6, 421.7, 179, 34673101)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, 41.8, 140.6, 439.1, 179, 34673101)
+
+  spawnMobile("dungeon2", "blackguard_engineer", 300, 33.9, 141.1, 433.9, 179, 34673102)
+  spawnMobile("dungeon2", "blackguard_engineer", 300, 28.5, 141.1, 433.6, 179, 34673102)
+  spawnMobile("dungeon2", "blackguard_engineer", 300, 27.9, 140.6, 439.7, 0, 34673102)
+  
+  spawnMobile("dungeon2", "blackguard_engineer", 300, 18.6, 140.6, 448.8, -90, 34673103)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, 15.9, 140.6, 445.0, -179, 34673103)
+
+  spawnMobile("dungeon2", "blackguard_engineer", 300, 43.0, 141.6, 479.1, 95, 34673104)
+  spawnMobile("dungeon2", "blackguard_engineer", 300, 43.8, 141.6, 486.5, 60, 34673104)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, 36.1, 140.6, 483.5, -179, 34673104)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, 17.1, 140.6, 485.8, -179, 34673104)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -8.1, 140.6, 484.3, 90, 34673104)
+
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -7.7, 140.6, 518.4, -179, 34673114)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -2.8, 140.6, 526.5, -1, 34673115)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -12.0, 122.3, 579.0, 158, 34673115)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -4.2, 122.3, 580.0, -158, 34673115)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -8.8, 152.3, 528.0, -90, 34673115)
+  spawnMobile("dungeon2", "black_sun_boarder", 300, -8.4, 156.3, 548.6, -179, 34673115)
+
+
   end
