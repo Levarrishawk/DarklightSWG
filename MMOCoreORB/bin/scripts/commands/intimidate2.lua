@@ -60,7 +60,7 @@ Intimidate2Command = {
 		{ "jedi_state_defense" }, 
 		80, 
 		0, 
-		15 
+		17 
 	  )
 	},
 
