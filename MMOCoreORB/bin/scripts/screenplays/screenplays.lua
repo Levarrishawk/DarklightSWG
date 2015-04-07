@@ -24,6 +24,9 @@ includeFile("themepark/tutorial.lua")
 --includeFile("legacy/mayor_start.lua")
 includeFile("legacy/force_sensitive.lua")--test
 
+-- Kaas questline
+includeFile("legacy/kaas/kaas_introduction.lua")
+
 --ISD
 includeFile("isd/isd.lua")
 
