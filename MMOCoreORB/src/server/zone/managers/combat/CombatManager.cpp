@@ -1810,7 +1810,7 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 		weapon->decreasePowerupUses(cast<CreatureObject*>(attacker));
 	}
 
-	return (int) (healthDamage + actionDamage + mindDamage);
+	return (int) (healthDamage); //+ actionDamage + mindDamage);
 }
 
 int CombatManager::applyDamage(CreatureObject* attacker, WeaponObject* weapon, TangibleObject* defender, int poolsToDamage, const CreatureAttackData& data) {
