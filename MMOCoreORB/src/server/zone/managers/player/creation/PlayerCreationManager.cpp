@@ -597,8 +597,8 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 		if (doTutorial)
 			playerManager->createTutorialBuilding(playerCreature);
 		else
-			//playerManager->createSkippedTutorialBuilding(playerCreature);
-			playerCreature->teleport(3542, 5, 4826, "tattooine");
+			playerManager->createSkippedTutorialBuilding(playerCreature);
+			
 
 		ValidatedPosition* lastValidatedPosition =
 				ghost->getLastValidatedPosition();
