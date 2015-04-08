@@ -571,7 +571,7 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 					if (lastCreatedCharacter.containsKey(accID)) {
 						Time lastCreatedTime = lastCreatedCharacter.get(accID);
 
-						if (lastCreatedTime.miliDifference() < 86400000) {
+						if (lastCreatedTime.miliDifference() < 1) {
 							ErrorMessage* errMsg = new ErrorMessage("Create Error", "You are only permitted to create one character every 24 hours. Repeat attempts prior to 24 hours elapsing will reset the timer.", 0x0);
 							client->sendMessage(errMsg);
 
@@ -597,7 +597,8 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 		if (doTutorial)
 			playerManager->createTutorialBuilding(playerCreature);
 		else
-			playerManager->createSkippedTutorialBuilding(playerCreature);
+			//playerManager->createSkippedTutorialBuilding(playerCreature);
+			playerManager->teleport(3542, 5, 4826, "tattooine");
 
 		ValidatedPosition* lastValidatedPosition =
 				ghost->getLastValidatedPosition();
