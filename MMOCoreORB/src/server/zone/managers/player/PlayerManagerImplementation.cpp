@@ -539,8 +539,11 @@ void PlayerManagerImplementation::createTutorialBuilding(CreatureObject* player)
 }
 
 void PlayerManagerImplementation::createSkippedTutorialBuilding(CreatureObject* player) {
+	Zone* zone = server->getZone("tatooine");
+	
+	player->initializePosition(3528, 5, -4802);
+/*
 	Zone* zone = server->getZone("tutorial");
-
 	String tut = "object/building/general/newbie_hall_skipped.iff";
 	String cell = "object/cell/cell.iff";
 
@@ -563,6 +566,7 @@ void PlayerManagerImplementation::createSkippedTutorialBuilding(CreatureObject* 
 	ghost->setSavedParentID(cellTut->getObjectID());
 
 	tutorial->updateToDatabase();
+	*/
 }
 
 uint8 PlayerManagerImplementation::calculateIncapacitationTimer(CreatureObject* playerCreature, int condition) {
