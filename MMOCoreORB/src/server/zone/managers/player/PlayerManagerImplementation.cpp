@@ -512,6 +512,14 @@ bool PlayerManagerImplementation::checkPlayerName(MessageCallback* messageCallba
 }
 
 void PlayerManagerImplementation::createTutorialBuilding(CreatureObject* player) {
+	Zone* zone = server->getZone("tatooine");
+	
+	player->initializePosition(3528, 5, -4802);
+	zone->transferObject(player, -1, true);
+	
+	PlayerObject* ghost = player->getPlayerObject();
+	ghost->setSavedTerrainName(zone->getZoneName());
+/*
 	Zone* zone = server->getZone("tutorial");
 
 	String tut = "object/building/general/newbie_hall.iff";
@@ -536,6 +544,7 @@ void PlayerManagerImplementation::createTutorialBuilding(CreatureObject* player)
 	ghost->setSavedParentID(cellTutPlayer->getObjectID());
 
 	tutorial->updateToDatabase();
+	*/
 }
 
 void PlayerManagerImplementation::createSkippedTutorialBuilding(CreatureObject* player) {
