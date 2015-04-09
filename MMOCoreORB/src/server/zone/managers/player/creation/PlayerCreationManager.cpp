@@ -41,6 +41,8 @@ which carries forward this exception.
 
 */
 
+#include "server/zone/ZoneServer.h"
+#include "server/zone/ZoneProcessServer.h"
 #include "server/db/ServerDatabase.h"
 #include "server/db/MantisDatabase.h"
 #include "PlayerCreationManager.h"
@@ -597,7 +599,9 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 		if (doTutorial)
 			playerManager->createTutorialBuilding(playerCreature);
 		else
-			playerManager->createSkippedTutorialBuilding(playerCreature);
+			//playerManager->createSkippedTutorialBuilding(playerCreature);
+			Zone* zone = server->getZone("tatooine");
+			playerCreature->initializePosition(3528, 5, -4802);
 
 			
 
