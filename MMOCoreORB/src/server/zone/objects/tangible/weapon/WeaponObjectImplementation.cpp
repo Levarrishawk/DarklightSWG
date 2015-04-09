@@ -59,6 +59,15 @@ void WeaponObjectImplementation::loadTemplateData(SharedObjectTemplate* template
 	actionAttackCost = weaponTemplate->getActionAttackCost();
 	mindAttackCost = weaponTemplate->getMindAttackCost();
 	forceCost = weaponTemplate->getForceCost();
+	
+	if (healthAttackCost > 0 || healthAttackCost < 0)
+		healthAttackCost = 0;
+	if (actionAttackCost < 0 || actionAttackCost > 150)
+		actionAttackCost = 150;
+	if (mindAttackCost < 0 || mindAttackCost > 0)
+		mindAttackCost = 0;
+	if (forceCost > 0 || forceCost < 0)
+		forceCost = 0;
 
 	pointBlankAccuracy = weaponTemplate->getPointBlankAccuracy();
 	pointBlankRange = weaponTemplate->getPointBlankRange();
