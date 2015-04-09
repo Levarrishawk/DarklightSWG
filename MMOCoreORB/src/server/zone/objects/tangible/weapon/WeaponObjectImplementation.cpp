@@ -570,7 +570,8 @@ int WeaponObjectImplementation::getHealthAttackCost(bool withPup) {
 
 	if(powerupObject != NULL && withPup)
 		return healthAttackCost - (abs(healthAttackCost) * powerupObject->getPowerupStat("healthAttackCost"));
-
+	if (healthAttackCost > 0 || healthAttackCost < 0)
+		healthAttackCost = 0;
 	return healthAttackCost;
 }
 
