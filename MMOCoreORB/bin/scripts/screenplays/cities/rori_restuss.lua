@@ -269,4 +269,8 @@ function RoriRestussScreenPlay:spawnMobiles()
 	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5268.1, 80.6,getRandomNumber(10) + 5553.5, getRandomNumber(360), 0)
 	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5268.1, 80.6,getRandomNumber(10) + 5553.5, getRandomNumber(360), 0)
 
+	spawnMobile("rori", "at_st", 300,getRandomNumber(10) + 5193.1, 80.6,getRandomNumber(10) + 5692.5, getRandomNumber(360), 0)
+
+	spawnMobile("rori", "at_st", 300, 5173.1, 80.0, 5818.4, 135, 0)
+
 end
