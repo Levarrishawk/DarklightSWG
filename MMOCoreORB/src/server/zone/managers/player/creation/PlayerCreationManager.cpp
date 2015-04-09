@@ -599,9 +599,7 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 		if (doTutorial)
 			playerManager->createTutorialBuilding(playerCreature);
 		else
-			//playerManager->createSkippedTutorialBuilding(playerCreature);
-			Zone* zone = server->getZone("tatooine");
-			playerCreature->initializePosition(3528, 5, -4802);
+			playerManager->createSkippedTutorialBuilding(playerCreature);
 
 			
 
