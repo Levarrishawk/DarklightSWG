@@ -539,17 +539,17 @@ void PlayerManagerImplementation::createTutorialBuilding(CreatureObject* player)
 }
 
 void PlayerManagerImplementation::createSkippedTutorialBuilding(CreatureObject* player) {
-	Zone* zone = server->getZone("tatooine");
+	Zone* zone = server->getZone("tutorial");
 
-	String tut = "";
-	String cell = "";
+	String tut = "object/building/general/newbie_hall_skipped.iff";
+	String cell = "object/cell/cell.iff";
 
 	Reference<BuildingObject*> tutorial = server->createObject(tut.hashCode(), 1).castTo<BuildingObject*>();
 	tutorial->createCellObjects();
 	tutorial->initializePosition(System::random(5000), 0, System::random(5000));
 	zone->transferObject(tutorial, -1, true);
 
-	Reference<SceneObject*> travelTutorialTerminal = server->createObject((uint32)String("").hashCode(), 1);
+	Reference<SceneObject*> travelTutorialTerminal = server->createObject((uint32)String("object/tangible/beta/beta_terminal_warp.iff").hashCode(), 1);
 
 	SceneObject* cellTut = tutorial->getCell(1);
 	cellTut->transferObject(travelTutorialTerminal, -1);
