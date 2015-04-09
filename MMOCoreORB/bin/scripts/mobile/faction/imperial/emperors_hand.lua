@@ -1,8 +1,7 @@
 emperors_hand = Creature:new {
 	objectName = "@mob/creature_names:emperors_hand",
 	customName = "Aralina Silk (Emperor's Hand)",
-	socialGroup = "imperial",
-	faction = "imperial",
+	socialGroup = "death_watch",
 	level = 252,
 	chanceHit = 23.5,
 	damageMin = 1395,
@@ -21,8 +20,8 @@ emperors_hand = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK + KILLER,
+	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
+	creatureBitmask = PACK + KILLER + STALKER,
 	optionsBitmask = 128,
 	diet = HERBIVORE,
 
