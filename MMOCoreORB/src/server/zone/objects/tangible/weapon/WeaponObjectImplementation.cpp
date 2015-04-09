@@ -579,7 +579,8 @@ int WeaponObjectImplementation::getActionAttackCost(bool withPup) {
 
 	if(powerupObject != NULL && withPup)
 		return actionAttackCost - (abs(actionAttackCost) * powerupObject->getPowerupStat("actionAttackCost"));
-
+        if (actionAttackCost < 0 || actionAttackCost > 150)
+               actionAttackCost = 150;
 	return actionAttackCost;
 }
 
@@ -587,7 +588,8 @@ int WeaponObjectImplementation::getMindAttackCost(bool withPup) {
 
 	if(powerupObject != NULL && withPup)
 		return mindAttackCost - (abs(mindAttackCost) * powerupObject->getPowerupStat("mindAttackCost"));
-
+        if (mindAttackCost < 0 || mindAttackCost > 0)
+                mindAttackCost = 0;
 	return mindAttackCost;
 }
 
