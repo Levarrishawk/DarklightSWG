@@ -548,7 +548,15 @@ void PlayerManagerImplementation::createTutorialBuilding(CreatureObject* player)
 }
 
 void PlayerManagerImplementation::createSkippedTutorialBuilding(CreatureObject* player) {
+	Zone* zone = server->getZone("tatooine");
+	
+	player->initializePosition(3528, 5, -4802);
+	zone->transferObject(player, -1, true);
+	
+	PlayerObject* ghost = player->getPlayerObject();
+	ghost->setSavedTerrainName(zone->getZoneName());
 
+/*
 	Zone* zone = server->getZone("tutorial");
 	
 	String tut = "object/building/general/newbie_hall_skipped.iff";
@@ -573,6 +581,7 @@ void PlayerManagerImplementation::createSkippedTutorialBuilding(CreatureObject* 
 	ghost->setSavedParentID(cellTut->getObjectID());
 
 	tutorial->updateToDatabase();
+	*/
 	
 }
 
