@@ -272,5 +272,40 @@ function RoriRestussScreenPlay:spawnMobiles()
 	spawnMobile("rori", "at_st", 300,getRandomNumber(10) + 5193.1, 80.6,getRandomNumber(10) + 5692.5, getRandomNumber(360), 0)
 
 	spawnMobile("rori", "at_st", 300, 5173.1, 80.0, 5818.4, 135, 0)
+	
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5378.1, 80.6,getRandomNumber(10) + 5582.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5378.1, 80.6,getRandomNumber(10) + 5582.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5378.1, 80.6,getRandomNumber(10) + 5582.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5378.1, 80.6,getRandomNumber(10) + 5582.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5378.1, 80.6,getRandomNumber(10) + 5582.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5378.1, 80.6,getRandomNumber(10) + 5582.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5378.1, 80.6,getRandomNumber(10) + 5582.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5378.1, 80.6,getRandomNumber(10) + 5582.5, getRandomNumber(360), 0)
+
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5408.1, 80.6,getRandomNumber(10) + 5623.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5408.1, 80.6,getRandomNumber(10) + 5623.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5408.1, 80.6,getRandomNumber(10) + 5623.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "rebel_commando", 300,getRandomNumber(10) + 5408.1, 80.6,getRandomNumber(10) + 5623.5, getRandomNumber(360), 0)
+
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5445.7, 80.0,getRandomNumber(12) + 5648.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5445.7, 80.0,getRandomNumber(12) + 5648.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5445.7, 80.0,getRandomNumber(12) + 5648.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5445.7, 80.0,getRandomNumber(12) + 5648.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5445.7, 80.0,getRandomNumber(12) + 5648.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5445.7, 80.0,getRandomNumber(12) + 5648.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5445.7, 80.0,getRandomNumber(12) + 5648.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5445.7, 80.0,getRandomNumber(12) + 5648.0, getRandomNumber(360), 0)
+
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5485.7, 80.0,getRandomNumber(12) + 5712.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5485.7, 80.0,getRandomNumber(12) + 5712.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5485.7, 80.0,getRandomNumber(12) + 5712.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5485.7, 80.0,getRandomNumber(12) + 5712.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5485.7, 80.0,getRandomNumber(12) + 5712.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5485.7, 80.0,getRandomNumber(12) + 5712.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5485.7, 80.0,getRandomNumber(12) + 5712.0, getRandomNumber(360), 0)
+	spawnMobile("rori", "stormtrooper", 300,getRandomNumber(5) + 5485.7, 80.0,getRandomNumber(12) + 5712.0, getRandomNumber(360), 0)
+
+	spawnMobile("rori", "at_st", 300,getRandomNumber(10) + 5486.1, 80.6,getRandomNumber(10) + 5820.5, getRandomNumber(360), 0)
+	spawnMobile("rori", "at_st", 300,getRandomNumber(10) + 5486.1, 80.6,getRandomNumber(10) + 5820.5, getRandomNumber(360), 0)
 
 end
