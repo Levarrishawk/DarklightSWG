@@ -90,7 +90,7 @@ object_weapon_melee_baton_baton_gaderiffi = object_weapon_melee_baton_shared_bat
 	defenderDefenseModifiers = { "melee_defense" },
 
 	-- Leave as "dodge" for now, may have additions later
-	defenderSecondaryDefenseModifiers = { "dodge" },
+	defenderSecondaryDefenseModifiers = { "unarmed_passive_defense" },
 
 	defenderToughnessModifiers = { "onehandmelee_toughness" },
 
@@ -103,25 +103,25 @@ object_weapon_melee_baton_baton_gaderiffi = object_weapon_melee_baton_shared_bat
 
 	-- The values below are the default values.  To be used for blue frog objects primarily
 	healthAttackCost = 0,
-	actionAttackCost = 26,
+	actionAttackCost = 150,
 	mindAttackCost = 0,
 	forceCost = 0,
 
 	pointBlankRange = 0,
-	pointBlankAccuracy = -10,
+	pointBlankAccuracy = 0,
 
-	idealRange = 3,
-	idealAccuracy = -10,
+	idealRange = 2,
+	idealAccuracy = 0,
 
-	maxRange = 5,
-	maxRangeAccuracy = -10,
+	maxRange = 4,
+	maxRangeAccuracy = 0,
 
-	minDamage = 90,
-	maxDamage = 185,
+	minDamage = 300,
+	maxDamage = 400,
 
-	attackSpeed = 4,
+	attackSpeed = 5,
 
-	woundsRatio = 16,
+	woundsRatio = 2,
 
 	numberExperimentalProperties = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalProperties = {"XX", "XX", "SR", "SR", "SR", "SR", "SR", "SR", "SR", "XX", "SR", "XX", "XX", "XX", "XX"},
