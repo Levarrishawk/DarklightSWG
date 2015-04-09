@@ -136,6 +136,9 @@ void ArmorObjectImplementation::fillAttributeList(AttributeListMessage* alm, Cre
 				"cat_armor_special_protection.armor_eff_elemental_acid",
 				txt.toString());
 	}
+	/*
+	Shouldn't display this since lightsaber damage will not be in-game.
+	
 	if ((isSpecial(WeaponObject::LIGHTSABER) || isVulnerable(WeaponObject::LIGHTSABER)) && getLightSaber() >= 0.5) {
 		StringBuffer txt;
 		txt << Math::getPrecision(getLightSaber(),1) << "%";
@@ -143,6 +146,7 @@ void ArmorObjectImplementation::fillAttributeList(AttributeListMessage* alm, Cre
 				"cat_armor_special_protection.armor_eff_restraint",
 				txt.toString());
 	}
+	*/
 	//Check for Effectiveness protections(Normal)
 	if (!isSpecial(WeaponObject::KINETIC) && !isVulnerable(WeaponObject::KINETIC) && getKinetic() >= 0.5) {
 		StringBuffer txt;
@@ -196,12 +200,17 @@ void ArmorObjectImplementation::fillAttributeList(AttributeListMessage* alm, Cre
 				"cat_armor_effectiveness.armor_eff_elemental_acid",
 				txt.toString());
 	}
+	
+	/*
+	Shouldn't need this since lightsaber damage won't be in-game.
+	
 	if (!isSpecial(WeaponObject::LIGHTSABER) && !isVulnerable(WeaponObject::LIGHTSABER) && getLightSaber() >= 0.5) {
 		StringBuffer txt;
 		txt << Math::getPrecision(getLightSaber(),1) << "%";
 		alm->insertAttribute("cat_armor_effectiveness.armor_eff_restraint",
 				txt.toString());
 	}
+	*/
 
 	//Vulnerabilities
 	if (getKinetic() < 0.5)
@@ -231,17 +240,21 @@ void ArmorObjectImplementation::fillAttributeList(AttributeListMessage* alm, Cre
 	if (getAcid() < 0.5)
 		alm->insertAttribute(
 				"cat_armor_vulnerability.armor_eff_elemental_acid", "-");
+				
+//Lightsaber damage will not be in-game no need to display
 
-	if (getLightSaber() < 0.5)
-		alm->insertAttribute("cat_armor_vulnerability.armor_eff_restraint", "-");
-
+	//if (getLightSaber() < 0.5)
+		//alm->insertAttribute("cat_armor_vulnerability.armor_eff_restraint", "-");
+		
+/*
+Removal of display for encumbrance
 	//Encumbrances
 	alm->insertAttribute("cat_armor_encumbrance.health", getHealthEncumbrance());
 
 	alm->insertAttribute("cat_armor_encumbrance.action", getActionEncumbrance());
 
 	alm->insertAttribute("cat_armor_encumbrance.mind", getMindEncumbrance());
-
+*/
 	//Anti Decay Kit
 	if(hasAntiDecayKit()){
 		alm->insertAttribute("@veteran_new:antidecay_examine_title", "@veteran_new:antidecay_examine_text");
@@ -265,18 +278,18 @@ float ArmorObjectImplementation::getTypeValue(int type, float value) {
 
 	else if(isSpecial(type)) {
 		newValue = specialProtection + value;
-		if(newValue > 80)
-			newValue = 80;
+		if(newValue > 70)
+			newValue = 70;
 	} else {
 		newValue = baseProtection + value;
 		newValue *= effectivenessSlice;
 
 		if(sliced && effectivenessSlice > 1) {
-			if(newValue > 90)
-				newValue = 90;
+			if(newValue > 70)
+				newValue = 70;
 		} else {
-			if(newValue > 80)
-				newValue = 80;
+			if(newValue > 70)
+				newValue = 70;
 		}
 	}
 
@@ -350,6 +363,8 @@ void ArmorObjectImplementation::updateCraftingValues(CraftingValues* values, boo
 
 		setConditionDamage(0);
 	}
+/*
+*Encumbrance removal.
 
 	setHealthEncumbrance((int) values->getCurrentValue(
 			"armor_health_encumbrance"));
@@ -357,6 +372,7 @@ void ArmorObjectImplementation::updateCraftingValues(CraftingValues* values, boo
 			"armor_action_encumbrance"));
 	setMindEncumbrance((int) values->getCurrentValue(
 			"armor_mind_encumbrance"));
+*/
 
 	setMaxCondition((int) values->getCurrentValue("armor_integrity"));
 
