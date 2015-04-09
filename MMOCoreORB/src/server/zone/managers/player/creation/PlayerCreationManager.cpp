@@ -517,7 +517,7 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 
 					
 					Reference<ShipControlDevice*> shipControlDevice = zoneServer->createObject(String("object/intangible/ship/sorosuub_space_yacht_pcd.iff").hashCode(), 1).castTo<ShipControlDevice*>();
-					ShipObject* ship = (ShipObject*) server->createObject(String("object/ship/player/player_sorosuub_space_yacht.iff").hashCode(), 1);
+					//ShipObject* ship = (ShipObject*) server->createObject(String("object/ship/player/player_sorosuub_space_yacht.iff").hashCode(), 1);
 					Reference<ShipObject*> ship = zoneServer->createObject(String("object/ship/player/player_basic_tiefighter.iff").hashCode(), 1).castTo<ShipObject*>();
 
 					shipControlDevice->setControlledObject(ship);
@@ -597,7 +597,9 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 		if (doTutorial)
 			playerManager->createTutorialBuilding(playerCreature);
 		else
-			playerManager->createSkippedTutorialBuilding(playerCreature);
+			//playerManager->createSkippedTutorialBuilding(playerCreature);
+			Zone* zone = server->getZone("tatooine");
+			playerCreature->initializePosition(3528, 5, -4802);
 			
 
 		ValidatedPosition* lastValidatedPosition =
