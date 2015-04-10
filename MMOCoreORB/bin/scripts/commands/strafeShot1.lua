@@ -49,8 +49,8 @@ StrafeShot1Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 0,
-	accuracyBonus = 5,
-
+	coneAngle = 30,
+	coneAction = true,
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("fire_5_special_single_medium"),
