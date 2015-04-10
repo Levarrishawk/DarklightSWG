@@ -49,21 +49,8 @@ BurstShot2Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.75,
 	mindCostMultiplier = 0,
-        --accuracyBonus = 25,
-	coneAngle = 45,
-	coneAction = true,
 	
-	stateEffects = {
-		  StateEffect( 
-		STUN_EFFECT, 
-		{}, 
-		{ "stun_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		30, 
-		100, 
-		10 
-	 	)
-  	},
+	stateEffects = {},
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
