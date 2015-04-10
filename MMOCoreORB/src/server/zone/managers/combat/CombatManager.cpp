@@ -1314,8 +1314,10 @@ float CombatManager::doDroidDetonation(CreatureObject* droid, CreatureObject* de
 				return (int)actionDamage * 0.1;
 			}
 		}
+		//This should be where pool damage is being handled, this should fix that.
 		if((pool & ACTION)){
-			defender->inflictDamage(droid, CreatureAttribute::ACTION, (int)actionDamage, true, true);
+			//defender->inflictDamage(droid, CreatureAttribute::ACTION, (int)actionDamage, true, true);
+			defender->inflictDamage(droid, CreatureAttribute::HEALTH, (int)actionDamage, true, true);
 			return (int)actionDamage;
 		}
 		if((pool & HEALTH)) {
@@ -1323,7 +1325,8 @@ float CombatManager::doDroidDetonation(CreatureObject* droid, CreatureObject* de
 			return (int)healthDamage;
 		}
 		if((pool & MIND)) {
-			defender->inflictDamage(droid, CreatureAttribute::MIND, (int)mindDamage, true, true);
+			//defender->inflictDamage(droid, CreatureAttribute::MIND, (int)mindDamage, true, true);
+			defender->inflictDamage(droid, CreatureAttribute::HEALTH, (int)mindDamage, true, true);
 			return (int)mindDamage;
 		}
 		return 0;
