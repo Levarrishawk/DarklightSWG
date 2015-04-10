@@ -49,6 +49,9 @@ StrafeShot2Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.75,
 	mindCostMultiplier = 0,
+	
+	coneAngle = 30,
+	coneAction = true,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
