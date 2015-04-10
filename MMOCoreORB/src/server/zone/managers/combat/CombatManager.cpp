@@ -1258,7 +1258,7 @@ float CombatManager::doDroidDetonation(CreatureObject* droid, CreatureObject* de
 		if (defender->isPlayerCreature())
 			damage *= 0.25;
 		// pikc a pool to target
-		int pool = calculatePoolsToDamage(RANDOM);
+		int pool = calculatePoolsToDamage(HEALTH);
 		// we now have damage to use lets apply it
 		float healthDamage = 0.f, actionDamage = 0.f, mindDamage = 0.f;
 		// need to check armor reduction with just defender, blast and their AR + resists
@@ -1732,7 +1732,8 @@ void CombatManager::applyStates(CreatureObject* creature, CreatureObject* target
 }
 
 int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
-	if (poolsToDamage & RANDOM) {
+
+/*	if (poolsToDamage & RANDOM) {
 		int rand = System::random(100);
 
 		if (rand <= 100) {
@@ -1743,6 +1744,8 @@ int CombatManager::calculatePoolsToDamage(int poolsToDamage) {
 			poolsToDamage = MIND;
 		}*/
 	}
+*/
+	poolsToDamage = HEALTH;
 
 	return poolsToDamage;
 }
@@ -1753,6 +1756,11 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 
 	float ratio = weapon->getWoundsRatio();
 	float healthDamage = 0.f, actionDamage = 0.f, mindDamage = 0.f;
+	
+	if (actionDamage > 0.f)
+		actionDamage = healthDamage;
+	if (mindDamage > 0.f)
+		mindDamage = healthDamage;
 
 	if (defender->isPlayerCreature() && defender->getPvpStatusBitmask() == CreatureFlag::NONE) {
 		return 0;
@@ -1782,7 +1790,7 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 
 	if (poolsToDamage & ACTION) {
 		actionDamage = getArmorReduction(attacker, weapon, defender, damage, ACTION, data) * damageMultiplier * data.getActionDamageMultiplier();
-		defender->inflictDamage(attacker, CreatureAttribute::ACTION, (int)actionDamage, true, xpType);
+		defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (int)actionDamage, true, xpType);
 
 		if (System::random(100) < ratio)
 			defender->addWounds(CreatureAttribute::ACTION, 1, true);
@@ -1796,8 +1804,8 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 
 	if (poolsToDamage & MIND) {
 		mindDamage = getArmorReduction(attacker, weapon, defender, damage, MIND, data) * damageMultiplier * data.getMindDamageMultiplier();
-		defender->inflictDamage(attacker, CreatureAttribute::MIND, (int)mindDamage, true, xpType);
-
+		defender->inflictDamage(attacker, CreatureAttribute::HEALTH, (int)mindDamage, true, xpType);
+/*
 		if (System::random(100) < ratio)
 			defender->addWounds(CreatureAttribute::MIND, 1, true);
 
@@ -1806,6 +1814,7 @@ int CombatManager::applyDamage(TangibleObject* attacker, WeaponObject* weapon, C
 
 		if (System::random(100) < ratio)
 			defender->addWounds(CreatureAttribute::WILLPOWER, 1, true);
+*/
 	}
 
 	// This method can be called multiple times for area attacks.  Let the calling method decrease the powerup once
