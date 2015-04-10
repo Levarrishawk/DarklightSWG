@@ -64,9 +64,9 @@ FullAutoArea2Command = {
 		{}, 
 		{ "dizzy_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		30, 
-		100, 
-		10 
+		20, 
+		70, 
+		4 
 	  )
 	},
 
