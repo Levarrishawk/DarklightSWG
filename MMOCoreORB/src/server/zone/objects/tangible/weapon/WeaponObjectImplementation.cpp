@@ -570,7 +570,8 @@ int WeaponObjectImplementation::getHealthAttackCost(bool withPup) {
 
 	if(powerupObject != NULL && withPup)
 		return healthAttackCost - (abs(healthAttackCost) * powerupObject->getPowerupStat("healthAttackCost"));
-	if (healthAttackCost > 0 || healthAttackCost < 0)
+	//Made it simplified.
+	if (healthAttackCost != 0)
 		healthAttackCost = 0;
 	return healthAttackCost;
 }
@@ -579,7 +580,8 @@ int WeaponObjectImplementation::getActionAttackCost(bool withPup) {
 
 	if(powerupObject != NULL && withPup)
 		return actionAttackCost - (abs(actionAttackCost) * powerupObject->getPowerupStat("actionAttackCost"));
-        if (actionAttackCost < 0 || actionAttackCost > 150)
+	//Made it simplified
+        if (actionAttackCost != 150)
                actionAttackCost = 150;
 	return actionAttackCost;
 }
@@ -588,7 +590,8 @@ int WeaponObjectImplementation::getMindAttackCost(bool withPup) {
 
 	if(powerupObject != NULL && withPup)
 		return mindAttackCost - (abs(mindAttackCost) * powerupObject->getPowerupStat("mindAttackCost"));
-        if (mindAttackCost < 0 || mindAttackCost > 0)
+	//Made it simplified
+        if (mindAttackCost != 0)
                 mindAttackCost = 0;
 	return mindAttackCost;
 }
