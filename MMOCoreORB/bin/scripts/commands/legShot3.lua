@@ -51,17 +51,8 @@ LegShot3Command = {
 	mindCostMultiplier = 0,
 	--accuracyBonus = 25,
 
-	stateEffects = {
-	  StateEffect( 
-		STUN_EFFECT, 
-		{}, 
-		{ "stun_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		100, 
-		100, 
-		10 
-	  )
-	},
+	stateEffects = {},
+	
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
