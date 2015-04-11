@@ -44,10 +44,10 @@
 DoubleTapCommand = {
         name = "doubletap",
 
-	damageMultiplier = 2,
+	damageMultiplier = 3,
 	speedMultiplier = 1,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 1,
+	actionCostMultiplier = 2,
 	mindCostMultiplier = 0,
         --accuracyBonus = 50,
 
