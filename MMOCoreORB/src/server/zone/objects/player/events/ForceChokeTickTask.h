@@ -29,7 +29,7 @@ public:
 		if(creature != NULL && creatureTarget != NULL) {
 			int amountOfTicks = 5;
 			if (counter < amountOfTicks && !creatureTarget->isIncapacitated() && !creatureTarget->isDead() && (creatureTarget->getPvpStatusBitmask() != CreatureFlag::NONE)) {
-				float damage = 500;
+				float damage = 250;
 				ManagedReference<SceneObject*> psg = creatureTarget->getSlottedObject("utility_belt");
 				if (psg != NULL && psg->isPsgArmorObject()) {
 						if (cast<ArmorObject*>(psg.get())->isVulnerable(1)){
@@ -40,9 +40,9 @@ public:
 						}
 					}
 				float healthDamage = damage;
-				float actionDamage = damage;
-				float mindDamage = damage;
-
+				//float actionDamage = damage;
+				//float mindDamage = damage;
+				
 				Vector<ManagedReference<ArmorObject*> > healthArmor = creatureTarget->getWearablesDeltaVector()->getArmorAtHitLocation(CombatManager::CHEST);
 				if (System::random(1) == 0)
 					healthArmor = creatureTarget->getWearablesDeltaVector()->getArmorAtHitLocation(CombatManager::ARMS);
@@ -55,6 +55,7 @@ public:
 						Locker locker(healthArmorToHit);
 						healthArmorToHit->inflictDamage(healthArmorToHit, 0, healthDamage * 0.1, true, true);
 					}
+				/*
 				Vector<ManagedReference<ArmorObject*> > actionArmor = creatureTarget->getWearablesDeltaVector()->getArmorAtHitLocation(CombatManager::LEGS);
 				ManagedReference<ArmorObject*> actionArmorToHit = NULL;
 				if (!actionArmor.isEmpty())
@@ -75,9 +76,10 @@ public:
 						Locker locker(mindArmorToHit);
 						mindArmorToHit->inflictDamage(mindArmorToHit, 0, mindDamage * 0.1, true, true);
 					}
+				*/
 				creatureTarget->inflictDamage(creature, CreatureAttribute::HEALTH, healthDamage, true);
-				creatureTarget->inflictDamage(creature, CreatureAttribute::ACTION, actionDamage, true);
-				creatureTarget->inflictDamage(creature, CreatureAttribute::MIND, mindDamage, true);
+				//creatureTarget->inflictDamage(creature, CreatureAttribute::ACTION, actionDamage, true);
+				//creatureTarget->inflictDamage(creature, CreatureAttribute::MIND, mindDamage, true);
 
 				creatureTarget->playEffect("clienteffect/pl_force_choke.cef", "");
 
