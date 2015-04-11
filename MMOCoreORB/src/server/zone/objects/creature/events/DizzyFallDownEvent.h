@@ -22,7 +22,7 @@ public:
 		Locker locker(creature);
 		// Small chance to stand up while dizzy...
 		int rand = System::random(100);
-		int chance = 80; // Percent.
+		int chance = 20; // Percent.
 
 		if (creature->isDizzied() && (rand >= chance)) {
 			if (creature->isRidingMount()) {
@@ -34,6 +34,8 @@ public:
 			creature->updateLastKnockdown();
 			creature->sendSystemMessage("@cbt_spam:dizzy_fall_down_single");
 			creature->sendStateCombatSpam("cbt_spam", "dizzy_fall_down", 11);
+		}else {
+			creature->setPosture(CreaturePosture::UPRIGHT);
 		}
 		
 		
