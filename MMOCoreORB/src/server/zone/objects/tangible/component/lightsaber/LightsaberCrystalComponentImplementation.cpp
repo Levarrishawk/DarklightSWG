@@ -40,7 +40,7 @@ void LightsaberCrystalComponentImplementation::fillAttributeList(AttributeListMe
 	TangibleObjectImplementation::fillAttributeList(alm, object);
 
 	PlayerObject* player = object->getPlayerObject();
-	if (player->getJediState() > 1 || player->isPrivileged()){
+	if (player->getJediState() == 0 || player->isPrivileged()){
 		if (owner == ""){
 			StringBuffer str;
 			str << "\\#FF6600" << "UNTUNED" ;
@@ -72,7 +72,7 @@ void LightsaberCrystalComponentImplementation::fillAttributeList(AttributeListMe
 				alm->insertAttribute("wpn_attack_cost_health", sacHealth);
 				alm->insertAttribute("wpn_attack_cost_action", sacAction);
 				alm->insertAttribute("wpn_attack_cost_mind", sacMind);
-				alm->insertAttribute("forcecost", forceCost);
+				//alm->insertAttribute("forcecost", forceCost);
 			} else {
 				StringBuffer str;
 				str << "@jedi_spam:crystal_quality_" << getQuality();
@@ -84,7 +84,7 @@ void LightsaberCrystalComponentImplementation::fillAttributeList(AttributeListMe
 
 void LightsaberCrystalComponentImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuResponse, CreatureObject* player) {
 
-	if ((owner == "") && player->hasSkill("force_title_jedi_rank_01") && hasPlayerAsParent(player)) {
+	if ((owner == "") && hasPlayerAsParent(player)) {
 		String text = "@jedi_spam:tune_crystal";
 		menuResponse->addRadialMenuItem(128, 3, text);
 	}
@@ -94,7 +94,7 @@ void LightsaberCrystalComponentImplementation::fillObjectMenuResponse(ObjectMenu
 
 int LightsaberCrystalComponentImplementation::handleObjectMenuSelect(CreatureObject* player, byte selectedID) {
 
-	if (selectedID == 128 && player->hasSkill("force_title_jedi_rank_01") && hasPlayerAsParent(player)) {
+	if (selectedID == 128 && hasPlayerAsParent(player)) {
 		if(owner == "") {
 			ManagedReference<SuiMessageBox*> suiMessageBox = new SuiMessageBox(player, SuiWindowType::TUNE_CRYSTAL);
 
@@ -140,10 +140,11 @@ bool LightsaberCrystalComponentImplementation::hasPlayerAsParent(CreatureObject*
 }
 
 void LightsaberCrystalComponentImplementation::tuneCrystal(CreatureObject* player) {
-
+/*
 	if(!player->hasSkill("force_title_jedi_rank_01") || !hasPlayerAsParent(player)) {
 		return;
 	}
+*/
 
 	if ((owner == "")){
 		String name = player->getDisplayedName();
@@ -180,7 +181,7 @@ void LightsaberCrystalComponentImplementation::updateCraftingValues(CraftingValu
 	setMaxCondition(values->getCurrentValue("hitpoints"));
 
 	if (colorMax != 31) {
-		int finalColor = MIN(color, 11);
+		int finalColor = MIN(color, 30);
 		setColor(finalColor);
 		updateCrystal(finalColor);
 	} 
@@ -198,10 +199,10 @@ void LightsaberCrystalComponentImplementation::updateCraftingValues(CraftingValu
 
 		// Following are incoming positive values in script (Due to loot modifier.)
 		// Switch to negative number.
-		setSacHealth(MIN(values->getCurrentValue("attackhealthcost"), 9) * -1);
-		setSacAction(MIN(values->getCurrentValue("attackactioncost"), 9) * -1);
-		setSacMind(MIN(values->getCurrentValue("attackmindcost"), 9) * -1);
-		setForceCost(MIN(values->getCurrentValue("forcecost"), 9) * -1);
+		setSacHealth(MIN(values->getCurrentValue("attackhealthcost"), 0) * 0);
+		setSacAction(MIN(values->getCurrentValue("attackactioncost"), 0) * 0);
+		setSacMind(MIN(values->getCurrentValue("attackmindcost"), 0) * 0);
+		setForceCost(MIN(values->getCurrentValue("forcecost"), 0) * 0);
 	}
 
 	ComponentImplementation::updateCraftingValues(values, firstUpdate);
@@ -222,11 +223,11 @@ int LightsaberCrystalComponentImplementation::inflictDamage(TangibleObject* atta
 				weapon->setAttackSpeed(weapon->getAttackSpeed() - getAttackSpeed());
 				weapon->setMinDamage(weapon->getMinDamage() - getMinimumDamage());
 				weapon->setMaxDamage(weapon->getMaxDamage() - getMaximumDamage());
-				weapon->setHealthAttackCost(weapon->getHealthAttackCost() - getSacHealth());
-				weapon->setActionAttackCost(weapon->getActionAttackCost() - getSacAction());
-				weapon->setMindAttackCost(weapon->getMindAttackCost() - getSacMind());
-				weapon->setWoundsRatio(weapon->getWoundsRatio() - getWoundChance());
-				weapon->setForceCost(weapon->getForceCost() - getForceCost());
+				//weapon->setHealthAttackCost(weapon->getHealthAttackCost() - getSacHealth());
+				//weapon->setActionAttackCost(weapon->getActionAttackCost() - getSacAction());
+				//weapon->setMindAttackCost(weapon->getMindAttackCost() - getSacMind());
+				//weapon->setWoundsRatio(weapon->getWoundsRatio() - getWoundChance());
+				//weapon->setForceCost(weapon->getForceCost() - getForceCost());
 			}
 
 			if (getColor() != 31) {
