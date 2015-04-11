@@ -47,9 +47,9 @@ HealthShot1Command = {
 	damageMultiplier = 1.5,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 1.75,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
-        accuracyBonus = 50,
+        --accuracyBonus = 50,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
@@ -78,7 +78,7 @@ HealthShot1Command = {
 		125,
 		100,
 		60, 
-		60
+		10
 	  )
 	},	
 
