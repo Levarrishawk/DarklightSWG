@@ -43,8 +43,8 @@
 
 DefaultAttackCommand = {
         name = "defaultattack",
-	damageMultiplier = 1,
-	speedMultiplier = 1,
+	damageMultiplier = 0.125,
+	speedMultiplier = 999999999999999999,
 
 	combatSpam = "attack",
 	animationCRC = 0,
