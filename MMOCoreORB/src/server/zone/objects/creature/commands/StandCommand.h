@@ -65,10 +65,16 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 
-		//StringTokenizer args(arguments.toString());
-		if (creature->isDizzied())
-			creature->queueDizzyFallEvent();
-
+		//If dizzy
+		if (creature->isDizzied()) {
+			creature->queueDizzyFallEvent(); //handle dizzy
+			
+			if  (creature->isKnockedDown()){ //if knocked down
+				creature->setPosture(CreaturePosture::KNOCKEDDOWN); //stay down
+			}
+		}else{ // or just stand the fuck up.
+			creature->setPosture(CreaturePosture::UPRIGHT);
+		}
 		return SUCCESS;
 	}
 
