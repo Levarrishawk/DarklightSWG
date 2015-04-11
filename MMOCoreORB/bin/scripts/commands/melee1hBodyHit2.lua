@@ -44,12 +44,11 @@
 Melee1hBodyHit2Command = {
         name = "melee1hbodyhit2",
 
-	damageMultiplier = 1.5,
-	speedMultiplier = 3,
+	damageMultiplier = 3.75,
+	speedMultiplier = 5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4,
+	actionCostMultiplier = 3.3,
 	mindCostMultiplier = 0,
-        accuracyBonus = 25,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
