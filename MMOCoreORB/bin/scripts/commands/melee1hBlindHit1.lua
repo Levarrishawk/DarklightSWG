@@ -44,12 +44,11 @@
 Melee1hBlindHit1Command = {
         name = "melee1hblindhit1",
 
-	damageMultiplier = 1.5,
+	damageMultiplier = 1.75,
 	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3,
+	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 0,
-        accuracyBonus = 25,
 
 	stateEffects = {
 	  StateEffect( 
