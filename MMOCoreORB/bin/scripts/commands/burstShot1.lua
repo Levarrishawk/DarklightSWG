@@ -44,12 +44,11 @@
 BurstShot1Command = {
         name = "burstshot1",
 
-	damageMultiplier = 4.0,
-	speedMultiplier = 2.0,
+	damageMultiplier = 3,
+	speedMultiplier = 1.25,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.5,
+	actionCostMultiplier = 2.75,
 	mindCostMultiplier = 0,
-        accuracyBonus = 25,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
