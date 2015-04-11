@@ -49,7 +49,7 @@ ActionShot1Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
-	accuracyBonus = 25,
+	--accuracyBonus = 25,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
@@ -57,18 +57,6 @@ ActionShot1Command = {
 
 	combatSpam = "sapshot",
 	    
-	stateEffects = {
-	  StateEffect( 
-		POSTUREDOWN_EFFECT, 
-		{ "postureDownRecovery" }, 
-		{ "posture_change_down_defense" }, 
-		{}, 
-		100, 
-		0, 
-		0 
-	  )
-	},	
-	  
 	dotEffects = {
 	  DotEffect( 
 		BLEEDING, 
@@ -78,7 +66,7 @@ ActionShot1Command = {
 		125,
 		100,
 		60, 
-		60
+		20
 	  )	  
 	},
 
