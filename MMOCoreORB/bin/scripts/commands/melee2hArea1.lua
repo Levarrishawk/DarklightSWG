@@ -43,26 +43,15 @@
 
 Melee2hArea1Command = {
         name = "melee2harea1",
-	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
-	healthCostMultiplier = 0.5,
-	actionCostMultiplier = 1.5,
-	mindCostMultiplier = 0.50,
-        accuracyBonus = 10,
+	damageMultiplier = 1.9,
+	speedMultiplier = 2.7,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.25,
+	mindCostMultiplier = 0,
 
 	areaRange = 7,
 	areaAction = true,
 	stateEffects = {
-        --documentation says nothing about a blind effect
-	--StateEffect( 
-	--	BLIND_EFFECT, 
-	--	{}, 
-	--	{ "blind_defense", "resistance_states" }, 
-	--	{ "jedi_state_defense" }, 
-	--	20, 
-	--	100, 
-	--	10 
-        --),
 	  StateEffect( 
 		POSTUREDOWN_EFFECT, 
 		{ "postureDownRecovery" }, 
