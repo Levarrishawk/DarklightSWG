@@ -94,8 +94,11 @@ public:
 			return GENERALERROR;
 		}
 
-		playerObject->setForcePower(playerObject->getForcePower() - forceCost);
-
+		//playerObject->setForcePower(playerObject->getForcePower() - forceCost);
+		if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) {
+			creature->sendSystemMessage("You don't have enough action to preform this ability");
+			return false;
+		}
 		StringIdChatParameter startStringId("jedi_spam", "apply_forcerun1");
 		StringIdChatParameter endStringId("jedi_spam", "remove_forcerun1");
 
