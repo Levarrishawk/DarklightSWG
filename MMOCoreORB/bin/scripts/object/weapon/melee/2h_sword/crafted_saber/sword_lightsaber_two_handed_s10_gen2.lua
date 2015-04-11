@@ -101,7 +101,7 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_s10_gen2 
 	healthAttackCost = 55,
 	actionAttackCost = 47,
 	mindAttackCost = 25,
-	forceCost = 24,
+	forceCost = 0,
 
 	pointBlankRange = 0,
 	pointBlankAccuracy = 20,
