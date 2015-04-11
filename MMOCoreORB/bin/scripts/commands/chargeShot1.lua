@@ -44,12 +44,11 @@
 ChargeShot1Command = {
 	name = "chargeshot1",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 2.0,
+	damageMultiplier = 2.15,
+	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.0,
+	actionCostMultiplier = 4.45,
 	mindCostMultiplier = 0,
-	accuracyBonus = 25,
 
 	animationCRC = hashCode("charge"),
 
