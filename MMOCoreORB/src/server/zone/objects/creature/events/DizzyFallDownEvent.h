@@ -20,7 +20,22 @@ public:
 
 	void run() {
 		Locker locker(creature);
-
+		
+		
+		if (creature->isKnockedDown() && !creature->isDizzied()) {
+			creature->setPosture(CreaturePosture::UPRIGHT);
+		}else if (creature->isKnockedDown() && creature->isDizzied()) {
+			int roll = System::random(100);
+			if (roll > 80) {
+				creature->setPosture(CreaturePosture::UPRIGHT);
+			}else{
+				creature->setPosture(CreaturePosture::KNOCKEDDOWN);
+				creature->sendSystemMessage("You are too dizzy to stand");
+			}
+		}else{
+			creature->setPosture(CreaturePosture::UPRIGHT);
+		}
+		/*
 		// Small chance to stand up while dizzy...
 		int rand = System::random(100);
 		int chance = 5; // Percent.
@@ -36,6 +51,7 @@ public:
 			creature->sendSystemMessage("@cbt_spam:dizzy_fall_down_single");
 			creature->sendStateCombatSpam("cbt_spam", "dizzy_fall_down", 11);
 		}
+		*/
 
 		creature->removePendingTask("dizzyFallDownEvent");
 	}
