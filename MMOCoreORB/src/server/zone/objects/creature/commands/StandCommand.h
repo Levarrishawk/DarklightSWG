@@ -66,15 +66,16 @@ public:
 			return INVALIDLOCOMOTION;
 
 		//StringTokenizer args(arguments.toString());
-		if (creature->isKnockedDown && creature->isDizzied)
+		if (creature->isKnockedDown && creature->isDizzied) {
 			int roll = System::Random(100);
-			if (roll > 80)
+			if (roll > 80) {
 				creature->setPosture(CreaturePosture::UPRIGHT);
-			else
+			}else{
 				creature->setPosture(CreaturePosture::KNOCKEDDOWN);
-		else
+			}
+		}else{
 			creature->setPosture(CreaturePosture::UPRIGHT);
-
+		}
 		if (creature->isDizzied())
 			creature->queueDizzyFallEvent();
 
