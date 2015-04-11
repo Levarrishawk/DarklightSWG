@@ -43,21 +43,7 @@
 
 Melee1hFrenzy2Command = {
         name = "melee1hfrenzy2",
-
-	damageMultiplier = 2.0,
-	speedMultiplier = 3,
-	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.25,
-	mindCostMultiplier = 0,
-        accuracyBonus = 25,
-
-	animationCRC = hashCode("combo_5b_light"),
-
-	poolsToDamage = HEALTH_ATTRIBUTE,
-
-	combatSpam = "scattershiak",
-
-	range = -1
+        
 }
 
 AddCommand(Melee1hFrenzy2Command)
