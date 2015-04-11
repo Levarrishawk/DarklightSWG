@@ -44,7 +44,7 @@
 StoppingShotCommand = {
         name = "stoppingshot",
 
-	damageMultiplier = 5.0,
+	damageMultiplier = 7,
 	speedMultiplier = 2.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.25,
