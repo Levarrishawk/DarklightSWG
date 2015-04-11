@@ -69,9 +69,9 @@ public:
 		if (creature->isKnockedDown && creature->isDizzied)
 			int roll = System::Random(100);
 			if (roll > 80)
-				creature->setPosture(CreaturePosture::UPRIGHT)
+				creature->setPosture(CreaturePosture::UPRIGHT);
 			else
-				creature->setPosture(CreaturePosture::KNOCKEDDOWN)
+				creature->setPosture(CreaturePosture::KNOCKEDDOWN);
 		else
 			creature->setPosture(CreaturePosture::UPRIGHT);
 
