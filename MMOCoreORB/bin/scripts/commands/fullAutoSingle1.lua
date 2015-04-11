@@ -62,7 +62,7 @@ FullAutoSingle1Command = {
 		{ "jedi_state_defense" }, 
 		30, 
 		100, 
-		30 
+		2 
 	  ),
 	  StateEffect( 
 		BLIND_EFFECT, 
@@ -71,7 +71,7 @@ FullAutoSingle1Command = {
 		{ "jedi_state_defense" }, 
 		30, 
 		100, 
-		40 
+		4 
 	  ),
 	  StateEffect( 
 		STUN_EFFECT, 
@@ -80,7 +80,7 @@ FullAutoSingle1Command = {
 		{ "jedi_state_defense" }, 
 		30, 
 		100, 
-		30 
+		4
 	  )
 	},
 
