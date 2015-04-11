@@ -101,7 +101,7 @@ object_weapon_melee_sword_crafted_saber_sword_lightsaber_one_handed_s10_gen2 = o
 	healthAttackCost = 25,
 	actionAttackCost = 47,
 	mindAttackCost = 45,
-	forceCost = 24,
+	forceCost = 0,
 
 	pointBlankRange = 0,
 	pointBlankAccuracy = 20,
