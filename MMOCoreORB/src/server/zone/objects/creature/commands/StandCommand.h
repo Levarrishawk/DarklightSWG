@@ -76,8 +76,8 @@ public:
 		}else{
 			creature->setPosture(CreaturePosture::UPRIGHT);
 		}
-		if (creature->isDizzied())
-			creature->queueDizzyFallEvent();
+		//if (creature->isDizzied())
+		//	creature->queueDizzyFallEvent();
 
 		return SUCCESS;
 	}
