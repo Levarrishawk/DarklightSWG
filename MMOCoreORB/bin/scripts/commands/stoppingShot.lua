@@ -44,12 +44,12 @@
 StoppingShotCommand = {
         name = "stoppingshot",
 
-	damageMultiplier = 7,
+	damageMultiplier = 9,
 	speedMultiplier = 2.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.25,
+	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
-	accuracyBonus = 50,
+	--accuracyBonus = 50,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
