@@ -44,12 +44,11 @@
 FullAutoArea1Command = {
         name = "fullautoarea1",
 
-	damageMultiplier = 1.5,
-	speedMultiplier = 1.5,
+	damageMultiplier = 1.85,
+	speedMultiplier = 2.35,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.75,
+	actionCostMultiplier = 3.85,
 	mindCostMultiplier = 0,
-	accuracyBonus = 25,
 
 	animationCRC = hashCode("fire_defender_posture_change_down"),
 
