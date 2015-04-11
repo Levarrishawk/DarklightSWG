@@ -55,6 +55,18 @@ FanShotCommand = {
 	coneAction = true,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
+	
+		stateEffects = {
+	   StateEffect( 
+		BLIND_EFFECT, 
+		{}, 
+		{ "blind_defense", "resistance_states" }, 
+		{ "jedi_state_defense" }, 
+		30, 
+		100, 
+		10 
+	  	)
+	  },
 
 	animationCRC = hashCode("fire_area_light"),
 
