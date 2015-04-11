@@ -44,12 +44,12 @@
 Melee1hHit2Command = {
         name = "melee1hhit2",
 
-	damageMultiplier = 2,
-	speedMultiplier = 3,
+	damageMultiplier = 2.5,
+	speedMultiplier = 1.75,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 2,
+	actionCostMultiplier = 1.25,
 	mindCostMultiplier = 0,
-        accuracyBonus = 25,
+	
         poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("combo_4a_medium"),
