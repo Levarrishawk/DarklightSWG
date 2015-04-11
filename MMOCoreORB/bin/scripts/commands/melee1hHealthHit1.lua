@@ -1,4 +1,8 @@
---Copyright (C) 2007 <SWGEmu>
+	damageMultiplier = 3.5,
+	speedMultiplier = 4,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 2.5,
+	mindCostMultiplier = 0,--Copyright (C) 2007 <SWGEmu>
 
 --This File is part of Core3.
 
@@ -49,7 +53,6 @@ Melee1hHealthHit1Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 0,
-        accuracyBonus = 25,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
