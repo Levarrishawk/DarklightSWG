@@ -46,7 +46,7 @@ FanShotCommand = {
 	damageMultiplier = 4.5,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.0,
+	actionCostMultiplier = 3.0,
 	mindCostMultiplier = 0,
         --accuracyBonus = 50,
 
