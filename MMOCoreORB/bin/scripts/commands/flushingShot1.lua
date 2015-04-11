@@ -44,12 +44,11 @@
 FlushingShot1Command = {
         name = "flushingshot1",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 2.0,
+	damageMultiplier = 3.55,
+	speedMultiplier = 3.45,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.5,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
-	accuracyBonus = 5,
 
 	stateEffects = {
 	  StateEffect( 
