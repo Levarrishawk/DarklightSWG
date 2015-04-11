@@ -49,7 +49,7 @@ PolearmActionHit1Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
-	accuracyBonus = 10,
+	--accuracyBonus = 10,
 
 	animationCRC = hashCode("attack_low_right_medium_0"),
 
