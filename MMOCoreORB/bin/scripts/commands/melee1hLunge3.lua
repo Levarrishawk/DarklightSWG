@@ -56,7 +56,7 @@ Melee1hLunge3Command = {
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	combatSpam = "lungestab",
 
-	range = 20,
+	range = 30,
 
 	stateEffects = {
 	  StateEffect( 
@@ -64,8 +64,8 @@ Melee1hLunge3Command = {
 		{ "postureDownRecovery" },
 		{ "posture_change_down_defense" },
 		{},
-		75,
-		75,
+		90,
+		90,
 		0
 	  )
 	}
