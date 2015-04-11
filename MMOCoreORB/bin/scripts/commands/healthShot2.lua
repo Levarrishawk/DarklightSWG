@@ -44,12 +44,12 @@
 HealthShot2Command = {
     name = "healthshot2",
 	
-	damageMultiplier = 3.0,
-	speedMultiplier = 2.0,
+	damageMultiplier = 2.0,
+	speedMultiplier = 3.0,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.0,
 	mindCostMultiplier = 0,
-        accuracyBonus = 50,
+        --accuracyBonus = 50,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
@@ -57,18 +57,6 @@ HealthShot2Command = {
 
 	combatSpam = "sapblast",
 
-	stateEffects = {
-	  StateEffect( 
-		HEALTHDEGRADE_EFFECT, 
-		{}, 
-		{}, 
-		{}, 
-		100, 
-		100, 
-		30 
-	  )
-	},
-	
 	dotEffects = {
 	  DotEffect( 
 		BLEEDING, 
@@ -78,7 +66,7 @@ HealthShot2Command = {
 		125,
 		100,
 		60, 
-		60
+		20
 	  )
 	},	
 
