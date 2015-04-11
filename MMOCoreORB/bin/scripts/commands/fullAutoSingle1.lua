@@ -44,12 +44,11 @@
 FullAutoSingle1Command = {
         name = "fullautosingle1",
 
-	damageMultiplier = 2,
-	speedMultiplier = 1.5,
+	damageMultiplier = 1.5,
+	speedMultiplier = 2.15,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.75,
+	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
-	accuracyBonus = 25,
 
 	animationCRC = hashCode("fire_5_special_single_medium"),
 
