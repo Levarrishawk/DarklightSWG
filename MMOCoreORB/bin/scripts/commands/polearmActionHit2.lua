@@ -49,7 +49,7 @@ PolearmActionHit2Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
-	accuracyBonus = 30,
+	--accuracyBonus = 30,
 
 	animationCRC = hashCode("lower_posture_2hmelee_2"),
 
