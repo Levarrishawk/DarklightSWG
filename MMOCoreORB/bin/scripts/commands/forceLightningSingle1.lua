@@ -44,9 +44,9 @@
 ForceLightningSingle1Command = {
         name = "forcelightningsingle1",
         
-	damage = 1500,
-	speed = 4.0,
-	forceCost = 75,
+	damage = 500,
+	speed = 2.0,
+	forceCost = 0,
 	accuracySkillMod = "forcelightning_accuracy";
 
 	animationCRC = hashCode("force_lightning_1_particle_level_1_light"),
@@ -57,7 +57,7 @@ ForceLightningSingle1Command = {
 	
 	attackType = FORCEATTACK,
 
-	range = 32
+	range = 15
 }
 
 AddCommand(ForceLightningSingle1Command)
