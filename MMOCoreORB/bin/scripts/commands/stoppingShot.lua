@@ -47,7 +47,7 @@ StoppingShotCommand = {
 	damageMultiplier = 5.0,
 	speedMultiplier = 2.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.25,
+	actionCostMultiplier = 3.25,
 	mindCostMultiplier = 0,
 	accuracyBonus = 50,
 
