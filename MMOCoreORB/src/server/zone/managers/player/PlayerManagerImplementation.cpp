@@ -1152,7 +1152,8 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 		if (attacker->isPet())
 			continue;
 
-		combatXp /= 10.f;
+		//combatXp /= 10.f;
+		combatXp = xpAmount;
 
 		Locker crossLocker(attacker, destructedObject);
 
