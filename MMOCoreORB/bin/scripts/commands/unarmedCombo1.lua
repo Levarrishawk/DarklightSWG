@@ -44,12 +44,11 @@
 UnarmedCombo1Command = {
 	name = "unarmedcombo1",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 2.0,
+	damageMultiplier = 3,
+	speedMultiplier = 3,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.5,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
-        accuracyBonus = 15,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
