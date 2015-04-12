@@ -1,8 +1,4 @@
-	damageMultiplier = 3.5,
-	speedMultiplier = 4,
-	healthCostMultiplier = 0,
-	actionCostMultiplier = 2.5,
-	mindCostMultiplier = 0,--Copyright (C) 2007 <SWGEmu>
+--Copyright (C) 2007 <SWGEmu>
 
 --This File is part of Core3.
 
