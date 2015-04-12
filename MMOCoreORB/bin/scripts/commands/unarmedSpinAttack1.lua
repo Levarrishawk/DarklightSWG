@@ -44,17 +44,16 @@
 UnarmedSpinAttack1Command = {
 	name = "unarmedspinattack1",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 2,
+	damageMultiplier = 2.75,
+	speedMultiplier = 3.25,
 	areaAction = true,
-	areaRange = -1,
-	accuracyBonus = 15,
+	areaRange = 7,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 4.25,
+	mindCostMultiplier = 0,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
-	
-	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.5,
-	mindCostMultiplier = 0,
+
 
 	animationCRC = hashCode("combo_3c_light"),
 
