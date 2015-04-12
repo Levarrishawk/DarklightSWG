@@ -49,7 +49,7 @@ UnarmedBlind2Command = {
 	--accuracyBonus = 15,
 	
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4,
+	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
 
 	animationCRC = hashCode("attack_high_center_light_1"),
