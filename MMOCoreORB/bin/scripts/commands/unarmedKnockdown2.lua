@@ -47,7 +47,7 @@ UnarmedKnockdown2Command = {
 	damageMultiplier = 4,
 	speedMultiplier = 2.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 5,
+	actionCostMultiplier = 4.5,
 	mindCostMultiplier = 0,
         --accuracyBonus = 15,
 
