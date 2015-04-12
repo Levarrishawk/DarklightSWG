@@ -49,7 +49,7 @@ UnarmedLunge2Command = {
 	accuracyBonus = 15,
 	
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.5,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
@@ -58,7 +58,7 @@ UnarmedLunge2Command = {
 
 	combatSpam = "lungeshiak",
 
-	range = 20,
+	range = 15,
 
 	stateEffects = {
 	  StateEffect( 
