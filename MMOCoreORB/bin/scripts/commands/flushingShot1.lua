@@ -56,7 +56,7 @@ FlushingShot1Command = {
 		{}, 
 		{ "stun_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		100, 
+		50, 
 		100, 
 		5 
 	  ),
