@@ -182,7 +182,7 @@ rori = {
 	
 	planetObjects = {
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.100263, oz = 0, ow = 0.994961, x = -5307.37, z = 80.1274, y = -2216.91, parentid = 0},
---		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.69192, oz = 0, ow = 0.721974, x = 5370.22, z = 80, y = 5666.04, parentid = 0},
+		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = 0, oz = 0, ow = 0, x = 5283.22, z = 79.3, y = 6180.04, parentid = 0},
 --		{templateFile = "object/tangible/terminal/terminal_character_builder.iff", ox = 0, oy = -0.0274543, oz = 0, ow = 0.999623, x = 3672.91, z = 96, y = -6441.07, parentid = 0}
 	}
 }
