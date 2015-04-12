@@ -140,10 +140,10 @@ TrePath = "/home/swgemu/workspace/tre"
 
 TreFiles = {
 	"default_patch.tre",
---	"darklight_02_hotfix.tre",
---	"darklight_01_hotfix.tre",
---	"darklight_02s.tre",
---	"darklight_02.tre",
+--	"darklight_02_hotfix.tre",  -- Redundant
+--	"darklight_01_hotfix.tre",  -- Redundant
+	"darklight_02s.tre",   -- Restuss Serverside - Cloning Crash Fix.  REQUIRED!
+--	"darklight_02.tre",	- Redundant
 	"darklight_01s.tre",
 	"darklight_01.tre",
 	"patch_sku1_14_00.tre",
