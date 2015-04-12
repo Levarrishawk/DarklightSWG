@@ -47,7 +47,7 @@ UnarmedDizzy2Command = {
 	damageMultiplier = 4,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4,
+	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
 
 
