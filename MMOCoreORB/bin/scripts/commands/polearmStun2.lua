@@ -62,7 +62,7 @@ PolearmStun2Command = {
 		{ "jedi_state_defense" }, 
 		50, 
 		60, 
-		20
+		10
 	  )
 	},
 
