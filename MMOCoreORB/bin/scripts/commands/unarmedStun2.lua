@@ -49,7 +49,7 @@ UnarmedStun2Command = {
 	--accuracyBonus = 15,
 	
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4,
+	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
 
 	animationCRC = hashCode("combo_4c_light"),
