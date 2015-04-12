@@ -49,7 +49,7 @@ UnarmedSpinAttack2Command = {
 	areaAction = true,
 	areaRange = 7,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.75,
+	actionCostMultiplier = 4.25,
 	mindCostMultiplier = 0,
         --accuracyBonus = 15,
 
