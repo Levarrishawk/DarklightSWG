@@ -43,21 +43,6 @@
 
 PolearmLegHit1Command = {
 	name = "polearmleghit1",
-
-	damageMultiplier = 1.5,
-	speedMultiplier = 1.25,
-	accuracyBonus = 10,
-	
-	healthCostMultiplier = 1.0,
-	actionCostMultiplier = 0.5,
-	mindCostMultiplier = 0.5,
-
-	animationCRC = hashCode("attack_low_left_medium_0"),
-
-	combatSpam = "legbruiser",
-
-	poolsToDamage = ACTION_ATTRIBUTE,
-
 	range = -1
 }
 
