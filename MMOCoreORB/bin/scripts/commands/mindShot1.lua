@@ -44,12 +44,11 @@
 MindShot1Command = {
 	name = "mindshot1",
 
-	damageMultiplier = 1.5,
-	speedMultiplier = 1,
+	damageMultiplier = 1.0,
+	speedMultiplier = 4.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.0,
+	actionCostMultiplier = 3.75,
 	mindCostMultiplier = 0,
-	accuracyBonus = 5,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
 
@@ -63,10 +62,10 @@ MindShot1Command = {
 		{ "resistance_bleeding", "bleed_resist", "combat_bleeding_defense" },
 		HEALTH,
 		true,
-		125,
-		100,
-		60, 
-		60
+		95,
+		75,
+		50, 
+		15
 	  )
 	},
 
