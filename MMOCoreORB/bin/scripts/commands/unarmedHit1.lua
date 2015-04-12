@@ -44,12 +44,10 @@
 UnarmedHit1Command = {
 	name = "unarmedhit1",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
-	accuracyBonus = 15,
-	
+	damageMultiplier = 2.25,
+	speedMultiplier = 3.5,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.0,
+	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
 
 	poolsToDamage = HEALTH_ATTRIBUTE,
