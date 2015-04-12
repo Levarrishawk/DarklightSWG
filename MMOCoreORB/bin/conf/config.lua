@@ -69,7 +69,7 @@ MantisUser = "swgemu"
 MantisPass = "123456"
 MantisPrfx = "mantis_" -- The prefix for your mantis tables.
 
-AutoReg = 0 --1 for true
+AutoReg = 1 --1 for true
 
 ProgressMonitors = "true"
 
@@ -140,10 +140,10 @@ TrePath = "/home/swgemu/workspace/tre"
 
 TreFiles = {
 	"default_patch.tre",
-	"darklight_02_hotfix.tre",
-	"darklight_01_hotfix.tre",
-	"darklight_02s.tre",
-	"darklight_02.tre",
+--	"darklight_02_hotfix.tre",
+--	"darklight_01_hotfix.tre",
+--	"darklight_02s.tre",
+--	"darklight_02.tre",
 	"darklight_01s.tre",
 	"darklight_01.tre",
 	"patch_sku1_14_00.tre",
