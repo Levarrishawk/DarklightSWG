@@ -1153,7 +1153,7 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 			continue;
 
 		//combatXp /= 10.f;
-		combatXp = xpAmount;
+		combatXp /= 1.f;
 
 		Locker crossLocker(attacker, destructedObject);
 
