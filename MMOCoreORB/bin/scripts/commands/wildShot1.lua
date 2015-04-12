@@ -44,12 +44,11 @@
 WildShot1Command = {
         name = "wildshot1",
 
-	damageMultiplier = 2.25,
+	damageMultiplier = 2.0,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
-	accuracyBonus = 25,
 
 	animationCRC = hashCode("fire_7_single_medium"),
 
@@ -63,7 +62,7 @@ WildShot1Command = {
 		{ "jedi_state_defense" }, 
 		30, 
 		100, 
-		30 
+		5 
 	  )
 	},
 
