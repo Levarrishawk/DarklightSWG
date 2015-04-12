@@ -44,12 +44,12 @@
 UnarmedLunge1Command = {
 	name = "unarmedlunge1",
 
-	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
+	damageMultiplier = 3.0,
+	speedMultiplier = 2.0,
 	accuracyBonus = 15,
 	
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3.0,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
 
 	animationCRC = hashCode("lower_posture_unarmed_1"),
@@ -58,7 +58,7 @@ UnarmedLunge1Command = {
 
 	combatSpam = "ridingbantha",
 
-	range = 15,
+	range = 8,
 
 	stateEffects = {
 	  StateEffect( 
