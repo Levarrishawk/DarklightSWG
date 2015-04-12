@@ -44,7 +44,7 @@
 FlushingShot1Command = {
         name = "flushingshot1",
 
-	damageMultiplier = 3.55,
+	damageMultiplier = 2.25,
 	speedMultiplier = 3.45,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4,
@@ -58,7 +58,7 @@ FlushingShot1Command = {
 		{ "jedi_state_defense" }, 
 		100, 
 		100, 
-		35 
+		5 
 	  ),
 	  StateEffect( 
 		POSTUREUP_EFFECT, 
