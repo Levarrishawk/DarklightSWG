@@ -46,10 +46,10 @@ PolearmStun1Command = {
 
 	damageMultiplier = 1.5,
 	speedMultiplier = 1.5,
-	healthCostMultiplier = 1.0,
-	actionCostMultiplier = 0.5,
-	mindCostMultiplier = 0.5,
-	accuracyBonus = 10,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 2.5,
+	mindCostMultiplier = 0,
+
 
 	animationCRC = hashCode("combo_4a_light"),
 
@@ -61,9 +61,9 @@ PolearmStun1Command = {
 		{}, 
 		{ "stun_defense", "resistance_states" }, 
 		{ "jedi_state_defense" }, 
-		100, 
-		100, 
-		30 
+		50, 
+		50, 
+		5
 	  )
 	},
 
