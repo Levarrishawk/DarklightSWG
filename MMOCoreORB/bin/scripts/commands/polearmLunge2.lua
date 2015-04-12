@@ -44,13 +44,13 @@
 PolearmLunge2Command = {
 	name = "polearmlunge2",
 
-	damageMultiplier = 4,
+	damageMultiplier = 2,
 	speedMultiplier = 4,
-	accuracyBonus = 30,
-	poolsToDamage = HEALTH_ATTRIBUTE,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 0,
+	
+	poolsToDamage = HEALTH_ATTRIBUTE,
 
 	animationCRC = hashCode("lower_posture_polearm_2"),
 
@@ -60,7 +60,7 @@ PolearmLunge2Command = {
 
 	stateEffects = {
 	  StateEffect( 
-		KNOCKDOWN_EFFECT, 
+		POSTUREDOWN_EFFECT, 
 		{ "knockdownRecovery", "lastKnockdown" }, 
 		{ "knockdown_defense" }, 
 		{}, 
