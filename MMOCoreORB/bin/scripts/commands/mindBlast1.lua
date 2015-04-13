@@ -44,9 +44,11 @@
 MindBlast1Command = {
         name = "mindblast1",
 
-	damage = 1000,
-	speed = 4.0,
-	forceCost = 68,
+	damage = 300,
+	speedMultiplier = 1.85,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.85,
+	mindCostMultiplier = 0,
 	accuracySkillMod = "mindblast_accuracy";
 
 	stateEffects = {
@@ -59,32 +61,7 @@ MindBlast1Command = {
 		100, 
 		10 
 	  )
-	},
-	
-	stateEffects = {
-	  StateEffect( 
-		BLIND_EFFECT, 
-		{}, 
-		{ "jedi_state_defense" }, 
-		{}, 
-		55, 
-		100, 
-		10 
-	  )
-	},	
-	
-	stateEffects = {
-	  StateEffect( 
-		DIZZY_EFFECT, 
-		{}, 
-		{ "jedi_state_defense" }, 
-		{}, 
-		55, 
-		100, 
-		10 
-	  )
-	},	
-	
+	}	
 	
 	animationCRC = hashCode("force_mind_blast_1_particle_level_1_light"),
 
