@@ -121,7 +121,7 @@ public:
 
 		if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) {
 			creature->sendSystemMessage("You don't have enough action to preform this ability");
-			return false;
+			return GENERALERROR;
 		}
 
 		forceCost = MIN(((healthHealed + strengthHealed + constitutionHealed) / 7), 65);
