@@ -45,7 +45,7 @@ FullAutoSingle1Command = {
         name = "fullautosingle1",
 
 	damageMultiplier = 1.5,
-	speedMultiplier = 2.15,
+	speedMultiplier = 1.65,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.5,
 	mindCostMultiplier = 0,
