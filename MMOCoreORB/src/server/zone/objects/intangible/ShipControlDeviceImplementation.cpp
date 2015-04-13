@@ -54,7 +54,7 @@ void ShipControlDeviceImplementation::generateObject(CreatureObject* player) {
 	//info("generating ship", true);
 	//return;
 
-	ZoneServer* zoneServer = getZoneServer();
+	//ZoneServer* zoneServer = getZoneServer();
 
 	ManagedReference<TangibleObject*> controlledObject = this->controlledObject.get();
 
