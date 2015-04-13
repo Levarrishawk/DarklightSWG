@@ -519,7 +519,7 @@ void PlayerManagerImplementation::createTutorialBuilding(CreatureObject* player)
 	
 	PlayerObject* ghost = player->getPlayerObject();
 	ghost->setSavedTerrainName(zone->getZoneName());
-	player->setJediState(2);
+	ghost->setJediState(2);
 /*
 	Zone* zone = server->getZone("tutorial");
 
@@ -556,7 +556,7 @@ void PlayerManagerImplementation::createSkippedTutorialBuilding(CreatureObject* 
 	
 	PlayerObject* ghost = player->getPlayerObject();
 	ghost->setSavedTerrainName(zone->getZoneName());
-	player->setJediState(2);
+	ghost->setJediState(2);
 
 /*
 	Zone* zone = server->getZone("tutorial");
