@@ -54,12 +54,13 @@ void ShipControlDeviceImplementation::generateObject(CreatureObject* player) {
 	//return;
 
 	//ZoneServer* zoneServer = getZoneServer();
-
+	ZoneServer* zone = server->getZone("rori");
+	
 	ManagedReference<TangibleObject*> controlledObject = this->controlledObject.get();
 
 	Locker clocker(controlledObject, player);
 	
-	Zone* zone = server->getZone("rori");
+	//Zone* zone = server->getZone("rori");
 
 	//controlledObject->initializePosition(player->getPositionX(), player->getPositionZ() + 10, player->getPositionY());
 	controlledObject->initializePosition(1, 100, 1);
