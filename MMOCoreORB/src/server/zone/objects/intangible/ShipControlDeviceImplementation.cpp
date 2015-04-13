@@ -60,7 +60,8 @@ void ShipControlDeviceImplementation::generateObject(CreatureObject* player) {
 	
 	Zone* zone = server->getZone("rori");
 
-	controlledObject->initializePosition(player->getPositionX(), player->getPositionZ() + 10, player->getPositionY());
+	//controlledObject->initializePosition(player->getPositionX(), player->getPositionZ() + 10, player->getPositionY());
+	controlledObject->initializePosition(1, 100, 1);
 
 	player->getZone()->transferObject(controlledObject, -1, true);
 	//controlledObject->insertToZone(player->getZone());
