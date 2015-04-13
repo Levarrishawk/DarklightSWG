@@ -104,6 +104,7 @@ public:
 
 		creature->addBuff(buff);
 		creature->playEffect("clienteffect/pl_force_run_self.cef", "");
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, forceCost, false);
 
 		return SUCCESS;
 	}
