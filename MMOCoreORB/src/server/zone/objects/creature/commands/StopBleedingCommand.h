@@ -115,6 +115,7 @@ public:
 
 		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
 		
+		int forceCost = 400;
 		if (playerObject != NULL) {
 			if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) {
 				creature->sendSystemMessage("You don't have enough action to preform this ability");
