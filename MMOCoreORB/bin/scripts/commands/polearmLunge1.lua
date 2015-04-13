@@ -45,7 +45,7 @@ PolearmLunge1Command = {
 	name = "polearmlunge1",
 
 	damageMultiplier = 2.0,
-	speedMultiplier = 1.5,
+	speedMultiplier = 0.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
