@@ -117,22 +117,21 @@ public:
 		int forceCost = 0;
 		
 		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
-
+		
 		if (playerObject != NULL) {
-			if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) 
+			if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) {
 				creature->sendSystemMessage("You don't have enough action to preform this ability");
 				return GENERALERROR;
-		}
+			}
 
-		forceCost = MIN(((healthHealed + strengthHealed + constitutionHealed) / 7), 65);
+		forceCost = MIN(((healthHealed + strengthHealed + constitutionHealed) / 15), 100);
 
 			
 		// Play client effect, and deduct Force Power.
 
-		creature->inflictDamage(creature, CreatureAttribute::ACTION, forceCost, false);
+
 		creature->playEffect("clienteffect/pl_force_heal_self.cef", "");
-	
-		
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, forceCost, false);	
 		return SUCCESS;
 		}
 
