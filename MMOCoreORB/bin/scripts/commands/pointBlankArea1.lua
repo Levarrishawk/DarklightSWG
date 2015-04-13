@@ -45,7 +45,7 @@ PointBlankArea1Command = {
 	name = "pointblankarea1",
 
 	damageMultiplier = 2,
-	speedMultiplier = 1.5,
+	speedMultiplier = 0.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.25,
 	mindCostMultiplier = 0,
