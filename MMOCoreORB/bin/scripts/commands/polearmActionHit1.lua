@@ -45,7 +45,7 @@ PolearmActionHit1Command = {
         name = "polearmactionhit1",
 
 	damageMultiplier = 2.25,
-	speedMultiplier = 4.25,
+	speedMultiplier = 3.25,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3,
 	mindCostMultiplier = 0,
