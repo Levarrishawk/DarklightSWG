@@ -44,9 +44,11 @@
 ForceThrow1Command = {
         name = "forcethrow1",
 
-    damage = 200, -- NOT CORRECT, Need data.
-	speed = 4.0,
-	forceCost = 28,
+	damage = 185,
+	speedMultiplier = 1.85,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.85,
+	mindCostMultiplier = 0,
 	accuracySkillMod = "forcethrow_accuracy";
 
 	stateEffects = {
