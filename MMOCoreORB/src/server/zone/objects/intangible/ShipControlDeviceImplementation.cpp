@@ -57,6 +57,8 @@ void ShipControlDeviceImplementation::generateObject(CreatureObject* player) {
 	ManagedReference<TangibleObject*> controlledObject = this->controlledObject.get();
 
 	Locker clocker(controlledObject, player);
+	
+	Zone* zone = server->getZone("tatooine");
 
 	controlledObject->initializePosition(player->getPositionX(), player->getPositionZ() + 10, player->getPositionY());
 
@@ -64,7 +66,9 @@ void ShipControlDeviceImplementation::generateObject(CreatureObject* player) {
 	//controlledObject->insertToZone(player->getZone());
 
 	//removeObject(controlledObject, true);
-
+//zone->transferObject(player, -1, true);
+//PlayerObject* ghost = player->getPlayerObject();
+//ghost->setSavedTerrainName(zone->getZoneName());
 	controlledObject->transferObject(player, 5, true);
 	player->setState(CreatureState::PILOTINGSHIP);
 	//controlledObject->inflictDamage(player, 0, System::random(50), true);
