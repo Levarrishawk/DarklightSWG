@@ -45,7 +45,7 @@ FullAutoArea1Command = {
         name = "fullautoarea1",
 
 	damageMultiplier = 1.85,
-	speedMultiplier = 2.35,
+	speedMultiplier = 1.85,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.85,
 	mindCostMultiplier = 0,
@@ -65,7 +65,7 @@ FullAutoArea1Command = {
 		{ "jedi_state_defense" }, 
 		5, 
 		100, 
-		30 
+		3
 	  ),
 	  StateEffect( 
 		BLIND_EFFECT, 
@@ -74,7 +74,7 @@ FullAutoArea1Command = {
 		{ "jedi_state_defense" }, 
 		5, 
 		100, 
-		40 
+		4 
 	  ),
 	  StateEffect( 
 		STUN_EFFECT, 
@@ -83,7 +83,7 @@ FullAutoArea1Command = {
 		{ "jedi_state_defense" }, 
 		5, 
 		100, 
-		30 
+		4 
 	  )
 	},
 
