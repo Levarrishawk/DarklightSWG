@@ -45,7 +45,7 @@ Melee1hBlindHit1Command = {
         name = "melee1hblindhit1",
 
 	damageMultiplier = 1.75,
-	speedMultiplier = 3,
+	speedMultiplier = 1.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.5,
 	mindCostMultiplier = 0,
