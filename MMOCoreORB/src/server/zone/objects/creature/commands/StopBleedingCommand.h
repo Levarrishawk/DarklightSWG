@@ -115,12 +115,13 @@ public:
 
 		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
 		
-		if (playerObject->getForcePower() <= 75) {
-			creature->sendSystemMessage("@jedi_spam:no_force_power"); //You do not have enough force to do that.
-			return false;
-		}
+		if (playerObject != NULL) {
+			if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) {
+				creature->sendSystemMessage("You don't have enough action to preform this ability");
+				return GENERALERROR;
+			}
 		
-		playerObject->setForcePower(playerObject->getForcePower() - 75); // Static amount.
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, forceCost, false);	
 
 		PlayerManager* playerManager = server->getPlayerManager();
 
