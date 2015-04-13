@@ -58,7 +58,7 @@ void ShipControlDeviceImplementation::generateObject(CreatureObject* player) {
 
 	Locker clocker(controlledObject, player);
 	
-	Zone* zone = server->getZone("tatooine");
+	Zone* zone = server->getZone("rori");
 
 	controlledObject->initializePosition(player->getPositionX(), player->getPositionZ() + 10, player->getPositionY());
 
