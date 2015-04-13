@@ -66,24 +66,6 @@ FullAutoArea1Command = {
 		5, 
 		100, 
 		3
-	  ),
-	  StateEffect( 
-		BLIND_EFFECT, 
-		{}, 
-		{ "blind_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		5, 
-		100, 
-		4 
-	  ),
-	  StateEffect( 
-		STUN_EFFECT, 
-		{}, 
-		{ "stun_defense", "resistance_states" }, 
-		{ "jedi_state_defense" }, 
-		5, 
-		100, 
-		4 
 	  )
 	},
 
