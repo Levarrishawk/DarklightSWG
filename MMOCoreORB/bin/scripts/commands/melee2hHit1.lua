@@ -45,7 +45,7 @@ Melee2hHit1Command = {
 	name = "melee2hhit1",
 
 	damageMultiplier = 1.75,
-	speedMultiplier = 3,
+	speedMultiplier = 1,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 2.75,
 	mindCostMultiplier = 0,
