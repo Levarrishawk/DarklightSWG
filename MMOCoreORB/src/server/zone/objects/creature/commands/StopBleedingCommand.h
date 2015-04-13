@@ -120,6 +120,7 @@ public:
 				creature->sendSystemMessage("You don't have enough action to preform this ability");
 				return GENERALERROR;
 			}
+		}
 		
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, forceCost, false);	
 
