@@ -81,20 +81,11 @@ public:
 			creature->removeBuff(String("burstrun").hashCode());
 			creature->removeBuff(String("retreat").hashCode());
 		}
-
 		// Force cost of skill.
 		int forceCost = 200;
-
 		//Check for and deduct Force cost.
-
 		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
 
-		if (playerObject->getForcePower() <= forceCost) {
-			creature->sendSystemMessage("@jedi_spam:no_force_power"); //"You do not have enough Force Power to peform that action.
-			return GENERALERROR;
-		}
-
-		//playerObject->setForcePower(playerObject->getForcePower() - forceCost);
 		if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) {
 			creature->sendSystemMessage("You don't have enough action to preform this ability");
 			return false;
