@@ -82,9 +82,9 @@ public:
 		}
 
 
-		if (!checkForceCost(creature)) {
-			creature->sendSystemMessage("@jedi_spam:no_force_power");
-			return GENERALERROR;
+		if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) {
+			creature->sendSystemMessage("You don't have enough action to preform this ability");
+			return false;
 		}
 
 		// At this point, the player has enough Force... Can they perform skill?
@@ -96,7 +96,7 @@ public:
 		int forceCostDeducted = forceCost;
 
 		// Lets see how much healing they are doing.
-		int healAmount = 500;
+		int healAmount = 150;
 
 		uint32 healthHealed = creature->healDamage(creature, CreatureAttribute::HEALTH, healAmount);
 
@@ -119,8 +119,9 @@ public:
 		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
 
 		if (playerObject != NULL)
-			playerObject->setForcePower(playerObject->getForcePower() - forceCostDeducted);
-
+			//playerObject->setForcePower(playerObject->getForcePower() - forceCostDeducted);
+			
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, forceCostDeducted, false);
 		return SUCCESS;
 	}
 };
