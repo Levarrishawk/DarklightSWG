@@ -45,8 +45,10 @@ ForceLightningSingle1Command = {
         name = "forcelightningsingle1",
         
 	damage = 500,
-	speed = 2.0,
-	forceCost = 0,
+	speedMultiplier = 1.85,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3.85,
+	mindCostMultiplier = 0,
 	accuracySkillMod = "forcelightning_accuracy";
 
 	animationCRC = hashCode("force_lightning_1_particle_level_1_light"),
