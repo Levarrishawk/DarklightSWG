@@ -119,11 +119,10 @@ public:
 		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
 
 
-		if (playerObject != NULL) {
-			if (playerObject->getForcePower() <= 65) {
-				creature->sendSystemMessage("@jedi_spam:no_force_power");
-				return GENERALERROR;
-			}
+		if (creature->getHAM(CreatureAttribute::ACTION) < forceCost) {
+			creature->sendSystemMessage("You don't have enough action to preform this ability");
+			return false;
+		}
 
 		forceCost = MIN(((healthHealed + strengthHealed + constitutionHealed) / 7), 65);
 
@@ -132,8 +131,8 @@ public:
 
 
 		creature->playEffect("clienteffect/pl_force_heal_self.cef", "");
-		playerObject->setForcePower(playerObject->getForcePower() - forceCost);
-			
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, forceCost, false);
+		
 		return SUCCESS;
 		}
 
