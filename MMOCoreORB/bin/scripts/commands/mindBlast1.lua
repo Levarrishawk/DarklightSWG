@@ -61,7 +61,7 @@ MindBlast1Command = {
 		100, 
 		10 
 	  )
-	}	
+	},	
 	
 	animationCRC = hashCode("force_mind_blast_1_particle_level_1_light"),
 
