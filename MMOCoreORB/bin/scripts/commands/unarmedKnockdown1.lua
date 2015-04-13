@@ -45,7 +45,7 @@ UnarmedKnockdown1Command = {
         name = "unarmedknockdown1",
 
 	damageMultiplier = 2,
-	speedMultiplier = 2.5,
+	speedMultiplier = 1.5,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 4.5,
 	mindCostMultiplier = 0,
