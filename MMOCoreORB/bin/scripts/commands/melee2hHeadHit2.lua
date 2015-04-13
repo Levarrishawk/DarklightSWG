@@ -45,7 +45,7 @@ Melee2hHeadHit2Command = {
         name = "melee2hheadhit2",
 
 	damageMultiplier = 3.75,
-	speedMultiplier = 3.25,
+	speedMultiplier = 2.25,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3.75,
 	mindCostMultiplier = 0,
