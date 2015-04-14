@@ -264,11 +264,21 @@ function kaas_imperial_garison:notifyPadawanDead(pPadawan, pKiller)
      return 0
 end
 
-function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
+
+
+function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 	
 	if pBoss == nil or pPlayer == nil then
 		return 1
 	end
+	
+	local player = LuaCreatureObject(pPlayer)
+	local boss = LuaCreatureObject(pBoss)
+	
+	
+	if ( boss == nil ) then
+		local bossHealth = boss:getHAM(0)
+		local bossMaxHealth = boss:getMaxHAM(0)
 
 		
 		local x1 = 0.2
@@ -288,7 +298,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 
 			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)
 		end
-	return ObjectManager.withCreatureObject(pBoss, function(boss)
+
 		if (((boss:getHAM(0) <= (boss:getMaxHAM(0) * 0.9)))) then
 			spatialChat(pBoss, "To my side apprentices!")
 			writeData("kaas_imperial_garison:spawnAdd", 1)
