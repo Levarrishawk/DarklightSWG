@@ -16,7 +16,7 @@ function kaas_pvp:start()
 end
   
 function kaas_pvp:spawnActiveAreas()
-	local pSpawnArea = spawnSceneObject("rori", "object/active_area.iff", 0, 80, 0, 0, 0, 0, 0, 0)
+	local pSpawnArea = spawnSceneObject("kaas", "object/active_area.iff", 0, 80, 0, 0, 0, 0, 0, 0)
     
 	if (pSpawnArea ~= nil) then
 		local activeArea = LuaActiveArea(pSpawnArea)
