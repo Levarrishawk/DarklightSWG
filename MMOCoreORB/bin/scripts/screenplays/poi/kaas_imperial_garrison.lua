@@ -258,7 +258,7 @@ function kaas_imperial_garison:notifyPadawanDead(pPadawan, pKiller)
 	local player = LuaCreatureObject(pKiller)
         local pBoss = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)
 			spatialChat(pBoss, "I have murdered thousands, and do you know that my only regret is that I could not see their blood?")	
-          createObserver(DAMAGERECEIVED,"kaas_imperial_garison", "boss_damage", pBoss)
+          createObserver(DAMAGERECEIVED, "kaas_imperial_garison", "boss_damage", pBoss)
           
           
      return 0
