@@ -41,6 +41,10 @@ NOBUILDZONEAREA     = 0x0100
 
 kaas_regions = {
         {"mysterious_shrine",-6374,6400,{1,30},NOSPAWNAREA + NOBUILDZONEAREA,1},
+        {"northern_islands_1",-70,6370,{1,100},NOSPAWNAREA + NOBUILDZONEAREA,1},
+        {"eastern_islands_1",2850,3890,{1,200},NOSPAWNAREA + NOBUILDZONEAREA,1},
+        {"eastern_islands_2",3342,2634,{1,500},NOSPAWNAREA + NOBUILDZONEAREA,1},
+        {"swamp_general_1",6017,-1141,{1,400},NOSPAWNAREA + NOBUILDZONEAREA,1},
         {"a_rebel_outpost",-6131,2705,{1,700},NOSPAWNAREA + NOBUILDZONEAREA,1},
         {"mysterious_shrine_2",-4495,-7535,{1,30},NOSPAWNAREA + NOBUILDZONEAREA,1},
 	{"narmle_easy_newbie",-5205,-2290,{1,1400},SPAWNAREA,1,"kaas_world",1256},
