@@ -265,9 +265,15 @@ function kaas_imperial_garison:notifyPadawanDead(pPadawan, pKiller)
 end
 
 function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
-		
+	
+	if pBoss == nil or pPlayer == nil then
+		return 1
+	end
+	
 	local player = LuaCreatureObject(pPlayer)
 	local boss = LuaCreatureObject(pBoss)
+	
+	
 	if ( boss == nil ) then
 		local bossHealth = boss:getHAM(0)
 		local bossMaxHealth = boss:getMaxHAM(0)
