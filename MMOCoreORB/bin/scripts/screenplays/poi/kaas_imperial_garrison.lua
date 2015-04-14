@@ -270,7 +270,11 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 	local boss = LuaCreatureObject(pBoss)
 	if ( boss ~= nil ) then
 		local bossHealth = boss:getHAM(0)
+	--	local bossAction = boss:getHAM(3)
+	--	local bossMind = boss:getHAM(6)
 		local bossMaxHealth = boss:getMaxHAM(0)
+	--	local bossMaxAction = boss:getMaxHAM(3)
+	--	local bossMaxMind = boss:getMaxHAM(6)
 		
 		local x1 = 0.2
 		local y1 = -24.2
@@ -301,10 +305,21 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end
-	
+		if (((bossHealth <= (bossMaxHealth *0.89))) and readData("kaas_imperial_garison:spawnAdd1") == 0) then
+			--spatialChat(pBoss, "I sense your presence")
+			writeData("kaas_imperial_garison:spawnAdd1", 1)
+			if (readData("kaas_imperial_garison:spawnAdd1") == 1) then
+				local pJosTwo = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)
+				local secondTime = LuaCreatureObject(pJosTwo)
+				spatialChat(pJosTwo, "In all my years I've only known Dark Jedi. Never one from the light side.")
+				secondTime:engageCombat(pPlayer)
+			end
 
-
+		end
 		
+
+
+		end	
 	
 	
 	
