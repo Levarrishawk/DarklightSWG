@@ -291,7 +291,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)
 		end
 
-		if (((boss:getHAM(0) <= (boss:getMaxHAM(0) * 0.9))) and readData("kaas_imperial_garison:spawnAdd") == 0) then
+		if (((boss:getHAM(0) <= (boss:getMaxHAM(0) * 0.9)))) then
 			spatialChat(pBoss, "To my side apprentices!")
 			writeData("kaas_imperial_garison:spawnAdd", 1)
 			if (readData("kaas_imperial_garison:spawnAdd") == 1) then
