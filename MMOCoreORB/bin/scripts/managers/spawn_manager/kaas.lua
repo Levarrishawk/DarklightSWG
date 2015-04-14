@@ -41,6 +41,7 @@ NOBUILDZONEAREA     = 0x0100
 
 kaas_regions = {
         {"mysterious_shrine",-6374,6400,{1,30},NOSPAWNAREA + NOBUILDZONEAREA,1},
+        {"kaas_city_ruins",-6374,6400,{1,700},NOSPAWNAREA + NOBUILDZONEAREA,1},
         {"mysterious_shrine_2",-4495,-7535,{1,30},NOSPAWNAREA + NOBUILDZONEAREA,1},
 	{"narmle_easy_newbie",-5205,-2290,{1,1400},SPAWNAREA,1,"kaas_world",1256},
 	{"narmle_medium_newbie",-5200,-2290,{3,1400,2200},SPAWNAREA,1,"kaas_world",1384},
