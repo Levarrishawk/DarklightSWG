@@ -70,7 +70,7 @@ function kaas_imperial_garison:spawnMobiles()
 	spawnMobile("kaas", "prophet_of_the_dark_side", 900, 2.0, -17.0, -18.8, 0, 35791397)
 	spawnMobile("kaas", "prophet_of_the_dark_side", 900, 18.8, -26.5, 2.3, 0, 35791397)
 --spawnMobile("kaas", "prophet_of_the_dark_side", 900, -0.1, -37.3, 15.2, -179, 35791397)
-	spawnMobile("kaas", "prophet_of_the_dark_side", 900, 11.7, -37.3, 0.0, -90, 35791397)
+--	spawnMobile("kaas", "prophet_of_the_dark_side", 900, 11.7, -37.3, 0.0, -90, 35791397)   -- Duplicate of Boss PlaceHolder
 --spawnMobile("kaas", "prophet_of_the_dark_side", 900, -11.7, -37.3, 15.2, 90, 35791397)
 	spawnMobile("kaas", "prophet_of_the_dark_side", 900, 16.3, -30.3, 16.6, -140, 35791397)
 	spawnMobile("kaas", "prophet_of_the_dark_side", 900, 16.6, -21.3, -16.7, -44, 35791397)
