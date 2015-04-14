@@ -1,4 +1,4 @@
 # DarklightSWG
-Always commit your work, don't let your shit get out of sync!  #terribaddevs
+We can only strive to be as good as Nightwing.   #loftygoals
 
-Manlove is a natural and beautiful thing, except if its on a Wednesday.
+
