@@ -281,7 +281,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 		local x2 = boss:getPositionX()
 		local y2 = boss:getPositionY() 
 
-		local distance = ((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1))
+	--[[	local distance = ((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1))
 		local maxDistance = 45
 		
 		if distance > (maxDistance * maxDistance) then
@@ -293,7 +293,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 
 			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)
 		end
-
+]]
 		if (((bossHealth <= (bossMaxHealth *0.9))) and readData("kaas_imperial_garison:spawnAdd") == 0) then
 			spatialChat(pBoss, "To my side apprentices!")
 			writeData("kaas_imperial_garison:spawnAdd", 1)
