@@ -270,11 +270,11 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 	local boss = LuaCreatureObject(pBoss)
 	if ( boss ~= nil ) then
 		local bossHealth = boss:getHAM(0)
-		local bossAction = boss:getHAM(3)
-		local bossMind = boss:getHAM(6)
+	--	local bossAction = boss:getHAM(3)
+	--	local bossMind = boss:getHAM(6)
 		local bossMaxHealth = boss:getMaxHAM(0)
-		local bossMaxAction = boss:getMaxHAM(3)
-		local bossMaxMind = boss:getMaxHAM(6)
+	--	local bossMaxAction = boss:getMaxHAM(3)
+	--	local bossMaxMind = boss:getMaxHAM(6)
 		
 		local x1 = 0.2
 		local y1 = -24.2
@@ -294,7 +294,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)
 		end
 
-		if (((bossHealth <= (bossMaxHealth *0.9)) or (bossAction <= (bossMaxAction * 0.9)) or (bossMind <= (bossMaxMind *0.9))) and readData("kaas_imperial_garison:spawnAdd") == 0) then
+		if (((bossHealth <= (bossMaxHealth *0.9))) and readData("kaas_imperial_garison:spawnAdd") == 0) then
 			spatialChat(pBoss, "To my side apprentices!")
 			writeData("kaas_imperial_garison:spawnAdd", 1)
 			if (readData("kaas_imperial_garison:spawnAdd") == 1) then
@@ -305,7 +305,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end
-		if (((bossHealth <= (bossMaxHealth *0.89)) or (bossAction <= (bossMaxAction * 0.89)) or (bossMind <= (bossMaxMind *0.89))) and readData("kaas_imperial_garison:spawnAdd1") == 0) then
+		if (((bossHealth <= (bossMaxHealth *0.89))) and readData("kaas_imperial_garison:spawnAdd1") == 0) then
 			--spatialChat(pBoss, "I sense your presence")
 			writeData("kaas_imperial_garison:spawnAdd1", 1)
 			if (readData("kaas_imperial_garison:spawnAdd1") == 1) then
@@ -316,7 +316,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end
-		if (((bossHealth <= (bossMaxHealth *0.85)) or (bossAction <= (bossMaxAction * 0.85)) or (bossMind <= (bossMaxMind *0.85))) and readData("kaas_imperial_garison:spawnAdd2") == 0) then
+		if (((bossHealth <= (bossMaxHealth *0.85))) and readData("kaas_imperial_garison:spawnAdd2") == 0) then
 			spatialChat(pBoss, "Prophets of the dark side, kill these intruders!")
 			writeData("kaas_imperial_garison:spawnAdd2", 1)
 			if (readData("kaas_imperial_garison:spawnAdd2") == 1) then
@@ -327,7 +327,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end		
-		if (((bossHealth <= (bossMaxHealth *0.84)) or (bossAction <= (bossMaxAction * 0.84)) or (bossMind <= (bossMaxMind *0.84))) and readData("kaas_imperial_garison:spawnAdd3") == 0) then
+		if (((bossHealth <= (bossMaxHealth *0.84))) and readData("kaas_imperial_garison:spawnAdd3") == 0) then
 			spatialChat(pBoss, "Your efforts are pointless.")
 			writeData("kaas_imperial_garison:spawnAdd3", 1)
 			if (readData("kaas_imperial_garison:spawnAdd3") == 1) then
@@ -338,7 +338,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end		
-		if (((bossHealth <= (bossMaxHealth * 0.5)) or (bossAction <= (bossMaxAction * 0.5)) or (bossMind <= (bossMaxMind * 0.5))) and readData("kaas_imperial_garison:spawnAddOne") == 0) then
+		if (((bossHealth <= (bossMaxHealth * 0.5))) and readData("kaas_imperial_garison:spawnAddOne") == 0) then
 			spatialChat(pBoss,"Kill your friends, begin your journey to the Dark Side and I will show you true power!")
 			writeData("kaas_imperial_garison:spawnAddOne", 1)
 			if (readData("kaas_imperial_garison:spawnAddOne") == 1) then
@@ -349,7 +349,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end
-		if (((bossHealth <= (bossMaxHealth * 0.4)) or (bossAction <= (bossMaxAction * 0.4)) or (bossMind <= (bossMaxMind * 0.4))) and readData("kaas_imperial_garison:spawnAddTwo") == 0) then
+		if (((bossHealth <= (bossMaxHealth * 0.4))) and readData("kaas_imperial_garison:spawnAddTwo") == 0) then
 			spatialChat(pBoss,"A pity, then you will die.")
 			writeData("kaas_imperial_garison:spawnAddTwo", 1)
 			if (readData("kaas_imperial_garison:spawnAddTwo") == 1) then
@@ -360,7 +360,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end
-		if (((bossHealth <= (bossMaxHealth * 0.4)) or (bossAction <= (bossMaxAction * 0.4)) or (bossMind <= (bossMaxMind * 0.4))) and readData("kaas_imperial_garison:spawnAddThree") == 0) then
+		if (((bossHealth <= (bossMaxHealth * 0.4))) and readData("kaas_imperial_garison:spawnAddThree") == 0) then
 			--spatialChat(pBoss,"I sense your presence")
 			writeData("kaas_imperial_garison:spawnAddThree", 1)
 			if (readData("kaas_imperial_garison:spawnAddThree") == 1) then
@@ -372,7 +372,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 
 		end		
 		
-		if (((bossHealth <= (bossMaxHealth * 0.02)) or (bossAction <= (bossMaxAction * 0.02)) or (bossMind <= (bossMaxMind * 0.02))) and readData("kaas_imperial_garison:spawnAddFour") == 0) then
+		if (((bossHealth <= (bossMaxHealth * 0.02))) and readData("kaas_imperial_garison:spawnAddFour") == 0) then
 			spatialChat(pBoss, "Strike me down! Kill me and your journey to the Dark Side can begin!")
 			writeData("kaas_imperial_garison:spawnAddFour", 1)
 		end
