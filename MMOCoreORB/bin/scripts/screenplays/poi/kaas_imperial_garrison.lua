@@ -268,13 +268,10 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 		
 	local player = LuaCreatureObject(pPlayer)
 	local boss = LuaCreatureObject(pBoss)
-	if ( boss ~= nil ) then
+	if ( boss == nil ) then
 		local bossHealth = boss:getHAM(0)
-	--	local bossAction = boss:getHAM(3)
-	--	local bossMind = boss:getHAM(6)
 		local bossMaxHealth = boss:getMaxHAM(0)
-	--	local bossMaxAction = boss:getMaxHAM(3)
-	--	local bossMaxMind = boss:getMaxHAM(6)
+
 		
 		local x1 = 0.2
 		local y1 = -24.2
