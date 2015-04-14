@@ -52,7 +52,7 @@ which carries forward this exception.
 void ShipControlDeviceImplementation::generateObject(CreatureObject* player) {
 	//info("generating ship", true);
 	//return;
-
+/*
 	//ZoneServer* zoneServer = getZoneServer();
 	ZoneServer* zone = server->getZone("rori");
 	
@@ -82,6 +82,7 @@ void ShipControlDeviceImplementation::generateObject(CreatureObject* player) {
 
 	if (ghost != NULL)
 		ghost->setTeleporting(true);
+*/
 }
 
 void ShipControlDeviceImplementation::storeObject(CreatureObject* player, bool force) {
