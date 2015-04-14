@@ -44,22 +44,6 @@
 LegShot3Command = {
         name = "legshot3",
 
-	damageMultiplier = 2.9,
-	speedMultiplier = 4.0,
-	healthCostMultiplier = 0,
-	actionCostMultiplier = 4.5,
-	mindCostMultiplier = 0,
-	--accuracyBonus = 25,
-
-	stateEffects = {},
-	
-
-	poolsToDamage = HEALTH_ATTRIBUTE,
-
-	animationCRC = hashCode("test_homing"),
-
-	combatSpam = "kneecapshot",
-
 	range = -1
 }
 
