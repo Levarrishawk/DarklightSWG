@@ -303,9 +303,9 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 			spatialChat(pBoss, "To my side apprentices!")
 			writeData("kaas_imperial_garison:spawnAdd", 1)
 			if (readData("kaas_imperial_garison:spawnAdd") == 1) then
-				local pJos = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)
-				local firstTime = LuaCreatureObject(pJos)
-				spatialChat(pJos, "At your command my lord!")
+				local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)
+				local firstTime = LuaCreatureObject(pAdd1)
+				spatialChat(pAdd1, "At your command my lord!")
 				firstTime:engageCombat(pPlayer)
 			end
 
