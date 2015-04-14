@@ -291,7 +291,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)
 		end
 
-		if (((bossHealth <= (bossMaxHealth *0.9))) and readData("kaas_imperial_garison:spawnAdd") == 0) then
+		if (((bossHealth <= (bossMaxHealth * 0.9))) and readData("kaas_imperial_garison:spawnAdd") == 0) then
 			spatialChat(pBoss, "To my side apprentices!")
 			writeData("kaas_imperial_garison:spawnAdd", 1)
 			if (readData("kaas_imperial_garison:spawnAdd") == 1) then
@@ -302,7 +302,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end
-		if (((bossHealth <= (bossMaxHealth *0.89))) and readData("kaas_imperial_garison:spawnAdd1") == 0) then
+		if (((bossHealth <= (bossMaxHealth * 0.89))) and readData("kaas_imperial_garison:spawnAdd1") == 0) then
 			--spatialChat(pBoss, "I sense your presence")
 			writeData("kaas_imperial_garison:spawnAdd1", 1)
 			if (readData("kaas_imperial_garison:spawnAdd1") == 1) then
