@@ -270,11 +270,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 	local boss = LuaCreatureObject(pBoss)
 	if ( boss ~= nil ) then
 		local bossHealth = boss:getHAM(0)
-	--	local bossAction = boss:getHAM(3)
-	--	local bossMind = boss:getHAM(6)
 		local bossMaxHealth = boss:getMaxHAM(0)
-	--	local bossMaxAction = boss:getMaxHAM(3)
-	--	local bossMaxMind = boss:getMaxHAM(6)
 		
 		local x1 = 0.2
 		local y1 = -24.2
@@ -305,80 +301,10 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer)
 			end
 
 		end
-		if (((bossHealth <= (bossMaxHealth *0.89))) and readData("kaas_imperial_garison:spawnAdd1") == 0) then
-			--spatialChat(pBoss, "I sense your presence")
-			writeData("kaas_imperial_garison:spawnAdd1", 1)
-			if (readData("kaas_imperial_garison:spawnAdd1") == 1) then
-				local pJosTwo = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)
-				local secondTime = LuaCreatureObject(pJosTwo)
-				spatialChat(pJosTwo, "In all my years I've only known Dark Jedi. Never one from the light side.")
-				secondTime:engageCombat(pPlayer)
-			end
+	
 
-		end
-		if (((bossHealth <= (bossMaxHealth *0.85))) and readData("kaas_imperial_garison:spawnAdd2") == 0) then
-			spatialChat(pBoss, "Prophets of the dark side, kill these intruders!")
-			writeData("kaas_imperial_garison:spawnAdd2", 1)
-			if (readData("kaas_imperial_garison:spawnAdd2") == 1) then
-				local pJosThree = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)
-				local thirdTime = LuaCreatureObject(pJosThree)
-				spatialChat(pJosThree, "Your death has been foreseen!")
-				thirdTime:engageCombat(pPlayer)
-			end
 
-		end		
-		if (((bossHealth <= (bossMaxHealth *0.84))) and readData("kaas_imperial_garison:spawnAdd3") == 0) then
-			spatialChat(pBoss, "Your efforts are pointless.")
-			writeData("kaas_imperial_garison:spawnAdd3", 1)
-			if (readData("kaas_imperial_garison:spawnAdd3") == 1) then
-				local pJosFour = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)
-				local fourthTime = LuaCreatureObject(pJosFour)
-				spatialChat(pJosFour, "The darkness shall consume the light.")
-				fourthTime:engageCombat(pPlayer)
-			end
-
-		end		
-		if (((bossHealth <= (bossMaxHealth * 0.5))) and readData("kaas_imperial_garison:spawnAddOne") == 0) then
-			spatialChat(pBoss,"Kill your friends, begin your journey to the Dark Side and I will show you true power!")
-			writeData("kaas_imperial_garison:spawnAddOne", 1)
-			if (readData("kaas_imperial_garison:spawnAddOne") == 1) then
-				local pJosFive = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)
-				local fifthTime = LuaCreatureObject(pJosFive)
-				spatialChat(pJosFive, "Fear, I sense much of it in you.")
-				fifthTime:engageCombat(pPlayer)
-			end
-
-		end
-		if (((bossHealth <= (bossMaxHealth * 0.4))) and readData("kaas_imperial_garison:spawnAddTwo") == 0) then
-			spatialChat(pBoss,"A pity, then you will die.")
-			writeData("kaas_imperial_garison:spawnAddTwo", 1)
-			if (readData("kaas_imperial_garison:spawnAddTwo") == 1) then
-				local pJosSix = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)
-				local sixthTime = LuaCreatureObject(pJosSix)
-				spatialChat(pJosSix, "You're an angry one, aren't you.")
-				sixthTime:engageCombat(pPlayer)
-			end
-
-		end
-		if (((bossHealth <= (bossMaxHealth * 0.4))) and readData("kaas_imperial_garison:spawnAddThree") == 0) then
-			--spatialChat(pBoss,"I sense your presence")
-			writeData("kaas_imperial_garison:spawnAddThree", 1)
-			if (readData("kaas_imperial_garison:spawnAddThree") == 1) then
-				local pJosSeven = spawnMobile("kaas",  "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)
-				local seventhTime = LuaCreatureObject(pJosSeven)
-				spatialChat(pJosSeven, "I can feel your anger.")
-				seventhTime:engageCombat(pPlayer)
-			end
-
-		end		
 		
-		if (((bossHealth <= (bossMaxHealth * 0.02))) and readData("kaas_imperial_garison:spawnAddFour") == 0) then
-			spatialChat(pBoss, "Strike me down! Kill me and your journey to the Dark Side can begin!")
-			writeData("kaas_imperial_garison:spawnAddFour", 1)
-		end
-
-
-		end	
 	
 	
 	
