@@ -304,7 +304,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 			end
 
 		return 1
-	end)
+	end
 end
 	
 --[[
