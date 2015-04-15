@@ -248,8 +248,8 @@ function kaas_imperial_garison:spawnMobiles()
 	spawnMobile("kaas", "imperial_inquisitor", 200, 55.6, -12.0, 59.3, 21, 35791469)
 	spawnMobile("kaas", "imperial_inquisitor", 200, 50.1, -12.0, 58.0, 179, 35791469)
 	
-		local pPadawan = spawnMobile("kaas", "prophet_of_the_dark_side", 10800, 11.7, -37.3, 0.0, -90, 35791397)
-        createObserver(OBJECTDESTRUCTION, "kaas_imperial_garison", "notifyPadawanDead", pPadawan)
+	local pPadawan = spawnMobile("kaas", "prophet_of_the_dark_side", 10800, 11.7, -37.3, 0.0, -90, 35791397)
+        	createObserver(OBJECTDESTRUCTION, "kaas_imperial_garison", "notifyPadawanDead", pPadawan)
 
 
 end
@@ -267,7 +267,49 @@ end
 
 
 function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
+	--Are any nil or not?
+	if pBoss == nil or pPlayer == nil then
+		return 1
+	end
+
+	--This properly calls LuaCreatureObject.h and (pPointer, function(pointerNewName)
+	return ObjectManager.withCreatureObject(pBoss, function(boss)
+		--Your range check
+		local x1 = 0.2
+		local y1 = -24.2
+		local x2 = boss:getPositionX()
+		local y2 = boss:getPositionY() 
+
+		local distance = ((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1))
+		local maxDistance = 45
+		
+		if distance > (maxDistance * maxDistance) then
+			spatialChat(pBoss, "RUN FROM YOUR DEATH! The power of the Dark Side has made me invulnerable.")
+
+			boss:setPvpStatusBitmask(0)
+			forcePeace(pBoss)
+			boss:setOptionsBitmask(128)
+
+			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)
+		end
+		--Your HAM check
+		if (((boss:getHAM(0) <= (boss:getMaxHAM(0) * 0.9)))) then
+			spatialChat(pBoss, "To my side apprentices!")
+			writeData("kaas_imperial_garison:spawnAdd", 1)
+			if (readData("kaas_imperial_garison:spawnAdd") == 1) then
+				local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)
+				local firstTime = LuaCreatureObject(pAdd1)
+				spatialChat(pAdd1, "At your command my lord!")
+				firstTime:engageCombat(pPlayer)
+			end
+
+		return 1
+	end)
+end
 	
+--[[
+*OLD kept for ref
+
 	if pBoss == nil or pPlayer == nil then
 		return 1
 	end
@@ -310,18 +352,11 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 			end
 
 		end
-		
-		
-
 
 	end	
-	
-	
-	
-	
-	
 
 end
+]]
 
 function kaas_imperial_garison:removeFromKIG(pPlayer)
 	if (pPlayer == nil) then
@@ -350,9 +385,9 @@ end
 
 function kaas_imperial_garison:teleportPlayer(pPlayer)
 	if (pPlayer == nil) then
-		return
+		return 0
 	end
 	
-	local creature = LuaCreatureObject(pPlayer)
-	creature:teleport( -4624.7, 78.9, 6677.5, 0)
+	--local creature = LuaCreatureObject(pPlayer)
+	CreatureObject(pPlayer):teleport( -4624.7, 78.9, 6677.5, 0)
 end
