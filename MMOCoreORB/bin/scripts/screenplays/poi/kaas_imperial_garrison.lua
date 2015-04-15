@@ -1,3 +1,5 @@
+local ObjectManager = require("managers.object.object_manager")
+
 kaas_imperial_garison = ScreenPlay:new {
 	numberOfActs = 1,
 
