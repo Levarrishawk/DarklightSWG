@@ -649,10 +649,15 @@ int CombatManager::getAttackerAccuracyModifier(TangibleObject* attacker, WeaponO
 }
 
 int CombatManager::getAttackerAccuracyBonus(CreatureObject* attacker, WeaponObject* weapon) {
+	int sBonus = 0;
 	int bonus = 0;
 
 	bonus += attacker->getSkillMod("private_attack_accuracy");
 	bonus += attacker->getSkillMod("private_accuracy_bonus");
+	sBonus += attacker->getSkillMod("healing_range");
+	
+	if (sBonus > bonus)
+		bonus = sBonus;
 
 	if (weapon->getAttackType() == WeaponObject::MELEEATTACK)
 		bonus += attacker->getSkillMod("private_melee_accuracy_bonus");
