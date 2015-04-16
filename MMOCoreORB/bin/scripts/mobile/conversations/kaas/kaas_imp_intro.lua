@@ -1,7 +1,7 @@
 kaas_imp_intro = ConvoTemplate:new {
   initialScreen = "first_conv",
   templateType = "Lua",
-  luaClassHandler = "legacy_quest_convo_handler",
+  luaClassHandler = "kaas_imp_intro_convo_handler",
   screens = {}
 }
 
@@ -18,7 +18,7 @@ first_conv = ConvoScreen:new {
   
   }
 }
-legacy_convo:addScreen(first_conv);
+kaas_imp_intro:addScreen(first_conv);
 
 --deny
 deny = ConvoScreen:new {
@@ -29,7 +29,7 @@ deny = ConvoScreen:new {
   options = {
   }
 }
-legacy_convo:addScreen(deny);
+kaas_imp_intro:addScreen(deny);
 
 
 
@@ -43,7 +43,7 @@ mayor2 = ConvoScreen:new {
      {"I see. What would I have to do?","mayor3"},
   }
 }
-legacy_convo:addScreen(mayor2);
+kaas_imp_intro:addScreen(mayor2);
 
 mayor3 = ConvoScreen:new {
   id = "mayor3",
@@ -54,7 +54,7 @@ mayor3 = ConvoScreen:new {
      {"Tell me about the wild vermin.","mayor4"},
   }
 }
-legacy_convo:addScreen(mayor4);
+kaas_imp_intro:addScreen(mayor4);
 
 mayor4 = ConvoScreen:new {
   id = "mayor4",
@@ -67,7 +67,7 @@ mayor4 = ConvoScreen:new {
   }
 }
 
-legacy_convo:addScreen(mayor4);
+kaas_imp_intro:addScreen(mayor4);
 
 mayorvermin = ConvoScreen:new {
   id = "mayorvermin",
@@ -78,6 +78,6 @@ mayorvermin = ConvoScreen:new {
     
   }
 }
-legacy_convo:addScreen(mayorvermin);
+kaas_imp_intro:addScreen(mayorvermin);
 
 addConversationTemplate("kaas_imp_intro", kaas_imp_intro);
