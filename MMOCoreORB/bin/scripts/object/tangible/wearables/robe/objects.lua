@@ -114,6 +114,13 @@ object_tangible_wearables_robe_shared_exar_cultist_hood_down_f = SharedTangibleO
 
 ObjectTemplates:addClientTemplate(object_tangible_wearables_robe_shared_exar_cultist_hood_down_f, "object/tangible/wearables/robe/shared_exar_cultist_hood_down_f.iff")
 
+object_tangible_wearables_robe_shared_exar_cultist_hood_up = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/wearables/robe/shared_exar_cultist_hood_up.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_wearables_robe_shared_exar_cultist_hood_up, "object/tangible/wearables/robe/shared_exar_cultist_hood_up.iff")
+
 
 object_tangible_wearables_robe_shared_robe_inquisitor = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/wearables/robe/shared_robe_inquisitor.iff"
