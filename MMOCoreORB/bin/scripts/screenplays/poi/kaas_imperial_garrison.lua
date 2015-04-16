@@ -271,7 +271,7 @@ end
 function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 	--Are any nil or not?
 	if pBoss == nil or pPlayer == nil then
-		return 1 print("returning 1 for nil pointers")
+		return 1 
 	end
 
 	--This properly calls LuaCreatureObject.h and (pPointer, function(pointerNewName)
