@@ -18,6 +18,9 @@ includeFile("conversations/themepark/tutorial/protocol_droid_3po_silver_conv.lua
 includeFile("conversations/legacy/legacy_convo.lua")
 includeFile("conversations/legacy/force_sensitive_intro_conv.lua")
 
+-- Kaas
+includeFile("conversations/kaas/kaas_imp_intro.lua")
+
 
 -- Nym Themepark
 includeFile("conversations/themepark/nym/berema_conv.lua")
