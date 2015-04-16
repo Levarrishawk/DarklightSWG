@@ -31,7 +31,7 @@ cloaked_figure = Creature:new {
 	scale = 1.1;
 	lootGroups = {},
 	weapons = {},
-	conversationTemplate = "legacy_convo",
+	conversationTemplate = "force_sensitive_intro_conv",
 	attacks = merge(forcewielder)
 }
 
