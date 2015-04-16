@@ -266,32 +266,25 @@ end
 
 
 
-function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
-	--Are any nil or not?
-	if pBoss == nil or pPlayer == nil then
-		return 1 
+function TutorialScreenPlay:banditDamageObserver(playerObject, creatureObject, damage)
+	local player = LuaCreatureObject(playerObject)
+	local boss = LuaCreatureObject(creatureObject)
+	
+	health = boss:getHAM(0)
+	maxHealth = boss:getMaxHAM(0)
+
+	if (health <= (maxHealth * 0.9)) then print("checking HAM")
+		spatialChat(pBoss, "To my side apprentices!") print("spatial")
+		writeData("kaas_imperial_garison:spawnAdd", 1) print("writing data")
+		if (readData("kaas_imperial_garison:spawnAdd") == 1) then print("checking spawnAdd")
+			local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)print("add spawned")
+			local firstTime = LuaCreatureObject(pAdd1)print("luaCreatureObject pointer")
+			spatialChat(pAdd1, "At your command my lord!") print("spatial for add")
+			firstTime:engageCombat(pPlayer)print("engaging combat")
+		return 1		
 	end
 	
-	spatialChat(pBoss, "To my side apprentices!") print("spatial")
-
-	--This properly calls LuaCreatureObject.h and (pPointer, function(pointerNewName)
-	return ObjectManager.withCreatureObject(pBoss, function(boss)
-		--Your HAM check
-		health = boss:getHAM(0)
-		maxHealth = boss:getMaxHAM(0)
-		
-		if (health <= (maxHealth * 0.9)) then print("checking HAM")
-			spatialChat(pBoss, "To my side apprentices!") print("spatial")
-			writeData("kaas_imperial_garison:spawnAdd", 1) print("writing data")
-			if (readData("kaas_imperial_garison:spawnAdd") == 1) then print("checking spawnAdd")
-				local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)print("add spawned")
-				local firstTime = LuaCreatureObject(pAdd1)print("luaCreatureObject pointer")
-				spatialChat(pAdd1, "At your command my lord!") print("spatial for add")
-				firstTime:engageCombat(pPlayer)print("engaging combat")
-			end
-		end
-		return 1
-	end)
+	return 0
 end
 
 --[[
