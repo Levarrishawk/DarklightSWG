@@ -281,7 +281,10 @@ function TutorialScreenPlay:banditDamageObserver(playerObject, creatureObject, d
 			local firstTime = LuaCreatureObject(pAdd1)print("luaCreatureObject pointer")
 			spatialChat(pAdd1, "At your command my lord!") print("spatial for add")
 			firstTime:engageCombat(pPlayer)print("engaging combat")
-		return 1		
+		end
+		
+		return 1
+	
 	end
 	
 	return 0
