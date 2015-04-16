@@ -21,7 +21,7 @@ cloaked_figure = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = ATTACKABLE,
+	pvpBitmask = NONE,
 	creatureBitmask = PACK + KILLER,
 	diet = HERBIVORE,
 
@@ -29,22 +29,8 @@ cloaked_figure = Creature:new {
 		"object/mobile/tatooine_npc/hedon_istee.iff"},
 	outfit = "prophet_kadann_outfit",
 	scale = 1.1;
-	lootGroups = {
-	    {
-			groups = {
-				{group = "holocron_dark", chance = 600000},
-				{group = "holocron_light", chance = 600000},
-				{group = "crystals_premium", chance = 600000},
-				{group = "rifles", chance = 1500000},
-				{group = "pistols", chance = 1500000},
-				{group = "melee_weapons", chance = 1500000},
-				{group = "armor_attachments", chance = 1100000},
-				{group = "clothing_attachments", chance = 1100000},
-				{group = "carbines", chance = 1500000}				
-			},
-			lootChance = 6000000
-		}
-	},
+	lootGroups = {},
+	weapons = {},
 	conversationTemplate = "kaas_imp_intro",
 	attacks = merge(forcewielder)
 }
