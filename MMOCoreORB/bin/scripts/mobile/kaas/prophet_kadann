@@ -1,6 +1,6 @@
 prophet_kadann = Creature:new {
 	objectName = "",
-	customName = "Supreme Prophet Kadann",
+	customName = "Kadann - Supreme Prophet of the Dark Side",
 	socialGroup = "imperial",
 	pvpFaction = "imperial",
 	faction = "imperial",
