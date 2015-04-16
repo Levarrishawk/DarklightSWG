@@ -29,6 +29,7 @@ prophet_kadann = Creature:new {
 	templates = {
 		"object/mobile/tatooine_npc/hedon_istee.iff"},
 	outfit = "prophet_kadann_outfit",
+	scale = 1.2;
 	lootGroups = {
 	    {
 			groups = {
