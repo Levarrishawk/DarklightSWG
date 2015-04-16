@@ -1,15 +1,15 @@
-local ObjectManager = require("managers.object.object_manager")
+local ObjectManager = require("managers.object.object_manager") print("Object manager loaded for KIG")
 
 kaas_imperial_garison = ScreenPlay:new {
 	numberOfActs = 1,
 
 }
 
-registerScreenPlay("kaas_imperial_garison", true)
+registerScreenPlay("kaas_imperial_garison", true) print("registered KIG")
 
 function kaas_imperial_garison:start()
-	if (isZoneEnabled("kaas")) then
-		self:spawnMobiles()
+	if (isZoneEnabled("kaas")) then print("kaas enable check")
+		self:spawnMobiles() ("spawning mobiles function")
 	end
 end
 
@@ -258,9 +258,9 @@ end
 
 function kaas_imperial_garison:notifyPadawanDead(pPadawan, pKiller)
 	local player = LuaCreatureObject(pKiller)
-        local pBoss = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)
+        local pBoss = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397) print("spawned POTDS")
 			spatialChat(pBoss, "I have murdered thousands, and do you know that my only regret is that I could not see their blood?")	
-          createObserver(DAMAGERECEIVED, "kaas_imperial_garison", "boss_damage", pBoss)
+          		createObserver(DAMAGERECEIVED, "kaas_imperial_garison", "boss_damage", pBoss) print("observer set")
           
           
      return 0
@@ -271,7 +271,7 @@ end
 function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 	--Are any nil or not?
 	if pBoss == nil or pPlayer == nil then
-		return 1
+		return 1 print("returning 1 for nil pointers")
 	end
 
 	--This properly calls LuaCreatureObject.h and (pPointer, function(pointerNewName)
@@ -285,81 +285,30 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 		local distance = ((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1))
 		local maxDistance = 45
 		
-		if distance > (maxDistance * maxDistance) then
-			spatialChat(pBoss, "RUN FROM YOUR DEATH! The power of the Dark Side has made me invulnerable.")
+		if distance > (maxDistance * maxDistance) then 
+			spatialChat(pBoss, "RUN FROM YOUR DEATH! The power of the Dark Side has made me invulnerable.") print("out of range")
 
 			boss:setPvpStatusBitmask(0)
 			forcePeace(pBoss)
-			boss:setOptionsBitmask(128)
+			boss:setOptionsBitmask(128)print("bitmask set")
 
-			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)
+			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)print("event triggered")
 		end
 		--Your HAM check
-		if (boss:getHAM(0) <= boss:getMaxHAM(0) * 0.9) then
-			spatialChat(pBoss, "To my side apprentices!")
-			writeData("kaas_imperial_garison:spawnAdd", 1)
-			if (readData("kaas_imperial_garison:spawnAdd") == 1) then
-				local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)
-				local firstTime = LuaCreatureObject(pAdd1)
-				spatialChat(pAdd1, "At your command my lord!")
-				firstTime:engageCombat(pPlayer)
+		if (boss:getHAM(0) <= boss:getMaxHAM(0) * 0.9) then print("checking HAM")
+			spatialChat(pBoss, "To my side apprentices!") print("spatial")
+			writeData("kaas_imperial_garison:spawnAdd", 1) print("writing data")
+			if (readData("kaas_imperial_garison:spawnAdd") == 1) then print("checking spawnAdd")
+				local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)print("add spawned")
+				local firstTime = LuaCreatureObject(pAdd1)print("luaCreatureObject pointer")
+				spatialChat(pAdd1, "At your command my lord!") print("spatial for add")
+				firstTime:engageCombat(pPlayer)print("engaging combat")
 			end
 		end
 		return 1
 	end)
 end
 	
---[[
-*OLD kept for ref
-
-	if pBoss == nil or pPlayer == nil then
-		return 1
-	end
-	
-	local player = LuaCreatureObject(pPlayer)
-	local boss = LuaCreatureObject(pBoss)
-	
-	
-	if ( boss == nil ) then
-		local bossHealth = boss:getHAM(0)
-		local bossMaxHealth = boss:getMaxHAM(0)
-
-		
-		local x1 = 0.2
-		local y1 = -24.2
-		local x2 = boss:getPositionX()
-		local y2 = boss:getPositionY() 
-
-		local distance = ((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1))
-		local maxDistance = 45
-		
-		if distance > (maxDistance * maxDistance) then
-			spatialChat(pBoss, "RUN FROM YOUR DEATH! The power of the Dark Side has made me invulnerable.")
-
-			boss:setPvpStatusBitmask(0)
-			forcePeace(pBoss)
-			boss:setOptionsBitmask(128)
-
-			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)
-		end
-
-		if (((boss:getHAM(0) <= (boss:getMaxHAM(0) * 0.9)))) then
-			spatialChat(pBoss, "To my side apprentices!")
-			writeData("kaas_imperial_garison:spawnAdd", 1)
-			if (readData("kaas_imperial_garison:spawnAdd") == 1) then
-				local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)
-				local firstTime = LuaCreatureObject(pAdd1)
-				spatialChat(pAdd1, "At your command my lord!")
-				firstTime:engageCombat(pPlayer)
-			end
-
-		end
-
-	end	
-
-end
-]]
-
 function kaas_imperial_garison:removeFromKIG(pPlayer)
 	if (pPlayer == nil) then
 		return
