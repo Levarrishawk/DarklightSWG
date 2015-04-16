@@ -1,8 +1,8 @@
 cloaked_figure = Creature:new {
 	objectName = "",
 	customName = "a Cloaked Figure",
-	socialGroup = "imperial",
-	faction = "imperial",
+	socialGroup = "",
+	faction = "",
 	level = 126,
 	chanceHit = 4,
 	damageMin = 745,
