@@ -261,9 +261,7 @@ function kaas_imperial_garison:notifyPadawanDead(pPadawan, pKiller)
         local pBoss = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397) print("spawned POTDS")
 			spatialChat(pBoss, "I have murdered thousands, and do you know that my only regret is that I could not see their blood?")	
           		createObserver(DAMAGERECEIVED, "kaas_imperial_garison", "boss_damage", pBoss) print("observer set")
-          
-          
-     return 0
+        return 0
 end
 
 
@@ -278,6 +276,25 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 
 	--This properly calls LuaCreatureObject.h and (pPointer, function(pointerNewName)
 	return ObjectManager.withCreatureObject(pBoss, function(boss)
+		--Your HAM check
+		health = boss:getHAM(0)
+		maxHealth = boss:getMaxHAM(0)
+		
+		if (health <= (maxHealth * 0.9)) then print("checking HAM")
+			spatialChat(pBoss, "To my side apprentices!") print("spatial")
+			writeData("kaas_imperial_garison:spawnAdd", 1) print("writing data")
+			if (readData("kaas_imperial_garison:spawnAdd") == 1) then print("checking spawnAdd")
+				local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)print("add spawned")
+				local firstTime = LuaCreatureObject(pAdd1)print("luaCreatureObject pointer")
+				spatialChat(pAdd1, "At your command my lord!") print("spatial for add")
+				firstTime:engageCombat(pPlayer)print("engaging combat")
+			end
+		end
+		return 1
+	end)
+end
+
+--[[
 		--Your range check
 		local x1 = 0.2
 		local y1 = -24.2
@@ -296,23 +313,7 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 
 			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)print("event triggered")
 		end
-		--Your HAM check
-		health = boss:getHAM(0)
-		maxHealth = boss:getMaxHAM(0)
-		
-		if (health <= (maxHealth * 0.9)) then print("checking HAM")
-			spatialChat(pBoss, "To my side apprentices!") print("spatial")
-			writeData("kaas_imperial_garison:spawnAdd", 1) print("writing data")
-			if (readData("kaas_imperial_garison:spawnAdd") == 1) then print("checking spawnAdd")
-				local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)print("add spawned")
-				local firstTime = LuaCreatureObject(pAdd1)print("luaCreatureObject pointer")
-				spatialChat(pAdd1, "At your command my lord!") print("spatial for add")
-				firstTime:engageCombat(pPlayer)print("engaging combat")
-			end
-		end
-		return 1
-	end)
-end
+]]--
 	
 function kaas_imperial_garison:removeFromKIG(pPlayer)
 	if (pPlayer == nil) then
