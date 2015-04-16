@@ -1,4 +1,4 @@
-legacy_convo = ConvoTemplate:new {
+kaas_imp_intro = ConvoTemplate:new {
   initialScreen = "first_conv",
   templateType = "Lua",
   luaClassHandler = "legacy_quest_convo_handler",
@@ -80,4 +80,4 @@ mayorvermin = ConvoScreen:new {
 }
 legacy_convo:addScreen(mayorvermin);
 
-addConversationTemplate("legacy_convo", legacy_convo);
+addConversationTemplate("kaas_imp_intro", kaas_imp_intro);
