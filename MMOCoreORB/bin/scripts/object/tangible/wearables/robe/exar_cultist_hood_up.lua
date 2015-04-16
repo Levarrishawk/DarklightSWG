@@ -41,7 +41,7 @@
 --this exception also makes it possible to release a modified version 
 
 
-object_tangible_wearables_robe_exar_cultist_hood_up = object_tangible_wearables_robe_exar_cultist_hood_up:new {
+object_tangible_wearables_robe_exar_cultist_hood_up = object_tangible_wearables_robe_shared_exar_cultist_hood_up:new {
 	playerRaces = { "object/creature/player/bothan_male.iff",
 				"object/creature/player/human_male.iff",
 				"object/creature/player/moncal_male.iff",
