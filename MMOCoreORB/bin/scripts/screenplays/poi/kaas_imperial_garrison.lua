@@ -266,7 +266,7 @@ end
 
 
 
-function TutorialScreenPlay:banditDamageObserver(playerObject, creatureObject, damage)
+function kaas_imperial_garison:boss_damage(playerObject, creatureObject, damage)
 	local player = LuaCreatureObject(playerObject)
 	local boss = LuaCreatureObject(creatureObject)
 	
