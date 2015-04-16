@@ -49,4 +49,4 @@ prophet_kadann = Creature:new {
 	attacks = merge(lightsabermaster,forcewielder)
 }
 
-CreatureTemplates:addCreatureTemplate(prophet_of_the_dark_side, "prophet_of_the_dark_side")
+CreatureTemplates:addCreatureTemplate(prophet_kadann, "prophet_kadann")
