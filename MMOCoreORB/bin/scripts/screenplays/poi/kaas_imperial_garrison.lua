@@ -273,7 +273,7 @@ function kaas_imperial_garison:boss_damage(playerObject, creatureObject, damage)
 	health = boss:getHAM(0)
 	maxHealth = boss:getMaxHAM(0)
 
-	if (health <= (maxHealth * 0.9)) then print("checking HAM")
+	if (health <= (maxHealth * 0.75)) then print("checking HAM")
 		spatialChat(playerObject, "To my side apprentices!") print("spatial")
 		writeData("kaas_imperial_garison:spawnAdd", 1) print("writing data")
 		if (readData("kaas_imperial_garison:spawnAdd") == 1) then print("checking spawnAdd")
