@@ -57,6 +57,8 @@ function kaas_imperial_garison:spawnMobiles()
 	spawnMobile("kaas", "stormtrooper", 300, 3.1, 7.0, -11.3, 121, 35791436)
 	spawnMobile("kaas", "stormtrooper", 300, -0.3, 7.0, -10.20, 123, 35791436)
 	
+	spawnMobile("kaas", "prophet_kadann", 300, 14.5, 1.0, -21.2, 0, 35791432)
+	
 	-- Temple Entrance Guards
 
 	spawnMobile("kaas", "at_st", 300, -5097.8, 80.0, -2362.2, -134, 0)
