@@ -295,7 +295,10 @@ function kaas_imperial_garison:boss_damage(pBoss, pPlayer, damage)
 			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)print("event triggered")
 		end
 		--Your HAM check
-		if (boss:getHAM(0) <= boss:getMaxHAM(0) * 0.9) then print("checking HAM")
+		health = boss:getHAM(0)
+		maxHealth = boss:getMaxHAM(0)
+		
+		if (health <= (maxHealth *0.9)) then print("checking HAM")
 			spatialChat(pBoss, "To my side apprentices!") print("spatial")
 			writeData("kaas_imperial_garison:spawnAdd", 1) print("writing data")
 			if (readData("kaas_imperial_garison:spawnAdd") == 1) then print("checking spawnAdd")
