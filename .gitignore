@@ -1,3 +1,6 @@
 MMOEngine
 luacov.report.out
 luacov.stats.out
+.metadata
+.gitignore
+MMOCoreORB\RemoteSystemsTempFiles\
