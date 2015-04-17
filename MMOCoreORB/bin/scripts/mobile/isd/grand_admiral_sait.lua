@@ -26,7 +26,7 @@ grand_admiral_sait = Creature:new {
 	optionsBitmask = 136,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_imperial_general_m.iff"},
+	templates = {"object/mobile/captain_andal_sait.iff"},
 	lootGroups = {
 		{
 			groups = {

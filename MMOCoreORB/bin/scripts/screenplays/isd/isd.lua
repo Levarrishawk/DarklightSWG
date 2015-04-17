@@ -183,7 +183,7 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "imperial_noncom", 300, 3.9, 451.4, 328.8, -169, 34673110)
   spawnMobile("dungeon2", "imperial_noncom", 300, 5.8, 451.4, 326.3, 129, 34673110)
 
-  spawnMobile("dungeon2", "grand_admiral_sait", 300, -0.1, 453.6, 325.3, 179, 34673110)
+  -- spawnMobile("dungeon2", "grand_admiral_sait", 300, -0.1, 453.6, 325.3, 179, 34673110)
 
 
   end
