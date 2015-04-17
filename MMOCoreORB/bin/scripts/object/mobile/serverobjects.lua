@@ -2651,3 +2651,8 @@ includeFile("mobile/zabrak_female.lua")
 includeFile("mobile/zabrak_male.lua")
 includeFile("mobile/zucca_boar.lua")
 includeFile("mobile/zucca_boar_hue.lua")
+
+--NGE Conversions
+includeFile("mobile/captain_andal_sait.lua")
+includeFile("mobile/exar_kun.lua")
+includeFile("mobile/krix_swiftshadow.lua")
