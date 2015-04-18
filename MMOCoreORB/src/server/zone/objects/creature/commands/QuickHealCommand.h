@@ -181,7 +181,7 @@ public:
 			return false;
 		}
 		
-		if (!creatureTarget->isHealableBy(creature)) {
+		if (!patient->isHealableBy(creature)) {
 			creature->sendSystemMessage("@healing:pvp_no_help"); //It would be unwise to help such a patient.
 			return false;
 		}
