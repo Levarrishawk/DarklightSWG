@@ -50,10 +50,27 @@ which carries forward this exception.
 #include "CombatQueueCommand.h"
 
 class BactaCureCommand : public CombatQueueCommand {
+	int mindCost;
+	int mindWoundCost;
+
+	int healthHealed;
+	int actionHealed;
+	int mindHealed;
+
+	float speed;
+	float range;
 public:
 
 	BactaCureCommand(const String& name, ZoneProcessServer* server)
 		: CombatQueueCommand(name, server) {
+		healthHealed = 0;
+		actionHealed = 0;
+		mindHealed = 0;
+
+		mindCost = 700;
+		mindWoundCost = 0;
+
+		range = 30;
 	}
 	
 	void doAnimations(CreatureObject* creature, CreatureObject* creatureTarget) {
