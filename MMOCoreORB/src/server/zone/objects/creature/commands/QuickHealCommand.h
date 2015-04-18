@@ -217,13 +217,13 @@ public:
 			playerManager->sendBattleFatigueMessage(creature, creatureTarget);
 		}
 
-		sendHealMessage(creature, creatureTarget, healedHealth);
+		sendHealMessage(creature, creatureTarget, healedHealth, healedAction);
 
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 		creature->addShockWounds(5);
 
 		doAnimations(creature, creatureTarget);
-		deactivateWoundTreatment(enhancer);
+		deactivateWoundTreatment(creature);
 
 		return SUCCESS;
 	}
