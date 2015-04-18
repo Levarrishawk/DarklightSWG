@@ -178,7 +178,7 @@ public:
 			return GENERALERROR;
 		}
 
-		if (creature != target && !CollisionManager::checkLineOfSight(creature, target)) {
+		if (creature != creatureTarget && !CollisionManager::checkLineOfSight(creature, creatureTarget)) {
 			creature->sendSystemMessage("@container_error_message:container18");
 			return GENERALERROR;
 		}
