@@ -1,8 +1,8 @@
-prophet_of_the_dark_side = Creature:new {
-	objectName = "@mob/creature_names:prophet_of_the_dark_side",
-	socialGroup = "imperial",
-	pvpFaction = "imperial",
-	faction = "imperial",
+insane_vitiate_cultist = Creature:new {
+	objectName = "",
+  customName = "an Insane Cultist",
+  socialGroup = "death_watch",
+  faction = "",
 	level = 126,
 	chanceHit = 4,
 	damageMin = 745,
@@ -48,4 +48,4 @@ prophet_of_the_dark_side = Creature:new {
 	attacks = merge(lightsabermaster,forcewielder)
 }
 
-CreatureTemplates:addCreatureTemplate(prophet_of_the_dark_side, "prophet_of_the_dark_side")
+CreatureTemplates:addCreatureTemplate(insane_vitiate_cultist, "insane_vitiate_cultist")

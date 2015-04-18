@@ -1,6 +1,6 @@
 yun = Creature:new {
 	objectName = "",
-	customName = "Yun Epicanthix",
+	customName = "Yun Epicanthix - Dark Acolyte",
 	socialGroup = "imperial",
 	pvpFaction = "imperial",
 	faction = "imperial",
@@ -27,8 +27,8 @@ yun = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/tatooine_npc/hedon_istee.iff"},
-	outfit = "prophet_outfit",
+		"object/mobile/dressed_emperors_hand_human_male_01.iff"},
+		
 	lootGroups = {
 	    {
 			groups = {

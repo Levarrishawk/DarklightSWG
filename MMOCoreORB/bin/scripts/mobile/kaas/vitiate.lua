@@ -1,15 +1,15 @@
-prophet_of_the_dark_side = Creature:new {
-	objectName = "@mob/creature_names:prophet_of_the_dark_side",
-	socialGroup = "imperial",
-	pvpFaction = "imperial",
-	faction = "imperial",
-	level = 126,
+vitiate = Creature:new {
+	objectName = "",
+	customName = "Essence of the Sith Emperor",
+	socialGroup = "death_watch",
+	faction = "",
+	level = 200,
 	chanceHit = 4,
-	damageMin = 745,
-	damageMax = 1200,
+	damageMin = 1745,
+	damageMax = 2000,
 	baseXp = 11953,
-	baseHAM = 44000,
-	baseHAMmax = 54000,
+	baseHAM = 444000,
+	baseHAMmax = 454000,
 	armor = 0,
 	resists = {80,80,80,80,80,80,80,80,-1},
 	meatType = "",
@@ -21,13 +21,14 @@ prophet_of_the_dark_side = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = ATTACKABLE,
-	creatureBitmask = PACK + KILLER,
-	diet = HERBIVORE,
+	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
+  creatureBitmask = PACK + KILLER,
+  optionsBitmask = 136,
+  diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/tatooine_npc/hedon_istee.iff"},
-	outfit = "prophet_outfit",
+		"object/mobile/exar_kun.iff"},
+	--outfit = "prophet_kadann_outfit",
 	lootGroups = {
 	    {
 			groups = {
@@ -44,8 +45,8 @@ prophet_of_the_dark_side = Creature:new {
 			lootChance = 6000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
+	weapons = {"dark_jedi_weapons_gen2"},
 	attacks = merge(lightsabermaster,forcewielder)
 }
 
-CreatureTemplates:addCreatureTemplate(prophet_of_the_dark_side, "prophet_of_the_dark_side")
+CreatureTemplates:addCreatureTemplate(vitiate, "vitiate")

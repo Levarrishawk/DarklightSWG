@@ -1,13 +1,13 @@
 blackguard_dark_trooper = Creature:new {
 	objectName = "@mob/creature_names:dark_trooper",
 	socialGroup = "death_watch",
-	level = 35,
+	level = 135,
 	chanceHit = 0.4,
-	damageMin = 305,
-	damageMax = 320,
+	damageMin = 1305,
+	damageMax = 1320,
 	baseXp = 3465,
-	baseHAM = 9000,
-	baseHAMmax = 10000,
+	baseHAM = 19000,
+	baseHAMmax = 20000,
 	armor = 0,
 	resists = {40,20,20,50,50,50,50,-1,-1},
 	meatType = "",
@@ -25,7 +25,7 @@ blackguard_dark_trooper = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dark_trooper.iff"},
-	scale = 1.2,	
+	scale = 1.4,	
 	lootGroups = {
 		{
 			groups = {

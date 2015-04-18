@@ -1,3 +1,5 @@
+local ObjectManager = require("managers.object.object_manager") print("Object manager loaded for KIG")
+
 ISDScreenPlay = ScreenPlay:new 
 {
   numberOfActs = 1,
@@ -17,22 +19,9 @@ function ISDScreenPlay:spawnMobiles()
 
   
 
-  --Main Room First Fight
-  spawnMobile("dungeon2", "krix_swift", 300, -0.2, 173.8, 27.0, 0, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 30.1, 173.8, 40.6, -90, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 30.1, 173.8, 36.4, -90, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 30.1, 173.8, 26.5, -90, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 21.5, 173.8, 11.3, -50, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 14.4, 173.8, 6.5, -50, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 10.0, 173.8, 6.5, 0, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 0.0, 173.8, 6.5, 0, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -9.9, 173.8, 6.5, 0, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -20.0, 173.8, 6.5, 45, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -23.8, 173.8, 10.4, 45, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.4, 173.8, 16.9, 45, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 26.5, 90, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 35.6, 90, 34673093)
-  spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 44.5, 90, 34673093)
+  --Main Room First Fight:  Continued on Line 184
+    local pDroid = spawnMobile("dungeon2", "blackguard_mouse_droid", 10800, -0.2, 173.8, 27.0, 0, 34673093)
+          createObserver(OBJECTDESTRUCTION, "ISDScreenPlay", "notifyDroidDead", pDroid)
   
   --Hallway 1
   spawnMobile("dungeon2", "blackguard_dark_trooper", 300, 69.2, 173.8, 31.5, -90, 34673082)
@@ -124,11 +113,15 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "black_sun_boarder", 300, -8.1, 140.6, 484.3, 90, 34673104)
 
   spawnMobile("dungeon2", "black_sun_boarder", 300, -7.7, 140.6, 518.4, -179, 34673114)
+  
+  --[[ 
+  -- Engine room: Commented because the room appears to be bugged, all NPCs spawn glitched in a corner. 
   spawnMobile("dungeon2", "black_sun_boarder", 300, -2.8, 140.6, 526.5, -1, 34673115)
   spawnMobile("dungeon2", "black_sun_boarder", 300, -12.0, 122.3, 579.0, 158, 34673115)
   spawnMobile("dungeon2", "black_sun_boarder", 300, -4.2, 122.3, 580.0, -158, 34673115)
   spawnMobile("dungeon2", "black_sun_boarder", 300, -8.8, 152.3, 528.0, -90, 34673115)
   spawnMobile("dungeon2", "black_sun_boarder", 300, -8.4, 156.3, 548.6, -179, 34673115)
+]]
 
 -- Prat approach
   spawnMobile("dungeon2", "watch_captain_prat", 300, -55.6, 172.1, 332.5, 0, 34673063)
@@ -183,7 +176,227 @@ function ISDScreenPlay:spawnMobiles()
   spawnMobile("dungeon2", "imperial_noncom", 300, 3.9, 451.4, 328.8, -169, 34673110)
   spawnMobile("dungeon2", "imperial_noncom", 300, 5.8, 451.4, 326.3, 129, 34673110)
 
-  -- spawnMobile("dungeon2", "grand_admiral_sait", 300, -0.1, 453.6, 325.3, 179, 34673110)
+  spawnMobile("dungeon2", "grand_admiral_sait", 300, -0.1, 453.6, 325.3, 179, 34673110)
 
 
   end
+
+
+
+--Start Krix Swiftshadow Fight   
+function ISDScreenPlay:notifyDroidDead(pDroid, pKiller)
+  local player = LuaCreatureObject(pKiller)
+        local pBoss = spawnMobile("dungeon2", "krix_swift", 300, -0.2, 173.8, 27.0, 0, 34673093) print("spawned Krix")
+      spatialChat(pBoss, "Welcome friends, You're just in time for the party.  Allow me to show you some hospitality!") 
+              createObserver(DAMAGERECEIVED, "ISDScreenPlay", "boss_damage", pBoss) print("observer set")
+        return 0
+end
+
+function ISDScreenPlay:boss_damage(playerObject, creatureObject, damage)
+  local player = LuaCreatureObject(playerObject)
+  local boss = LuaCreatureObject(creatureObject)
+  
+  health = boss:getHAM(0)
+  maxHealth = boss:getMaxHAM(0)
+
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+    spatialChat(playerObject, "Well, it seems we need a more suitable welcome.  Get 'em Boys!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd1", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd1") == 1) then print("checking spawnAdd1")
+      local pAdd1 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 30.1, 173.8, 40.6, -90, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd1)print("luaCreatureObject pointer")
+      spatialChat(pAdd1, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd2", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd2") == 1) then print("checking spawnAdd2")
+      local pAdd2 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 30.1, 173.8, 36.4, -90, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd2)print("luaCreatureObject pointer")
+      spatialChat(pAdd2, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd3", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd3") == 1) then print("checking spawnAdd3")
+      local pAdd3 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 30.1, 173.8, 26.5, -90, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd3)print("luaCreatureObject pointer")
+      spatialChat(pAdd3, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd4", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd4") == 1) then print("checking spawnAdd4")
+      local pAdd4 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 21.5, 173.8, 11.3, -50, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd4)print("luaCreatureObject pointer")
+      spatialChat(pAdd4, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd5", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd5") == 1) then print("checking spawnAdd5")
+      local pAdd5 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 14.4, 173.8, 6.5, -50, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd5)print("luaCreatureObject pointer")
+      spatialChat(pAdd5, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd6", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd6") == 1) then print("checking spawnAdd6")
+      local pAdd6 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 10.0, 173.8, 6.5, 0, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd6)print("luaCreatureObject pointer")
+      spatialChat(pAdd6, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd7", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd7") == 1) then print("checking spawnAdd7")
+      local pAdd7 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, 0.0, 173.8, 6.5, 0, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd7)print("luaCreatureObject pointer")
+      spatialChat(pAdd7, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd8", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd8") == 1) then print("checking spawnAdd8")
+      local pAdd8 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -9.9, 173.8, 6.5, 0, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd8)print("luaCreatureObject pointer")
+      spatialChat(pAdd8, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd9", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd9") == 1) then print("checking spawnAdd9")
+      local pAdd9 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -20.0, 173.8, 6.5, 45, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd9)print("luaCreatureObject pointer")
+      spatialChat(pAdd9, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd10", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd10") == 1) then print("checking spawnAdd10")
+      local pAdd10 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -23.8, 173.8, 10.4, 45, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd10)print("luaCreatureObject pointer")
+      spatialChat(pAdd10, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd11", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd11") == 1) then print("checking spawnAdd11")
+      local pAdd11 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.4, 173.8, 16.9, 45, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd11)print("luaCreatureObject pointer")
+      spatialChat(pAdd11, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd12", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd12") == 1) then print("checking spawnAdd12")
+      local pAdd12 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 26.5, 90, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd12)print("luaCreatureObject pointer")
+      spatialChat(pAdd12, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd13", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd13") == 1) then print("checking spawnAdd13")
+      local pAdd13 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 35.6, 90, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd13)print("luaCreatureObject pointer")
+      spatialChat(pAdd13, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.95)) then print("checking HAM")
+   -- spatialChat(playerObject, "I don't know where Bill is!") print("spatial")
+    writeData("ISDScreenPlay:spawnAdd14", 1) print("writing data")
+    if (readData("ISDScreenPlay:spawnAdd14") == 1) then print("checking spawnAdd14")
+      local pAdd14 = spawnMobile("dungeon2", "blackguard_stormtrooper_commando", 300, -30.7, 173.8, 44.5, 90, 34673093)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd14)print("luaCreatureObject pointer")
+      spatialChat(pAdd14, "Time to Die!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.75)) then print("checking HAM")
+    spatialChat(playerObject, "Come on now, do yourselves a favor and just die.") print("spatial")       
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.5)) then print("checking HAM")
+    spatialChat(playerObject, "You're too late, this ship belongs to us!") print("spatial")       
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.25)) then print("checking HAM")
+    spatialChat(playerObject, "You'll never leave this hangar alive.") print("spatial")       
+    return 1
+  
+  end
+  return 0
+end
+
+-- End of Krix Swiftshadow Fight

@@ -3,13 +3,13 @@ commander_kenkirk = Creature:new {
 	customName = "Commander Kenkirk",
 	socialGroup = "imperial",
 	faction = "imperial",
-	level = 23,
+	level = 123,
 	chanceHit = 0.35,
-	damageMin = 220,
-	damageMax = 230,
+	damageMin = 1220,
+	damageMax = 1230,
 	baseXp = 2443,
-	baseHAM = 6300,
-	baseHAMmax = 7700,
+	baseHAM = 163000,
+	baseHAMmax = 177000,
 	armor = 0,
 	resists = {15,15,15,-1,15,-1,15,-1,-1},
 	meatType = "",
@@ -27,6 +27,7 @@ commander_kenkirk = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_imperial_colonel_m.iff"},
+	scale = 1.2,
 	lootGroups = {
 		{
 			groups = {

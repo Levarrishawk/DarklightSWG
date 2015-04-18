@@ -2,13 +2,13 @@ blackguard_interrogator_droid = Creature:new {
 	objectName = "",
 	customName = "IT-0 Interrogator",
 	socialGroup = "death_watch",
-	level = 29,
+	level = 129,
 	chanceHit = 0.38,
-	damageMin = 280,
-	damageMax = 290,
+	damageMin = 1280,
+	damageMax = 1290,
 	baseXp = 3005,
-	baseHAM = 8300,
-	baseHAMmax = 10100,
+	baseHAM = 48300,
+	baseHAMmax = 50100,
 	armor = 0,
 	resists = {0,0,0,30,-1,30,-1,-1,-1},
 	meatType = "",
@@ -26,6 +26,7 @@ blackguard_interrogator_droid = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/ito_interrogator.iff"},
+	scale = 1.1,
 	lootGroups = {
 		{
 			groups = {

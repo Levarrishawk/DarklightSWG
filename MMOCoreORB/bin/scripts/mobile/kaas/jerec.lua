@@ -1,5 +1,6 @@
-prophet_of_the_dark_side = Creature:new {
-	objectName = "@mob/creature_names:prophet_of_the_dark_side",
+jerec = Creature:new {
+	objectName = "",
+	customName = "Inquisitor Jerec",
 	socialGroup = "imperial",
 	pvpFaction = "imperial",
 	faction = "imperial",
@@ -8,8 +9,8 @@ prophet_of_the_dark_side = Creature:new {
 	damageMin = 745,
 	damageMax = 1200,
 	baseXp = 11953,
-	baseHAM = 44000,
-	baseHAMmax = 54000,
+	baseHAM = 144000,
+	baseHAMmax = 154000,
 	armor = 0,
 	resists = {80,80,80,80,80,80,80,80,-1},
 	meatType = "",
@@ -27,7 +28,7 @@ prophet_of_the_dark_side = Creature:new {
 
 	templates = {
 		"object/mobile/tatooine_npc/hedon_istee.iff"},
-	outfit = "prophet_outfit",
+	outfit = "prophet_kadann_outfit",
 	lootGroups = {
 	    {
 			groups = {
@@ -44,8 +45,8 @@ prophet_of_the_dark_side = Creature:new {
 			lootChance = 6000000
 		}
 	},
-	weapons = {"mixed_force_weapons"},
+	weapons = {"dark_jedi_weapons_gen2"},
 	attacks = merge(lightsabermaster,forcewielder)
 }
 
-CreatureTemplates:addCreatureTemplate(prophet_of_the_dark_side, "prophet_of_the_dark_side")
+CreatureTemplates:addCreatureTemplate(jerec, "jerec")

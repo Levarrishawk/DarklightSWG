@@ -3,13 +3,13 @@ black_sun_boarder = Creature:new {
 	customName = "Black Sun Boarder",
 	socialGroup = "death_watch",
 	faction = "",
-	level = 107,
+	level = 127,
 	chanceHit = 1.75,
 	damageMin = 670,
-	damageMax = 1050,
+	damageMax = 1350,
 	baseXp = 10081,
-	baseHAM = 29000,
-	baseHAMmax = 36000,
+	baseHAM = 39000,
+	baseHAMmax = 46000,
 	armor = 2,
 	resists = {55,55,70,45,75,80,55,45,-1},
 	meatType = "",
@@ -44,6 +44,7 @@ black_sun_boarder = Creature:new {
 	},
 	weapons = {"pirate_weapons_heavy"},
 	conversationTemplate = "",
+	reactionStf = "@npc_reaction/fancy",
 	attacks = merge(bountyhuntermaster,marksmanmaster,brawlermaster)
 }
 

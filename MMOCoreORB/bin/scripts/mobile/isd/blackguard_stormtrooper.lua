@@ -4,11 +4,11 @@ blackguard_stormtrooper = Creature:new {
 	socialGroup = "death_watch",
 	level = 25,
 	chanceHit = 0.36,
-	damageMin = 240,
-	damageMax = 250,
+	damageMin = 740,
+	damageMax = 950,
 	baseXp = 2637,
-	baseHAM = 7200,
-	baseHAMmax = 8800,
+	baseHAM = 17200,
+	baseHAMmax = 18800,
 	armor = 0,
 	resists = {15,15,40,15,15,15,15,-1,-1},
 	meatType = "",
@@ -26,6 +26,7 @@ blackguard_stormtrooper = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_stormtrooper_m.iff"},
+	scale = 1.1,
 	lootGroups = {
 		{
 			groups = {

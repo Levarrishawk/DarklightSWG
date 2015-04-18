@@ -260,7 +260,7 @@ end
 
 function kaas_imperial_garison:notifyPadawanDead(pPadawan, pKiller)
 	local player = LuaCreatureObject(pKiller)
-        local pBoss = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397) print("spawned POTDS")
+        local pBoss = spawnMobile("kaas", "jerec", 0, 0.2, -37.3, -24.2, 0, 35791397) print("spawned POTDS")
 			spatialChat(pBoss, "I have murdered thousands, and do you know that my only regret is that I could not see their blood?")	
           		createObserver(DAMAGERECEIVED, "kaas_imperial_garison", "boss_damage", pBoss) print("observer set")
         return 0
@@ -279,7 +279,7 @@ function kaas_imperial_garison:boss_damage(playerObject, creatureObject, damage)
 		spatialChat(playerObject, "To my side apprentices!") print("spatial")
 		writeData("kaas_imperial_garison:spawnAdd", 1) print("writing data")
 		if (readData("kaas_imperial_garison:spawnAdd") == 1) then print("checking spawnAdd")
-			local pAdd1 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 11.7, -37.3, 0.0, -90, 35791397)print("add spawned")
+			local pAdd1 = spawnMobile("kaas", "sariss", 0, 0.2, -37.3, -24.2, 0, 35791397)print("add spawned")
 			local firstTime = LuaCreatureObject(pAdd1)print("luaCreatureObject pointer")
 			spatialChat(pAdd1, "At your command my lord!") print("spatial for add")
 			firstTime:engageCombat(pPlayer)print("engaging combat")
@@ -288,30 +288,75 @@ function kaas_imperial_garison:boss_damage(playerObject, creatureObject, damage)
 		return 1
 	
 	end
+	if (health <= (maxHealth * 0.75)) then print("checking HAM")
+   -- spatialChat(playerObject, "To my side apprentices!") print("spatial")
+    writeData("kaas_imperial_garison:spawnAdd2", 1) print("writing data")
+    if (readData("kaas_imperial_garison:spawnAdd2") == 1) then print("checking spawnAdd")
+      local pAdd2 = spawnMobile("kaas", "yun", 0, 0.2, -37.3, -24.2, 0, 35791397)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd2)print("luaCreatureObject pointer")
+      spatialChat(pAdd2, "In all my years I've only known Dark Jedi. Never one from the light side.") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.70)) then print("checking HAM")
+    spatialChat(playerObject, "Prophets of the dark side, kill these intruders!") print("spatial")
+    writeData("kaas_imperial_garison:spawnAdd3", 1) print("writing data")
+    if (readData("kaas_imperial_garison:spawnAdd3") == 1) then print("checking spawnAdd")
+      local pAdd3 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd3)print("luaCreatureObject pointer")
+      spatialChat(pAdd3, "Your death has been foreseen!") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.65)) then print("checking HAM")
+    spatialChat(playerObject, "Your efforts are pointless.") print("spatial")
+    writeData("kaas_imperial_garison:spawnAdd4", 1) print("writing data")
+    if (readData("kaas_imperial_garison:spawnAdd4") == 1) then print("checking spawnAdd")
+      local pAdd4 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd4)print("luaCreatureObject pointer")
+      spatialChat(pAdd4, "The darkness shall consume the light.") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.50)) then print("checking HAM")
+    spatialChat(playerObject, "Kill your friends, begin your journey to the Dark Side and I will show you true power!") print("spatial")
+    writeData("kaas_imperial_garison:spawnAdd5", 1) print("writing data")
+    if (readData("kaas_imperial_garison:spawnAdd5") == 1) then print("checking spawnAdd")
+      local pAdd5 = spawnMobile("kaas", "prophet_of_the_dark_side", 0, 0.2, -37.3, -24.2, 0, 35791397)print("add spawned")
+      local firstTime = LuaCreatureObject(pAdd5)print("luaCreatureObject pointer")
+      spatialChat(pAdd5, "Fear, I sense much of it in you.") print("spatial for add")
+      firstTime:engageCombat(pPlayer)print("engaging combat")
+    end
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.40)) then print("checking HAM")
+    spatialChat(playerObject, "You refuse? A pity, then you will die.") print("spatial")   
+    
+    return 1
+  
+  end
+  if (health <= (maxHealth * 0.10)) then print("checking HAM")
+    spatialChat(playerObject, "Strike me down! Kill me and your journey to the Dark Side can begin!") print("spatial")   
+    
+    return 1
+  
+  end
 	
 	return 0
 end
 
---[[
-		--Your range check
-		local x1 = 0.2
-		local y1 = -24.2
-		local x2 = boss:getPositionX()
-		local y2 = boss:getPositionY() 
 
-		local distance = ((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1))
-		local maxDistance = 45
-		
-		if distance > (maxDistance * maxDistance) then 
-			spatialChat(pBoss, "RUN FROM YOUR DEATH! The power of the Dark Side has made me invulnerable.") print("out of range")
-
-			boss:setPvpStatusBitmask(0)
-			forcePeace(pBoss)
-			boss:setOptionsBitmask(128)print("bitmask set")
-
-			createEvent(500, "kaas_imperial_garison", "removeFromKIG", pPlayer)print("event triggered")
-		end
-]]--
 	
 function kaas_imperial_garison:removeFromKIG(pPlayer)
 	if (pPlayer == nil) then

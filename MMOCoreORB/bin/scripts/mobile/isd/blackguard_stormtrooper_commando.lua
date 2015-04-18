@@ -1,13 +1,13 @@
 blackguard_stormtrooper_commando = Creature:new {
 	objectName = "@mob/creature_names:storm_commando",
 	socialGroup = "death_watch",
-	level = 29,
+	level = 129,
 	chanceHit = 0.38,
-	damageMin = 280,
-	damageMax = 290,
+	damageMin = 480,
+	damageMax = 690,
 	baseXp = 3005,
-	baseHAM = 8300,
-	baseHAMmax = 10100,
+	baseHAM = 20300,
+	baseHAMmax = 25100,
 	armor = 0,
 	resists = {0,0,0,30,-1,30,-1,-1,-1},
 	meatType = "",
@@ -25,6 +25,7 @@ blackguard_stormtrooper_commando = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_stormtrooper_commando_m.iff"},
+	scale = 1.1,
 	lootGroups = {
 		{
 			groups = {

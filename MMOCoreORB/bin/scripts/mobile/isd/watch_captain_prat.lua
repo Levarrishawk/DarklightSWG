@@ -2,13 +2,13 @@ watch_captain_prat = Creature:new {
 	objectName = "",
 	customName = "Watch Captain Prat",
 	socialGroup = "death_watch",
-	level = 21,
+	level = 121,
 	chanceHit = 0.34,
-	damageMin = 200,
-	damageMax = 210,
+	damageMin = 1200,
+	damageMax = 1310,
 	baseXp = 2006,
-	baseHAM = 5400,
-	baseHAMmax = 6600,
+	baseHAM = 154000,
+	baseHAMmax = 166000,
 	armor = 0,
 	resists = {0,0,0,0,0,0,0,-1,-1},
 	meatType = "",
@@ -26,6 +26,7 @@ watch_captain_prat = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_imperial_captain_m.iff"},
+	scale = 1.1,
 	lootGroups = {
 		{
 			groups = {
