@@ -186,8 +186,6 @@ public:
 		if (!creatureTarget->isInRange(creature, range + creatureTarget->getTemplateRadius() + creature->getTemplateRadius()))
 			return TOOFAR;
 
-		uint8 attribute = findAttribute(creatureTarget);
-
 		if (creature->isProne() || creature->isMeditating()) {
 			creature->sendSystemMessage("@error_message:wrong_state"); //You cannot complete that action while in your current state.
 			return GENERALERROR;
