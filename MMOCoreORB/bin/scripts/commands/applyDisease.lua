@@ -65,9 +65,11 @@ ApplyDiseaseCommand = {
 	  )
 	},
 	
-	animationCRC = hashCode("fire_1_special_single_medium"),
+	animationCRC = hashCode("throw_grenade"),
 	
 	poolsToDamage = HEALTH_ATTRIBUTE,
+	
+	combatSpam = "applydisease",
 
 	range = -1
 }
