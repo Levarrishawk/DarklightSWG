@@ -86,7 +86,7 @@ public:
 	
 		int modSkill = (creature->getSkillMod("healing_range_speed") * 0.15);
 		
-		int delay = 30 - modSkill;
+		int delay = 40 - modSkill;
 		
 		StringIdChatParameter message("healing_response", "healing_response_58"); //You are now ready to heal more damage.
 		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatment");
@@ -133,7 +133,7 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
-if (!creature->canTreatInjuries()) {
+		if (!creature->canTreatInjuries()) {
 			creature->sendSystemMessage("@healing_response:healing_must_wait"); //You must wait before you can do that.
 			return GENERALERROR;
 		}
@@ -200,7 +200,7 @@ if (!creature->canTreatInjuries()) {
 			return GENERALERROR;
 		}
 
-		int healPower = (int) round(150 + System::random(600));
+		int healPower = (creature->getSkillMod("combat_healing_ability") * 25);
 
 		int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healPower);
 		int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healPower);
