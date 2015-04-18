@@ -200,7 +200,7 @@ public:
 			return GENERALERROR;
 		}
 
-		int healPower = (int) round(150 + System::random(600));
+		int healPower = (creature->getSkillMod("combat_healing_ability") * 3);
 
 		int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healPower);
 		int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healPower);
