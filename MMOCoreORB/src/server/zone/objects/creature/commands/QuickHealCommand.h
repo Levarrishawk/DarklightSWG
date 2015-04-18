@@ -155,7 +155,7 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 			
-		if (patient->isDead())
+		if (target->isDead())
 			return GENERALERROR;
 
 		if (!creature->canTreatWounds()) {
@@ -178,7 +178,7 @@ public:
 			return GENERALERROR;
 		}
 
-		if (creature != patient && !CollisionManager::checkLineOfSight(creature, patient)) {
+		if (creature != target && !CollisionManager::checkLineOfSight(creature, target)) {
 			creature->sendSystemMessage("@container_error_message:container18");
 			return GENERALERROR;
 		}
@@ -190,8 +190,8 @@ public:
 		if ((creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
 			creatureTarget = creature;
 		
-		if (!patient->isHealableBy(creature)) {
-			creature->sendSystemMessage("@healing:pvp_no_help"); //It would be unwise to help such a patient.
+		if (!target->isHealableBy(creature)) {
+			creature->sendSystemMessage("@healing:pvp_no_help"); //It would be unwise to help such a target.
 			return GENERALERROR;
 		}
 		
