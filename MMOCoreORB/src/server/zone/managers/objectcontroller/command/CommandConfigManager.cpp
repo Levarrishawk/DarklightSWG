@@ -1539,6 +1539,12 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<InspacereloadCommand>(String("inspacereload").toLowerCase());
 	commandFactory.registerCommand<InspacerrCommand>(String("inspacerr").toLowerCase());
 	commandFactory.registerCommand<RequestSpaceTrainerCommand>(String("requestSpaceTrainer").toLowerCase());
+	commandFactory.registerCommand<BactaBombCommand>(String("bactaBomb").toLowerCase());
+	commandFactory.registerCommand<BactaJabCommand>(String("bactaJab").toLowerCase());
+	commandFactory.registerCommand<BactaCureCommand>(String("bactaCure").toLowerCase());
+	commandFactory.registerCommand<StasisCommand>(String("stasis").toLowerCase());
+	commandFactory.registerCommand<StasisOtherCommand>(String("stasisOther").toLowerCase());
+	commandFactory.registerCommand<CalamityCommand>(String("calamity").toLowerCase());
 
 	//pet commands
 	commandFactory.registerCommand<PetAttackCommand>(String("petAttack").toLowerCase());
