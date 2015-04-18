@@ -43,6 +43,33 @@
 
 ApplyDiseaseCommand = {
         name = "applydisease",
+        
+	damageMultiplier = 2.5,
+	speedMultiplier = 2.0,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
+	
+        dotEffects = {
+	  DotEffect( 
+		DISEASE, 
+		{"resistance_fire", "fire_resist"},
+		HEALTH,
+		true,
+		100,
+		100,
+		100, 
+		60,
+		10,
+		2
+	  )
+	},
+	
+	animationCRC = hashCode("fire_1_special_single_medium"),
+	
+	poolsToDamage = HEALTH_ATTRIBUTE,
+
+	range = -1
 }
 
 AddCommand(ApplyDiseaseCommand)
