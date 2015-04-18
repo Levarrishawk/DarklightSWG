@@ -178,7 +178,7 @@ public:
 			return GENERALERROR;
 		}
 
-		if (creature != creatureTarget && !CollisionManager::checkLineOfSight(creature, creatureTarget)) {
+		if (creature != target && !CollisionManager::checkLineOfSight(creature, target)) {
 			creature->sendSystemMessage("@container_error_message:container18");
 			return GENERALERROR;
 		}
@@ -187,8 +187,8 @@ public:
 			return GENERALERROR;
 		}
 		
-		if ((creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
-			creatureTarget = creature;
+		if ((target->isAiAgent() && !target->isPet()) || target->isDroidObject() || target->isDead() || target->isRidingMount() || target->isAttackableBy(creature))
+			target = creature;
 		
 		if (!target->isHealableBy(creature)) {
 			creature->sendSystemMessage("@healing:pvp_no_help"); //It would be unwise to help such a target.
