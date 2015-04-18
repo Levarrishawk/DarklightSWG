@@ -43,6 +43,35 @@
 
 ApplyPoisonCommand = {
         name = "applypoison",
+                
+	damageMultiplier = 2.5,
+	speedMultiplier = 2.0,
+	healthCostMultiplier = 0,
+	actionCostMultiplier = 3,
+	mindCostMultiplier = 0,
+	
+        dotEffects = {
+	  DotEffect( 
+		POISONED, 
+		{"resistance_fire", "fire_resist"},
+		HEALTH,
+		true,
+		100,
+		100,
+		100, 
+		60,
+		10,
+		2
+	  )
+	},
+	
+	animationCRC = hashCode("throw_grenade"),
+	
+	poolsToDamage = HEALTH_ATTRIBUTE,
+	
+	combatSpam = "applypoison",
+
+	range = -1
 }
 
 AddCommand(ApplyPoisonCommand)
