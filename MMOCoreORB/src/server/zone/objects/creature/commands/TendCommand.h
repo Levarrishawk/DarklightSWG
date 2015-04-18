@@ -229,7 +229,7 @@ public:
 			}
 
 			//int healPower = round(((float)creature->getSkillMod("healing_injury_treatment") / 3.f + 20.f) * bfScale);
-			int bonusHeal = (creature->getSkillMod("medicine_use") * 4);
+			int bonusHeal = (creature->getSkillMod("healing_ability") * 4);
 			int healPower = 100 + bonusHeal;
 			int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healPower);
 			int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healPower, true, false);
