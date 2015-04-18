@@ -55,8 +55,8 @@ public:
 	FirstAidCommand(const String& name, ZoneProcessServer* server)
 		: QueueCommand(name, server) {
 		
-		mindCost = 0;
-		range = 6;
+		mindCost = 500;
+		range = 4;
 	}
 
 	void doAnimations(CreatureObject* creature, CreatureObject* creatureTarget) {
@@ -179,9 +179,9 @@ public:
 			
 		uint32 skillMod = creature->getSkillMod("healing_injury_treatment");
 			
-		creatureTarget->healDot(CreatureState::BLEEDING, skillMod*3);
+		creatureTarget->healDot(CreatureState::BLEEDING, skillMod* 0.5);
 			
-		creature->inflictDamage(creature, CreatureAttribute::MIND, mindCost, false);
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 		
 		sendCureMessage(creature, creatureTarget);
  
