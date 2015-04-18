@@ -427,8 +427,8 @@ bool PlayerCreationManager::createCharacter(MessageCallback* data) {
 	String profession, customization, hairTemplate, hairCustomization;
 	callback->getSkill(profession);
 
-	//if (profession.contains("jedi"))
-	//	profession = "crafting_artisan";
+	if (profession.contains("jdi"))
+		profession = "crafting_artisan";
 
 	callback->getCustomizationString(customization);
 	callback->getHairObject(hairTemplate);
