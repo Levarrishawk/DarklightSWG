@@ -221,8 +221,6 @@ public:
 			playerManager->sendBattleFatigueMessage(creature, creatureTarget);
 		}
 
-		sendHealMessage(creature, creatureTarget);
-
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 		creature->addShockWounds(5);
 		creatureTarget->healDot(CreatureState::DISEASED, 100);
