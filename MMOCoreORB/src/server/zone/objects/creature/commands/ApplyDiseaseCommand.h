@@ -45,14 +45,29 @@ which carries forward this exception.
 #ifndef APPLYDISEASECOMMAND_H_
 #define APPLYDISEASECOMMAND_H_
 
-#include "DotPackCommand.h"
+#include "server/zone/objects/scene/SceneObject.h"
+#include "server/zone/managers/combat/CombatManager.h"
+#include "CombatQueueCommand.h"
 
-class ApplyDiseaseCommand : public DotPackCommand {
+class ApplyDiseaseCommand : public CombatQueueCommand {
 public:
 
 	ApplyDiseaseCommand(const String& name, ZoneProcessServer* server)
-		: DotPackCommand(name, server) {
-		skillName = "applydisease";
+		: CombatQueueCommand(name, server) {
+	}
+
+	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) {
+
+		if (!checkStateMask(creature))
+			return INVALIDSTATE;
+
+		if (!checkInvalidLocomotions(creature))
+			return INVALIDLOCOMOTION;
+
+		ManagedReference<WeaponObject*> weapon = creature->getWeapon();
+
+
+		return doCombatAction(creature, target);
 	}
 
 };
