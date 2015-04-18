@@ -124,39 +124,6 @@ public:
 		creature->addPendingTask("injuryTreatment", task, delay * 1000);
 	}
 
-	void sendHealMessage(CreatureObject* creature, CreatureObject* creatureTarget, int healthDamage, int actionDamage) {
-		if (!creature->isPlayerCreature())
-			return;
-
-		CreatureObject* player = cast<CreatureObject*>(creature);
-
-		StringBuffer msgPlayer, msgTarget, msgBody, msgTail;
-
-		if (healthDamage > 0) {
-			msgBody << healthDamage << " health damage";
-		} else if (healthDamage > 0) {
-			msgBody << healthDamage << " health"; 
-		}else {
-			return; //No damage to heal.
-		}
-
-		msgTail << " damage.";
-
-		if (creature == creatureTarget) {
-			msgPlayer << "You heal yourself for " << msgBody.toString() << msgTail.toString();
-			player->sendSystemMessage(msgPlayer.toString());
-		} else if (creatureTarget->isPlayerCreature()){
-			msgPlayer << "You heal " << creatureTarget->getFirstName() << " for " << msgBody.toString() << msgTail.toString();
-			msgTarget << player->getFirstName() << " heals you for " << msgBody.toString() << msgTail.toString();
-
-			player->sendSystemMessage(msgPlayer.toString());
-			creatureTarget->sendSystemMessage(msgTarget.toString());
-		} else {
-			msgPlayer << "You heal " << creatureTarget->getDisplayedName() << " for " << msgBody.toString() << msgTail.toString();
-			player->sendSystemMessage(msgPlayer.toString());
-		}
-		
-	}
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) {
 
 		if (!checkStateMask(creature))
