@@ -89,6 +89,20 @@ public:
 		else
 			creature->doAnimation("heal_other");
 	}
+	
+	void deactivateWoundTreatment(CreatureObject* creature) {
+		float modSkill = (float)creature->getSkillMod("healing_injury_speed");
+
+		int delay = (int)round((modSkill * -(2.0f / 25.0f)) + 20.0f);
+
+
+		//Force the delay to be at least 3 seconds.
+		delay = (delay < 3) ? 3 : delay;
+
+		StringIdChatParameter message("healing_response", "healing_response_59"); //You are now ready to heal more wounds or apply more enhancements.
+		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "woundTreatment");
+		creature->addPendingTask("woundTreatment", task, delay * 1000);
+	}
 
 	void sendHealMessage(CreatureObject* creature, CreatureObject* creatureTarget, int healthDamage, int actionDamage) {
 		if (!creature->isPlayerCreature())
@@ -209,6 +223,7 @@ public:
 		creature->addShockWounds(5);
 
 		doAnimations(creature, creatureTarget);
+		deactivateWoundTreatment(enhancer);
 
 		return SUCCESS;
 	}
