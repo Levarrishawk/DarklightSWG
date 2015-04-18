@@ -232,14 +232,14 @@ public:
 		}
 		int healDisease = creatureTarget->healDot(CreatureState::DISEASED, 300);
 		int healPoison = creatureTarget->healDot(CreatureState::POISONED, 300);
-		int roll = System:random(4);
+		int roll = (System::random(4));
 		if (roll == 0)
 			creatureTarget->removeStateBuff(CreatureState::STUNNED);
 		else if (roll == 1)
 			creatureTarget->removeStateBuff(CreatureState::DIZZY);
 		else if (roll == 2)
 			creatureTarget->removeStateBuff(CreatureState::BLINDED);
-		else if (roll = 3)
+		else if (roll == 3)
 			creatureTarget->removeStateBuff(CreatureState::INTIMIDATED);
 
 		int healPower = (creature->getSkillMod("combat_healing_ability") * 3);
