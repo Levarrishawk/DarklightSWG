@@ -79,13 +79,11 @@ public:
 
 		StringBuffer msgPlayer, msgTarget, msgBody, msgTail;
 
-		if (healthDamage > 0 && actionDamage > 0) {
-			msgBody << healthDamage << " health and " << actionDamage << " action";
+		if (healthDamage > 0) {
+			msgBody << healthDamage << " health and ";
 		} else if (healthDamage > 0) {
 			msgBody << healthDamage << " health";
-		} else if (actionDamage > 0) {
-			msgBody << actionDamage << " action";
-		} else {
+		}else {
 			return; //No damage to heal.
 		}
 
@@ -208,14 +206,14 @@ public:
 		}
 
 		if (creature->getHAM(CreatureAttribute::ACTION) < mindCost) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
+			creature->sendSystemMessage("You do not have enough action to do that."); //You do not have enough mind to do that.
 			return GENERALERROR;
 		}
 
 		float bfScale = 1 - creatureTarget->calculateBFRatio();
 
 		if (tendDamage) {
-			if (!creatureTarget->hasDamage(CreatureAttribute::HEALTH) && !creatureTarget->hasDamage(CreatureAttribute::ACTION)) {
+			if (!creatureTarget->hasDamage(CreatureAttribute::HEALTH)) {
 				if (creatureTarget == creature)
 					creature->sendSystemMessage("@healing_response:healing_response_61"); //You have no damage to heal.
 				else if (creatureTarget->isPlayerCreature()) {
@@ -231,7 +229,8 @@ public:
 			}
 
 			//int healPower = round(((float)creature->getSkillMod("healing_injury_treatment") / 3.f + 20.f) * bfScale);
-			int healPower = 300;
+			int bonusHeal = (creature->getSkillMod("medicine_use") * 4)
+			int healPower = 100 + bonusHeal;
 			int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healPower);
 			int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healPower, true, false);
 
@@ -259,7 +258,7 @@ public:
 			sendWoundMessage(creature, creatureTarget, attribute, healedWounds);
 
 			if (creatureTarget != creature && healedWounds > 0)
-				awardXp(creature, "medical", round(healedWounds * 2.5f));
+				awardXp(creature, "medical", round(healedWounds * 5.5f));
 		} else
 			return GENERALERROR;
 
@@ -269,6 +268,7 @@ public:
 		}
 
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
+		awardXp(creature, "medical", round(healedWounds * 5.5f));
 		//creature->addWounds(CreatureAttribute::FOCUS, mindWoundCost);
 		//creature->addWounds(CreatureAttribute::WILLPOWER, mindWoundCost);
 		//creature->addShockWounds(2);
