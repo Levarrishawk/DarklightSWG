@@ -70,6 +70,17 @@ public:
 		else
 			creature->doAnimation("heal_other");
 	}
+	
+	void deactivateInjuryTreatment(CreatureObject* creature) {
+	
+		int modSkill = (creature->getSkillMod("healing_injury_speed") * 0.1);
+		
+		int delay = 18 - modSkill;
+
+		StringIdChatParameter message("healing_response", "healing_response_58"); //You are now ready to heal more damage.
+		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatment");
+		creature->addPendingTask("injuryTreatment", task, delay * 1000);
+	}
 
 	void sendHealMessage(CreatureObject* creature, CreatureObject* creatureTarget, int healthDamage, int actionDamage) {
 		if (!creature->isPlayerCreature())
