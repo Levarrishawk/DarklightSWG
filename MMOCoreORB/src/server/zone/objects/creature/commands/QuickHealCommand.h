@@ -167,11 +167,6 @@ public:
 			return false;
 		}
 
-		if (!patient->isHealableBy(creature)) {
-			creature->sendSystemMessage("@healing:pvp_no_help"); //It would be unwise to help such a patient.
-			return false;
-		}
-
 		if (creature->getHAM(CreatureAttribute::ACTION) < mindCost) {
 			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
 			return false;
@@ -179,6 +174,15 @@ public:
 
 		if (creature != patient && !CollisionManager::checkLineOfSight(creature, patient)) {
 			creature->sendSystemMessage("@container_error_message:container18");
+			return false;
+		}
+		if (!creature->canTreatInjuries()) {
+			creature->sendSystemMessage("@healing_response:healing_must_wait"); //You must wait before you can do that.
+			return false;
+		}
+		
+		if (!creatureTarget->isHealableBy(creature)) {
+			creature->sendSystemMessage("@healing:pvp_no_help"); //It would be unwise to help such a patient.
 			return false;
 		}
 		
@@ -211,11 +215,6 @@ public:
 		CreatureObject* creatureTarget = cast<CreatureObject*>( object.get());
 
 		Locker clocker(creatureTarget, creature);
-		
-		if (!creature->canTreatInjuries()) {
-			creature->sendSystemMessage("@healing_response:healing_must_wait"); //You must wait before you can do that.
-			return false;
-		}
 		
 		if (!canPerformSkill(creature, creatureTarget))
 			return GENERALERROR;
