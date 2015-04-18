@@ -76,7 +76,7 @@ public:
 		mindHealed = 0;
 
 		mindCost = 800;
-		mindWoundCost = 10;
+		mindWoundCost = 0;
 
 		range = 6;
 	}
@@ -209,7 +209,7 @@ public:
 			return GENERALERROR;
 		}
 
-		int healPower = (int) round(150 + System::random(600));
+		int healPower = ((creature->getSkillMod("healing_ability") * 4.2) + 200);
 
 		int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healPower);
 		int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healPower);
