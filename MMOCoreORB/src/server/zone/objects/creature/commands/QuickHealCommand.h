@@ -149,7 +149,7 @@ void deactivateInjuryTreatment(CreatureObject* creature, bool isRangedStim) {
 			msgPlayer << "You heal " << creatureTarget->getDisplayedName() << " for " << msgBody.toString() << msgTail.toString();
 			player->sendSystemMessage(msgPlayer.toString());
 		}
-		deactivateWoundTreatment(creature);
+		
 	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) {
@@ -236,7 +236,8 @@ void deactivateInjuryTreatment(CreatureObject* creature, bool isRangedStim) {
 
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 		creature->addShockWounds(5);
-
+		
+ 		deactivateInjuryTreatment(creature);
 		doAnimations(creature, creatureTarget);
 
 		return SUCCESS;
