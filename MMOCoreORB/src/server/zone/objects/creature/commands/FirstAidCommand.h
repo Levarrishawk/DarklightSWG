@@ -179,7 +179,7 @@ public:
 			
 		uint32 skillMod = creature->getSkillMod("healing_injury_treatment");
 			
-		creatureTarget->healDot(CreatureState::BLEEDING, skillMod* 0.5);
+		creatureTarget->healDot(CreatureState::BLEEDING, skillMod* 0.25);
 			
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 		
