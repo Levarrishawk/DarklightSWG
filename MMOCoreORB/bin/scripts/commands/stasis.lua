@@ -1,6 +1,6 @@
-RelocateCommand = {
+StasisCommand = {
         name = "stasis",
 
 }
 
-AddCommand(RelocateCommand)
+AddCommand(StasisCommand)
