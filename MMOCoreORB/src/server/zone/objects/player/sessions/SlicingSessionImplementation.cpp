@@ -233,9 +233,9 @@ int SlicingSessionImplementation::getSlicingSkill(CreatureObject* slicer) {
 
 	String skill0 = "combat_smuggler_novice";
 	String skill1 = "combat_smuggler_slicing_01";
-	String skill2 = "combat_smuggler_slicing_02";
+	String skill2 = "combat_smuggler_spice_02";
 	String skill3 = "combat_smuggler_slicing_03";
-	String skill4 = "combat_smuggler_slicing_04";
+	String skill4 = "combat_smuggler_spice_04";
 	String skill5 = "combat_smuggler_master";
 
 	if (slicer->hasSkill(skill5))
