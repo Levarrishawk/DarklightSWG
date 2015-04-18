@@ -90,13 +90,9 @@ public:
 			creature->doAnimation("heal_other");
 	}
 	
-void deactivateInjuryTreatment(CreatureObject* creature, bool isRangedStim) {
-		float modSkill = 0.0f;
-
-		if (isRangedStim)
-			modSkill = (float)creature->getSkillMod("healing_range_speed");
-		else
-			modSkill = (float)creature->getSkillMod("healing_injury_speed");
+void deactivateInjuryTreatment(CreatureObject* creature) {
+	
+		float modSkill = (float)creature->getSkillMod("healing_injury_speed");
 
 		int delay = (int)round(20.0f - (modSkill / 5));
 
