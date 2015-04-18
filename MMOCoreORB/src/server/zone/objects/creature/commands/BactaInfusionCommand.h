@@ -65,7 +65,7 @@ public:
 			return INVALIDLOCOMOTION;
 			
 		Reference<BactaInfusionTickTask*> biTask = new BactaInfusionTickTask(creature, creatureTarget);
-		creatureTarget->addPendingTask("BactaInfusionTickTask", fctTask, 6000);
+		creatureTarget->addPendingTask("BactaInfusionTickTask", biTask, 6000);
 
 		return SUCCESS;
 	}
