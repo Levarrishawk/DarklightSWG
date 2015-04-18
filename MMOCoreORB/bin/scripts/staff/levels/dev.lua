@@ -1,7 +1,7 @@
 dev = {
 	level = 14,
 	name = "dev",
-	tag = "Darklight Developer",
+	tag = "Darklight QA Lead",
 	skills = {
 		"admin_base",
 		"admin_debug_01",
