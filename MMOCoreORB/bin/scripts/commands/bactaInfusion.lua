@@ -1,6 +1,6 @@
-RelocateCommand = {
+BactaInfusionCommand = {
         name = "bactaInfusion",
 
 }
 
-AddCommand(RelocateCommand)
+AddCommand(BactaInfusionCommand)
