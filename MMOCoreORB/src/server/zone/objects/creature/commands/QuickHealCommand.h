@@ -135,6 +135,7 @@ public:
 			msgPlayer << "You heal " << creatureTarget->getDisplayedName() << " for " << msgBody.toString() << msgTail.toString();
 			player->sendSystemMessage(msgPlayer.toString());
 		}
+		deactivateWoundTreatment(creature);
 	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) {
@@ -223,7 +224,6 @@ public:
 		creature->addShockWounds(5);
 
 		doAnimations(creature, creatureTarget);
-		deactivateWoundTreatment(creature);
 
 		return SUCCESS;
 	}
