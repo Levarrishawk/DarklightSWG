@@ -92,23 +92,10 @@ public:
 	
 	void deactivateInjuryTreatment(CreatureObject* creature) {
 	
-		float modSkill = (float)creature->getSkillMod("healing_injury_speed");
-
-		int delay = 10;
-
-		if (creature->hasBuff(BuffCRC::FOOD_HEAL_RECOVERY)) {
-			DelayedBuff* buff = cast<DelayedBuff*>( creature->getBuff(BuffCRC::FOOD_HEAL_RECOVERY));
-
-			if (buff != NULL) {
-				float percent = buff->getSkillModifierValue("heal_recovery");
-
-				delay = round(delay * (100.0f - percent) / 100.0f);
-			}
-		}
-
-		//Force the delay to be at least 4 seconds.
-		delay = (delay < 10) ? 10 : delay;
-
+		int modSkill = (creature->getSkillMod("healing_injury_speed") * 0.1);
+		
+		int delay = 18 - modSkill;
+		
 		StringIdChatParameter message("healing_response", "healing_response_58"); //You are now ready to heal more damage.
 		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatment");
 		creature->addPendingTask("injuryTreatment", task, delay * 1000);
