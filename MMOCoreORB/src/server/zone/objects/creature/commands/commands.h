@@ -844,7 +844,13 @@
 #include "InspacereloadCommand.h"
 #include "InspacerrCommand.h"
 #include "RequestSpaceTrainerCommand.h"
-
+#include "BactaBombCommand.h"
+#include "BactaJabCommand.h"
+#include "BactaInfusionCommand.h"
+#include "BactaCureCommand.h"
+#include "StasisCommand.h"
+#include "StasisOtherCommand.h"
+#include "CalamityCommand.h"
 
 
 
