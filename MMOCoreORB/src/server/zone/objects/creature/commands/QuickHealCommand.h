@@ -90,18 +90,32 @@ public:
 			creature->doAnimation("heal_other");
 	}
 	
-	void deactivateWoundTreatment(CreatureObject* creature) {
-		float modSkill = (float)creature->getSkillMod("healing_injury_speed");
+void deactivateInjuryTreatment(CreatureObject* creature, bool isRangedStim) {
+		float modSkill = 0.0f;
 
-		int delay = (int)round((modSkill * -(2.0f / 25.0f)) + 20.0f);
+		if (isRangedStim)
+			modSkill = (float)creature->getSkillMod("healing_range_speed");
+		else
+			modSkill = (float)creature->getSkillMod("healing_injury_speed");
 
+		int delay = (int)round(20.0f - (modSkill / 5));
 
-		//Force the delay to be at least 3 seconds.
-		delay = (delay < 3) ? 3 : delay;
+		if (creature->hasBuff(BuffCRC::FOOD_HEAL_RECOVERY)) {
+			DelayedBuff* buff = cast<DelayedBuff*>( creature->getBuff(BuffCRC::FOOD_HEAL_RECOVERY));
 
-		StringIdChatParameter message("healing_response", "healing_response_59"); //You are now ready to heal more wounds or apply more enhancements.
-		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "woundTreatment");
-		creature->addPendingTask("woundTreatment", task, delay * 1000);
+			if (buff != NULL) {
+				float percent = buff->getSkillModifierValue("heal_recovery");
+
+				delay = round(delay * (100.0f - percent) / 100.0f);
+			}
+		}
+
+		//Force the delay to be at least 4 seconds.
+		delay = (delay < 4) ? 4 : delay;
+
+		StringIdChatParameter message("healing_response", "healing_response_58"); //You are now ready to heal more damage.
+		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatment");
+		creature->addPendingTask("injuryTreatment", task, delay * 1000);
 	}
 
 	void sendHealMessage(CreatureObject* creature, CreatureObject* creatureTarget, int healthDamage, int actionDamage) {
