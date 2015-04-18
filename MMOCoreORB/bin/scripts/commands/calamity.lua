@@ -1,6 +1,6 @@
-RelocateCommand = {
+CalamityCommand = {
         name = "calamity",
 
 }
 
-AddCommand(RelocateCommand)
+AddCommand(CalamityCommand)
