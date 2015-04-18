@@ -77,9 +77,9 @@ public:
 		creatureTarget->playEffect("clienteffect/bacta_jab.cef", "");
 
 		if (creature == creatureTarget)
-			creature->doAnimation("heal_self");
+			creature->playEffect("clienteffect/bacta_jab.cef", "");
 		else
-			creature->doAnimation("heal_other");
+			creature->playEffect("clienteffect/bacta_jab.cef", "");
 	}
 
 	void deactivateInjuryTreatment(CreatureObject* creature) {
