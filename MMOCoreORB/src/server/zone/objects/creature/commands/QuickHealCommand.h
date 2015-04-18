@@ -181,6 +181,8 @@ public:
 			creature->sendSystemMessage("@container_error_message:container18");
 			return false;
 		}
+		if ((patient->isAiAgent() && !patient->isPet()) || patient->isDroidObject() || patient->isDead() || patient->isRidingMount() || patient->isAttackableBy(creature))
+			patient = creature;
 
 		return true;
 	}
