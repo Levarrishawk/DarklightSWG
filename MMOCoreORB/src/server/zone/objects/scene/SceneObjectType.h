@@ -342,6 +342,9 @@ public:
 	const static int SHIPCOUNTERMEASURE = 0x4000000E;
 	const static int SHIPWEAPONLAUNCHER = 0x4000000F;
 	const static int SHIPCOUNTERMEASURELAUNCHER = 0x40000010;
+	
+	//New crc
+	const static int SPECIALARMORCOMPONENT = 0x400A;
 };
 
 #endif /* SCENEOBJECTTYPE_H_ */
