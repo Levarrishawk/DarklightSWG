@@ -98,13 +98,11 @@ public:
 
 		StringBuffer msgPlayer, msgTarget, msgBody, msgTail;
 
-		if (healthDamage > 0 && actionDamage > 0) {
-			msgBody << healthDamage << " health and " << actionDamage << " action";
+		if (healthDamage > 0) {
+			msgBody << healthDamage << " health damage";
 		} else if (healthDamage > 0) {
-			msgBody << healthDamage << " health";
-		} else if (actionDamage > 0) {
-			msgBody << actionDamage << " action";
-		} else {
+			msgBody << healthDamage << " health"; 
+		}else {
 			return; //No damage to heal.
 		}
 
@@ -168,28 +166,18 @@ public:
 			return GENERALERROR;
 		}
 
-		if (creature->isInCombat()) {
-			creature->sendSystemMessage("You cannot do that while in Combat.");
-			return GENERALERROR;
-		}
-
-		if (creatureTarget->isInCombat()) {
-			creature->sendSystemMessage("You cannot do that while your target is in Combat.");
-			return GENERALERROR;
-		}
-
 		if (!creatureTarget->isHealableBy(creature)) {
 			creature->sendSystemMessage("@healing:pvp_no_help");  //It would be unwise to help such a patient.
 			return GENERALERROR;
 		}
 
-		if (creature->getHAM(CreatureAttribute::MIND) < abs(mindCost)) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
+		if (creature->getHAM(CreatureAttribute::ACTION) < abs(mindCost)) {
+			creature->sendSystemMessage("You do not have enough action to do that."); //You do not have enough mind to do that.
 			return GENERALERROR;
 		}
 
 
-		if (!creatureTarget->hasDamage(CreatureAttribute::HEALTH) && !creatureTarget->hasDamage(CreatureAttribute::ACTION)) {
+		if (!creatureTarget->hasDamage(CreatureAttribute::HEALTH)) {
 			if (creatureTarget == creature)
 				creature->sendSystemMessage("@healing_response:healing_response_61"); //You have no damage to heal.
 			else if (creatureTarget->isPlayerCreature()) {
@@ -215,12 +203,10 @@ public:
 			playerManager->sendBattleFatigueMessage(creature, creatureTarget);
 		}
 
-		sendHealMessage(creature, creatureTarget, healedHealth, healedAction);
+		sendHealMessage(creature, creatureTarget, healedHealth);
 
-		creature->inflictDamage(creature, CreatureAttribute::MIND, mindCost, false);
-		creature->addWounds(CreatureAttribute::FOCUS, mindWoundCost, true);
-		creature->addWounds(CreatureAttribute::WILLPOWER, mindWoundCost, true);
-		creature->addShockWounds(2);
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
+		creature->addShockWounds(5);
 
 		doAnimations(creature, creatureTarget);
 
