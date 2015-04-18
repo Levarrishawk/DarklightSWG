@@ -230,22 +230,24 @@ public:
 
 			return GENERALERROR;
 		}
-		int healDisease = creatureTarget->healDot(CreatureState::DISEASED, 300);
-		int healPoison = creatureTarget->healDot(CreatureState::POISONED, 300);
+		
 		int roll = (System::random(4));
-		if (roll == 0)
+		
+		if (roll == 0){
 			creatureTarget->removeStateBuff(CreatureState::STUNNED);
-		else if (roll == 1)
+		}else if (roll == 1){
 			creatureTarget->removeStateBuff(CreatureState::DIZZY);
-		else if (roll == 2)
+		}else if (roll == 2){
 			creatureTarget->removeStateBuff(CreatureState::BLINDED);
-		else if (roll == 3)
+		}else if (roll == 3){
 			creatureTarget->removeStateBuff(CreatureState::INTIMIDATED);
-
+		}else{
+			creatureTarget->removeStateBuff(CreatureState::STUNNED);
+			creatureTarget->removeStateBuff(CreatureState::DIZZY);
+			creatureTarget->removeStateBuff(CreatureState::BLINDED);
+			creatureTarget->removeStateBuff(CreatureState::INTIMIDATED);
+		}
 		int healPower = (creature->getSkillMod("combat_healing_ability") * 3);
-
-		int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healPower);
-		int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healPower);
 
 		if (creature->isPlayerCreature()) {
 			PlayerManager* playerManager = server->getZoneServer()->getPlayerManager();
@@ -256,6 +258,8 @@ public:
 
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 		creature->addShockWounds(5);
+		creatureTarget->healDot(CreatureState::DISEASED, 100);
+		creatureTarget->healDot(CreatureState::POISONED, 100);
 		
  		deactivateInjuryTreatment(creature);
 		doAnimations(creature, creatureTarget);
