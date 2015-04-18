@@ -155,46 +155,11 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 			
-		if (target->isDead())
-			return GENERALERROR;
-
-		if (!creature->canTreatWounds()) {
-			creature->sendSystemMessage("@healing_response:enhancement_must_wait"); //You must wait before you can heal wounds or apply enhancements again.
-			return GENERALERROR;
-		}
-
-		if (creature->isProne() || creature->isMeditating()) {
-			creature->sendSystemMessage("@error_message:wrong_state"); //You cannot complete that action while in your current state.
-			return GENERALERROR;
-		}
-
-		if (creature->isRidingMount()) {
-			creature->sendSystemMessage("@error_message:survey_on_mount"); //You cannot perform that action while mounted on a creature or driving a vehicle.
-			return GENERALERROR;
-		}
-
-		if (creature->getHAM(CreatureAttribute::ACTION) < mindCost) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
-			return GENERALERROR;
-		}
-
-		if (creature != target && !CollisionManager::checkLineOfSight(creature, target)) {
-			creature->sendSystemMessage("@container_error_message:container18");
-			return GENERALERROR;
-		}
 		if (!creature->canTreatInjuries()) {
 			creature->sendSystemMessage("@healing_response:healing_must_wait"); //You must wait before you can do that.
 			return GENERALERROR;
 		}
-		
-		if ((target->isAiAgent() && !target->isPet()) || target->isDroidObject() || target->isDead() || target->isRidingMount() || target->isAttackableBy(creature))
-			target = creature;
-		
-		if (!target->isHealableBy(creature)) {
-			creature->sendSystemMessage("@healing:pvp_no_help"); //It would be unwise to help such a target.
-			return GENERALERROR;
-		}
-		
+	
 		ManagedReference<SceneObject*> object = server->getZoneServer()->getObject(target);
 
 		if (object != NULL) {
@@ -210,13 +175,39 @@ public:
 		} else
 			object = creature;
 
-		CreatureObject* creatureTarget = cast<CreatureObject*>( object.get());
+
+		CreatureObject* creatureTarget = cast<CreatureObject*>(object.get());
 
 		Locker clocker(creatureTarget, creature);
-		
-		if (!creature->isInRange(creatureTarget, range + creatureTarget->getTemplateRadius() + creature->getTemplateRadius()))
-			return TOOFAR;		
 
+		if ((creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
+			creatureTarget = creature;
+
+		if (!creatureTarget->isInRange(creature, range + creatureTarget->getTemplateRadius() + creature->getTemplateRadius()))
+			return TOOFAR;
+
+		uint8 attribute = findAttribute(creatureTarget);
+
+		if (creature->isProne() || creature->isMeditating()) {
+			creature->sendSystemMessage("@error_message:wrong_state"); //You cannot complete that action while in your current state.
+			return GENERALERROR;
+		}
+
+		if (creature->isRidingMount()) {
+			creature->sendSystemMessage("@error_message:survey_on_mount"); //You cannot perform that action while mounted on a creature or driving a vehicle.
+			return GENERALERROR;
+		}
+		
+		if (!creatureTarget->isHealableBy(creature)) {
+			creature->sendSystemMessage("@healing:pvp_no_help");  //It would be unwise to help such a patient.
+			return GENERALERROR;
+		}
+
+		if (creature->getHAM(CreatureAttribute::ACTION) < mindCost) {
+			creature->sendSystemMessage("You do not have enough action to do that."); //You do not have enough mind to do that.
+			return GENERALERROR;
+		}
+		
 		if (!creatureTarget->hasDamage(CreatureAttribute::HEALTH)) {
 			if (creatureTarget == creature)
 				creature->sendSystemMessage("@healing_response:healing_response_61"); //You have no damage to heal.
