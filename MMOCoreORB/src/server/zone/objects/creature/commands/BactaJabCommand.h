@@ -77,9 +77,9 @@ public:
 		creatureTarget->playEffect("clienteffect/bacta_jab.cef", "");
 
 		if (creature == creatureTarget)
-			creature->playEffect("clienteffect/bacta_jab.cef", "");
+			creature->playEffect("clienteffect/heal_self.cef", "");
 		else
-			creature->playEffect("clienteffect/bacta_jab.cef", "");
+			creature->playEffect("clienteffect/heal_other.cef", "");
 	}
 
 	void deactivateInjuryTreatment(CreatureObject* creature) {
@@ -149,6 +149,7 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
+			
 		if (!creature->canTreatInjuries()) {
 			creature->sendSystemMessage("@healing_response:healing_must_wait"); //You must wait before you can do that.
 			return GENERALERROR;
