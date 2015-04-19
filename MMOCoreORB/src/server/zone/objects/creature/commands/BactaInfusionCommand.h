@@ -98,6 +98,10 @@ public:
 			return GENERALERROR;
 		if ((creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
 			creatureTarget = creature;
+		if (!CollisionManager::checkLineOfSight(creature, creatureTarget)) {
+			creature->sendSystemMessage("@container_error_message:container18");
+			return GENERALERROR;
+		}
 		Reference<BactaInfusionTickTask*> biCheck = creatureTarget->getPendingTask("BactaInfusionTickTask").castTo<BactaInfusionTickTask*>();
 
 		if (biCheck != NULL) {
