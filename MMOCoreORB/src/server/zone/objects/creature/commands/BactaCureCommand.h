@@ -106,10 +106,6 @@ public:
 		if (!creatureTarget->isDiseased()) {
 			return false;
 		}
-
-		if (!creatureTarget->isBleeding()) {
-			return false;
-		}	
 		
 		return true;
 	}
