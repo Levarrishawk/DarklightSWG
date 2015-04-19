@@ -244,9 +244,6 @@ public:
 			revivePack = inventory->getContainerObject(objectId).castTo<RevivePack*>();
 		}
 
-		if (revivePack == NULL)
-			revivePack = findRevivePack(creature);
-
 		if (!canPerformSkill(creature, creatureTarget, revivePack))
 			return 0;
 
@@ -255,7 +252,6 @@ public:
 
 		int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healthToHeal);
 		int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, actionToHeal);
-		int healedMind = creatureTarget->healDamage(creature, CreatureAttribute::MIND, mindToHeal);
 
 		creatureTarget->setPosture(CreaturePosture::UPRIGHT);
 
