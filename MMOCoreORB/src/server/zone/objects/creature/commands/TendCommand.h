@@ -289,10 +289,7 @@ public:
 
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 		awardXp(creature, "medical", 100);
-		//creature->addWounds(CreatureAttribute::FOCUS, mindWoundCost);
-		//creature->addWounds(CreatureAttribute::WILLPOWER, mindWoundCost);
-		//creature->addShockWounds(2);
-
+		deactivateInjuryTreatment(creature);
 		doAnimations(creature, creatureTarget);
 
 		return SUCCESS;
