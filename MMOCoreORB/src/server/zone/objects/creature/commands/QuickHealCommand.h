@@ -161,11 +161,6 @@ public:
 			return GENERALERROR;
 		}
 		
-		if (!CollisionManager::checkLineOfSight(creature, target)) {
-			creature->sendSystemMessage("@container_error_message:container18");
-			return GENERALERROR;
-		}
-	
 		ManagedReference<SceneObject*> object = server->getZoneServer()->getObject(target);
 
 		if (object != NULL) {
@@ -185,7 +180,11 @@ public:
 		CreatureObject* creatureTarget = cast<CreatureObject*>(object.get());
 
 		Locker clocker(creatureTarget, creature);
-
+		
+		if (!CollisionManager::checkLineOfSight(creature, creatureTarget)) {
+			creature->sendSystemMessage("@container_error_message:container18");
+			return GENERALERROR;
+		}
 		if ((creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
 			creatureTarget = creature;
 
