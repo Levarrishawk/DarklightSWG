@@ -192,7 +192,12 @@ public:
 		CreatureObject* creatureTarget = cast<CreatureObject*>(object.get());
 
 		Locker clocker(creatureTarget, creature);
-
+		
+		if (!creature->canTreatInjuries()) {
+			creature->sendSystemMessage("@healing_response:healing_must_wait"); //You must wait before you can do that.
+			return GENERALERROR;
+		}
+		
 		if ((creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
 			creatureTarget = creature;
 
