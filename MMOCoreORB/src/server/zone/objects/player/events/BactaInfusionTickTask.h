@@ -36,7 +36,7 @@ public:
 				creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, health, true);
 				creatureTarget->playEffect("clienteffect/bacta_infusion.cef", "");
 				counter++;
-				this->reschedule(6000); // Reschedule in 6 seconds...
+				this->reschedule(8000); // Reschedule in 8 seconds...
 			}
 			else {
 
