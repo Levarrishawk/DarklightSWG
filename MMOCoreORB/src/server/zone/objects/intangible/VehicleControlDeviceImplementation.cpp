@@ -227,7 +227,7 @@ keep safe
  *
  *  Created on: 10/04/2010
  *      Author: victor
- */
+ *\
 
 #include "server/zone/objects/intangible/VehicleControlDevice.h"
 #include "server/zone/objects/intangible/VehicleControlObserver.h"
@@ -278,7 +278,7 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 		player->sendSystemMessage(waitTime);
 		return;
 	}
-*/
+*\
 
 	ManagedReference<SceneObject*> datapad = player->getSlottedObject("datapad");
 
@@ -326,7 +326,7 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 		Locker clocker(controlledObject, player);
 		spawnObject(player);
 	}
-	*/
+	*\
 	
 	Locker clocker(controlledObject, player);
 	spawnObject(player);
@@ -418,7 +418,7 @@ void VehicleControlDeviceImplementation::storeObject(CreatureObject* player, boo
 		return;
 
 	/*if (!controlledObject->isInQuadTree())
-		return;*/
+		return;*\
 
 	if (player->isRidingMount() && player->getParent() == controlledObject) {
 
