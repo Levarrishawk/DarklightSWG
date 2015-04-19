@@ -44,7 +44,7 @@
 ApplyPoisonCommand = {
         name = "applypoison",
                 
-	damageMultiplier = 2.5,
+	damageMultiplier = 0.15,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3,
@@ -61,11 +61,9 @@ ApplyPoisonCommand = {
 		100, 
 		60,
 		10,
-		2
+		150
 	  )
 	},
-	
-	animationCRC = hashCode("throw_grenade"),
 	
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	
