@@ -60,7 +60,7 @@ ApplyDiseaseCommand = {
 		100,
 		100, 
 		60,
-		10,
+		150,
 		25
 	  )
 	},
