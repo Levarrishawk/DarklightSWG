@@ -53,15 +53,15 @@ ApplyDiseaseCommand = {
         dotEffects = {
 	  DotEffect( 
 		DISEASED, 
-		{"resistance_fire", "fire_resist"},
+		{"resistance_disease", "disease_resist"},
 		HEALTH,
 		true,
 		100,
-		100,
-		100, 
-		60,
-		150,
-		25
+		1,
+		1, 
+		1,
+		1,
+		1
 	  )
 	},
 
