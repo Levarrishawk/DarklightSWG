@@ -43,7 +43,7 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 	if (tradeContainer != NULL) {
 		server->getZoneServer()->getPlayerManager()->handleAbortTradeMessage(player);
 	}
-
+/*
 	if(player->getPendingTask("call_mount") != NULL) {
 		StringIdChatParameter waitTime("pet/pet_menu", "call_delay_finish_vehicle");
 		Time nextExecution;
@@ -54,6 +54,7 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 		player->sendSystemMessage(waitTime);
 		return;
 	}
+*/
 
 	ManagedReference<SceneObject*> datapad = player->getSlottedObject("datapad");
 
@@ -78,7 +79,7 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 			}
 		}
 	}
-
+/*
 	if(player->getCurrentCamp() == NULL && player->getCityRegion() == NULL) {
 
 		Reference<CallMountTask*> callMount = new CallMountTask(_this.get(), player, "call_mount");
@@ -101,6 +102,10 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 		Locker clocker(controlledObject, player);
 		spawnObject(player);
 	}
+	*/
+	
+	Locker clocker(controlledObject, player);
+	spawnObject(player);
 
 }
 
@@ -159,7 +164,7 @@ void VehicleControlDeviceImplementation::spawnObject(CreatureObject* player) {
 	if (vehicle != NULL && controlledObject->getServerObjectCRC() == 0x32F87A54) // Jetpack
 	{
 	
-		controlledObject->setCustomizationVariable("/private/index_hover_height", 40, true); // Illusion of flying.
+		controlledObject->setCustomizationVariable("/private/index_hover_height", 50, true); // Illusion of flying.
 		player->executeObjectControllerAction(String("mount").hashCode(), controlledObject->getObjectID(), ""); // Auto mount.
 		
 	}
