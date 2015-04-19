@@ -46,7 +46,6 @@ which carries forward this exception.
 #define BACTAINFUSIONCOMMAND_H_
 
 #include "server/zone/objects/scene/SceneObject.h"
-#include "server/zone/managers/combat/CombatManager.h"
 #include "CombatQueueCommand.h"
 #include "server/zone/objects/player/events/BactaInfusionTickTask.h"
 
@@ -54,7 +53,8 @@ class BactaInfusionCommand : public CombatQueueCommand {
 public:
 
 	BactaInfusionCommand(const String& name, ZoneProcessServer* server)
-		: CombatQueueCommand(name, server) {
+		: ForcePowersQueueCommand(name, server) {
+
 	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) {
@@ -64,18 +64,40 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
-		Reference<BactaInfusionTickTask*> biCheck = creatureTarget->getPendingTask("BactaInfusionTickTask").castTo<BactaInfusionTickTask*>();
-		
-		if (biCheck != NULL) {
-				return SUCCESS;
+
+		if (isWearingArmor(creature)) {
+			return NOJEDIARMOR;
 		}
-			
-		Reference<BactaInfusionTickTask*> biTask = new BactaInfusionTickTask(creature, target);
-		target->addPendingTask("BactaInfusionTickTask", biTask, 6000);
+
+		int res = doCombatAction(creature, target);
+
+		//if (creature->isAiAgent()) { // If they are NPC, don't get past here.
+		//	return SUCCESS;
+		//}
+
+		if (res == SUCCESS) {
+
+			// Setup task, if choke attack was successful (5 tick amount.), AND if they don't already have one.
+
+			Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
+			ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
+
+			if (creatureTarget == NULL)
+				return GENERALERROR;
+
+			Reference<BactaInfusionTickTask*> biCheck = creatureTarget->getPendingTask("BactaInfusionTickTask").castTo<BactaInfusionTickTask*>();
+
+			if (biCheck != NULL) {
+				return SUCCESS;
+			}
+
+			Reference<BactaInfusionTickTask*> biTask = new BactaInfusionTickTask(creature, creatureTarget);
+			creatureTarget->addPendingTask("BactaInfusionTickTask", biTask, 6000);
+		}
 
 		return SUCCESS;
 	}
 
 };
 
-#endif
+#endif //BactaInfusionCOMMAND_H_
