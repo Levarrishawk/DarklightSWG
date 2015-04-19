@@ -42,7 +42,7 @@ VehicleControlDevice::~VehicleControlDevice() {
 
 
 
-void VehicleControlDevice::storeObject(CreatureObject* player) {
+void VehicleControlDevice::storeObject(CreatureObject* player, bool force) {
 	VehicleControlDeviceImplementation* _implementation = static_cast<VehicleControlDeviceImplementation*>(_getImplementation());
 	if (_implementation == NULL) {
 		if (!deployed)
