@@ -63,8 +63,43 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
+					
+		// Action cost of skill.
+		int actionCost = 600;
 
-		return doCombatAction(creature, target);
+		//Check for and deduct Force cost.
+
+		ManagedReference<PlayerObject*> playerObject = creature->getPlayerObject();
+		
+		if (creature->getHAM(CreatureAttribute::ACTION) < actionCost) {
+			creature->sendSystemMessage("You don't have enough action to preform this ability");
+			return false;
+		}
+		
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
+		
+		int duration = 15;
+		int cooldown = 65;
+		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
+		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
+		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
+		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, cooldown, BuffType::JEDI);
+
+		if (creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You cannot stasis at this time!");
+		}
+		else if (!creature->hasBuff(buffcrc2)) {
+			creature->sendSystemMessage("You apply a shield around yourself!");
+			buff->setSkillModifier("ability_armor", 50);
+			buff->setSpeedMultiplierMod(0.01f);
+			creature->addBuff(buff);
+			creature->addBuff(buff2);
+			creature->playEffect("clienteffect/stasis.cef", "");
+			}else {
+				creature->sendSystemMessage("You cannot stasis at this time.");
+			}
+
+		return SUCCESS;
 	}
 
 };
