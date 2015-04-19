@@ -3,15 +3,15 @@ krix_swift = Creature:new {
 	customName = "Krix SwiftShadow",
 	socialGroup = "death_watch",
 	faction = "",
-	level = 127,
+	level = 27,
 	chanceHit = 0.37,
-	damageMin = 1260,
-	damageMax = 1270,
-	baseXp = 12822,
-	baseHAM = 158100,
-	baseHAMmax = 159900,
+	damageMin = 260,
+	damageMax = 270,
+	baseXp = 2822,
+	baseHAM = 8100,
+	baseHAMmax = 9900,
 	armor = 0,
-	resists = {30,30,30,-1,30,-1,30,-1,-1},
+	resists = {0,0,0,-1,30,-1,30,-1,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -27,7 +27,6 @@ krix_swift = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_imperial_general_m.iff"},
-	scale = 1.3,
 	lootGroups = {
 		{
 			groups = {
@@ -46,8 +45,8 @@ krix_swift = Creature:new {
 		}
 	},
 	weapons = {"imperial_weapons_heavy"},
-	reactionStf = "@npc_reaction/fancy",
-	attacks = merge(brawlermaster)
+	reactionStf = "@npc_reaction/military",
+	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(krix_swift, "krix_swift")
