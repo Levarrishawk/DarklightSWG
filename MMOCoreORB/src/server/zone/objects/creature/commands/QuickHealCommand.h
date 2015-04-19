@@ -134,6 +134,20 @@ public:
 		}
 		
 	}
+	void awardXp(CreatureObject* creature, const String& type, int power) {
+		if (!creature->isPlayerCreature())
+			return;
+
+		CreatureObject* player = cast<CreatureObject*>(creature);
+
+		int amount = (int) round((float) power * 1.0f);
+
+		if (amount <= 0)
+			return;
+
+		PlayerManager* playerManager = server->getZoneServer()->getPlayerManager();
+		playerManager->awardExperience(player, type, amount, true);
+	}
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) {
 
 		if (!checkStateMask(creature))
@@ -224,6 +238,7 @@ public:
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 		creature->addShockWounds(5);
 		
+		awardXp(creature, "medical", 100);
  		deactivateInjuryTreatment(creature);
 		doAnimations(creature, creatureTarget);
 
