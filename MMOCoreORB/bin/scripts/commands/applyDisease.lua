@@ -44,7 +44,7 @@
 ApplyDiseaseCommand = {
         name = "applydisease",
         
-	damageMultiplier = 0.15,
+	damageMultiplier = 5,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 3,
