@@ -77,7 +77,7 @@ public:
 		}
 		
 		int duration = 15;
-		int cooldown = 65;
+		int cooldown = 85;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
 		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
