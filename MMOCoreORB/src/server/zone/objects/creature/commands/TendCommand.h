@@ -225,7 +225,11 @@ public:
 			creature->sendSystemMessage("You do not have enough action to do that."); //You do not have enough mind to do that.
 			return GENERALERROR;
 		}
-
+		
+		if (!CollisionManager::checkLineOfSight(creature, creatureTarget)) {
+			creature->sendSystemMessage("@container_error_message:container18");
+			return GENERALERROR;
+		}
 		float bfScale = 1 - creatureTarget->calculateBFRatio();
 
 		if (tendDamage) {
