@@ -182,6 +182,11 @@ public:
 			return GENERALERROR;
 		}
 		
+		if (!CollisionManager::checkLineOfSight(creature, creatureTarget)) {
+			creature->sendSystemMessage("@container_error_message:container18");
+			return GENERALERROR;
+		}
+		
 		if (!creatureTarget->hasDamage(CreatureAttribute::HEALTH)) {
 			if (creatureTarget == creature)
 				creature->sendSystemMessage("@healing_response:healing_response_61"); //You have no damage to heal.
