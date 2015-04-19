@@ -157,14 +157,14 @@ void VehicleControlDeviceImplementation::spawnObject(CreatureObject* player) {
 	if (zone == NULL)
 		return;
 
-	//controlledObject->insertToZone(player->getZone());
-	zone->transferObject(controlledObject, -1, true);
+	controlledObject->insertToZone(player->getZone());
+	//zone->transferObject(controlledObject, -1, true);
 	controlledObject->inflictDamage(player, 0, System::random(50), true);
 	
 	if (vehicle != NULL && controlledObject->getServerObjectCRC() == 0x32F87A54) // Jetpack
 	{
 	
-		controlledObject->setCustomizationVariable("/private/index_hover_height", 50, true); // Illusion of flying.
+		controlledObject->setCustomizationVariable("/private/index_hover_height", 40, true); // Illusion of flying.
 		player->executeObjectControllerAction(String("mount").hashCode(), controlledObject->getObjectID(), ""); // Auto mount.
 		
 	}
