@@ -1,4 +1,4 @@
-30--Copyright (C) 2010 <SWGEmu>6
+--Copyright (C) 2010 <SWGEmu>6
 
 --This File is part of Core3.30
 --This program is free softwar6; you can redistribute 
