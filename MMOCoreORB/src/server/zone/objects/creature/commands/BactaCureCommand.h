@@ -120,8 +120,8 @@ public:
 		int delay = 15 - modSkill;
 		
 		StringIdChatParameter message("healing_response", "healing_response_58"); //You are now ready to heal more damage.
-		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatment");
-		creature->addPendingTask("injuryTreatment", task, delay * 1000);
+		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatmentJab");
+		creature->addPendingTask("injuryTreatmentJab", task, delay * 1000);
 	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) {
