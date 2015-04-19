@@ -44,10 +44,10 @@
 ApplyPoisonCommand = {
         name = "applypoison",
                 
-	damageMultiplier = 5,
+	damageMultiplier = 4,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
 	
         dotEffects = {
@@ -67,7 +67,7 @@ ApplyPoisonCommand = {
 
 	animationCRC = 0,
 	poolsToDamage = HEALTH_ATTRIBUTE,
-	
+	effectString = "clienteffect/medic_poison.cef",
 	combatSpam = "applypoison",
 
 	range = -1
