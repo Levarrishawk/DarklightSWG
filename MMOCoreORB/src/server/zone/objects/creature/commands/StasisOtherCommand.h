@@ -81,8 +81,10 @@ public:
 		int cooldown = 65;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
+		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
 		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
-		ManagedReference<Buff*> buff2 = new Buff(creature, buffcrc2, cooldown, BuffType::JEDI);
+		ManagedReference<Buff*> buff2 = new Buff(creatureTarget, buffcrc2, cooldown, BuffType::JEDI);
+		
 
 		if (creature->hasBuff(buffcrc2) || creatureTarget->hasBuff(buffcrc2)) {
 			creature->sendSystemMessage("You cannot stasis at this time!");
