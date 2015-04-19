@@ -65,10 +65,6 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 
-		if (isWearingArmor(creature)) {
-			return NOJEDIARMOR;
-		}
-
 		int res = doCombatAction(creature, target);
 
 		//if (creature->isAiAgent()) { // If they are NPC, don't get past here.
