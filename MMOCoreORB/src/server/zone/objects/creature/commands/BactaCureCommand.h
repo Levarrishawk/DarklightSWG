@@ -74,7 +74,7 @@ public:
 	}
 	
 	void doAnimations(CreatureObject* creature, CreatureObject* creatureTarget) {
-		reatureTarget->playEffect("clienteffect/bacta_cure.cef", "");
+		creatureTarget->playEffect("clienteffect/bacta_cure.cef", "");
 
 		if (creature == creatureTarget)
 			creature->playEffect("clienteffect/heal_self.cef", "");
