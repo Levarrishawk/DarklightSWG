@@ -65,13 +65,10 @@ ApplyDiseaseCommand = {
 	  )
 	},
 
-	combatSpam = "applypoison",
-	animationCRC = 0,
-	
-	poolsToDamage = HEALTH_ATTRIBUTE,
-	
-	combatSpam = "applydisease",
 
+	animationCRC = 0,
+	poolsToDamage = HEALTH_ATTRIBUTE,
+	combatSpam = "applydisease",
 	range = -1
 }
 
