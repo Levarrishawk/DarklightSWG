@@ -81,6 +81,8 @@ public:
 		int cooldown = 65;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
+		
+		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
 		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
 		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
 		ManagedReference<Buff*> buff2 = new Buff(creatureTarget, buffcrc2, cooldown, BuffType::JEDI);
