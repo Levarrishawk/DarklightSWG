@@ -74,12 +74,12 @@ public:
 	}
 	
 	void doAnimations(CreatureObject* creature, CreatureObject* creatureTarget) {
-		//creatureTarget->playEffect("clienteffect/bacta_jab.cef", "");
+		reatureTarget->playEffect("clienteffect/bacta_cure.cef", "");
 
 		if (creature == creatureTarget)
-			creature->playEffect("clienteffect/bacta_jab.cef", "");
+			creature->playEffect("clienteffect/heal_self.cef", "");
 		else
-			creature->playEffect("clienteffect/bacta_jab.cef", "");
+			creature->playEffect("clienteffect/heal_other.cef", "");
 	}
 	bool checkTarget(CreatureObject* creature, CreatureObject* creatureTarget) {
 
