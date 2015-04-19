@@ -76,8 +76,6 @@ public:
 			return false;
 		}
 		
-		creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
-		
 		int duration = 15;
 		int cooldown = 65;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
@@ -95,6 +93,8 @@ public:
 			creature->addBuff(buff);
 			creature->addBuff(buff2);
 			creature->playEffect("clienteffect/stasis.cef", "");
+			creature->inflictDamage(creature, CreatureAttribute::ACTION, actionCost, false);
+			
 			}else {
 				creature->sendSystemMessage("You cannot stasis at this time.");
 			}
