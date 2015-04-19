@@ -44,10 +44,10 @@
 ApplyDiseaseCommand = {
         name = "applydisease",
         
-	damageMultiplier = 5,
+	damageMultiplier = 4,
 	speedMultiplier = 2.0,
 	healthCostMultiplier = 0,
-	actionCostMultiplier = 3,
+	actionCostMultiplier = 4,
 	mindCostMultiplier = 0,
 	
         dotEffects = {
@@ -67,6 +67,7 @@ ApplyDiseaseCommand = {
 
 
 	animationCRC = 0,
+	effectString = "clienteffect/medic_disease.cef",
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	combatSpam = "applydisease",
 	range = -1
