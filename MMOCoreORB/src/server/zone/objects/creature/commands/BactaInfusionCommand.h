@@ -96,7 +96,8 @@ public:
 
 		if (creatureTarget == NULL)
 			return GENERALERROR;
-
+		if ((creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
+			creatureTarget = creature;
 		Reference<BactaInfusionTickTask*> biCheck = creatureTarget->getPendingTask("BactaInfusionTickTask").castTo<BactaInfusionTickTask*>();
 
 		if (biCheck != NULL) {
