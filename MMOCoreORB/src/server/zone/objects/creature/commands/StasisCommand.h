@@ -90,7 +90,7 @@ public:
 		}
 		else if (!creature->hasBuff(buffcrc2)) {
 			creature->sendSystemMessage("You apply a shield around yourself!");
-			buff->setSkillModifier("ability_armor", 50);
+			buff->setSkillModifier("ability_armor", 60);
 			buff->setSpeedMultiplierMod(0.01f);
 			creature->addBuff(buff);
 			creature->addBuff(buff2);
