@@ -94,8 +94,9 @@ public:
 		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
 		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
 
-		if (creatureTarget == NULL)
-			return GENERALERROR;
+		if (creatureTarget == NULL) //target is no one?
+			creatureTarget = creature;//you're the target then... i hope.
+			
 		if ((creatureTarget->isAiAgent() && !creatureTarget->isPet()) || creatureTarget->isDroidObject() || creatureTarget->isDead() || creatureTarget->isRidingMount() || creatureTarget->isAttackableBy(creature))
 			creatureTarget = creature;
 		if (!CollisionManager::checkLineOfSight(creature, creatureTarget)) {
