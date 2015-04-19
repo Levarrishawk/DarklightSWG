@@ -81,23 +81,25 @@ public:
 		int cooldown = 65;
 		uint32 buffcrc = BuffCRC::FORCE_RANK_SUFFERING;
 		uint32 buffcrc2 = BuffCRC::FORCE_RANK_SERENITY;
+		uint32 buffcrc3 = BuffCRC::FORCE_RANK_SERENITY;
 		
 		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
 		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
-		ManagedReference<Buff*> buff = new Buff(creature, buffcrc, duration, BuffType::JEDI);
+		ManagedReference<Buff*> buff = new Buff(creatureTarget, buffcrc, duration, BuffType::JEDI);
 		ManagedReference<Buff*> buff2 = new Buff(creatureTarget, buffcrc2, cooldown, BuffType::JEDI);
+		ManagedReference<Buff*> buff3= new Buff(creature, buffcrc3, cooldown, BuffType::JEDI);
 		
 
-		if (creature->hasBuff(buffcrc2) || creatureTarget->hasBuff(buffcrc2)) {
+		if (creature->hasBuff(buffcrc3) || creatureTarget->hasBuff(buffcrc2)) {
 			creature->sendSystemMessage("You cannot stasis at this time!");
 		}
-		else if (!creature->hasBuff(buffcrc2)) {
+		else if (!creature->hasBuff(buffcrc3) || (creatureTarget->hasBuff(buffcrc2)) || (creatureTarget->hasBuff(buffcrc))) {
 			creature->sendSystemMessage("You apply a shield around your ally!");
 			buff->setSkillModifier("ability_armor", 50);
 			buff->setSpeedMultiplierMod(0.01f);
 			creatureTarget->addBuff(buff);
 			creatureTarget->addBuff(buff2);
-			creature->addBuff(buff2);
+			creature->addBuff(buff3);
 			creatureTarget->playEffect("clienteffect/stasis.cef", "");
 			}else {
 				creature->sendSystemMessage("You cannot stasis at this time.");
