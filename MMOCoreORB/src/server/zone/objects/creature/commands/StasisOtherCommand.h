@@ -95,7 +95,7 @@ public:
 		}
 		else if (!creature->hasBuff(buffcrc3) || (creatureTarget->hasBuff(buffcrc2)) || (creatureTarget->hasBuff(buffcrc))) {
 			creature->sendSystemMessage("You apply a shield around your ally!");
-			buff->setSkillModifier("ability_armor", 50);
+			buff->setSkillModifier("ability_armor", 60);
 			buff->setSpeedMultiplierMod(0.01f);
 			creatureTarget->addBuff(buff);
 			creatureTarget->addBuff(buff2);
