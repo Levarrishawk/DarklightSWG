@@ -64,7 +64,8 @@ ApplyPoisonCommand = {
 		150
 	  )
 	},
-	
+
+	animationCRC = 0,
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	
 	combatSpam = "applypoison",
