@@ -27,6 +27,7 @@ public:
 		Locker lockerC(creature);
 		Locker lockerCT(creatureTarget,creature);
 		if(creature != NULL && creatureTarget != NULL) {
+			int bonus = 0;
 			if (creature->hasSkill("science_combatmedic_master"))
 				bonus += 1;
 			int amountOfTicks = 5 + bonus;
