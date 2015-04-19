@@ -67,7 +67,7 @@ public:
 		actionHealed = 0;
 		mindHealed = 0;
 
-		mindCost = 300;
+		mindCost = 450;
 		mindWoundCost = 0;
 
 		range = 30;
