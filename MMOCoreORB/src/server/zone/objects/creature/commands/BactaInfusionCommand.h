@@ -53,7 +53,7 @@ class BactaInfusionCommand : public CombatQueueCommand {
 public:
 
 	BactaInfusionCommand(const String& name, ZoneProcessServer* server)
-		: ForcePowersQueueCommand(name, server) {
+		: CombatQueueCommand(name, server) {
 
 	}
 
