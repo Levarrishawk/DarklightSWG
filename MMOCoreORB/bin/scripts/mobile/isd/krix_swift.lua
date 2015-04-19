@@ -26,7 +26,7 @@ krix_swift = Creature:new {
 	optionsBitmask = 136,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_imperial_general_m.iff"},
+	templates = {"object/mobile/dressed_imperial_colonel_m.iff"},
 	lootGroups = {
 		{
 			groups = {
