@@ -227,7 +227,7 @@ public:
 			return GENERALERROR;
 		}
 
-		int healPower = ((creature->getSkillMod("healing_ability") * 4.2) + 200);
+		int healPower = ((creature->getSkillMod("healing_ability") * 4.2) + 300);
 
 		int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healPower);
 		int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, healPower);
