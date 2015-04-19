@@ -53,15 +53,15 @@ ApplyPoisonCommand = {
         dotEffects = {
 	  DotEffect( 
 		POISONED, 
-		{"resistance_fire", "fire_resist"},
+		{"resistance_poison", "poison_resist"},
 		HEALTH,
 		true,
+		1,
 		100,
-		100,
-		100, 
-		150,
-		150,
-		150
+		1, 
+		1,
+		1,
+		1
 	  )
 	},
 
