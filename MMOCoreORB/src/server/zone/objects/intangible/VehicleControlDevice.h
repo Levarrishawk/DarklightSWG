@@ -183,7 +183,7 @@ public:
 
 	VehicleControlDeviceImplementation(DummyConstructorParameter* param);
 
-	void storeObject(CreatureObject* player);
+	void storeObject(CreatureObject* player, bool force);
 
 	void generateObject(CreatureObject* player);
 
@@ -240,7 +240,7 @@ public:
 
 	void invokeMethod(sys::uint32 methid, DistributedMethod* method);
 
-	void storeObject(CreatureObject* player);
+	void storeObject(CreatureObject* player, bool force);
 
 	void generateObject(CreatureObject* player);
 
