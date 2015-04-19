@@ -160,6 +160,11 @@ public:
 			creature->sendSystemMessage("@healing_response:healing_must_wait"); //You must wait before you can do that.
 			return GENERALERROR;
 		}
+		
+		if (!CollisionManager::checkLineOfSight(creature, creatureTarget)) {
+			creature->sendSystemMessage("@container_error_message:container18");
+			return GENERALERROR;
+		}
 	
 		ManagedReference<SceneObject*> object = server->getZoneServer()->getObject(target);
 
