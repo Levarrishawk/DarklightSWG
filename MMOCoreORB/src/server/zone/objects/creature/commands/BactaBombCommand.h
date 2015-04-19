@@ -88,9 +88,9 @@ public:
 		
 		int delay = 32 - modSkill;
 		
-		StringIdChatParameter message("healing_response", "Bacta Bomb is ready to be used!"); //You are now ready to heal more damage.
-		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatment");
-		creature->addPendingTask("injuryTreatment", task, delay * 1000);
+		StringIdChatParameter message("healing_response", "bacta_bomb"); //You are now ready to heal more damage.
+		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatmentBomb");
+		creature->addPendingTask("injuryTreatmentBomb", task, delay * 1000);
 	}
 
 	void sendHealMessage(CreatureObject* creature, CreatureObject* creatureTarget, int healthDamage, int actionDamage) {
@@ -133,6 +133,7 @@ public:
 
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
+			
 		if (!creature->canTreatInjuries()) {
 			creature->sendSystemMessage("@healing_response:healing_must_wait"); //You must wait before you can do that.
 			return GENERALERROR;
