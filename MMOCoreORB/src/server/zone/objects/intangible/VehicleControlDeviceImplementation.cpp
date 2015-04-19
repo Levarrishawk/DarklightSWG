@@ -125,7 +125,7 @@ void VehicleControlDeviceImplementation::spawnObject(CreatureObject* player) {
 	if (vehicle != NULL && controlledObject->getServerObjectCRC() == 0x32F87A54) // Jetpack
 	{
 	
-		controlledObject->setCustomizationVariable("/private/index_hover_height", 180, true);//was 40  // Illusion of flying.
+		controlledObject->setCustomizationVariable("/private/index_hover_height", 40, true);//was 40  // Illusion of flying.
 		player->executeObjectControllerAction(String("mount").hashCode(), controlledObject->getObjectID(), ""); // Auto mount.
 		
 	}
