@@ -31,7 +31,7 @@ public:
 				bonus += 1;
 			int amountOfTicks = 5 + bonus;
 			if (counter < amountOfTicks && !creatureTarget->isIncapacitated() && !creatureTarget->isDead()) {
-				int health = (creature->getSkillMod("infusion") * 5)
+				int health = (creature->getSkillMod("infusion") * 5);
 				creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, health, true);
 				creatureTarget->playEffect("clienteffect/bacta_infusion.cef", "");
 				counter++;
