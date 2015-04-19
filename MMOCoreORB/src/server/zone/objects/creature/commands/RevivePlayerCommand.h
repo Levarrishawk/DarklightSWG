@@ -73,16 +73,6 @@ public:
 			return 0;
 		}
 
-		if (revivePack == NULL) {
-			creature->sendSystemMessage("@healing_response:cannot_resuscitate_kit"); //You cannot resuscitate someone without a resuscitation kit!
-			return false;
-		}
-
-		if (!creatureTarget->isResuscitable()) {
-			creature->sendSystemMessage("@healing_response:too_dead_to_resuscitate"); //Your target has been dead too long. There is no hope of resuscitation.
-			return false;
-		}
-
 		if (creature->isProne() || creature->isMeditating()) {
 			creature->sendSystemMessage("@error_message:wrong_state"); //You cannot complete that action while in your current state.
 			return false;
@@ -121,8 +111,8 @@ public:
 
 		}
 
-		if (creature->getHAM(CreatureAttribute::MIND) < mindCost) {
-			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.
+		if (creature->getHAM(CreatureAttribute::ACTION) < mindCost) {
+			creature->sendSystemMessage("You don't have enough action to do that."); //You do not have enough mind to do that.
 			return false;
 		}
 
@@ -134,6 +124,17 @@ public:
 			objectId = Long::valueOf(modifier);
 		else
 			objectId = 0;
+	}
+	
+	void deactivateInjuryTreatment(CreatureObject* creature) {
+	
+		int modSkill = (creature->getSkillMod("healing_range_speed") * 0.15);
+		
+		int delay = 120 - modSkill;
+		
+		StringIdChatParameter message("healing_response", "revive"); //You are now ready to heal more damage.
+		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatmentRevive");
+		creature->addPendingTask("injuryTreatmentRevive", task, delay * 1000);
 	}
 
 	void awardXp(CreatureObject* creature, const String& type, int power) {
@@ -150,7 +151,7 @@ public:
 		PlayerManager* playerManager = server->getZoneServer()->getPlayerManager();
 		playerManager->awardExperience(player, type, amount, true);
 	}
-
+/*
 	RevivePack* findRevivePack(CreatureObject* creature) {
 		SceneObject* inventory = creature->getSlottedObject("inventory");
 		int medicineUse = creature->getSkillMod("healing_ability");
@@ -179,6 +180,7 @@ public:
 
 		return NULL;
 	}
+*/
 
 	void doAnimations(CreatureObject* creature, CreatureObject* creatureTarget) {
 		creatureTarget->playEffect("clienteffect/healing_healwound.cef", "");
@@ -250,7 +252,6 @@ public:
 
 		int healthToHeal = MAX(1, (int) round(revivePack->getHealthHealed()));
 		int actionToHeal = MAX(1, (int) round(revivePack->getActionHealed()));
-		int mindToHeal = MAX(1, (int) round(revivePack->getMindHealed()));
 
 		int healedHealth = creatureTarget->healDamage(creature, CreatureAttribute::HEALTH, healthToHeal);
 		int healedAction = creatureTarget->healDamage(creature, CreatureAttribute::ACTION, actionToHeal);
@@ -258,19 +259,13 @@ public:
 
 		creatureTarget->setPosture(CreaturePosture::UPRIGHT);
 
-		int healedHealthWounds = creatureTarget->addWounds(CreatureAttribute::HEALTH, - (int) (round(revivePack->getHealthWoundHealed())));
-		int healedActionWounds = creatureTarget->addWounds(CreatureAttribute::ACTION, - (int) (round(revivePack->getActionWoundHealed())));
-		int healedMindWounds = creatureTarget->addWounds(CreatureAttribute::MIND, - (int) (round(revivePack->getMindWoundHealed())));
-
-		creature->inflictDamage(creature, CreatureAttribute::MIND, mindCost, false);
-
-		if (revivePack != NULL)
-			revivePack->decreaseUseCount();
-
-		int xpAmount = healedHealth + healedAction + healedMind + healedHealthWounds + healedActionWounds + healedMindWounds + 250;
+		int healedHealthWounds = creatureTarget->addWounds(CreatureAttribute::HEALTH, - 1);
+		int healedActionWounds = creatureTarget->addWounds(CreatureAttribute::ACTION, - 1);
 		
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
+		int xpAmount = healedHealth + healedAction + healedHealthWounds + healedActionWounds + 250;
+		deactivateInjuryTreatment(creature);
 		awardXp(creature, "medical", xpAmount);
-
 		doAnimations(creature, creatureTarget);
 
 		return SUCCESS;
