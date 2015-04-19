@@ -222,7 +222,7 @@ int VehicleControlDeviceImplementation::canBeDestroyed(CreatureObject* player) {
 
 keep safe
 
-/*
+\*
  * VehicleControlDeviceImplementation.cpp
  *
  *  Created on: 10/04/2010
@@ -267,7 +267,7 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 	if (tradeContainer != NULL) {
 		server->getZoneServer()->getPlayerManager()->handleAbortTradeMessage(player);
 	}
-/*
+\*
 	if(player->getPendingTask("call_mount") != NULL) {
 		StringIdChatParameter waitTime("pet/pet_menu", "call_delay_finish_vehicle");
 		Time nextExecution;
@@ -303,7 +303,7 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 			}
 		}
 	}
-/*
+\*
 	if(player->getCurrentCamp() == NULL && player->getCityRegion() == NULL) {
 
 		Reference<CallMountTask*> callMount = new CallMountTask(_this.get(), player, "call_mount");
@@ -417,7 +417,7 @@ void VehicleControlDeviceImplementation::storeObject(CreatureObject* player, boo
 	if (controlledObject == NULL)
 		return;
 
-	/*if (!controlledObject->isInQuadTree())
+	\*if (!controlledObject->isInQuadTree())
 		return;*\
 
 	if (player->isRidingMount() && player->getParent() == controlledObject) {
