@@ -109,8 +109,8 @@ object_tangible_wearables_armor_bone_armor_bone_s01_boots = object_tangible_wear
 	experimentalWeights = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
 	experimentalGroupTitles = {"null", "null", "null", "null", "exp_quality", "exp_durability", "null", "null", "null", "null", "null", "exp_resistance", "null"},
 	experimentalSubGroupTitles = {"null", "null", "sockets", "hit_points", "armor_effectiveness", "armor_integrity", "armor_health_encumbrance", "armor_action_encumbrance", "armor_mind_encumbrance", "armor_rating", "armor_special_type", "armor_special_effectiveness", "armor_special_integrity"},
-	experimentalMin = {0, 0, 0, 1000, 30, 7500, 0, 0, 0, 1, 2, 5, 7500},
-	experimentalMax = {0, 0, 0, 1000, 60, 12500, 0, 0, 0, 1, 2, 30, 12500},
+	experimentalMin = {0, 0, 0, 1000, 30, 7500, 0, 0, 0, 1, 2, 30, 7500},
+	experimentalMax = {0, 0, 0, 1000, 60, 12500, 0, 0, 0, 1, 2, 60, 12500},
 	experimentalPrecision = {0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0},
 	experimentalCombineType = {0, 0, 4, 1, 1, 1, 1, 1, 1, 4, 4, 4, 1},
 }
