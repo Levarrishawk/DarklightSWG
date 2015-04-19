@@ -50,10 +50,28 @@ which carries forward this exception.
 #include "server/zone/objects/player/events/BactaInfusionTickTask.h"
 
 class BactaInfusionCommand : public CombatQueueCommand {
+	int mindCost;
+	int mindWoundCost;
+
+	int healthHealed;
+	int actionHealed;
+	int mindHealed;
+
+	float speed;
+	float range;
 public:
 
 	BactaInfusionCommand(const String& name, ZoneProcessServer* server)
 		: CombatQueueCommand(name, server) {
+			
+		healthHealed = 0;
+		actionHealed = 0;
+		mindHealed = 0;
+
+		mindCost = 800;
+		mindWoundCost = 0;
+
+		range = 6;
 
 	}
 
@@ -87,6 +105,7 @@ public:
 
 		Reference<BactaInfusionTickTask*> biTask = new BactaInfusionTickTask(creature, creatureTarget);
 		creatureTarget->addPendingTask("BactaInfusionTickTask", biTask, 6000);
+		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 
 		return SUCCESS;
 	}
