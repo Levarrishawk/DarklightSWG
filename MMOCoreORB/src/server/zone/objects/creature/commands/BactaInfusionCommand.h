@@ -71,25 +71,22 @@ public:
 		//	return SUCCESS;
 		//}
 
-		if (res == SUCCESS) {
-
 			// Setup task, if choke attack was successful (5 tick amount.), AND if they don't already have one.
 
-			Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
-			ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
+		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
+		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
 
-			if (creatureTarget == NULL)
-				return GENERALERROR;
+		if (creatureTarget == NULL)
+			return GENERALERROR;
 
-			Reference<BactaInfusionTickTask*> biCheck = creatureTarget->getPendingTask("BactaInfusionTickTask").castTo<BactaInfusionTickTask*>();
+		Reference<BactaInfusionTickTask*> biCheck = creatureTarget->getPendingTask("BactaInfusionTickTask").castTo<BactaInfusionTickTask*>();
 
-			if (biCheck != NULL) {
-				return SUCCESS;
-			}
-
-			Reference<BactaInfusionTickTask*> biTask = new BactaInfusionTickTask(creature, creatureTarget);
-			creatureTarget->addPendingTask("BactaInfusionTickTask", biTask, 6000);
+		if (biCheck != NULL) {
+			return SUCCESS;
 		}
+
+		Reference<BactaInfusionTickTask*> biTask = new BactaInfusionTickTask(creature, creatureTarget);
+		creatureTarget->addPendingTask("BactaInfusionTickTask", biTask, 6000);
 
 		return SUCCESS;
 	}
