@@ -136,7 +136,7 @@ class VehicleControlDevice : public ControlDevice {
 public:
 	VehicleControlDevice();
 
-	void storeObject(CreatureObject* player);
+	void storeObject(CreatureObject* player, bool force);
 
 	void generateObject(CreatureObject* player);
 
