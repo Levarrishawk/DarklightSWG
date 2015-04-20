@@ -156,4 +156,4 @@ namespace guild {
 }
 using namespace server::zone::objects::guild;
 
-#endif \* GUILDMEMBERINFO_H_ *\
+#endif \* GUILDMEMBERINFO_H_ */
