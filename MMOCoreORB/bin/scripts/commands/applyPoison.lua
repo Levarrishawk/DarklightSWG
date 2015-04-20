@@ -67,7 +67,7 @@ ApplyPoisonCommand = {
 
 	animationCRC = 0,
 	poolsToDamage = HEALTH_ATTRIBUTE,
-	effectString = "clienteffect/combat_grenade_glop.cef",
+	effectString = "clienteffect/combat_grenade_poison.cef",
 	combatSpam = "applyPoison",
 
 	range = -1
