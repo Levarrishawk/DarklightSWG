@@ -24,7 +24,6 @@ CalamityCommand = {
 
 	animationCRC = 0,
 	effectString = "clienteffect/calamity.cef",
-	effectString = "clienteffect/combat_grenade_cryoban.cef",
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	combatSpam = "calamity",
 	range = -1
