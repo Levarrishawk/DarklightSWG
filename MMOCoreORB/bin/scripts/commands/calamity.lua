@@ -8,6 +8,8 @@ CalamityCommand = {
 	mindCostMultiplier = 0,
 	
 	skillMods = {{"ranged_defense", -40}},
+	successMessage = "trap_ranged_def_1_effect",
+	failMessage = "sys_miss",
 	
 	dotEffects = {
 	  DotEffect( 
