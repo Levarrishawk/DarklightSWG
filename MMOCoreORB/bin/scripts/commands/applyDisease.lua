@@ -57,8 +57,8 @@ ApplyDiseaseCommand = {
 		HEALTH,
 		true,
 		20,
-		200,
-		200, 
+		50,
+		50, 
 		75,
 		100,
 		100
