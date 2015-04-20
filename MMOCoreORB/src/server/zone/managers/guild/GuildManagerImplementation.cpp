@@ -608,7 +608,7 @@ void GuildManagerImplementation::sendGuildMemberOptionsTo(CreatureObject* player
 }
 
 void GuildManagerImplementation::sendGuildTransferTo(CreatureObject* player, GuildTerminal* guildTerminal) {
-
+/*
 	if ( !player->getPlayerObject()->hasSuiBoxWindowType( SuiWindowType::GUILD_TRANSFER_LEADER)) {
 
 		ManagedReference<SuiInputBox*> suiBox = new SuiInputBox(player, SuiWindowType::GUILD_TRANSFER_LEADER);
@@ -622,9 +622,11 @@ void GuildManagerImplementation::sendGuildTransferTo(CreatureObject* player, Gui
 		player->sendMessage(suiBox->generateMessage());
 
 	}
+	*/
 }
 
 void GuildManagerImplementation::sendTransferAckTo(CreatureObject* player, const String& newOwnerName, SceneObject* sceoTerminal){
+	/*
 	if(player->getFirstName().toLowerCase() == newOwnerName.toLowerCase())	{
 		player->sendSystemMessage("Cannot transfer guild to yourself");
 		return;
@@ -681,6 +683,7 @@ void GuildManagerImplementation::sendTransferAckTo(CreatureObject* player, const
 	} else {
 		player->sendSystemMessage("A transfer confirmation for " + target->getFirstName() + " is already pending");
 	}
+	*/
 }
 
 void GuildManagerImplementation::sendAcceptLotsTo(CreatureObject* newOwner, GuildTerminal* guildTerminal) {
@@ -708,6 +711,7 @@ void GuildManagerImplementation::sendAcceptLotsTo(CreatureObject* newOwner, Guil
 void GuildManagerImplementation::transferLeadership(CreatureObject* newLeader, CreatureObject* oldLeader, SceneObject* sceoTerminal){
 
 	oldLeader->sendSystemMessage("You cannot transfer leadership at this time.");
+}
 	
 
 /*
@@ -747,6 +751,7 @@ void GuildManagerImplementation::transferLeadership(CreatureObject* newLeader, C
 
 // pre: newOwner locked ... old owner not locked
 void GuildManagerImplementation::transferGuildHall(CreatureObject* newOwner, SceneObject* sceoTerminal) {
+	/*
 	if (sceoTerminal == NULL || !sceoTerminal->isTerminal())
 		return;
 
@@ -782,6 +787,7 @@ void GuildManagerImplementation::transferGuildHall(CreatureObject* newOwner, Sce
 				newOwner->sendSystemMessage("@player_structure:already_owner"); //You are already the owner.
 			}
 		}
+		*/
 }
 
 
