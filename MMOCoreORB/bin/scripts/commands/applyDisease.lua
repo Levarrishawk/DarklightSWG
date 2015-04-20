@@ -69,7 +69,7 @@ ApplyDiseaseCommand = {
 	animationCRC = 0,
 	effectString = "clienteffect/combat_grenade_glop.cef",
 	poolsToDamage = HEALTH_ATTRIBUTE,
-	combatSpam = "applydisease",
+	combatSpam = "applyDisease",
 	range = -1
 }
 
