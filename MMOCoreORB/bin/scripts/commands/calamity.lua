@@ -7,8 +7,24 @@ CalamityCommand = {
 	actionCostMultiplier = 2,
 	mindCostMultiplier = 0,
 	
+	dotEffects = {
+	  DotEffect( 
+		ONFIRE, 
+		{"resistance_fire", "fire_resist"},
+		HEALTH,
+		true,
+		20,
+		300,
+		300, 
+		75,
+		100,
+		100
+	  )
+	},
+
 	animationCRC = 0,
 	effectString = "clienteffect/calamity.cef",
+	effectString = "clienteffect/combat_grenade_cryoban.cef",
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	combatSpam = "calamity",
 	range = -1
