@@ -56,18 +56,18 @@ ApplyDiseaseCommand = {
 		{"resistance_disease", "disease_resist"},
 		HEALTH,
 		true,
+		20,
+		200,
+		200, 
+		75,
 		100,
-		1,
-		1, 
-		1,
-		1,
-		1
+		100
 	  )
 	},
 
 
 	animationCRC = 0,
-	effectString = "clienteffect/medic_disease.cef",
+	effectString = "clienteffect/combat_grenade_glop.cef",
 	poolsToDamage = HEALTH_ATTRIBUTE,
 	combatSpam = "applydisease",
 	range = -1
