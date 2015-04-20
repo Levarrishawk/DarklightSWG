@@ -56,18 +56,18 @@ ApplyPoisonCommand = {
 		{"resistance_poison", "poison_resist"},
 		HEALTH,
 		true,
-		1,
+		20,
+		200,
+		200, 
+		75,
 		100,
-		1, 
-		1,
-		1,
-		1
+		100
 	  )
 	},
 
 	animationCRC = 0,
 	poolsToDamage = HEALTH_ATTRIBUTE,
-	effectString = "clienteffect/medic_poison.cef",
+	effectString = "clienteffect/combat_grenade_glop.cef",
 	combatSpam = "applypoison",
 
 	range = -1
