@@ -706,6 +706,11 @@ void GuildManagerImplementation::sendAcceptLotsTo(CreatureObject* newOwner, Guil
 
 // pre: guild is locked
 void GuildManagerImplementation::transferLeadership(CreatureObject* newLeader, CreatureObject* oldLeader, SceneObject* sceoTerminal){
+
+	oldLeader->sendSystemMessage("You cannot transfer leadership at this time.");
+	
+
+/*
 	GuildObject* guild = newLeader->getGuildObject();
 
 	Locker glock(guild);
@@ -738,6 +743,7 @@ void GuildManagerImplementation::transferLeadership(CreatureObject* newLeader, C
 
 	sendGuildMail("@guildmail:leaderchange_subject", params, guild);
 }
+*/
 
 // pre: newOwner locked ... old owner not locked
 void GuildManagerImplementation::transferGuildHall(CreatureObject* newOwner, SceneObject* sceoTerminal) {
