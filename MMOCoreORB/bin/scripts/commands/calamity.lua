@@ -7,6 +7,8 @@ CalamityCommand = {
 	actionCostMultiplier = 2,
 	mindCostMultiplier = 0,
 	
+	skillMods = {{"ranged_defense", -40}},
+	
 	dotEffects = {
 	  DotEffect( 
 		ONFIRE, 
