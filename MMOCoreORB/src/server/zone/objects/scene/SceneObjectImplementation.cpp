@@ -1289,7 +1289,7 @@ Vector3 SceneObjectImplementation::getCoordinate(float distance, float angleDegr
 }
 
 void SceneObjectImplementation::rotateXaxis(int degrees) {
-	Vector3 unity(1, 0, 0);	1289
+	Vector3 unity(1, 0, 0);
 	direction.rotate(unity, degrees);
 }
 	
