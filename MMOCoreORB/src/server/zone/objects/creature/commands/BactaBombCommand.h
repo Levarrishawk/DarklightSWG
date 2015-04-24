@@ -219,7 +219,7 @@ public:
 		sendHealMessage(creature, creatureTarget, healedHealth, healedAction);
 
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
-		creature->addShockWounds(5);
+		creature->addShockWounds(1);
 		
  		deactivateInjuryTreatment(creature);
 		doAnimations(creature, creatureTarget);
