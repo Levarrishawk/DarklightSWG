@@ -4641,8 +4641,10 @@ bool PlayerManagerImplementation::doBurstRun(CreatureObject* player, float hamMo
 	uint32 forceRun1CRC = BuffCRC::JEDI_FORCE_RUN_1;
 	uint32 forceRun2CRC = BuffCRC::JEDI_FORCE_RUN_2;
 	uint32 forceRun3CRC = BuffCRC::JEDI_FORCE_RUN_3;
+	uint32 abilityCRC = BuffCRC::FORCE_RANK_SUFFERING;
+	uint32 abilityCdCRC = BuffCRC::FORCE_RANK_SERENITY;
 
-	if(player->hasBuff(forceRun1CRC) || player->hasBuff(forceRun2CRC) || player->hasBuff(forceRun3CRC)) {
+	if(player->hasBuff(forceRun1CRC) || player->hasBuff(forceRun2CRC) || player->hasBuff(forceRun3CRC) || player->hasBuff(abilityCRC) || player->hasBuff(abilityCdCRC)) {
 		player->sendSystemMessage("@combat_effects:burst_run_no"); // You cannot burst run right now.
 		return false;
 	}
@@ -4694,7 +4696,7 @@ bool PlayerManagerImplementation::doBurstRun(CreatureObject* player, float hamMo
 
 	player->inflictDamage(player, CreatureAttribute::HEALTH, newHamCost, true);
 	player->inflictDamage(player, CreatureAttribute::ACTION, newHamCost, true);
-	player->inflictDamage(player, CreatureAttribute::MIND, newHamCost, true);
+	//player->inflictDamage(player, CreatureAttribute::MIND, newHamCost, true);
 
 	StringIdChatParameter startStringId("cbt_spam", "burstrun_start_single");
 	StringIdChatParameter modifiedStartStringId("combat_effects", "instant_burst_run");
