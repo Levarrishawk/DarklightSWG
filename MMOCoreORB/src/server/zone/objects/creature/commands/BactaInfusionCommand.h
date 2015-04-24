@@ -74,6 +74,15 @@ public:
 		range = 6;
 
 	}
+	
+	void doAnimations(CreatureObject* creature, CreatureObject* creatureTarget) {
+		creatureTarget->playEffect("clienteffect/bacta_infusion.cef", "");
+
+		if (creature == creatureTarget)
+			creature->playEffect("clienteffect/heal_self.cef", "");
+		else
+			creature->playEffect("clienteffect/heal_other.cef", "");
+	}
 
 	int doQueueCommand(CreatureObject* creature, const uint64& target, const UnicodeString& arguments) {
 
