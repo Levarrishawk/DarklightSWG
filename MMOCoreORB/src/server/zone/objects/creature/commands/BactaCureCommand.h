@@ -223,7 +223,7 @@ public:
 		}
 
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
-		creature->addShockWounds(5);
+		creature->addShockWounds(1);
 		creatureTarget->healDot(CreatureState::DISEASED, 100);
 		creatureTarget->healDot(CreatureState::POISONED, 100);
 		
