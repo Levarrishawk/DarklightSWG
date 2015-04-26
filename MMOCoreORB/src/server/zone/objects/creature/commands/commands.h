@@ -851,6 +851,7 @@
 #include "StasisCommand.h"
 #include "StasisOtherCommand.h"
 #include "CalamityCommand.h"
+#include "PvpCommand.h"
 
 
 
