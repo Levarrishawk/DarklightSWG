@@ -1546,6 +1546,7 @@ void CommandConfigManager::registerCommands() {
 	commandFactory.registerCommand<StasisOtherCommand>(String("stasisOther").toLowerCase());
 	commandFactory.registerCommand<CalamityCommand>(String("calamity").toLowerCase());
 	commandFactory.registerCommand<BactaInfusionCommand>(String("bactaInfusion").toLowerCase());
+	commandFactory.registerCommand<PvpCommand>(String("pvp").toLowerCase());
 
 	//pet commands
 	commandFactory.registerCommand<PetAttackCommand>(String("petAttack").toLowerCase());
