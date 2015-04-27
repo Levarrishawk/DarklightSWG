@@ -41,7 +41,7 @@
 --which carries forward this exception.
 --true = 1, false = 0
 
-Melee2hFocus2Command = {
+PvpCommand = {
         name = "pvp",
 
 }
