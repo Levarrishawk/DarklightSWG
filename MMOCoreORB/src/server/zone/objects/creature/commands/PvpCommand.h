@@ -25,10 +25,10 @@ public:
 			
 		PlayerObject* ghost = creature->getPlayerObject();
 		
-		if (ghost->getFactionStatus() == FactionStatus::COVERT)
-			ghost->setFactionStatus(FactionStatus::OVERT);
-		if (ghost->getFactionStatus() == FactionStatus::OVERT)
-			ghost->setFactionStatus(FactionStatus::COVERT);
+		if (ghost->getFactionStatus() == 1)
+			ghost->setFactionStatus(2);
+		if (ghost->getFactionStatus() == 2)
+			ghost->setFactionStatus(1);
 
 		return SUCCESS;
 	}
