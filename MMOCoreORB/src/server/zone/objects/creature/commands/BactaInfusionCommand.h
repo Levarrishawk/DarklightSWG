@@ -93,13 +93,7 @@ public:
 			return INVALIDLOCOMOTION;
 
 		int res = doCombatAction(creature, target);
-
-		//if (creature->isAiAgent()) { // If they are NPC, don't get past here.
-		//	return SUCCESS;
-		//}
-
-			// Setup task, if choke attack was successful (5 tick amount.), AND if they don't already have one.
-
+		
 		Reference<SceneObject*> object = server->getZoneServer()->getObject(target);
 		ManagedReference<CreatureObject*> creatureTarget = cast<CreatureObject*>( object.get());
 
@@ -119,7 +113,7 @@ public:
 		}
 
 		Reference<BactaInfusionTickTask*> biTask = new BactaInfusionTickTask(creature, creatureTarget);
-		creatureTarget->addPendingTask("BactaInfusionTickTask", biTask, 6000);
+		creatureTarget->addPendingTask("BactaInfusionTickTask", biTask, 1000);
 		creature->inflictDamage(creature, CreatureAttribute::ACTION, mindCost, false);
 
 		return SUCCESS;
