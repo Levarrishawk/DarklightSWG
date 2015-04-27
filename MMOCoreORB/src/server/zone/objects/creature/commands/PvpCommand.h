@@ -23,14 +23,14 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 			
-		PlayerObject* ghost = player->getPlayerObject();
+		PlayerObject* ghost = creature->getPlayerObject();
 		
 		if (ghost->getFactionStatus() == FactionStatus::COVERT)
 			ghost->setFactionStatus(FactionStatus::OVERT);
 		if (ghost->getFactionStatus() == FactionStatus::OVERT)
 			ghost->setFactionStatus(FactionStatus::COVERT);
 
-		return doCombatAction(creature, target);
+		return SUCCESS;
 	}
 
 };
