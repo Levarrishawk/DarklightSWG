@@ -86,7 +86,7 @@ public:
 	
 		int modSkill = (creature->getSkillMod("healing_range_speed") * 0.1);
 		
-		int delay = 18 - modSkill;
+		int delay = 20 - modSkill;
 		
 		StringIdChatParameter message("healing_response", "healing_response_58"); //You are now ready to heal more damage.
 		Reference<InjuryTreatmentTask*> task = new InjuryTreatmentTask(creature, message, "injuryTreatmentJab");
