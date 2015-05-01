@@ -5,5 +5,9 @@ We the former Developers of DarklightSWG have simply become jaded with the great
 
 This project has been open sourced in the hope that someone willing will finish what we started.
 
+Signed,
 - Levarris
-
+- Synge
+- Skyyyr Death
+- Bitsnbytes
+- Wim
