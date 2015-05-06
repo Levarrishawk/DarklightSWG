@@ -11,3 +11,8 @@ Signed,
 - Skyyyr Death
 - Bitsnbytes
 - Wim
+
+
+https://www.sendspace.com/file/z8lg28  - Darklight_01.tre (Required server & clientside)
+https://www.sendspace.com/file/ggz63q - Darklight_01s.tre (Required serverside only for Dromund Kaas)
+https://www.sendspace.com/file/kzwcts - kaas.trn (Special version of TRN required serverside in /bin/terrain )
